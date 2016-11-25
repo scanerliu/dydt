@@ -1,0 +1,1 @@
+<?php	return array ( 0 => 'product_attribute_list_id', 1 => 'attribute_id', 2 => 'product_id', 3 => 'value', '_autoinc' => true, '_pk' => 'product_attribute_list_id', '_type' => array ( 'product_attribute_list_id' => 'int(100)', 'attribute_id' => 'int(100)', 'product_id' => 'int(100)', 'value' => 'varchar(100)', ), );?>

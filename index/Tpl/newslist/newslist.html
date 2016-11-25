@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>{$top_content.title}</title>
+<meta name="Keywords" content="{$top_content.keywords}" />
+<meta name="Description" content="{$top_content.description}" />
+<link rel="stylesheet" href="__PUBLIC__css/base.css">
+<link rel="stylesheet" href="__PUBLIC__css/main.css">
+<link rel="stylesheet" href="__PUBLIC__css/other.css">
+<link rel="shortcut icon" href="__PUBLIC__images/favico.ico" />
+<script style="text/javascript" src="__PUBLIC__js/jquery-1.11.0.js"></script>
+<script style="text/javascript" src="__PUBLIC__js/rich_lee.js"></script>
+</head>
+<script type="text/javascript">
+	$(function(){
+		
+
+		nav_down();//
+	});
+		
+	</script>
+<body>
+<include file="public:header"/> <include file="public:search"/>
+<div class="content">
+  <include file="public:nav"/>
+  <!--
+        	作者：rich
+        	描述：nav end
+        -->
+  <div class="news_box">
+    <div class="news_nav">
+      <dl>
+        <dt><a href="">新闻</a></dt>
+        <dd> <a href="/newssmalllist/newssmalllist?id=11"  >行业新闻</a> <a href="/newssmalllist/newssmalllist?id=13"  >药厂资讯</a> </dd>
+        <dd> <a href="/newssmalllist/newssmalllist?id=12"  >药店资讯</a> <a href="/newssmalllist/newssmalllist?id=14"  >企业新闻</a> </dd>
+      </dl>
+      <dl>
+        <dt><a href="">健康</a></dt>
+        <dd> <a href="/newssmalllist/newssmalllist?id=21"  >健康快车</a> <a href="/newssmalllist/newssmalllist?id=24"  >健身宝典</a> </dd>
+        <dd> <a href="/newssmalllist/newssmalllist?id=22"  >美丽人生</a> <a href="/newssmalllist/newssmalllist?id=25"  >纤体有术</a> </dd>
+        <dd> <a href="/newssmalllist/newssmalllist?id=23"  >心理魔方</a> <a href="/newssmalllist/newssmalllist?id=26"  >他康她康</a> </dd>
+      </dl>
+      <dl>
+        <dt><a href="">疾病</a></dt>
+        <dd> <a href="/newssmalllist/newssmalllist?id=31"  >疾病大全</a> <a href="/newssmalllist/newssmalllist?id=32"  >疾病手册</a> </dd>
+      </dl>
+      <dl>
+        <dt><a href="">药品</a></dt>
+        <dd> <a href="/newssmalllist/newssmalllist?id=41"  >用药心得</a> <a href="/newssmalllist/newssmalllist?id=43"  >药品知识</a> </dd>
+        <dd> <a href="/newssmalllist/newssmalllist?id=42"  >药物常识</a> <a href="/newssmalllist/newssmalllist?id=44"  >药品信息</a> </dd>
+      </dl>
+      <dl>
+        <dt><a href="">曝光</a></dt>
+        <dd> <a href="/newssmalllist/newssmalllist?id=51"  >网购警示</a> <a href="/newssmalllist/newssmalllist?id=53"  >质量公告</a> </dd>
+        <dd> <a href="/newssmalllist/newssmalllist?id=52"  >假劣产品</a> <a href="/newssmalllist/newssmalllist?id=54"  >违法广告</a> </dd>
+      </dl>
+    </div>
+    <div class="news_box01">
+      <div class="newsbox_left">
+        <dl class="news_banner">
+          <dt> 
+          <volist name="list8" id="vo8" offset="0" length='1'>
+           <a href="{$vo8['link']}" target="view_window">
+              <img src="/Uploads/{$vo8['img']}"  /> 
+            </a>
+              <span>{$vo8['title']}</span> 
+          </volist>
+          </dt>
+          
+        </dl>
+        <dl class="news_hot">
+          <dt> <a href="#">热点文章 </a> </dt>
+          <dd>
+            <volist name="list" id="vo"> <a href="/news/news/id/{$vo['article_id']}" target="view_window"><span>{$vo['title']}</span>
+              <p>{$vo['time']}</p>
+              </a> </volist>
+          </dd>
+        </dl>
+      </div>
+      <div class="newsbox_cen">
+        <volist name="list7" id="vo6">
+          <dl>
+            <dt> <a href="/news/news/id/{$vo6['article_id']}" target="view_window"><img src="/Uploads/{$vo6[thumbnail]}"  /></a> </dt>
+            <dd> <a href="/news/news/id/{$vo6['article_id']}" target="view_window">
+              <h3>{$vo6['title']}</h3>
+              </a>
+              <p>{$vo6['arccontent']}</p>
+            </dd>
+          </dl>
+        </volist>
+      </div>
+      <div class="newsbox_right">
+        <dl class="news_first">
+          <dt> <a href="#">推荐头条</a> </dt>
+          <dd>
+            <volist name="list2" id="vo2"> <a href="/news/news/id/{$vo2['article_id']}" target="view_window"><span>{$vo2['title']}</span>
+              <p>{$vo2['time']}</p>
+              </a> </volist>
+          </dd>
+        </dl>
+        <div class="newsbox_rightadv"> 
+
+        <volist name="list8" id="vo8" offset="1" length='1'>
+           <a href="{$vo8['link']}" target="view_window">
+              <img src="/Uploads/{$vo8['img']}"  /> 
+            </a> 
+          </volist>
+
+        </div>
+      </div>
+    </div>
+    <div class="news_box02">
+      <volist name="list8" id="vo8" offset="2" length='1'>
+           <a href="{$vo8['link']}" target="view_window">
+              <img src="/Uploads/{$vo8['img']}"  /> 
+            </a>
+          </volist>
+
+    </div>
+    <div class="news_box03">
+      <div class="news_box03_left">
+        <dl>
+          <dt>
+            <h3>妇科</h3>
+            <span>
+            <volist name="list3" id="vo3" offset="1" length='1'>
+              <a href="/news/news/id/{$vo3['article_id']}" target="view_window" style="color:#fff;">
+               {$vo3['title']}
+              </a>
+             </volist>
+             <volist name="list3" id="vo3" offset="2" length='1'>
+              <a href="/news/news/id/{$vo3['article_id']}" target="view_window" style="color:#fff;">
+               {$vo3['title']}
+              </a>
+             </volist>
+                </span> 
+                </dt>
+          <dd>
+          <volist name="list3" id="vo3" offset="0" length='1'>
+             <div> 
+                <a href="/news/news/id/{$vo3['article_id']}" target="view_window">
+                 <img src="/Uploads/{$vo3['thumbnail']}"  /> 
+                 </a>
+                 <span>{$vo3['title']}</span>
+             </div>
+          </volist>
+            <volist name="list3" id="vo3" offset="3" length='15'> <a href="/news/news/id/{$vo3['article_id']}" target="view_window">妇科&nbsp;|&nbsp;{$vo3['title']}</a> </volist>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <h3>男科</h3>
+            <span>
+            <volist name="list4" id="vo4" offset="1" length='1'>
+              <a href="/news/news/id/{$vo4['article_id']}" target="view_window" style="color:#fff;">
+               {$vo4['title']}
+              </a>
+             </volist>
+             <volist name="list4" id="vo4" offset="2" length='1'>
+              <a href="/news/news/id/{$vo4['article_id']}" target="view_window" style="color:#fff;">
+               {$vo4['title']}
+              </a>
+             </volist>
+                </span> 
+                </dt>
+          <dd>
+          <volist name="list4" id="vo4" offset="0" length='1'>
+             <div> 
+                <a href="/news/news/id/{$vo4['article_id']}" target="view_window">
+                 <img src="/Uploads/{$vo4['thumbnail']}"  /> 
+                 </a>
+                 <span>{$vo4['title']}</span>
+             </div>
+          </volist>
+            <volist name="list4" id="vo4" offset="3" length='15'> <a href="/news/news/id/{$vo4['article_id']}" target="view_window">男科&nbsp;|&nbsp;{$vo4['title']}</a> </volist>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <h3>儿科</h3>
+            <span>
+            <volist name="list5" id="vo5" offset="1" length='1'>
+              <a href="/news/news/id/{$vo5['article_id']}" target="view_window" style="color:#fff;">
+               {$vo5['title']}
+              </a>
+             </volist>
+             <volist name="list5" id="vo5" offset="2" length='1'>
+              <a href="/news/news/id/{$vo5['article_id']}" target="view_window" style="color:#fff;">
+               {$vo5['title']}
+              </a>
+             </volist>
+                </span> 
+                </dt>
+          <dd>
+          <volist name="list5" id="vo5" offset="0" length='1'>
+             <div> 
+                <a href="/news/news/id/{$vo5['article_id']}" target="view_window">
+                 <img src="/Uploads/{$vo5['thumbnail']}"  /> 
+                 </a>
+                 <span>{$vo5['title']}</span>
+             </div>
+          </volist>
+            <volist name="list5" id="vo5" offset="3" length='15'> <a href="/news/news/id/{$vo5['article_id']}" target="view_window">儿科&nbsp;|&nbsp;{$vo5['title']}</a> </volist>
+          </dd>
+        </dl>
+      </div>
+      <ul class="news_box03_right">
+        <li class="li01"> <span>热门话题</span> </li>
+        <li class="li02">
+          <p>
+            <volist name="list6" id="vo6"> <a href="/news/news/id/{$vo6['article_id']}" target="view_window" class="a2">{$vo6['title']}</a> </volist>
+            </p>
+          <span>
+            <volist name="list8" id="vo8" offset="3" length='1'>
+           <a href="{$vo8['link']}" target="view_window">
+              <img src="/Uploads/{$vo8['img']}"  /> 
+            </a>
+          </volist>
+          </span>
+          <div>
+            <volist name="list8" id="vo8" offset="4" length='1'>
+           <a href="{$vo8['link']}" target="view_window">
+              <img src="/Uploads/{$vo8['img']}"  /> 
+            </a>
+          </volist>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<include file="public:bottom"/>
+</body>
+</html>

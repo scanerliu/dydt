@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="__PUBLIC__css/indexManagement/common.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="__PUBLIC__js/jquery.1.10.js"></script>
+<script type="text/javascript" src="__PUBLIC__js/jquery-1.4.2.min.js"></script>
+<script src="__PUBLIC__js/main.js" type="text/javascript"></script>
+<style>
+*{margin:0;padding:0;list-style-type:none;}
+img,a{border:0;}
+.piccon{height:75px;margin:100px 0 0 50px;}
+.piccon li{float:left;padding:0 10px;}
+#preview{position:absolute;border:1px solid #ccc;background:#333;padding:5px;display:none;color:#fff;}
+</style>
+</head>
+<body>
+ <div class="bannerList">
+ <table width="99%" border="0" cellpadding="0" cellspacing="0" style=" margin-bottom:5px;">
+    <tbody><tr style="background:url(/admin/Tpl/public/images/a10.gif) repeat-x; height:36px;" class="status">
+      <td style="text-align:right">
+      <a href="__APP__/manage/certification_audit/" class="button1">全部申请</a>
+      <a href="__APP__/manage/certification_audit/status/1" class="button1">待审核</a>
+      <a href="__APP__/manage/certification_audit/status/2" class="button1">已通过</a>
+      <a href="__APP__/manage/certification_audit/status/3" class="button1">未通过</a>
+   </tr>
+  </tbody></table>
+  <script type="text/javascript">
+     <if condition="$_GET['status']"> 
+      $('.status a').eq({$_GET['status']}).css('color','#06C')
+    <else/> $('.status a').eq(0).css('color','#06C')
+      </if>
+    </script>
+  <table width="99%" border="0" cellpadding="0" cellspacing="0" style=" margin-bottom:5px;" >
+    <tr>
+      <td style="background:url(__PUBLIC__images/a10.gif) repeat-x; height:26px; text-align:left" colspan="9">待审核认证列表
+        <label style="padding-left:33px;">搜索类别</label>
+          <if condition="$keyv eq 2">
+              <select id="key">
+                  <option value="1">用户名</option>
+                  <option value="2" selected="true">证件持有者姓名</option>
+              </select>
+          <else />
+              <select id="key">
+                  <option value="1">用户名</option>
+                  <option value="2">证件持有者姓名</option>
+              </select>
+          </if>
+          <label id="kw" style="margin-left:9px;">搜索关键字</label>
+          <input type="text" id="keyword" placeholder="请输入搜索关键字" value="{$keyword}" />
+          <input type="submit" style="width:60px;" onclick="ss()" value="搜索">
+      </td>
+    </tr>
+    <tr bgcolor="#fbfce2">
+      <td style="width:100px;">认证ID</td>
+      <td style="width:60px;">用户ID</td>
+      <td style="width:100px;">证件持有者姓名</td>
+      <td style="width:100px;">认证类型</td>
+      <td style="width:100px;">证件有效日期</td>
+      <td style="width:100px;">提交时间</td>
+      <td style="width:40px;">状态</td>
+      <td style="width:80px;">图片</td>
+      <td style="width:80px;">操作</td>
+    </tr>
+    <volist name='list' id='vo'>
+    <tr>
+      <td>{$vo.id}</td>
+      <td>{$vo.user_name}</td>
+      <td>{$vo.name}</td>
+      <td>{$vo.doc_type}</td> 
+      <td>
+      {$vo.get_date} ~ {$vo.lose_date}<br><br>
+      <a style="color:#db6969">{$vo.er}</a>
+      </td>
+      <td>{$vo.date|date='Y-m-d',###}</td>
+      <td>
+        <if condition="$vo.status eq 0">
+          未审核
+        <elseif condition="$vo.status eq 1" />
+          已通过
+        <else />
+          未通过
+        </if>
+      </td>
+      <td><a rel="/Uploads/{$vo.img}" class="preview"><img style="width:100px;height:80px;" src="/Uploads/{$vo.img}"></a></td>
+      <td>
+        <if condition="$vo.status eq 0">
+            <a onClick="return confirm('确认要通过此认证吗？')" href="__APP__/manage/audit_ok/id/{$vo.id}" style="cursor:pointer;color:#03C">通过</a>
+            <a onclick="alertpro()" style="cursor:pointer;margin-left:33px;color:red" name="{$vo.id}" id="alertpro">不通过</a>
+        <elseif condition="$vo.status eq 1" />
+            已通过该申请
+        <else />
+            已拒绝该申请<br>
+            (原因：{$vo.back})
+        </if>
+      </td>
+      <script>
+      function alertpro () {
+          var alertpro = document.getElementById('alertpro');
+          var name=prompt("请输入不通过的原因(注：原因为空将不能提交操作申请)","");
+          if (name!=null && name!="") {
+          alertpro.href = "__APP__/manage/audit_no/id/"+alertpro.name+"/name/"+name;
+          alertpro.onclick = "";
+          alertpro.click();
+          }
+      }
+      </script>
+    </tr>
+    </volist>
+    <tr>
+    </tr>
+  </table>
+</div>
+<div style="margin-left:40%;margin-top:13%;">{$page}</div>
+<script type="text/javascript">
+  function ss () {
+    var key=document.getElementById('key').value;
+    var keyword=document.getElementById('keyword').value;
+    window.location.href="__APP__/manage/certification_audit/key/"+key+"/keyword/"+keyword;
+  }
+</script>
+</body>
+</html>

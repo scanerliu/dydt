@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>购物车-{$top_content.title}</title>
+<meta name="Keywords" content="{$top_content.keywords}" />
+<meta name="Description" content="{$top_content.description}" />
+<link rel="stylesheet" href="__PUBLIC__css/base.css">
+<link rel="stylesheet" href="__PUBLIC__css/main.css">
+<link rel="stylesheet" href="__PUBLIC__css/other.css">
+<script style="text/javascript" src="__PUBLIC__js/jquery-1.11.0.js"></script>
+<script style="text/javascript" src="__PUBLIC__js/rich_lee.js"></script>
+</head>
+<script type="text/javascript">
+	$(function(){
+		
+		cen_go()//个人中心
+		nav_down();//
+	});
+		
+	</script>
+<body>
+<!-- top --> 
+<include file="public:header"/> 
+<!-- topend --> 
+<!-- search --> 
+<include file="public:search"/> 
+<!-- searchend --> 
+<!-- nav -->
+<div class="content"> <include file="public:nav"/>
+  <div class="crumbs"> <span>订单管理</span>
+    <p>the order management</p>
+    <p class="crumbs02">购物车</p>
+  </div>
+  <include file="public:left"/> 
+  <!--
+       	作者：rich_lee
+       	描述：面包屑 面包屑导航 完成
+       -->
+  <form class="buy_car">
+    <div class="car_name">购物车</div>
+    <dl class="car_title">
+      <dt>标题 </dt>
+      <dd>单价（元）</dd>
+      <dd>数量</dd>
+      <dd>金额（元）</dd>
+      <dd>操作</dd>
+    </dl>
+    <volist name="list" id="vo">
+      <dl class="car_box">
+        <dt> <a href="/shop/content/product_id/{$vo.product_id}"><img src="/Uploads/{$vo['img']}"   />
+          <div>
+            <h3>{$vo.title}</h3>
+            <p>{$vo.subhead}</p>
+          </div>
+          </a> </dt>
+        <dd><span>￥</span><span id="pr">{$vo.price2}</span></dd>
+        <input name="" type="hidden" value="{$vo.product_id}" class="pro_id">
+         <dd>
+          <input class="car_btnl" type="button" value="-" />
+          <input class="car_text num" type="text" name="" id="num" value="{$vo['num']}" />
+          <input class="car_btnr" type="button" value="+" />
+        </dd>
+        <dd>
+          <p id="mo">{$p}</p>
+        </dd>
+        <dd> <a href="{:U('ordermanage/add_mycol',array('id' => $vo['product_id']))}">移入收藏夹</a> <a href="{:U('ordermanage/del_shop_cart',array('id' => $vo['product_id']))}">删除</a> </dd>
+      </dl>
+    </volist>
+    <dl class="rcar_sub">
+      <dd>
+        <p>合计（不含运费）：</p>
+        <a>￥ <span class="total"></span></a>
+       <a style="margin-left:100px;" onClick="pay_to_order()">去结算</a>
+      </dd>
+    </dl>
+  </form>
+  <script type="text/javascript">
+    function price_count(){
+     total=0;
+     for(  i=0;i<$('.car_box').length;i++){
+	      price=$('.car_box').eq(i).find('#pr').html()* $('.car_box').eq(i).find('#num').val();
+ 		  $('.car_box').eq(i).find('#mo').html(price);
+		  total=total+price;
+	 }
+	 $('.total').html(total);
+ 	 }
+  	 setInterval('price_count()',500)	   
+ 		   
+		   
+	$(".car_btnr").on("click", function(){
+		val=$(this).parent().find('.num').val()
+		val=val*1+1;
+		$(this).parent().find('.num').val(val)	
+  });	   
+		   
+		   
+ 	$(".car_btnl").on("click", function(){
+		val=$(this).parent().find('.num').val()
+		val=val*1-1;
+		if(val==0){
+	     val=1
+		}
+		$(this).parent().find('.num').val(val)	
+  });	   
+		      
+		   
+		   
+		   
+		   
+		function  pay_to_order(){
+			 num= new Array(); 
+ 			for(  i=0;i<$(".num").length;i++   ){
+		    var val = $(".num").eq(i).val()
+			num.push(val);
+		   }
+		    num= num.toString(); 
+		   
+		   
+		  num= num.toString(); 
+   		   pro_id= new Array(); 
+ 			for(  i=0;i<$(".pro_id").length;i++   ){
+		    var val = $(".pro_id").eq(i).val()
+			pro_id.push(val);
+		   }
+		    pro_id= pro_id.toString(); 
+  			window.location.href='/order/cart_to_order/product_id/'+pro_id+'/product_num/'+num;
+ 		}   
+		   
+		   
+		   
+    </script> 
+</div>
+</div>
+
+<!--
+    	作者：rich
+    	描述：friend ++ content end
+    --> 
+<include file="public:bottom"/>
+</body>
+</html>

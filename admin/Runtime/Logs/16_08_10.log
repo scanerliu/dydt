@@ -1,0 +1,1230 @@
+[ 2016-08-10T09:13:58+08:00 ] 183.69.195.172 /admin.php/login/login
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000000s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.031200s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031200s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000000s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000000s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-08-10T09:13:58+08:00 ] 183.69.195.172 /admin.php/login/verify
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-08-10T09:14:05+08:00 ] 183.69.195.172 /admin.php/login/loginFunAjaxName
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `admin_user` [ RunTime:0.015600s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_user` WHERE ( name ='root' ) LIMIT 1   [ RunTime:0.000000s ]
+
+[ 2016-08-10T09:14:05+08:00 ] 183.69.195.172 /admin.php/login/loginFunAjaxPassword
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `admin_user` [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_user` WHERE ( `password` = 'd9b1d7db4cd6e70935368a1efb10e377' ) AND ( `name` = 'root' ) LIMIT 1   [ RunTime:0.000000s ]
+
+[ 2016-08-10T09:14:05+08:00 ] 183.69.195.172 /admin.php/login/loginFunAjaxCode
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.015600s ]
+INFO: [ route_check ] --END-- [ RunTime:0.015600s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-08-10T09:14:05+08:00 ] 183.69.195.172 /admin.php/login/loginFundo
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.015600s ]
+INFO: [ route_check ] --END-- [ RunTime:0.015600s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `admin_user` [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_user` WHERE ( `password` = 'd9b1d7db4cd6e70935368a1efb10e377' ) AND ( `name` = 'root' ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: sessionName D:\wwwroot\pc_dtyd\admin\Lib\Action\loginAction.class.php 第 63 行.
+SQL: UPDATE `admin_user` SET `loginTime`=1470791645 WHERE ( `name` = 'root' ) [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `record` [ RunTime:0.000000s ]
+SQL: INSERT INTO `record` (`time`,`remark`) VALUES (1470791645,'用户登录') [ RunTime:0.000000s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000000s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.031200s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031200s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000000s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000000s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-08-10T09:14:06+08:00 ] 183.69.195.172 /admin.php/Index/index
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `system` [ RunTime:0.000000s ]
+SQL: SELECT `atuo_time` FROM `system` LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `order` [ RunTime:0.000000s ]
+SQL: SELECT `endtime`,`order_id`,`need_pay` FROM `order` WHERE ( `status` = 3 )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `system` WHERE ( system_id=1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `product` [ RunTime:0.015600s ]
+SQL: SELECT `product_id` FROM `product` WHERE ( `able_discount` = 1 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `able_discount` = '' ) [ RunTime:0.000000s ]
+SQL: select product_id  , product_num   from `order_product`  where order_id  in (  select  order_id  from  `order`  where  status = 2   and stock_reduce <> 1) [ RunTime:0.000000s ]
+SQL: update `order` set stock_reduce=1 , time2=1470791646 where  stock_reduce<>1 and status <> 1  [ RunTime:0.000000s ]
+SQL: UPDATE `system` SET `atuo_time`=1470791646 WHERE ( `system_id` = 1 ) [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `record` [ RunTime:0.000000s ]
+SQL: INSERT INTO `record` (`time`,`remark`) VALUES (1470791646,'网站正常访问操作') [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `admin_user` [ RunTime:0.000000s ]
+SQL: SELECT `loginTime` FROM `admin_user` WHERE ( `name` = 'root' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `admin_user` WHERE ( name	= 'root' ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000000s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant admin_name - assumed 'admin_name' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\4c18d5952d0dbf1eedb8a1ec796fa788.php 第 23 行.
+NOTIC: [8] Use of undefined constant root - assumed 'root' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\4c18d5952d0dbf1eedb8a1ec796fa788.php 第 23 行.
+NOTIC: [8] Use of undefined constant admin_name - assumed 'admin_name' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\4c18d5952d0dbf1eedb8a1ec796fa788.php 第 27 行.
+NOTIC: [8] Use of undefined constant root - assumed 'root' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\4c18d5952d0dbf1eedb8a1ec796fa788.php 第 27 行.
+NOTIC: [8] Use of undefined constant admin_name - assumed 'admin_name' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\4c18d5952d0dbf1eedb8a1ec796fa788.php 第 31 行.
+NOTIC: [8] Use of undefined constant root - assumed 'root' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\4c18d5952d0dbf1eedb8a1ec796fa788.php 第 31 行.
+NOTIC: [8] Use of undefined constant admin_name - assumed 'admin_name' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\4c18d5952d0dbf1eedb8a1ec796fa788.php 第 35 行.
+NOTIC: [8] Use of undefined constant root - assumed 'root' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\4c18d5952d0dbf1eedb8a1ec796fa788.php 第 35 行.
+NOTIC: [8] Use of undefined constant admin_name - assumed 'admin_name' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\4c18d5952d0dbf1eedb8a1ec796fa788.php 第 39 行.
+NOTIC: [8] Use of undefined constant root - assumed 'root' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\4c18d5952d0dbf1eedb8a1ec796fa788.php 第 39 行.
+NOTIC: [8] Use of undefined constant admin_name - assumed 'admin_name' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\4c18d5952d0dbf1eedb8a1ec796fa788.php 第 43 行.
+NOTIC: [8] Use of undefined constant root - assumed 'root' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\4c18d5952d0dbf1eedb8a1ec796fa788.php 第 43 行.
+NOTIC: [8] Use of undefined constant admin_name - assumed 'admin_name' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\4c18d5952d0dbf1eedb8a1ec796fa788.php 第 47 行.
+NOTIC: [8] Use of undefined constant root - assumed 'root' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\4c18d5952d0dbf1eedb8a1ec796fa788.php 第 47 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.015600s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015600s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000000s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000000s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-08-10T09:14:06+08:00 ] 183.69.195.172 /admin.php/indexManagement/bannerList/class/banner
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `system` [ RunTime:0.000000s ]
+SQL: SELECT `atuo_time` FROM `system` LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `record` [ RunTime:0.000000s ]
+SQL: INSERT INTO `record` (`time`,`remark`) VALUES (1470791646,'网站正常访问操作') [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `index_banner` [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: where D:\wwwroot\pc_dtyd\admin\Lib\Action\indexManagementAction.class.php 第 18 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `index_banner` LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: where D:\wwwroot\pc_dtyd\admin\Lib\Action\indexManagementAction.class.php 第 21 行.
+SQL: SELECT * FROM `index_banner` LIMIT 0,10   [ RunTime:0.000000s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000000s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant index_ad2 - assumed 'index_ad2' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\d6265d428dbf68aa6dc3848ef43fac70.php 第 11 行.
+NOTIC: [8] Use of undefined constant index_ad2 - assumed 'index_ad2' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\d6265d428dbf68aa6dc3848ef43fac70.php 第 23 行.
+NOTIC: [8] Use of undefined constant index_ad2 - assumed 'index_ad2' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\d6265d428dbf68aa6dc3848ef43fac70.php 第 31 行.
+NOTIC: [8] Use of undefined constant index_ad2 - assumed 'index_ad2' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\d6265d428dbf68aa6dc3848ef43fac70.php 第 34 行.
+NOTIC: [8] Use of undefined constant index_ad2 - assumed 'index_ad2' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\d6265d428dbf68aa6dc3848ef43fac70.php 第 31 行.
+NOTIC: [8] Use of undefined constant index_ad2 - assumed 'index_ad2' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\d6265d428dbf68aa6dc3848ef43fac70.php 第 34 行.
+NOTIC: [8] Use of undefined constant index_ad2 - assumed 'index_ad2' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\d6265d428dbf68aa6dc3848ef43fac70.php 第 31 行.
+NOTIC: [8] Use of undefined constant index_ad2 - assumed 'index_ad2' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\d6265d428dbf68aa6dc3848ef43fac70.php 第 34 行.
+NOTIC: [8] Use of undefined constant index_ad2 - assumed 'index_ad2' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\d6265d428dbf68aa6dc3848ef43fac70.php 第 31 行.
+NOTIC: [8] Use of undefined constant index_ad2 - assumed 'index_ad2' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\d6265d428dbf68aa6dc3848ef43fac70.php 第 34 行.
+NOTIC: [8] Use of undefined constant index_ad2 - assumed 'index_ad2' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\d6265d428dbf68aa6dc3848ef43fac70.php 第 31 行.
+NOTIC: [8] Use of undefined constant index_ad2 - assumed 'index_ad2' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\d6265d428dbf68aa6dc3848ef43fac70.php 第 34 行.
+NOTIC: [8] Use of undefined constant index_ad2 - assumed 'index_ad2' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\d6265d428dbf68aa6dc3848ef43fac70.php 第 36 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.015600s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015600s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000000s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000000s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-08-10T09:27:36+08:00 ] 183.69.195.172 /admin.php/productManagement/productList/
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `system` [ RunTime:0.015600s ]
+SQL: SELECT `atuo_time` FROM `system` LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `order` [ RunTime:0.000000s ]
+SQL: SELECT `endtime`,`order_id`,`need_pay` FROM `order` WHERE ( `status` = 3 )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `system` WHERE ( system_id=1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `product` [ RunTime:0.000000s ]
+SQL: SELECT `product_id` FROM `product` WHERE ( `able_discount` = 1 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `able_discount` = '' ) [ RunTime:0.000000s ]
+SQL: select product_id  , product_num   from `order_product`  where order_id  in (  select  order_id  from  `order`  where  status = 2   and stock_reduce <> 1) [ RunTime:0.000000s ]
+SQL: update `order` set stock_reduce=1 , time2=1470792456 where  stock_reduce<>1 and status <> 1  [ RunTime:0.000000s ]
+SQL: UPDATE `system` SET `atuo_time`=1470792456 WHERE ( `system_id` = 1 ) [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `record` [ RunTime:0.000000s ]
+SQL: INSERT INTO `record` (`time`,`remark`) VALUES (1470792456,'网站正常访问操作') [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `product_classify` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '1' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '22' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '21' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '42' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '43' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '78' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '79' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '80' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '81' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '83' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '84' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '85' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '86' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '87' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '88' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '2' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '28' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '27' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '26' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '44' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '45' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '46' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '47' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '48' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '49' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '50' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '51' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '52' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '3' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '54' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '55' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '56' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '57' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '58' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '59' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '60' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '256' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '254' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '255' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '257' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '258' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '259' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '260' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '261' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '262' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '4' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '62' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '63' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '64' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '249' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '66' )  [ RunTime:0.015600s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '67' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '250' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '251' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '252' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '253' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '5' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '74' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '75' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '76' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '263' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '243' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '244' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '245' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '246' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '247' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '248' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '6' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '68' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '69' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '71' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '72' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '73' )  [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: stock D:\wwwroot\pc_dtyd\admin\Lib\Action\productManagementAction.class.php 第 185 行.
+NOTIC: [8] Undefined index: class D:\wwwroot\pc_dtyd\admin\Lib\Action\productManagementAction.class.php 第 192 行.
+NOTIC: [8] Undefined index: keyword D:\wwwroot\pc_dtyd\admin\Lib\Action\productManagementAction.class.php 第 195 行.
+NOTIC: [8] Undefined index: frame D:\wwwroot\pc_dtyd\admin\Lib\Action\productManagementAction.class.php 第 216 行.
+SQL: SELECT DISTINCT  COUNT(*) AS tp_count FROM `product` LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT DISTINCT  * FROM `product` LIMIT 0,25   [ RunTime:0.000000s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000000s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: class D:\wwwroot\pc_dtyd\admin\Runtime\Cache\0542c7ad31f045b7d0d16659eb4ee50e.php 第 48 行.
+NOTIC: [8] Undefined index: frame D:\wwwroot\pc_dtyd\admin\Runtime\Cache\0542c7ad31f045b7d0d16659eb4ee50e.php 第 49 行.
+NOTIC: [8] Undefined index: keyword D:\wwwroot\pc_dtyd\admin\Runtime\Cache\0542c7ad31f045b7d0d16659eb4ee50e.php 第 50 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.046800s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.046800s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000000s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000000s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-08-10T09:28:30+08:00 ] 183.69.195.172 /admin.php/productManagement/productAdd?class2=207
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `system` [ RunTime:0.000000s ]
+SQL: SELECT `atuo_time` FROM `system` LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `order` [ RunTime:0.000000s ]
+SQL: SELECT `endtime`,`order_id`,`need_pay` FROM `order` WHERE ( `status` = 3 )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `system` WHERE ( system_id=1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `product` [ RunTime:0.000000s ]
+SQL: SELECT `product_id` FROM `product` WHERE ( `able_discount` = 1 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `able_discount` = '' ) [ RunTime:0.000000s ]
+SQL: select product_id  , product_num   from `order_product`  where order_id  in (  select  order_id  from  `order`  where  status = 2   and stock_reduce <> 1) [ RunTime:0.000000s ]
+SQL: update `order` set stock_reduce=1 , time2=1470792510 where  stock_reduce<>1 and status <> 1  [ RunTime:0.000000s ]
+SQL: UPDATE `system` SET `atuo_time`=1470792510 WHERE ( `system_id` = 1 ) [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `record` [ RunTime:0.000000s ]
+SQL: INSERT INTO `record` (`time`,`remark`) VALUES (1470792510,'网站正常访问操作') [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `product_attribute` [ RunTime:0.015600s ]
+SQL: SELECT * FROM `product_attribute` WHERE ( `product_classify_id` = '' )  [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: class1 D:\wwwroot\pc_dtyd\admin\Lib\Action\productManagementAction.class.php 第 390 行.
+SQL: SELECT * FROM `product_attribute` WHERE ( `product_classify_id` = null )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_attribute` WHERE ( `product_classify_id` = '207' )  [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: class3 D:\wwwroot\pc_dtyd\admin\Lib\Action\productManagementAction.class.php 第 404 行.
+SQL: SELECT * FROM `product_attribute` WHERE ( `product_classify_id` = null )  [ RunTime:0.000000s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000000s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.031200s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031200s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000000s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000000s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-08-10T15:29:16+08:00 ] 183.69.195.172 /admin.php/login/login
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000000s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.031200s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031200s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000000s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000000s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-08-10T15:29:16+08:00 ] 183.69.195.172 /admin.php/login/verify
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-08-10T15:29:26+08:00 ] 183.69.195.172 /admin.php/login/loginFunAjaxName
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.015601s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015601s ]
+SQL: SHOW COLUMNS FROM `admin_user` [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_user` WHERE ( name ='root' ) LIMIT 1   [ RunTime:0.000000s ]
+
+[ 2016-08-10T15:29:26+08:00 ] 183.69.195.172 /admin.php/login/loginFunAjaxPassword
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.015601s ]
+INFO: [ route_check ] --END-- [ RunTime:0.015601s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `admin_user` [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_user` WHERE ( `password` = 'd9b1d7db4cd6e70935368a1efb10e377' ) AND ( `name` = 'root' ) LIMIT 1   [ RunTime:0.000000s ]
+
+[ 2016-08-10T15:29:26+08:00 ] 183.69.195.172 /admin.php/login/loginFunAjaxCode
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-08-10T15:29:26+08:00 ] 183.69.195.172 /admin.php/login/loginFundo
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `admin_user` [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_user` WHERE ( `password` = 'd9b1d7db4cd6e70935368a1efb10e377' ) AND ( `name` = 'root' ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: sessionName D:\wwwroot\pc_dtyd\admin\Lib\Action\loginAction.class.php 第 63 行.
+SQL: UPDATE `admin_user` SET `loginTime`=1470814166 WHERE ( `name` = 'root' ) [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `record` [ RunTime:0.000000s ]
+SQL: INSERT INTO `record` (`time`,`remark`) VALUES (1470814166,'用户登录') [ RunTime:0.000000s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000000s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.031200s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031200s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000000s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000000s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-08-10T15:29:27+08:00 ] 183.69.195.172 /admin.php/Index/index
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.015600s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015600s ]
+SQL: SHOW COLUMNS FROM `system` [ RunTime:0.000000s ]
+SQL: SELECT `atuo_time` FROM `system` LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `order` [ RunTime:0.000000s ]
+SQL: SELECT `endtime`,`order_id`,`need_pay` FROM `order` WHERE ( `status` = 3 )  [ RunTime:0.015600s ]
+SQL: SELECT * FROM `system` WHERE ( system_id=1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `product` [ RunTime:0.000000s ]
+SQL: SELECT `product_id` FROM `product` WHERE ( `able_discount` = 1 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `able_discount` = '' ) [ RunTime:0.000000s ]
+SQL: select product_id  , product_num   from `order_product`  where order_id  in (  select  order_id  from  `order`  where  status = 2   and stock_reduce <> 1) [ RunTime:0.000000s ]
+SQL: update `order` set stock_reduce=1 , time2=1470814167 where  stock_reduce<>1 and status <> 1  [ RunTime:0.000000s ]
+SQL: UPDATE `system` SET `atuo_time`=1470814167 WHERE ( `system_id` = 1 ) [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `record` [ RunTime:0.000000s ]
+SQL: INSERT INTO `record` (`time`,`remark`) VALUES (1470814167,'网站正常访问操作') [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `admin_user` [ RunTime:0.000000s ]
+SQL: SELECT `loginTime` FROM `admin_user` WHERE ( `name` = 'root' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `admin_user` WHERE ( name	= 'root' ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000000s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant admin_name - assumed 'admin_name' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\4c18d5952d0dbf1eedb8a1ec796fa788.php 第 23 行.
+NOTIC: [8] Use of undefined constant root - assumed 'root' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\4c18d5952d0dbf1eedb8a1ec796fa788.php 第 23 行.
+NOTIC: [8] Use of undefined constant admin_name - assumed 'admin_name' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\4c18d5952d0dbf1eedb8a1ec796fa788.php 第 27 行.
+NOTIC: [8] Use of undefined constant root - assumed 'root' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\4c18d5952d0dbf1eedb8a1ec796fa788.php 第 27 行.
+NOTIC: [8] Use of undefined constant admin_name - assumed 'admin_name' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\4c18d5952d0dbf1eedb8a1ec796fa788.php 第 31 行.
+NOTIC: [8] Use of undefined constant root - assumed 'root' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\4c18d5952d0dbf1eedb8a1ec796fa788.php 第 31 行.
+NOTIC: [8] Use of undefined constant admin_name - assumed 'admin_name' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\4c18d5952d0dbf1eedb8a1ec796fa788.php 第 35 行.
+NOTIC: [8] Use of undefined constant root - assumed 'root' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\4c18d5952d0dbf1eedb8a1ec796fa788.php 第 35 行.
+NOTIC: [8] Use of undefined constant admin_name - assumed 'admin_name' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\4c18d5952d0dbf1eedb8a1ec796fa788.php 第 39 行.
+NOTIC: [8] Use of undefined constant root - assumed 'root' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\4c18d5952d0dbf1eedb8a1ec796fa788.php 第 39 行.
+NOTIC: [8] Use of undefined constant admin_name - assumed 'admin_name' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\4c18d5952d0dbf1eedb8a1ec796fa788.php 第 43 行.
+NOTIC: [8] Use of undefined constant root - assumed 'root' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\4c18d5952d0dbf1eedb8a1ec796fa788.php 第 43 行.
+NOTIC: [8] Use of undefined constant admin_name - assumed 'admin_name' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\4c18d5952d0dbf1eedb8a1ec796fa788.php 第 47 行.
+NOTIC: [8] Use of undefined constant root - assumed 'root' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\4c18d5952d0dbf1eedb8a1ec796fa788.php 第 47 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.015600s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015600s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000000s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000000s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-08-10T15:29:27+08:00 ] 183.69.195.172 /admin.php/indexManagement/bannerList/class/banner
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `system` [ RunTime:0.000000s ]
+SQL: SELECT `atuo_time` FROM `system` LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `record` [ RunTime:0.000000s ]
+SQL: INSERT INTO `record` (`time`,`remark`) VALUES (1470814167,'网站正常访问操作') [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `index_banner` [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: where D:\wwwroot\pc_dtyd\admin\Lib\Action\indexManagementAction.class.php 第 18 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `index_banner` LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: where D:\wwwroot\pc_dtyd\admin\Lib\Action\indexManagementAction.class.php 第 21 行.
+SQL: SELECT * FROM `index_banner` LIMIT 0,10   [ RunTime:0.000000s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000000s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant index_ad2 - assumed 'index_ad2' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\d6265d428dbf68aa6dc3848ef43fac70.php 第 11 行.
+NOTIC: [8] Use of undefined constant index_ad2 - assumed 'index_ad2' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\d6265d428dbf68aa6dc3848ef43fac70.php 第 23 行.
+NOTIC: [8] Use of undefined constant index_ad2 - assumed 'index_ad2' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\d6265d428dbf68aa6dc3848ef43fac70.php 第 31 行.
+NOTIC: [8] Use of undefined constant index_ad2 - assumed 'index_ad2' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\d6265d428dbf68aa6dc3848ef43fac70.php 第 34 行.
+NOTIC: [8] Use of undefined constant index_ad2 - assumed 'index_ad2' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\d6265d428dbf68aa6dc3848ef43fac70.php 第 31 行.
+NOTIC: [8] Use of undefined constant index_ad2 - assumed 'index_ad2' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\d6265d428dbf68aa6dc3848ef43fac70.php 第 34 行.
+NOTIC: [8] Use of undefined constant index_ad2 - assumed 'index_ad2' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\d6265d428dbf68aa6dc3848ef43fac70.php 第 31 行.
+NOTIC: [8] Use of undefined constant index_ad2 - assumed 'index_ad2' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\d6265d428dbf68aa6dc3848ef43fac70.php 第 34 行.
+NOTIC: [8] Use of undefined constant index_ad2 - assumed 'index_ad2' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\d6265d428dbf68aa6dc3848ef43fac70.php 第 31 行.
+NOTIC: [8] Use of undefined constant index_ad2 - assumed 'index_ad2' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\d6265d428dbf68aa6dc3848ef43fac70.php 第 34 行.
+NOTIC: [8] Use of undefined constant index_ad2 - assumed 'index_ad2' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\d6265d428dbf68aa6dc3848ef43fac70.php 第 31 行.
+NOTIC: [8] Use of undefined constant index_ad2 - assumed 'index_ad2' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\d6265d428dbf68aa6dc3848ef43fac70.php 第 34 行.
+NOTIC: [8] Use of undefined constant index_ad2 - assumed 'index_ad2' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\d6265d428dbf68aa6dc3848ef43fac70.php 第 36 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.015600s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015600s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000000s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000000s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-08-10T15:30:07+08:00 ] 183.69.195.172 /admin.php/productManagement/productList/
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `system` [ RunTime:0.000000s ]
+SQL: SELECT `atuo_time` FROM `system` LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `order` [ RunTime:0.000000s ]
+SQL: SELECT `endtime`,`order_id`,`need_pay` FROM `order` WHERE ( `status` = 3 )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `system` WHERE ( system_id=1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `product` [ RunTime:0.000000s ]
+SQL: SELECT `product_id` FROM `product` WHERE ( `able_discount` = 1 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `able_discount` = '' ) [ RunTime:0.000000s ]
+SQL: select product_id  , product_num   from `order_product`  where order_id  in (  select  order_id  from  `order`  where  status = 2   and stock_reduce <> 1) [ RunTime:0.000000s ]
+SQL: update `order` set stock_reduce=1 , time2=1470814207 where  stock_reduce<>1 and status <> 1  [ RunTime:0.000000s ]
+SQL: UPDATE `system` SET `atuo_time`=1470814207 WHERE ( `system_id` = 1 ) [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `record` [ RunTime:0.000000s ]
+SQL: INSERT INTO `record` (`time`,`remark`) VALUES (1470814207,'网站正常访问操作') [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `product_classify` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '' )  [ RunTime:0.015600s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '1' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '22' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '21' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '42' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '43' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '78' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '79' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '80' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '81' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '83' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '84' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '85' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '86' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '87' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '88' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '2' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '28' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '27' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '26' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '44' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '45' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '46' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '47' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '48' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '49' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '50' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '51' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '52' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '3' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '54' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '55' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '56' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '57' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '58' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '59' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '60' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '256' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '254' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '255' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '257' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '258' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '259' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '260' )  [ RunTime:0.015600s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '261' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '262' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '4' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '62' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '63' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '64' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '249' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '66' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '67' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '250' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '251' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '252' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '253' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '5' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '74' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '75' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '76' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '263' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '243' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '244' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '245' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '246' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '247' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '248' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '6' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '68' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '69' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '71' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '72' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '73' )  [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: stock D:\wwwroot\pc_dtyd\admin\Lib\Action\productManagementAction.class.php 第 185 行.
+NOTIC: [8] Undefined index: class D:\wwwroot\pc_dtyd\admin\Lib\Action\productManagementAction.class.php 第 192 行.
+NOTIC: [8] Undefined index: keyword D:\wwwroot\pc_dtyd\admin\Lib\Action\productManagementAction.class.php 第 195 行.
+NOTIC: [8] Undefined index: frame D:\wwwroot\pc_dtyd\admin\Lib\Action\productManagementAction.class.php 第 216 行.
+SQL: SELECT DISTINCT  COUNT(*) AS tp_count FROM `product` LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT DISTINCT  * FROM `product` LIMIT 0,25   [ RunTime:0.000000s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000000s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: class D:\wwwroot\pc_dtyd\admin\Runtime\Cache\0542c7ad31f045b7d0d16659eb4ee50e.php 第 48 行.
+NOTIC: [8] Undefined index: frame D:\wwwroot\pc_dtyd\admin\Runtime\Cache\0542c7ad31f045b7d0d16659eb4ee50e.php 第 49 行.
+NOTIC: [8] Undefined index: keyword D:\wwwroot\pc_dtyd\admin\Runtime\Cache\0542c7ad31f045b7d0d16659eb4ee50e.php 第 50 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.031200s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031200s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000000s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000000s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-08-10T15:31:32+08:00 ] 183.69.195.172 /admin.php/productManagement/productAdd?class2=207
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `system` [ RunTime:0.000000s ]
+SQL: SELECT `atuo_time` FROM `system` LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `order` [ RunTime:0.000000s ]
+SQL: SELECT `endtime`,`order_id`,`need_pay` FROM `order` WHERE ( `status` = 3 )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `system` WHERE ( system_id=1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `product` [ RunTime:0.000000s ]
+SQL: SELECT `product_id` FROM `product` WHERE ( `able_discount` = 1 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `able_discount` = '' ) [ RunTime:0.000000s ]
+SQL: select product_id  , product_num   from `order_product`  where order_id  in (  select  order_id  from  `order`  where  status = 2   and stock_reduce <> 1) [ RunTime:0.000000s ]
+SQL: update `order` set stock_reduce=1 , time2=1470814292 where  stock_reduce<>1 and status <> 1  [ RunTime:0.000000s ]
+SQL: UPDATE `system` SET `atuo_time`=1470814292 WHERE ( `system_id` = 1 ) [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `record` [ RunTime:0.000000s ]
+SQL: INSERT INTO `record` (`time`,`remark`) VALUES (1470814292,'网站正常访问操作') [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `product_attribute` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_attribute` WHERE ( `product_classify_id` = '' )  [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: class1 D:\wwwroot\pc_dtyd\admin\Lib\Action\productManagementAction.class.php 第 390 行.
+SQL: SELECT * FROM `product_attribute` WHERE ( `product_classify_id` = null )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_attribute` WHERE ( `product_classify_id` = '207' )  [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: class3 D:\wwwroot\pc_dtyd\admin\Lib\Action\productManagementAction.class.php 第 404 行.
+SQL: SELECT * FROM `product_attribute` WHERE ( `product_classify_id` = null )  [ RunTime:0.000000s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000000s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.015600s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015600s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000000s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000000s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-08-10T15:39:35+08:00 ] 183.69.195.172 /admin.php/productManagement/productAddFunDo/class2/207
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `system` [ RunTime:0.000000s ]
+SQL: SELECT `atuo_time` FROM `system` LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `order` [ RunTime:0.000000s ]
+SQL: SELECT `endtime`,`order_id`,`need_pay` FROM `order` WHERE ( `status` = 3 )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `system` WHERE ( system_id=1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `product` [ RunTime:0.000000s ]
+SQL: SELECT `product_id` FROM `product` WHERE ( `able_discount` = 1 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `able_discount` = '' ) [ RunTime:0.000000s ]
+SQL: select product_id  , product_num   from `order_product`  where order_id  in (  select  order_id  from  `order`  where  status = 2   and stock_reduce <> 1) [ RunTime:0.000000s ]
+SQL: update `order` set stock_reduce=1 , time2=1470814774 where  stock_reduce<>1 and status <> 1  [ RunTime:0.000000s ]
+SQL: UPDATE `system` SET `atuo_time`=1470814774 WHERE ( `system_id` = 1 ) [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `record` [ RunTime:0.000000s ]
+SQL: INSERT INTO `record` (`time`,`remark`) VALUES (1470814774,'网站正常访问操作') [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `product_attribute_list` [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product_attribute_list` WHERE ( attribute_id=1 and value= 113581  ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `product_classify` [ RunTime:0.000000s ]
+SQL: SELECT `fid` FROM `product_classify` WHERE ( product_classify_id=207 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `fid` FROM `product_classify` WHERE ( product_classify_id=54 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: able_discount D:\wwwroot\pc_dtyd\admin\Lib\Action\productManagementAction.class.php 第 450 行.
+SQL: INSERT INTO `product` (`class3`,`class2`,`class1`,`title`,`subhead`,`is_recommend`,`price1`,`price2`,`price3`,`qualification`,`introduction`,`product_group`,`time`,`frame`,`stock`) VALUES (207,54,3,'天然维生素E','营养屋','1','141.6','118','118','<img src=\"/Uploads/image/20160810/20160810153858_78538.jpg\" alt=\"\" /><img src=\"/Uploads/image/20160810/20160810153911_48875.jpg\" alt=\"\" /><img src=\"/Uploads/image/20160810/20160810153925_12996.jpg\" alt=\"\" />','<img src=\"/Uploads/image/20160810/20160810153528_79389.jpg\" alt=\"\" />','',1470814774,1,10000) [ RunTime:0.000000s ]
+SQL: SELECT `product_id` FROM `product` WHERE ( `time` = 1470814774 ) AND ( `title` = '天然维生素E' ) AND ( `subhead` = '营养屋' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `product_attribute` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_attribute` WHERE ( `product_classify_id` = '' )  [ RunTime:0.000000s ]
+SQL: INSERT INTO `product_attribute_list` (`product_id`,`attribute_id`,`value`) VALUES (1,1,'113581') [ RunTime:0.000000s ]
+SQL: INSERT INTO `product_attribute_list` (`product_id`,`attribute_id`,`value`) VALUES (1,2,'国食健字G20130141') [ RunTime:0.000000s ]
+SQL: INSERT INTO `product_attribute_list` (`product_id`,`attribute_id`,`value`) VALUES (1,3,'250mg/粒×100粒/瓶') [ RunTime:0.000000s ]
+SQL: INSERT INTO `product_attribute_list` (`product_id`,`attribute_id`,`value`) VALUES (1,4,'营养屋(成都)生物医药有限公司') [ RunTime:0.000000s ]
+SQL: INSERT INTO `product_attribute_list` (`product_id`,`attribute_id`,`value`) VALUES (1,5,'') [ RunTime:0.000000s ]
+SQL: INSERT INTO `product_attribute_list` (`product_id`,`attribute_id`,`value`) VALUES (1,6,'') [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: class1 D:\wwwroot\pc_dtyd\admin\Lib\Action\productManagementAction.class.php 第 501 行.
+SQL: SELECT * FROM `product_attribute` WHERE ( `product_classify_id` = null )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_attribute` WHERE ( `product_classify_id` = '207' )  [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: class3 D:\wwwroot\pc_dtyd\admin\Lib\Action\productManagementAction.class.php 第 519 行.
+SQL: SELECT * FROM `product_attribute` WHERE ( `product_classify_id` = null )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product` WHERE ( `time` = 1470814774 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `product_img` [ RunTime:0.015600s ]
+SQL: INSERT INTO `product_img` (`product_id`,`img`) VALUES (1,'57aada36e9d32.png') [ RunTime:0.000000s ]
+SQL: INSERT INTO `product_img` (`product_id`,`img`) VALUES (1,'57aada36eda22.png') [ RunTime:0.000000s ]
+SQL: INSERT INTO `product_img` (`product_id`,`img`) VALUES (1,'57aada36f1712.png') [ RunTime:0.000000s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000000s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.000000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000000s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000000s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.015600s ]
+INFO: [ view_end ] --END-- [ RunTime:0.015600s ]
+
+[ 2016-08-10T15:39:36+08:00 ] 183.69.195.172 /admin.php/productManagement/productAdd?class2=207
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `system` [ RunTime:0.000000s ]
+SQL: SELECT `atuo_time` FROM `system` LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `record` [ RunTime:0.000000s ]
+SQL: INSERT INTO `record` (`time`,`remark`) VALUES (1470814776,'网站正常访问操作') [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `product_attribute` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_attribute` WHERE ( `product_classify_id` = '' )  [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: class1 D:\wwwroot\pc_dtyd\admin\Lib\Action\productManagementAction.class.php 第 390 行.
+SQL: SELECT * FROM `product_attribute` WHERE ( `product_classify_id` = null )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_attribute` WHERE ( `product_classify_id` = '207' )  [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: class3 D:\wwwroot\pc_dtyd\admin\Lib\Action\productManagementAction.class.php 第 404 行.
+SQL: SELECT * FROM `product_attribute` WHERE ( `product_classify_id` = null )  [ RunTime:0.000000s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000000s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.031200s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031200s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000000s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000000s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-08-10T15:40:28+08:00 ] 183.69.195.172 /admin.php/productManagement/productList/
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.015600s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015600s ]
+SQL: SHOW COLUMNS FROM `system` [ RunTime:0.000000s ]
+SQL: SELECT `atuo_time` FROM `system` LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `order` [ RunTime:0.000000s ]
+SQL: SELECT `endtime`,`order_id`,`need_pay` FROM `order` WHERE ( `status` = 3 )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `system` WHERE ( system_id=1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `product` [ RunTime:0.000000s ]
+SQL: SELECT `product_id` FROM `product` WHERE ( `able_discount` = 1 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `able_discount` = '' ) [ RunTime:0.000000s ]
+SQL: select product_id  , product_num   from `order_product`  where order_id  in (  select  order_id  from  `order`  where  status = 2   and stock_reduce <> 1) [ RunTime:0.000000s ]
+SQL: update `order` set stock_reduce=1 , time2=1470814828 where  stock_reduce<>1 and status <> 1  [ RunTime:0.000000s ]
+SQL: UPDATE `system` SET `atuo_time`=1470814828 WHERE ( `system_id` = 1 ) [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `record` [ RunTime:0.000000s ]
+SQL: INSERT INTO `record` (`time`,`remark`) VALUES (1470814828,'网站正常访问操作') [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `product_classify` [ RunTime:0.015600s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '1' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '22' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '21' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '42' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '43' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '78' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '79' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '80' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '81' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '83' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '84' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '85' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '86' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '87' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '88' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '2' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '28' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '27' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '26' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '44' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '45' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '46' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '47' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '48' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '49' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '50' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '51' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '52' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '3' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '54' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '55' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '56' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '57' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '58' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '59' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '60' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '256' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '254' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '255' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '257' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '258' )  [ RunTime:0.015600s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '259' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '260' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '261' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '262' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '4' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '62' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '63' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '64' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '249' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '66' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '67' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '250' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '251' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '252' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '253' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '5' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '74' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '75' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '76' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '263' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '243' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '244' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '245' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '246' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '247' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '248' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '6' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '68' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '69' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '71' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '72' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '73' )  [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: stock D:\wwwroot\pc_dtyd\admin\Lib\Action\productManagementAction.class.php 第 185 行.
+NOTIC: [8] Undefined index: class D:\wwwroot\pc_dtyd\admin\Lib\Action\productManagementAction.class.php 第 192 行.
+NOTIC: [8] Undefined index: keyword D:\wwwroot\pc_dtyd\admin\Lib\Action\productManagementAction.class.php 第 195 行.
+NOTIC: [8] Undefined index: frame D:\wwwroot\pc_dtyd\admin\Lib\Action\productManagementAction.class.php 第 216 行.
+SQL: SELECT DISTINCT  COUNT(*) AS tp_count FROM `product` LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT DISTINCT  * FROM `product` LIMIT 0,25   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `product_img` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_img` WHERE ( `product_id` = 1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `product_attribute_list` [ RunTime:0.015600s ]
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( `product_id` = 1 ) AND ( `attribute_id` = 1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( `product_id` = 1 ) AND ( `attribute_id` = 2 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( `product_id` = 1 ) AND ( `attribute_id` = 4 ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000000s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: class D:\wwwroot\pc_dtyd\admin\Runtime\Cache\0542c7ad31f045b7d0d16659eb4ee50e.php 第 48 行.
+NOTIC: [8] Undefined index: frame D:\wwwroot\pc_dtyd\admin\Runtime\Cache\0542c7ad31f045b7d0d16659eb4ee50e.php 第 49 行.
+NOTIC: [8] Undefined index: keyword D:\wwwroot\pc_dtyd\admin\Runtime\Cache\0542c7ad31f045b7d0d16659eb4ee50e.php 第 50 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.015600s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015600s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000000s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000000s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-08-10T15:40:31+08:00 ] 183.69.195.172 /admin.php/productManagement/productSave/product_id/1
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `system` [ RunTime:0.000000s ]
+SQL: SELECT `atuo_time` FROM `system` LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `record` [ RunTime:0.000000s ]
+SQL: INSERT INTO `record` (`time`,`remark`) VALUES (1470814831,'网站正常访问操作') [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `product` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product` WHERE ( `product_id` = 1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `product_img` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_img` WHERE ( `product_id` = 1 )  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `product_attribute_list` [ RunTime:0.000000s ]
+SQL: SELECT DISTINCT  product_attribute_list.*,product_attribute.title,product_attribute.is_select,product_attribute.value as value2 FROM `product_attribute_list` left join  product_attribute  on product_attribute.attribute_id  = product_attribute_list.attribute_id WHERE ( `product_id` = 1 )  [ RunTime:0.000000s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000000s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Array to string conversion D:\wwwroot\pc_dtyd\admin\Runtime\Cache\181aa971652b75547d8f82f8007acf43.php 第 71 行.
+NOTIC: [8] Array to string conversion D:\wwwroot\pc_dtyd\admin\Runtime\Cache\181aa971652b75547d8f82f8007acf43.php 第 71 行.
+NOTIC: [8] Array to string conversion D:\wwwroot\pc_dtyd\admin\Runtime\Cache\181aa971652b75547d8f82f8007acf43.php 第 71 行.
+NOTIC: [2] date() expects parameter 2 to be long, string given D:\wwwroot\pc_dtyd\admin\Runtime\Cache\181aa971652b75547d8f82f8007acf43.php 第 112 行.
+NOTIC: [2] date() expects parameter 2 to be long, string given D:\wwwroot\pc_dtyd\admin\Runtime\Cache\181aa971652b75547d8f82f8007acf43.php 第 117 行.
+NOTIC: [8] Undefined index: class1 D:\wwwroot\pc_dtyd\admin\Runtime\Cache\181aa971652b75547d8f82f8007acf43.php 第 205 行.
+NOTIC: [8] Undefined index: class2 D:\wwwroot\pc_dtyd\admin\Runtime\Cache\181aa971652b75547d8f82f8007acf43.php 第 205 行.
+NOTIC: [8] Undefined index: class3 D:\wwwroot\pc_dtyd\admin\Runtime\Cache\181aa971652b75547d8f82f8007acf43.php 第 205 行.
+NOTIC: [8] Undefined index: is_import D:\wwwroot\pc_dtyd\admin\Runtime\Cache\181aa971652b75547d8f82f8007acf43.php 第 211 行.
+NOTIC: [8] Undefined index: brand D:\wwwroot\pc_dtyd\admin\Runtime\Cache\181aa971652b75547d8f82f8007acf43.php 第 212 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.046800s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.046800s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000000s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000000s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-08-10T15:41:10+08:00 ] 183.69.195.172 /admin.php/Index/index
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `system` [ RunTime:0.000000s ]
+SQL: SELECT `atuo_time` FROM `system` LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `order` [ RunTime:0.000000s ]
+SQL: SELECT `endtime`,`order_id`,`need_pay` FROM `order` WHERE ( `status` = 3 )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `system` WHERE ( system_id=1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `product` [ RunTime:0.000000s ]
+SQL: SELECT `product_id` FROM `product` WHERE ( `able_discount` = 1 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `able_discount` = '' ) [ RunTime:0.000000s ]
+SQL: select product_id  , product_num   from `order_product`  where order_id  in (  select  order_id  from  `order`  where  status = 2   and stock_reduce <> 1) [ RunTime:0.000000s ]
+SQL: update `order` set stock_reduce=1 , time2=1470814870 where  stock_reduce<>1 and status <> 1  [ RunTime:0.000000s ]
+SQL: UPDATE `system` SET `atuo_time`=1470814870 WHERE ( `system_id` = 1 ) [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `record` [ RunTime:0.000000s ]
+SQL: INSERT INTO `record` (`time`,`remark`) VALUES (1470814870,'网站正常访问操作') [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `admin_user` [ RunTime:0.000000s ]
+SQL: SELECT `loginTime` FROM `admin_user` WHERE ( `name` = 'root' ) LIMIT 1   [ RunTime:0.015600s ]
+SQL: SELECT * FROM `admin_user` WHERE ( name	= 'root' ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000000s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant admin_name - assumed 'admin_name' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\4c18d5952d0dbf1eedb8a1ec796fa788.php 第 23 行.
+NOTIC: [8] Use of undefined constant root - assumed 'root' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\4c18d5952d0dbf1eedb8a1ec796fa788.php 第 23 行.
+NOTIC: [8] Use of undefined constant admin_name - assumed 'admin_name' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\4c18d5952d0dbf1eedb8a1ec796fa788.php 第 27 行.
+NOTIC: [8] Use of undefined constant root - assumed 'root' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\4c18d5952d0dbf1eedb8a1ec796fa788.php 第 27 行.
+NOTIC: [8] Use of undefined constant admin_name - assumed 'admin_name' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\4c18d5952d0dbf1eedb8a1ec796fa788.php 第 31 行.
+NOTIC: [8] Use of undefined constant root - assumed 'root' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\4c18d5952d0dbf1eedb8a1ec796fa788.php 第 31 行.
+NOTIC: [8] Use of undefined constant admin_name - assumed 'admin_name' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\4c18d5952d0dbf1eedb8a1ec796fa788.php 第 35 行.
+NOTIC: [8] Use of undefined constant root - assumed 'root' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\4c18d5952d0dbf1eedb8a1ec796fa788.php 第 35 行.
+NOTIC: [8] Use of undefined constant admin_name - assumed 'admin_name' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\4c18d5952d0dbf1eedb8a1ec796fa788.php 第 39 行.
+NOTIC: [8] Use of undefined constant root - assumed 'root' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\4c18d5952d0dbf1eedb8a1ec796fa788.php 第 39 行.
+NOTIC: [8] Use of undefined constant admin_name - assumed 'admin_name' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\4c18d5952d0dbf1eedb8a1ec796fa788.php 第 43 行.
+NOTIC: [8] Use of undefined constant root - assumed 'root' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\4c18d5952d0dbf1eedb8a1ec796fa788.php 第 43 行.
+NOTIC: [8] Use of undefined constant admin_name - assumed 'admin_name' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\4c18d5952d0dbf1eedb8a1ec796fa788.php 第 47 行.
+NOTIC: [8] Use of undefined constant root - assumed 'root' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\4c18d5952d0dbf1eedb8a1ec796fa788.php 第 47 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.000000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000000s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000000s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.015600s ]
+INFO: [ view_end ] --END-- [ RunTime:0.015600s ]
+
+[ 2016-08-10T15:41:11+08:00 ] 183.69.195.172 /admin.php/indexManagement/bannerList/class/banner
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `system` [ RunTime:0.015600s ]
+SQL: SELECT `atuo_time` FROM `system` LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `record` [ RunTime:0.000000s ]
+SQL: INSERT INTO `record` (`time`,`remark`) VALUES (1470814871,'网站正常访问操作') [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `index_banner` [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: where D:\wwwroot\pc_dtyd\admin\Lib\Action\indexManagementAction.class.php 第 18 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `index_banner` LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: where D:\wwwroot\pc_dtyd\admin\Lib\Action\indexManagementAction.class.php 第 21 行.
+SQL: SELECT * FROM `index_banner` LIMIT 0,10   [ RunTime:0.000000s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000000s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant index_ad2 - assumed 'index_ad2' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\d6265d428dbf68aa6dc3848ef43fac70.php 第 11 行.
+NOTIC: [8] Use of undefined constant index_ad2 - assumed 'index_ad2' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\d6265d428dbf68aa6dc3848ef43fac70.php 第 23 行.
+NOTIC: [8] Use of undefined constant index_ad2 - assumed 'index_ad2' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\d6265d428dbf68aa6dc3848ef43fac70.php 第 31 行.
+NOTIC: [8] Use of undefined constant index_ad2 - assumed 'index_ad2' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\d6265d428dbf68aa6dc3848ef43fac70.php 第 34 行.
+NOTIC: [8] Use of undefined constant index_ad2 - assumed 'index_ad2' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\d6265d428dbf68aa6dc3848ef43fac70.php 第 31 行.
+NOTIC: [8] Use of undefined constant index_ad2 - assumed 'index_ad2' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\d6265d428dbf68aa6dc3848ef43fac70.php 第 34 行.
+NOTIC: [8] Use of undefined constant index_ad2 - assumed 'index_ad2' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\d6265d428dbf68aa6dc3848ef43fac70.php 第 31 行.
+NOTIC: [8] Use of undefined constant index_ad2 - assumed 'index_ad2' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\d6265d428dbf68aa6dc3848ef43fac70.php 第 34 行.
+NOTIC: [8] Use of undefined constant index_ad2 - assumed 'index_ad2' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\d6265d428dbf68aa6dc3848ef43fac70.php 第 31 行.
+NOTIC: [8] Use of undefined constant index_ad2 - assumed 'index_ad2' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\d6265d428dbf68aa6dc3848ef43fac70.php 第 34 行.
+NOTIC: [8] Use of undefined constant index_ad2 - assumed 'index_ad2' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\d6265d428dbf68aa6dc3848ef43fac70.php 第 31 行.
+NOTIC: [8] Use of undefined constant index_ad2 - assumed 'index_ad2' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\d6265d428dbf68aa6dc3848ef43fac70.php 第 34 行.
+NOTIC: [8] Use of undefined constant index_ad2 - assumed 'index_ad2' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\d6265d428dbf68aa6dc3848ef43fac70.php 第 36 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.015600s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015600s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000000s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000000s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-08-10T15:42:39+08:00 ] 183.69.195.172 /admin.php/productManagement/productList/
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `system` [ RunTime:0.000000s ]
+SQL: SELECT `atuo_time` FROM `system` LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `order` [ RunTime:0.000000s ]
+SQL: SELECT `endtime`,`order_id`,`need_pay` FROM `order` WHERE ( `status` = 3 )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `system` WHERE ( system_id=1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `product` [ RunTime:0.000000s ]
+SQL: SELECT `product_id` FROM `product` WHERE ( `able_discount` = 1 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `able_discount` = '' ) [ RunTime:0.000000s ]
+SQL: select product_id  , product_num   from `order_product`  where order_id  in (  select  order_id  from  `order`  where  status = 2   and stock_reduce <> 1) [ RunTime:0.000000s ]
+SQL: update `order` set stock_reduce=1 , time2=1470814959 where  stock_reduce<>1 and status <> 1  [ RunTime:0.000000s ]
+SQL: UPDATE `system` SET `atuo_time`=1470814959 WHERE ( `system_id` = 1 ) [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `record` [ RunTime:0.000000s ]
+SQL: INSERT INTO `record` (`time`,`remark`) VALUES (1470814959,'网站正常访问操作') [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `product_classify` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '1' )  [ RunTime:0.015600s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '22' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '21' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '42' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '43' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '78' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '79' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '80' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '81' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '83' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '84' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '85' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '86' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '87' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '88' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '2' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '28' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '27' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '26' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '44' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '45' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '46' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '47' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '48' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '49' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '50' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '51' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '52' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '3' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '54' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '55' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '56' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '57' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '58' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '59' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '60' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '256' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '254' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '255' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '257' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '258' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '259' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '260' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '261' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '262' )  [ RunTime:0.015600s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '4' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '62' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '63' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '64' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '249' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '66' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '67' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '250' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '251' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '252' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '253' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '5' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '74' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '75' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '76' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '263' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '243' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '244' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '245' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '246' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '247' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '248' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '6' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '68' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '69' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '71' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '72' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_classify` WHERE ( `fid` = '73' )  [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: stock D:\wwwroot\pc_dtyd\admin\Lib\Action\productManagementAction.class.php 第 185 行.
+NOTIC: [8] Undefined index: class D:\wwwroot\pc_dtyd\admin\Lib\Action\productManagementAction.class.php 第 192 行.
+NOTIC: [8] Undefined index: keyword D:\wwwroot\pc_dtyd\admin\Lib\Action\productManagementAction.class.php 第 195 行.
+NOTIC: [8] Undefined index: frame D:\wwwroot\pc_dtyd\admin\Lib\Action\productManagementAction.class.php 第 216 行.
+SQL: SELECT DISTINCT  COUNT(*) AS tp_count FROM `product` LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT DISTINCT  * FROM `product` LIMIT 0,25   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `product_img` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_img` WHERE ( `product_id` = 1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `product_attribute_list` [ RunTime:0.000000s ]
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( `product_id` = 1 ) AND ( `attribute_id` = 1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( `product_id` = 1 ) AND ( `attribute_id` = 2 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( `product_id` = 1 ) AND ( `attribute_id` = 4 ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000000s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: class D:\wwwroot\pc_dtyd\admin\Runtime\Cache\0542c7ad31f045b7d0d16659eb4ee50e.php 第 48 行.
+NOTIC: [8] Undefined index: frame D:\wwwroot\pc_dtyd\admin\Runtime\Cache\0542c7ad31f045b7d0d16659eb4ee50e.php 第 49 行.
+NOTIC: [8] Undefined index: keyword D:\wwwroot\pc_dtyd\admin\Runtime\Cache\0542c7ad31f045b7d0d16659eb4ee50e.php 第 50 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.015600s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015600s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000000s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000000s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-08-10T15:42:40+08:00 ] 183.69.195.172 /admin.php/productManagement/productSave/product_id/1
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `system` [ RunTime:0.000000s ]
+SQL: SELECT `atuo_time` FROM `system` LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `record` [ RunTime:0.000000s ]
+SQL: INSERT INTO `record` (`time`,`remark`) VALUES (1470814960,'网站正常访问操作') [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `product` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product` WHERE ( `product_id` = 1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `product_img` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `product_img` WHERE ( `product_id` = 1 )  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `product_attribute_list` [ RunTime:0.000000s ]
+SQL: SELECT DISTINCT  product_attribute_list.*,product_attribute.title,product_attribute.is_select,product_attribute.value as value2 FROM `product_attribute_list` left join  product_attribute  on product_attribute.attribute_id  = product_attribute_list.attribute_id WHERE ( `product_id` = 1 )  [ RunTime:0.000000s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000000s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Array to string conversion D:\wwwroot\pc_dtyd\admin\Runtime\Cache\181aa971652b75547d8f82f8007acf43.php 第 71 行.
+NOTIC: [8] Array to string conversion D:\wwwroot\pc_dtyd\admin\Runtime\Cache\181aa971652b75547d8f82f8007acf43.php 第 71 行.
+NOTIC: [8] Array to string conversion D:\wwwroot\pc_dtyd\admin\Runtime\Cache\181aa971652b75547d8f82f8007acf43.php 第 71 行.
+NOTIC: [2] date() expects parameter 2 to be long, string given D:\wwwroot\pc_dtyd\admin\Runtime\Cache\181aa971652b75547d8f82f8007acf43.php 第 112 行.
+NOTIC: [2] date() expects parameter 2 to be long, string given D:\wwwroot\pc_dtyd\admin\Runtime\Cache\181aa971652b75547d8f82f8007acf43.php 第 117 行.
+NOTIC: [8] Undefined index: class1 D:\wwwroot\pc_dtyd\admin\Runtime\Cache\181aa971652b75547d8f82f8007acf43.php 第 205 行.
+NOTIC: [8] Undefined index: class2 D:\wwwroot\pc_dtyd\admin\Runtime\Cache\181aa971652b75547d8f82f8007acf43.php 第 205 行.
+NOTIC: [8] Undefined index: class3 D:\wwwroot\pc_dtyd\admin\Runtime\Cache\181aa971652b75547d8f82f8007acf43.php 第 205 行.
+NOTIC: [8] Undefined index: is_import D:\wwwroot\pc_dtyd\admin\Runtime\Cache\181aa971652b75547d8f82f8007acf43.php 第 211 行.
+NOTIC: [8] Undefined index: brand D:\wwwroot\pc_dtyd\admin\Runtime\Cache\181aa971652b75547d8f82f8007acf43.php 第 212 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.031200s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031200s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000000s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000000s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+

@@ -1,0 +1,60 @@
+<link rel="shortcut icon" href="/favicon.ico"/>
+<div class="side">
+  <ul>
+    <li><a href="/newsmanu/newsmanu/id/124">
+      <div class="sidebox"><img src="__PUBLIC__img/side_icon01.png">客服中心</div>
+      </a></li>
+    <li><a href="/newsmanu/newsmanu/id/124">
+      <div class="sidebox"><img src="__PUBLIC__img/side_icon02.png">客户案例</div>
+      </a></li>
+    <li><a href="tencent://message/?uin={$top_content.qq}&Site=真善美&Menu=yes">
+      <div class="sidebox"><img src="__PUBLIC__img/side_icon04.png">QQ客服</div>
+      </a></li>
+    <li><a href="{$top_content.weibo}">
+      <div class="sidebox"><img src="__PUBLIC__img/side_icon03.png">新浪微博</div>
+      </a></li>
+    <li style="border:none;"><a  onclick="move()"  class="sidetop"><img src="__PUBLIC__img/side_icon05.png"></a></li>
+  </ul>
+</div>
+<script type="text/javascript"> 
+function move()
+{
+    $('html,body').animate({scrollTop:0},500);
+}
+
+</script>
+ <link rel="stylesheet" href="__PUBLIC__css/style.css">
+<div class="top_index" id="top">
+  <div class="top_index_middle">
+    <div class="top_index_left">
+      <ul>
+        <li>
+          <if condition="$_SESSION['user_id'] neq null"> <span style="color:#069">{$top.name} </span> </if>
+          您好，欢迎来到单体药店网！</li>
+        <if condition="$_SESSION['user_id'] eq null">
+          <li><a href="/account/login">请登录</a></li>
+          <li><a href="/account/register">免费注册</a></li>
+        </if>
+        <if condition="$_SESSION['user_id'] neq null">
+          <li><a href="/account/logout" style="color:#999">[退出]</a></li>
+        </if>
+      </ul>
+    </div>
+    <div class="top_index_right">
+      <ul>
+        <if condition="$_SESSION['user_id'] neq null">
+          <li class="top_index_right_per"> <span></span><!-- 这个span是小图标不能删 --> 
+            <a href="/order/orderList">个人中心</a> </li>
+          <li class="top_index_right_favor"> <span></span><!-- 这个span是小图标不能删 --> 
+            <a href="/ordermanage/my_collection/">收藏夹</a> </li>
+        </if>
+        <li class="top_index_right_app"> <span></span><!-- 这个span是小图标不能删 --> 
+          <a href="/newsmanu/newsmanu/id/74">手机APP</a> </li>
+        <li class="top_index_right_contact"> <span></span><!-- 这个span是小图标不能删 --> 
+          <a href="tencent://message/?uin={$top_content.qq}&Site=真善美&Menu=yes">联系客服</a> </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<!-- topend --> 
+<!-- search -->

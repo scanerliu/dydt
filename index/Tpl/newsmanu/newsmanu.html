@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>{$list.title}-{$top_content.title}</title>
+<meta name="Keywords" content="{$top_content.keywords}" />
+<meta name="Description" content="{$top_content.description}" />
+<link rel="stylesheet" href="__PUBLIC__css/base.css">
+<link rel="stylesheet" href="__PUBLIC__css/main.css">
+<link rel="stylesheet" href="__PUBLIC__css/other.css">
+<link rel="stylesheet" href="__PUBLIC__css/cssforml.css">
+<link rel="shortcut icon" href="__PUBLIC__images/favico.ico" />
+<script style="text/javascript" src="__PUBLIC__js/jquery-1.11.0.js"></script>
+<script style="text/javascript" src="__PUBLIC__js/rich_lee.js"></script>
+</head>
+<script type="text/javascript">
+	$(function(){
+		
+
+		nav_down();//
+	});
+		
+	</script>
+<body>
+<!-- top --> 
+<include file="public:header"/> <include file="public:search"/>
+<div class="content"> <include file="public:nav"/>
+  
+  <!--
+        	作者：rich
+        	时间：2015-10-21
+        	描述：banner右侧
+        -->
+  <div class="position_l">
+    <p>您现在的位置：</p>
+    <span>单体药店网 > <span class="news">{$hello1.category_Name}</span> </div>
+  <div class="content_list_l">
+    <div class="content_list_left">
+      <dt>{$hello1.category_Name}</dt>
+      <dl class="list_left_dl">
+ <volist name='asdsdaf' id='vol2'>
+        <dd><a href="/newsmanu/newsmanu/id/{$vol2.class_child_id}">{$vol2.category_Name}</a></dd>
+ </volist>
+      </dl>
+      <div class="code_list"> <img src="__PUBLIC__images/footer_mark.png" alt="">
+        <p>微信关注二维码</p>
+        <p>买药查价一手抓</p>
+      </div>
+    </div>
+    <div class="content_list_right">
+      <h1 class="arc_title">{$list.title}</h1>
+      <p class="arc_author"><span>时间：{$list.time}</span><span>浏览：{$list.browse_num}</span></p>
+      <p> {$list.arccontent} </p>
+    </div>
+  </div>
+</div>
+<include file="public:bottom"/>
+</body>
+</html>

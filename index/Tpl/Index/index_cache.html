@@ -1,0 +1,118 @@
+
+<div class="content"> <include file="public:nav"/>
+  <div class="my_banner">
+    <div class="nav_index_banner">
+      <div class="banner">
+        <div class="banner_box">
+          <div class="banner_move">
+            <volist name='index_banner' id='vol'> <a href="{$vol.link}" target="_blank"><img src="/Uploads/{$vol.img}"></a> </volist>
+          </div>
+          <div class="move_btn">
+            <ul>
+            <volist name='index_banner' id='vol'> 
+            <if condition="$i eq 1"><li class="my"></li>
+            <else/> <li></li>
+            </if>
+             </volist>
+               </ul>
+          </div>
+        </div>
+        <div class="index_card_box">
+          <dl class="index_card">
+            <dt> <span style="border-bottom-style: none; background-image: none; background-position: initial initial; background-repeat: initial initial;">公告</span> <span>通知</span> <span>帮助</span> </dt>
+            <dd>
+               <div style="display: block;"> 
+			 <volist name="list1" id="vo1">
+              <a href="/news/news/id/{$vo1['article_id']}" target="view_window" style="color:#fff;">
+               <p>{$vo1['title']}</p>
+			   <span>{$vo1['time']}</span>
+              </a>
+             </volist>
+              </div>
+			  
+              <div>
+              <volist name="list2" id="vo2">
+              <a href="/news/news/id/{$vo2['article_id']}" target="view_window" style="color:#fff;">
+               <p>{$vo2['title']}</p>
+			   <span>{$vo2['time']}</span>
+              </a>
+             </volist>                
+                </div>
+              <div>
+                    <volist name="list3" id="vo3">
+              <a href="/news/news/id/{$vo3['article_id']}" target="view_window" style="color:#fff;">
+               <p>{$vo3['title']}</p>
+			   <span>{$vo3['time']}</span>
+              </a>
+             </volist> 
+                </div>
+            </dd>
+          </dl>
+          <div class="index_onload">
+           </div>
+        </div>
+      </div>
+      <div class="index_adv">
+        <div class="move_adv" style="left: 0px;">
+          <volist name='index_ad1' id='vol'> <a href="{$vol.link}" target="_blank"><img src="/Uploads/{$vol.img}"></a> </volist>
+        </div>
+      </div>
+    </div>
+    <div class="products">
+      <div class="pro_title"> <a class="pro_title01">精品推荐</a> <a href="/shop/discount" class="pro_title02" style="display:none">促销活动</a> </div>
+      <dl>
+        <dt>
+          <volist name='index_part_recommend' id='vol'> <a href="/shop/content/product_id/{$vol.product_id}">
+            <p>{$vol.title|mb_substr=0,16,'utf-8'}</p>
+            <span>¥{$vol.price}</span> <img src="/Uploads/{$vol.img}" style="width:140px; height:140px;"> </a> </volist>
+        </dt>
+        <dd>
+          <volist name='index_part_discount' id='vol'> <a href="/shop/content/product_id/{$vol.product_id}">
+            <p>{$vol.title|mb_substr=0,16,'utf-8'}</p>
+            <span>￥{$vol.price3}</span> <img src="/Uploads/{$vol.img}" style="width:65px; height:65px;"> </a> </volist>
+        </dd>
+      </dl>
+    </div>
+    <ul class="brand">
+     <li> 
+       <volist name='index_part_goldCompany' id='vol'>
+           <a href="/goldcontent/goldcontent/id/{$vol.gold_id}"><img src="/Uploads/{$vol.gold_pic}"> </a> 
+          </volist>
+            </li>
+      </ul>
+    <volist name='index_part_productList' id='vol' key="k">
+      <div class="sale_box">
+        <dl class="sale_left">
+          <dt> <a class="sale_a{$k}" href="/shop/shopList/class1/{$vol.product_classify_id}">{$k}F {$vol.title}</a> </dt>
+          <dd>
+            <volist name='vol.class2' id='vol2'> <a href="/shop/shopList/class1/{$vol.product_classify_id}/class2/{$vol2.product_classify_id}">{$vol2.title}</a> </volist>
+          </dd>
+        </dl>
+        <ul class="sale_center">
+          <volist name='vol.product' id='vol3'>
+            <li><a href="/shop/content/product_id/{$vol3.product_id}"> <img src="/Uploads/{$vol3.img}">
+              <p> {$vol3.title|mb_substr=0,27,'utf-8'} </p>
+              <span>¥{$vol3.price2}</span> </a> </li>
+          </volist>
+        </ul>
+        <div class="sale_right">
+          <if condition="$k eq 1"> <a href="{$index_ad2.0.link}" target="_blank"><img src="/Uploads/{$index_ad2.0.img}"  style=" width:229px; height:511px;"></a>
+            <elseif condition="$k eq 2"/>
+            <a href="{$index_ad2.1.link}" target="_blank"><img src="/Uploads/{$index_ad2.1.img}"  style=" width:229px; height:511px;"></a>
+            <elseif condition="$k eq 3"/>
+            <a href="{$index_ad2.2.link}" target="_blank"><img src="/Uploads/{$index_ad2.2.img}"  style=" width:229px; height:511px;"></a>
+            <elseif condition="$k eq 4"/>
+            <a href="{$index_ad2.3.link}" target="_blank"><img src="/Uploads/{$index_ad2.3.img}"  style=" width:229px; height:511px;"></a>
+            <elseif condition="$k eq 5"/>
+            <a href="{$index_ad2.4.link}" target="_blank"><img src="/Uploads/{$index_ad2.4.img}"  style=" width:229px; height:511px;"></a>
+            <elseif condition="$k eq 6"/>
+            <a href="{$index_ad2.5.link}" target="_blank"><img src="/Uploads/{$index_ad2.5.img}"  style=" width:229px; height:511px;"></a> </if>
+        </div>
+      </div>
+    </volist>
+    <dl class="friend">
+      <dt> <a>友情链接</a> </dt>
+      <dd> {$top_content.link|stripslashes} </dd>
+    </dl>
+  </div>
+</div>

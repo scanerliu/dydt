@@ -1,0 +1,51 @@
+<div class="my_box_nav">
+  <div class="my_box_posi">
+    <volist name='top_class' id='vol'>
+      <div class="sub_nav">
+        <volist name='vol.class_1' id='vol2'>
+          <ul class="sub_content">
+            <li class="sub_title"> <a href="/shop/shopList?class1={$vol.product_classify_id}&class2={$vol2.product_classify_id}">{$vol2.title|mb_substr=0,4,'utf-8'}</a> </li>
+            <li class="sub_nav_box">
+              <volist name='vol2.class_2' id='vol3'><a href="/shop/shopList?class1={$vol.product_classify_id}&class2={$vol2.product_classify_id}&class3={$vol3.product_classify_id}">{$vol3.title}</a> </volist>
+            </li>
+          </ul>
+        </volist>
+      </div>
+      <!--sub_nav--> 
+    </volist>
+    <!--下拉菜单结束-->
+    <div class="nav_index_left">
+      <dl>
+        <dt>全部商品分类</dt>
+        <volist name='top_class' id='vol'>
+          <dd> <span></span><!-- 这个span是小图标不能删 -->
+            <h2><a href="/shop/shopList?class1={$vol.product_classify_id}">{$vol.title}</a></h2>
+            <ul>
+              <volist name='vol.class_1' id='vol2'  offset="0"  length='3'>
+                <li><a href="/shop/shopList?class1={$vol.product_classify_id}&class2/{$vol2.product_classify_id}">{$vol2.title|mb_substr=0,4,'utf-8'}</a></li>
+              </volist>
+            </ul>
+          </dd>
+        </volist>
+        <script type="text/javascript">
+     $('.nav_index_left dd').eq(0).attr('class','nav_index_left_first');
+     $('.nav_index_left dd').eq(1).attr('class','nav_index_left_second');
+     $('.nav_index_left dd').eq(2).attr('class','nav_index_left_third');
+     $('.nav_index_left dd').eq(3).attr('class','nav_index_left_fourth');
+     $('.nav_index_left dd').eq(4).attr('class','nav_index_left_fifth');
+     $('.nav_index_left dd').eq(5).attr('class','nav_index_left_sixth');
+</script>
+      </dl>
+    </div>
+  </div>
+</div>
+<div class="nav_index_banner">
+  <ul class="center_nav">
+    <li><a href="/">首页</a></li>
+    <li><a href="/shop/shopList">药品超市</a></li>
+    <li><a href="/company/company">金牌厂家</a></li>
+    <li><a href="/newslist/newslist">医药资讯</a></li>
+    <li><a href="/newsmanu/newsmanu/id/72">帮助中心</a></li>
+    <li><a href="/shop/discount">团购</a></li>
+  </ul>
+</div>

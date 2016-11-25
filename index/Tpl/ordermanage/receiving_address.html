@@ -1,0 +1,217 @@
+                                           <!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>收货地址-{$top_content.title}</title>
+<meta name="Keywords" content="{$top_content.keywords}" />
+<meta name="Description" content="{$top_content.description}" />
+	<link rel="stylesheet" href="__PUBLIC__css/base.css">
+	<link rel="stylesheet" href="__PUBLIC__css/main.css">
+	<link rel="stylesheet" href="__PUBLIC__css/other.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__css/L_person.css">
+	<script style="text/javascript" src="__PUBLIC__js/jquery-1.11.0.js"></script>	
+	<script style="text/javascript" src="__PUBLIC__js/rich_lee.js"></script>
+</head>
+	<script type="text/javascript">
+	$(function(){
+		
+
+		nav_down();//
+	});
+		
+	</script>
+<body>
+<!-- top -->
+	<include file="public:header"/>
+<!-- topend -->
+<!-- search -->
+	<include file="public:search"/>
+<!-- searchend -->
+<!-- nav -->
+	<div class="content">
+		<include file="public:nav"/>
+		<!--
+        	作者：rich
+        	时间：2015-10-21
+        	描述：banner右侧
+        -->	
+       <div class="crumbs">
+       		<span>订单管理</span>
+       		<p>the order management</p> 
+       		<p class="crumbs02">收货地址</p>
+       </div>
+       <include file="public:left"/>
+       <!--
+       	作者：rich_lee
+       	描述：面包屑 面包屑导航 完成
+       -->
+
+
+       <!-- 收货地址 -->
+       <div class="L_adress">
+       		<dl>
+       			<dt>收货地址</dt>
+	       			<dd class="add_new">
+	       					<!-- <a id="add_f" style="cursor: pointer;" onclick="add()">新增收货地址</a> -->
+	       					电话号码、手机号码选填一项其余均为必填项
+	       			</dd>
+	       			<form id="add_form" method="post" action="{:U('ordermanage/save_receiving_address')}">
+	       				<dd class="add_area">
+	       					<label>所在地区：</label>
+	       					<if condition="($address['city1'] eq '') or ($address['city2'] eq '') or ($address['city3'] eq '')">
+				       			<select id="s_province" name="s_province"></select>
+							    <select id="s_city" name="s_city"></select>
+							    <select id="s_county" name="s_county"></select>
+						    <else />
+							    <div id="spanposition" >
+							    	<label id="l_province" name="province">{$address.city1}</label>
+							    	<label id="l_city" name="city">{$address.city2}</label>
+							    	<label id="l_county" name="county">{$address.city3}</label>
+							    	<label><a style="color:red;cursor:pointer;" onclick="edit()">修改</a></label>
+							    </div>
+							    <div id="iptposition" style="display:none">
+							    	<select id="s_province" name="s_province"></select>
+								    <select id="s_city" name="s_city" ></select>
+								    <select id="s_county" name="s_county"></select>
+								    <img style="margin-left:10px" src="__PUBLIC__images/L_dot.png">
+								</div>	
+						    </if>
+			       			<!-- <select id="s_province" name="s_province"></select>
+						    <select id="s_city" name="s_city" ></select>
+						    <select id="s_county" name="s_county"></select> -->
+						    <script class="resources library" src="__PUBLIC__js/area.js" type="text/javascript"></script>
+	    					<script type="text/javascript">_init_area();</script>
+	       			</dd>
+	       			<dd class="detail_ad">
+	       				<label>详细地址</label>
+	       				<textarea name="address" required="required" placeholder="建议您如实填写详细地址，例如街道名称，门牌号码，楼层和房间号等信息">{$address.address}</textarea>
+	       				<img style="margin-left:10px" src="__PUBLIC__images/L_dot.png">
+	       			</dd>
+	       			<dd>
+	       				<label>邮政编码</label>
+	       				<input type="text" name="postcode" required="required" placeholder="若您不清楚邮递区号，请填写000000" value="{$address.postcode}">
+	       				<img style="margin-left:10px" src="__PUBLIC__images/L_dot.png">
+	       			</dd>
+	       			<dd>
+	       				<label>收货人姓名</label>
+	       				<input type="text" name="name" required="required" placeholder="长度不可超过25个字符" value="{$address.name}">
+	       				<img style="margin-left:10px" src="__PUBLIC__images/L_dot.png">
+	       			</dd>
+	       			<dd>
+	       				<label>手机号码</label>
+	       				<input type="text" name="mobile_phone" required="required" id="phonenumber" placeholder="请输入正确的手机号码格式" value="{$address.mobile_phone}">
+	       				<img style="margin-left:10px" src="__PUBLIC__images/L_dot.png">
+	       			</dd>
+					<script>
+					 var phonenumber = document.getElementById("phonenumber");
+					 var mobile = parseInt(phonenumber.value);
+						phonenumber.onblur =  function(){
+						
+        if(phonenumber.value.length==0)
+        {
+			alert('不允许为空！');
+           phonenumber.focus();
+           return false;
+        }    
+        if(phonenumber.value.length!=11)
+        {
+            alert('手机号码的长度为11位！');
+            phonenumber.focus();
+            return false;
+        }
+        
+        var myreg = /^0?1[3|4|5|7|8][0-9]\d{8}$/;
+        if(!myreg.test(phonenumber.value))
+        {
+            alert('请输入有效的手机号码！');
+            phonenumber.focus();
+            return false;
+        }
+    }
+					</script>
+	       			<dd class="table_phone">
+	       				<label>座机号码</label>
+	       				<input type="text" placeholder="区号" name="quhao" value="{$address.quhao}">
+	       				<b>-</b>
+	       				<input type="text" placeholder="电话号码" name="home_phone" value="{$address.home_phone}">
+	       				<img style="margin-left:10px" src="__PUBLIC__images/L_dot.png">
+	       			</dd>
+	       			<!-- <dd class="design_common">
+	       				<input type="checkbox" value="1" name="moren">
+						设置为默认
+	       			</dd> -->
+	       			<dd>
+	       				<input class="getgoods_save" type="submit" name="" id="" value="保存" />
+	       			</dd>
+       			</form>
+       		</dl>
+       		<!-- <div class="had_adress">
+       			<?php $ot = 10-$count;?>
+       			<div class="ad_limit">已保存了{$count}条地址，还能保存{$ot}条地址</div>
+       			<div class="had_sheet_head">
+       				<label class="hadad_label1">收货人</label>
+       				<label class="hadad_label2">所在地区</label>
+       				<label class="hadad_label3">详细地址</label>
+       				<label class="hadad_label4">邮编</label>
+       				<label class="hadad_label5">手机/电话</label>
+       				<label class="hadad_label6">操作</label>
+       			</div>
+       			<ul>
+       			<volist name="address" id="vo">
+       				<li class="getgood_firstli">
+       					<div class="get_porson">{$vo.name}</div>
+       					<div class="where">{$vo.city1} {$vo.city2} {$vo.city3}</div>
+       					<div class="detail_adress">{$vo.address}</div>
+       					<div class="zip_code">{$vo.postcode}</div>
+       					<div class="phone">{$vo.mobile_phone}</div>
+       					<div class="operate">
+       						<a href="#">修改</a>
+       						<label>|</label>
+       						<a href="{:U('ordermanage/delete_address' ,array('id' => $vo['id']))}">删除</a>
+       					</div>
+       					<if condition="$vo.moren eq 1">
+       						<div class="mo_sure"><a style="background-color:#28FF28;color:#FFFFFF;">默认地址</a></div>
+       					<else />
+       						<div class="mo_sure"><a href="{:U('ordermanage/moren_address',array('id' => $vo['id']))}">默认地址</a></div>
+       					</if>
+       				</li>
+       			</volist>
+       			</ul>
+       		</div> -->
+       </div>
+       <!-- 收货地址-结束 -->
+
+	<script type="text/javascript">
+
+		// function add () {
+		// 	if($("#add_form").css("display")=="none"){
+		// 		$("#add_form").show();
+		// 	}else{
+		// 		$("#add_form").hide();
+		// 	}
+		// }
+
+		function edit() {
+			document.getElementById("spanposition").style.display="none";//隐藏
+			document.getElementById("iptposition").style.display="block";//显示
+			// document.getElementById("s_county").style.visibility="visible";//显示
+		}
+
+		var Gid  = document.getElementById ;
+		var showArea = function(){
+			Gid('show').innerHTML = "<h3>省" + Gid('s_province').value + " - 市" + 	
+			Gid('s_city').value + " - 县/区" + 
+			Gid('s_county').value + "</h3>"
+		}
+		Gid('s_county').setAttribute('onchange','showArea()');
+	</script>  
+	</div>	
+	<!--
+    	作者：rich
+    	描述：friend ++ content end
+    -->	
+    	</div>
+
+	<include file="public:bottom"/>
+</body>
+</html>

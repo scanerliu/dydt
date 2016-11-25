@@ -1,0 +1,1 @@
+<?php	return array ( 0 => 'category_Name', 1 => 'class_father_id', 2 => 'class_child_id', 3 => 'id', 4 => 'other_id', '_autoinc' => false, '_pk' => 'category_Name', '_type' => array ( 'category_Name' => 'char(18)', 'class_father_id' => 'varchar(20)', 'class_child_id' => 'varchar(20)', 'id' => 'int(10)', 'other_id' => 'int(10)', ), );?>

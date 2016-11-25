@@ -1,0 +1,1 @@
+<?php	return array ( 0 => 'index_banner_id', 1 => 'img', 2 => 'link', '_autoinc' => true, '_pk' => 'index_banner_id', '_type' => array ( 'index_banner_id' => 'int(100)', 'img' => 'varchar(100)', 'link' => 'varchar(100)', ), );?>

@@ -1,0 +1,1279 @@
+[ 2016-07-07T14:00:58+08:00 ] 183.6.132.67 /admin.php/system/base
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `system` [ RunTime:0.000000s ]
+SQL: SELECT `atuo_time` FROM `system` LIMIT 1   [ RunTime:0.015600s ]
+SQL: SHOW COLUMNS FROM `order` [ RunTime:0.000000s ]
+SQL: SELECT `endtime`,`order_id`,`need_pay` FROM `order` WHERE ( `status` = 3 )  [ RunTime:0.109201s ]
+SQL: SELECT * FROM `system` WHERE ( system_id=1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `product` [ RunTime:0.015600s ]
+SQL: SELECT `product_id` FROM `product` WHERE ( `able_discount` = 1 )  [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 2 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 2 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 2 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 144 ) LIMIT 1   [ RunTime:0.015600s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 144 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 144 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 146 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 146 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 146 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 147 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 147 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 147 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 148 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 148 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 148 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 149 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 149 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 149 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 150 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 150 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 150 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 151 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 151 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 151 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 154 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 154 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 154 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 155 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 155 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 155 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 156 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 156 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 156 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 135 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 135 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 135 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 141 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 141 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 141 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 142 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 142 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 142 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 143 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 143 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 143 ) [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `able_discount` = '' ) [ RunTime:0.982801s ]
+SQL: select product_id  , product_num   from `order_product`  where order_id  in (  select  order_id  from  `order`  where  status = 2   and stock_reduce <> 1) [ RunTime:1.747204s ]
+SQL: update `order` set stock_reduce=1 , time2=1467871257 where  stock_reduce<>1 and status <> 1  [ RunTime:1.232402s ]
+SQL: UPDATE `system` SET `atuo_time`=1467871258 WHERE ( `system_id` = 1 ) [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `record` [ RunTime:0.015600s ]
+SQL: INSERT INTO `record` (`time`,`remark`) VALUES (1467871258,'网站正常访问操作') [ RunTime:0.015600s ]
+NOTIC: [2] Missing argument 1 for beginAction::run() D:\wwwroot\pc_dtyd\admin\Lib\Action\beginAction.class.php 第 16 行.
+SQL: SELECT * FROM `system` LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000000s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.015600s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015600s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000000s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000000s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-07-07T14:01:09+08:00 ] 183.6.132.67 /admin.php/system/baseFunUpload
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `system` [ RunTime:0.000000s ]
+SQL: SELECT `atuo_time` FROM `system` LIMIT 1   [ RunTime:0.015600s ]
+SQL: SHOW COLUMNS FROM `order` [ RunTime:0.000000s ]
+SQL: SELECT `endtime`,`order_id`,`need_pay` FROM `order` WHERE ( `status` = 3 )  [ RunTime:0.015600s ]
+SQL: SELECT * FROM `system` WHERE ( system_id=1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `product` [ RunTime:0.000000s ]
+SQL: SELECT `product_id` FROM `product` WHERE ( `able_discount` = 1 )  [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 2 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 2 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 2 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 144 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 144 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 144 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 146 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 146 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 146 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 147 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 147 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 147 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 148 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 148 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 148 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 149 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 149 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 149 ) [ RunTime:0.015600s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 150 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 150 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 150 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 151 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 151 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 151 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 154 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 154 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 154 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 155 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 155 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 155 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 156 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 156 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 156 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 135 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 135 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 135 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 141 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 141 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 141 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 142 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 142 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 142 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 143 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 143 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 143 ) [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `able_discount` = '' ) [ RunTime:0.982801s ]
+SQL: select product_id  , product_num   from `order_product`  where order_id  in (  select  order_id  from  `order`  where  status = 2   and stock_reduce <> 1) [ RunTime:0.000000s ]
+SQL: update `order` set stock_reduce=1 , time2=1467871268 where  stock_reduce<>1 and status <> 1  [ RunTime:1.248003s ]
+SQL: UPDATE `system` SET `atuo_time`=1467871269 WHERE ( `system_id` = 1 ) [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `record` [ RunTime:0.000000s ]
+SQL: INSERT INTO `record` (`time`,`remark`) VALUES (1467871269,'网站正常访问操作') [ RunTime:0.015600s ]
+NOTIC: [2] Missing argument 1 for beginAction::run() D:\wwwroot\pc_dtyd\admin\Lib\Action\beginAction.class.php 第 16 行.
+SQL: UPDATE `system` SET `title`='真善美',`keywords`='真善美药房 网上药店 ',`description`='真善美药店',`link`='<a href=\'http://163.com\'>网易</a><a href=\"http://m.kuaidi100.com\" target=\"_blank\">快递查询</a>',`qq`='3170476224',`search_keyword`='感冒灵颗粒/丹参片',`weibo`='1111',`tel`='1582936266',`express_fee`='22',`discount`='',`reduce_money1`='100',`reduce_money2`='80',`get_cash`='10',`use_cash`='1',`service_charge`='1',`contract`='' WHERE ( `system_id` = 1 ) [ RunTime:0.000000s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000000s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.015600s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015600s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000000s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000000s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-07-07T14:01:10+08:00 ] 183.6.132.67 /admin.php/system/base
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `system` [ RunTime:0.000000s ]
+SQL: SELECT `atuo_time` FROM `system` LIMIT 1   [ RunTime:0.015600s ]
+SQL: SHOW COLUMNS FROM `record` [ RunTime:0.000000s ]
+SQL: INSERT INTO `record` (`time`,`remark`) VALUES (1467871270,'网站正常访问操作') [ RunTime:0.015600s ]
+NOTIC: [2] Missing argument 1 for beginAction::run() D:\wwwroot\pc_dtyd\admin\Lib\Action\beginAction.class.php 第 16 行.
+SQL: SELECT * FROM `system` LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000000s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.015600s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015600s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000000s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000000s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-07-07T14:03:25+08:00 ] 183.6.132.67 /admin.php/order/orderList
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `system` [ RunTime:0.015600s ]
+SQL: SELECT `atuo_time` FROM `system` LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `order` [ RunTime:0.015600s ]
+SQL: SELECT `endtime`,`order_id`,`need_pay` FROM `order` WHERE ( `status` = 3 )  [ RunTime:0.109200s ]
+SQL: SELECT * FROM `system` WHERE ( system_id=1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `product` [ RunTime:0.000000s ]
+SQL: SELECT `product_id` FROM `product` WHERE ( `able_discount` = 1 )  [ RunTime:0.015600s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 2 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 2 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 2 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 144 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 144 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 144 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 146 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 146 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 146 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 147 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 147 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 147 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 148 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 148 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 148 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 149 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 149 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 149 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 150 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 150 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 150 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 151 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 151 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 151 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 154 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 154 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 154 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 155 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 155 )  [ RunTime:0.015600s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 155 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 156 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 156 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 156 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 135 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 135 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 135 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 141 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 141 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 141 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 142 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 142 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 142 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 143 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 143 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 143 ) [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `able_discount` = '' ) [ RunTime:0.920402s ]
+SQL: select product_id  , product_num   from `order_product`  where order_id  in (  select  order_id  from  `order`  where  status = 2   and stock_reduce <> 1) [ RunTime:1.528802s ]
+SQL: update `order` set stock_reduce=1 , time2=1467871398 where  stock_reduce<>1 and status <> 1  [ RunTime:0.889202s ]
+SQL: UPDATE `system` SET `atuo_time`=1467871399 WHERE ( `system_id` = 1 ) [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `record` [ RunTime:0.000000s ]
+SQL: INSERT INTO `record` (`time`,`remark`) VALUES (1467871399,'网站正常访问操作') [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: status D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 28 行.
+NOTIC: [8] Undefined index: keyword D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 31 行.
+NOTIC: [8] Undefined index: begtime D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 48 行.
+NOTIC: [8] Undefined index: begtime D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 56 行.
+NOTIC: [8] Undefined index: endtime D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 63 行.
+NOTIC: [8] Undefined index: _string D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 106 行.
+SQL: SELECT DISTINCT  SUM(need_pay) AS tp_sum FROM `order` WHERE ( `confirm` <> 2 ) AND ( status  in (2,3,4,5) ) LIMIT 1   [ RunTime:0.078000s ]
+NOTIC: [8] Undefined index: _string D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 115 行.
+SQL: SELECT DISTINCT  SUM(need_pay) AS tp_sum FROM `order` WHERE ( `confirm` <> 2 ) AND ( status  in (3,4,5) ) LIMIT 1   [ RunTime:0.078000s ]
+NOTIC: [8] Undefined index: _string D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 124 行.
+SQL: SELECT DISTINCT  SUM(need_pay) AS tp_sum FROM `order` WHERE ( `confirm` <> 2 ) AND ( status  in (2) ) LIMIT 1   [ RunTime:0.078000s ]
+SQL: SELECT DISTINCT  COUNT(*) AS tp_count FROM `order` WHERE ( `confirm` <> 2 ) LIMIT 1   [ RunTime:0.062400s ]
+SQL: SELECT DISTINCT  * FROM `order` left join `user` on user.user_id=order.user_id  WHERE ( `confirm` <> 2 ) ORDER BY order_id desc LIMIT 0,10   [ RunTime:4.867209s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 87 行.
+SQL: SHOW COLUMNS FROM `order_product` [ RunTime:0.015600s ]
+NOTIC: [8] Use of undefined constant order_id - assumed 'order_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 87 行.
+SQL: SELECT * FROM `order_product` WHERE ( order_id=100481 )  [ RunTime:0.078000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 89 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+SQL: SHOW COLUMNS FROM `product_attribute_list` [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=3 and product_id=2 ) LIMIT 1   [ RunTime:0.015600s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=4 and product_id=2 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=1 and product_id=2 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 89 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 87 行.
+NOTIC: [8] Use of undefined constant order_id - assumed 'order_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 87 行.
+SQL: SELECT * FROM `order_product` WHERE ( order_id=100476 )  [ RunTime:0.078000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 89 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=3 and product_id=2 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=4 and product_id=2 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=1 and product_id=2 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 89 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 87 行.
+NOTIC: [8] Use of undefined constant order_id - assumed 'order_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 87 行.
+SQL: SELECT * FROM `order_product` WHERE ( order_id=100474 )  [ RunTime:0.062400s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 89 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=3 and product_id=2 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=4 and product_id=2 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=1 and product_id=2 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 89 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=3 and product_id=144 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=4 and product_id=144 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=1 and product_id=144 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 89 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 87 行.
+NOTIC: [8] Use of undefined constant order_id - assumed 'order_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 87 行.
+SQL: SELECT * FROM `order_product` WHERE ( order_id=100471 )  [ RunTime:0.078001s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 89 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 87 行.
+NOTIC: [8] Use of undefined constant order_id - assumed 'order_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 87 行.
+SQL: SELECT * FROM `order_product` WHERE ( order_id=100470 )  [ RunTime:0.062400s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 89 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=3 and product_id=158 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=4 and product_id=158 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=1 and product_id=158 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 89 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 87 行.
+NOTIC: [8] Use of undefined constant order_id - assumed 'order_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 87 行.
+SQL: SELECT * FROM `order_product` WHERE ( order_id=100469 )  [ RunTime:0.078000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 89 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=3 and product_id=158 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=4 and product_id=158 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=1 and product_id=158 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 89 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 87 行.
+NOTIC: [8] Use of undefined constant order_id - assumed 'order_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 87 行.
+SQL: SELECT * FROM `order_product` WHERE ( order_id=100468 )  [ RunTime:0.062400s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 89 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=3 and product_id=158 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=4 and product_id=158 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=1 and product_id=158 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 89 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 87 行.
+NOTIC: [8] Use of undefined constant order_id - assumed 'order_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 87 行.
+SQL: SELECT * FROM `order_product` WHERE ( order_id=100467 )  [ RunTime:0.078000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 89 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=3 and product_id=158 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=4 and product_id=158 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=1 and product_id=158 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 89 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 87 行.
+NOTIC: [8] Use of undefined constant order_id - assumed 'order_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 87 行.
+SQL: SELECT * FROM `order_product` WHERE ( order_id=100466 )  [ RunTime:0.062400s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 89 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=3 and product_id=158 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=4 and product_id=158 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=1 and product_id=158 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 89 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 87 行.
+NOTIC: [8] Use of undefined constant order_id - assumed 'order_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 87 行.
+SQL: SELECT * FROM `order_product` WHERE ( order_id=100465 )  [ RunTime:0.078000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 89 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=3 and product_id=158 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=4 and product_id=158 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=1 and product_id=158 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 89 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000000s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: status D:\wwwroot\pc_dtyd\admin\Runtime\Cache\15322a5d21b66ea86139880190438035.php 第 26 行.
+NOTIC: [8] Undefined index: keyword D:\wwwroot\pc_dtyd\admin\Runtime\Cache\15322a5d21b66ea86139880190438035.php 第 29 行.
+NOTIC: [8] Undefined index: time D:\wwwroot\pc_dtyd\admin\Runtime\Cache\15322a5d21b66ea86139880190438035.php 第 43 行.
+NOTIC: [8] Undefined index: begtime D:\wwwroot\pc_dtyd\admin\Runtime\Cache\15322a5d21b66ea86139880190438035.php 第 46 行.
+NOTIC: [8] Undefined index: endtime D:\wwwroot\pc_dtyd\admin\Runtime\Cache\15322a5d21b66ea86139880190438035.php 第 49 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.015600s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015600s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000000s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000000s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.015600s ]
+INFO: [ view_end ] --END-- [ RunTime:0.015600s ]
+
+[ 2016-07-07T16:02:35+08:00 ] 183.69.197.236 /admin.php/order/orderList
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `system` [ RunTime:0.109200s ]
+SQL: SELECT `atuo_time` FROM `system` LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `order` [ RunTime:0.015600s ]
+SQL: SELECT `endtime`,`order_id`,`need_pay` FROM `order` WHERE ( `status` = 3 )  [ RunTime:0.015600s ]
+SQL: SELECT * FROM `system` WHERE ( system_id=1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `product` [ RunTime:0.000000s ]
+SQL: SELECT `product_id` FROM `product` WHERE ( `able_discount` = 1 )  [ RunTime:0.015600s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 2 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 2 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 2 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 144 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 144 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 144 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 146 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 146 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 146 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 147 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 147 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 147 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 148 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 148 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 148 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 149 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 149 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 149 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 150 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 150 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 150 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 151 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 151 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 151 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 154 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 154 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 154 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 155 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 155 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 155 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 156 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 156 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 156 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 135 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 135 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 135 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 141 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 141 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 141 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 142 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 142 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 142 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 143 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 143 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 143 ) [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `able_discount` = '' ) [ RunTime:0.982802s ]
+SQL: select product_id  , product_num   from `order_product`  where order_id  in (  select  order_id  from  `order`  where  status = 2   and stock_reduce <> 1) [ RunTime:0.000000s ]
+SQL: update `order` set stock_reduce=1 , time2=1467878554 where  stock_reduce<>1 and status <> 1  [ RunTime:0.951602s ]
+SQL: UPDATE `system` SET `atuo_time`=1467878555 WHERE ( `system_id` = 1 ) [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `record` [ RunTime:0.000000s ]
+SQL: INSERT INTO `record` (`time`,`remark`) VALUES (1467878555,'网站正常访问操作') [ RunTime:0.015600s ]
+NOTIC: [8] Undefined index: status D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 28 行.
+NOTIC: [8] Undefined index: keyword D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 31 行.
+NOTIC: [8] Undefined index: begtime D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 48 行.
+NOTIC: [8] Undefined index: begtime D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 56 行.
+NOTIC: [8] Undefined index: endtime D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 63 行.
+NOTIC: [8] Undefined index: _string D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 106 行.
+SQL: SELECT DISTINCT  SUM(need_pay) AS tp_sum FROM `order` WHERE ( `confirm` <> 2 ) AND ( status  in (2,3,4,5) ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: _string D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 115 行.
+SQL: SELECT DISTINCT  SUM(need_pay) AS tp_sum FROM `order` WHERE ( `confirm` <> 2 ) AND ( status  in (3,4,5) ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: _string D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 124 行.
+SQL: SELECT DISTINCT  SUM(need_pay) AS tp_sum FROM `order` WHERE ( `confirm` <> 2 ) AND ( status  in (2) ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT DISTINCT  COUNT(*) AS tp_count FROM `order` WHERE ( `confirm` <> 2 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT DISTINCT  * FROM `order` left join `user` on user.user_id=order.user_id  WHERE ( `confirm` <> 2 ) ORDER BY order_id desc LIMIT 0,10   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 87 行.
+SQL: SHOW COLUMNS FROM `order_product` [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant order_id - assumed 'order_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 87 行.
+SQL: SELECT * FROM `order_product` WHERE ( order_id=100481 )  [ RunTime:0.015600s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 89 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+SQL: SHOW COLUMNS FROM `product_attribute_list` [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=3 and product_id=2 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=4 and product_id=2 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=1 and product_id=2 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 89 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 87 行.
+NOTIC: [8] Use of undefined constant order_id - assumed 'order_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 87 行.
+SQL: SELECT * FROM `order_product` WHERE ( order_id=100476 )  [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 89 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=3 and product_id=2 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=4 and product_id=2 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=1 and product_id=2 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 89 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 87 行.
+NOTIC: [8] Use of undefined constant order_id - assumed 'order_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 87 行.
+SQL: SELECT * FROM `order_product` WHERE ( order_id=100474 )  [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 89 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=3 and product_id=2 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=4 and product_id=2 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=1 and product_id=2 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 89 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=3 and product_id=144 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=4 and product_id=144 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=1 and product_id=144 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 89 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 87 行.
+NOTIC: [8] Use of undefined constant order_id - assumed 'order_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 87 行.
+SQL: SELECT * FROM `order_product` WHERE ( order_id=100471 )  [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 89 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 87 行.
+NOTIC: [8] Use of undefined constant order_id - assumed 'order_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 87 行.
+SQL: SELECT * FROM `order_product` WHERE ( order_id=100470 )  [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 89 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=3 and product_id=158 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=4 and product_id=158 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=1 and product_id=158 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 89 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 87 行.
+NOTIC: [8] Use of undefined constant order_id - assumed 'order_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 87 行.
+SQL: SELECT * FROM `order_product` WHERE ( order_id=100469 )  [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 89 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=3 and product_id=158 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=4 and product_id=158 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=1 and product_id=158 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 89 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 87 行.
+NOTIC: [8] Use of undefined constant order_id - assumed 'order_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 87 行.
+SQL: SELECT * FROM `order_product` WHERE ( order_id=100468 )  [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 89 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=3 and product_id=158 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=4 and product_id=158 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=1 and product_id=158 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 89 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 87 行.
+NOTIC: [8] Use of undefined constant order_id - assumed 'order_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 87 行.
+SQL: SELECT * FROM `order_product` WHERE ( order_id=100467 )  [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 89 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=3 and product_id=158 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=4 and product_id=158 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=1 and product_id=158 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 89 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 87 行.
+NOTIC: [8] Use of undefined constant order_id - assumed 'order_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 87 行.
+SQL: SELECT * FROM `order_product` WHERE ( order_id=100466 )  [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 89 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=3 and product_id=158 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=4 and product_id=158 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=1 and product_id=158 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 89 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 87 行.
+NOTIC: [8] Use of undefined constant order_id - assumed 'order_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 87 行.
+SQL: SELECT * FROM `order_product` WHERE ( order_id=100465 )  [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 89 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=3 and product_id=158 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=4 and product_id=158 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=1 and product_id=158 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 89 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000000s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: status D:\wwwroot\pc_dtyd\admin\Runtime\Cache\15322a5d21b66ea86139880190438035.php 第 26 行.
+NOTIC: [8] Undefined index: keyword D:\wwwroot\pc_dtyd\admin\Runtime\Cache\15322a5d21b66ea86139880190438035.php 第 29 行.
+NOTIC: [8] Undefined index: time D:\wwwroot\pc_dtyd\admin\Runtime\Cache\15322a5d21b66ea86139880190438035.php 第 43 行.
+NOTIC: [8] Undefined index: begtime D:\wwwroot\pc_dtyd\admin\Runtime\Cache\15322a5d21b66ea86139880190438035.php 第 46 行.
+NOTIC: [8] Undefined index: endtime D:\wwwroot\pc_dtyd\admin\Runtime\Cache\15322a5d21b66ea86139880190438035.php 第 49 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.031200s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031200s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000000s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000000s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-07-07T16:08:05+08:00 ] 183.69.197.236 /admin.php/order/orderList
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `system` [ RunTime:0.015600s ]
+SQL: SELECT `atuo_time` FROM `system` LIMIT 1   [ RunTime:0.015600s ]
+SQL: SHOW COLUMNS FROM `order` [ RunTime:0.000000s ]
+SQL: SELECT `endtime`,`order_id`,`need_pay` FROM `order` WHERE ( `status` = 3 )  [ RunTime:0.015600s ]
+SQL: SELECT * FROM `system` WHERE ( system_id=1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `product` [ RunTime:0.000000s ]
+SQL: SELECT `product_id` FROM `product` WHERE ( `able_discount` = 1 )  [ RunTime:0.015600s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 2 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 2 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 2 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 144 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 144 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 144 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 146 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 146 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 146 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 147 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 147 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 147 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 148 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 148 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 148 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 149 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 149 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 149 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 150 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 150 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 150 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 151 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 151 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 151 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 154 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 154 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 154 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 155 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 155 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 155 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 156 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 156 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 156 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 135 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 135 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 135 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 141 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 141 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 141 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 142 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 142 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 142 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 143 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 143 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 143 ) [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `able_discount` = '' ) [ RunTime:0.982802s ]
+SQL: select product_id  , product_num   from `order_product`  where order_id  in (  select  order_id  from  `order`  where  status = 2   and stock_reduce <> 1) [ RunTime:0.000000s ]
+SQL: update `order` set stock_reduce=1 , time2=1467878884 where  stock_reduce<>1 and status <> 1  [ RunTime:0.920402s ]
+SQL: UPDATE `system` SET `atuo_time`=1467878885 WHERE ( `system_id` = 1 ) [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `record` [ RunTime:0.000000s ]
+SQL: INSERT INTO `record` (`time`,`remark`) VALUES (1467878885,'网站正常访问操作') [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: status D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 28 行.
+NOTIC: [8] Undefined index: keyword D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 31 行.
+NOTIC: [8] Undefined index: begtime D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 48 行.
+NOTIC: [8] Undefined index: begtime D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 56 行.
+NOTIC: [8] Undefined index: endtime D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 63 行.
+NOTIC: [8] Undefined index: _string D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 106 行.
+SQL: SELECT DISTINCT  SUM(need_pay) AS tp_sum FROM `order` WHERE ( `confirm` <> 2 ) AND ( status  in (2,3,4,5) ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: _string D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 115 行.
+SQL: SELECT DISTINCT  SUM(need_pay) AS tp_sum FROM `order` WHERE ( `confirm` <> 2 ) AND ( status  in (3,4,5) ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: _string D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 124 行.
+SQL: SELECT DISTINCT  SUM(need_pay) AS tp_sum FROM `order` WHERE ( `confirm` <> 2 ) AND ( status  in (2) ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT DISTINCT  COUNT(*) AS tp_count FROM `order` WHERE ( `confirm` <> 2 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT DISTINCT  * FROM `order` left join `user` on user.user_id=order.user_id  WHERE ( `confirm` <> 2 ) ORDER BY order_id desc LIMIT 0,10   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 87 行.
+SQL: SHOW COLUMNS FROM `order_product` [ RunTime:0.015600s ]
+NOTIC: [8] Use of undefined constant order_id - assumed 'order_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 87 行.
+SQL: SELECT * FROM `order_product` WHERE ( order_id=100481 )  [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 89 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+SQL: SHOW COLUMNS FROM `product_attribute_list` [ RunTime:0.015600s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=3 and product_id=2 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=4 and product_id=2 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=1 and product_id=2 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 89 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 87 行.
+NOTIC: [8] Use of undefined constant order_id - assumed 'order_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 87 行.
+SQL: SELECT * FROM `order_product` WHERE ( order_id=100476 )  [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 89 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=3 and product_id=2 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=4 and product_id=2 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=1 and product_id=2 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 89 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 87 行.
+NOTIC: [8] Use of undefined constant order_id - assumed 'order_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 87 行.
+SQL: SELECT * FROM `order_product` WHERE ( order_id=100474 )  [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 89 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=3 and product_id=2 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=4 and product_id=2 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=1 and product_id=2 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 89 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=3 and product_id=144 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=4 and product_id=144 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=1 and product_id=144 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 89 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 87 行.
+NOTIC: [8] Use of undefined constant order_id - assumed 'order_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 87 行.
+SQL: SELECT * FROM `order_product` WHERE ( order_id=100471 )  [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 89 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 87 行.
+NOTIC: [8] Use of undefined constant order_id - assumed 'order_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 87 行.
+SQL: SELECT * FROM `order_product` WHERE ( order_id=100470 )  [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 89 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=3 and product_id=158 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=4 and product_id=158 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=1 and product_id=158 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 89 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 87 行.
+NOTIC: [8] Use of undefined constant order_id - assumed 'order_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 87 行.
+SQL: SELECT * FROM `order_product` WHERE ( order_id=100469 )  [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 89 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=3 and product_id=158 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=4 and product_id=158 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=1 and product_id=158 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 89 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 87 行.
+NOTIC: [8] Use of undefined constant order_id - assumed 'order_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 87 行.
+SQL: SELECT * FROM `order_product` WHERE ( order_id=100468 )  [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 89 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=3 and product_id=158 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=4 and product_id=158 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=1 and product_id=158 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 89 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 87 行.
+NOTIC: [8] Use of undefined constant order_id - assumed 'order_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 87 行.
+SQL: SELECT * FROM `order_product` WHERE ( order_id=100467 )  [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 89 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=3 and product_id=158 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=4 and product_id=158 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=1 and product_id=158 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 89 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 87 行.
+NOTIC: [8] Use of undefined constant order_id - assumed 'order_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 87 行.
+SQL: SELECT * FROM `order_product` WHERE ( order_id=100466 )  [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 89 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=3 and product_id=158 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=4 and product_id=158 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=1 and product_id=158 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 89 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 87 行.
+NOTIC: [8] Use of undefined constant order_id - assumed 'order_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 87 行.
+SQL: SELECT * FROM `order_product` WHERE ( order_id=100465 )  [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 89 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=3 and product_id=158 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=4 and product_id=158 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=1 and product_id=158 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 89 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000000s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: status D:\wwwroot\pc_dtyd\admin\Runtime\Cache\15322a5d21b66ea86139880190438035.php 第 26 行.
+NOTIC: [8] Undefined index: keyword D:\wwwroot\pc_dtyd\admin\Runtime\Cache\15322a5d21b66ea86139880190438035.php 第 29 行.
+NOTIC: [8] Undefined index: time D:\wwwroot\pc_dtyd\admin\Runtime\Cache\15322a5d21b66ea86139880190438035.php 第 43 行.
+NOTIC: [8] Undefined index: begtime D:\wwwroot\pc_dtyd\admin\Runtime\Cache\15322a5d21b66ea86139880190438035.php 第 46 行.
+NOTIC: [8] Undefined index: endtime D:\wwwroot\pc_dtyd\admin\Runtime\Cache\15322a5d21b66ea86139880190438035.php 第 49 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.015600s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015600s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000000s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000000s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-07-07T16:09:30+08:00 ] 183.69.197.236 /admin.php/order/orderList
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `system` [ RunTime:0.000000s ]
+SQL: SELECT `atuo_time` FROM `system` LIMIT 1   [ RunTime:0.015600s ]
+SQL: SHOW COLUMNS FROM `order` [ RunTime:0.000000s ]
+SQL: SELECT `endtime`,`order_id`,`need_pay` FROM `order` WHERE ( `status` = 3 )  [ RunTime:0.015600s ]
+SQL: SELECT * FROM `system` WHERE ( system_id=1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `product` [ RunTime:0.000000s ]
+SQL: SELECT `product_id` FROM `product` WHERE ( `able_discount` = 1 )  [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 2 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 2 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 2 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 144 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 144 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 144 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 146 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 146 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 146 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 147 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 147 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 147 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 148 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 148 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 148 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 149 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 149 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 149 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 150 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 150 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 150 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 151 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 151 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 151 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 154 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 154 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 154 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 155 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 155 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 155 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 156 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 156 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 156 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 135 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 135 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 135 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 141 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 141 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 141 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 142 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 142 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 142 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 143 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 143 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 143 ) [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `able_discount` = '' ) [ RunTime:0.998402s ]
+SQL: select product_id  , product_num   from `order_product`  where order_id  in (  select  order_id  from  `order`  where  status = 2   and stock_reduce <> 1) [ RunTime:0.000000s ]
+SQL: update `order` set stock_reduce=1 , time2=1467878968 where  stock_reduce<>1 and status <> 1  [ RunTime:1.248002s ]
+SQL: UPDATE `system` SET `atuo_time`=1467878969 WHERE ( `system_id` = 1 ) [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `record` [ RunTime:0.000000s ]
+SQL: INSERT INTO `record` (`time`,`remark`) VALUES (1467878969,'网站正常访问操作') [ RunTime:0.015600s ]
+NOTIC: [8] Undefined index: status D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 28 行.
+NOTIC: [8] Undefined index: keyword D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 31 行.
+NOTIC: [8] Undefined index: begtime D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 48 行.
+NOTIC: [8] Undefined index: begtime D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 56 行.
+NOTIC: [8] Undefined index: endtime D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 63 行.
+NOTIC: [8] Undefined index: _string D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 106 行.
+SQL: SELECT DISTINCT  SUM(need_pay) AS tp_sum FROM `order` WHERE ( `confirm` <> 2 ) AND ( status  in (2,3,4,5) ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: _string D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 115 行.
+SQL: SELECT DISTINCT  SUM(need_pay) AS tp_sum FROM `order` WHERE ( `confirm` <> 2 ) AND ( status  in (3,4,5) ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: _string D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 124 行.
+SQL: SELECT DISTINCT  SUM(need_pay) AS tp_sum FROM `order` WHERE ( `confirm` <> 2 ) AND ( status  in (2) ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT DISTINCT  COUNT(*) AS tp_count FROM `order` WHERE ( `confirm` <> 2 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT DISTINCT  * FROM `order` left join `user` on user.user_id=order.user_id  WHERE ( `confirm` <> 2 ) ORDER BY order_id desc LIMIT 0,10   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 87 行.
+SQL: SHOW COLUMNS FROM `order_product` [ RunTime:0.015600s ]
+NOTIC: [8] Use of undefined constant order_id - assumed 'order_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 87 行.
+SQL: SELECT * FROM `order_product` WHERE ( order_id=100481 )  [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 89 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+SQL: SHOW COLUMNS FROM `product_attribute_list` [ RunTime:0.015600s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=3 and product_id=2 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=4 and product_id=2 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=1 and product_id=2 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 89 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 87 行.
+NOTIC: [8] Use of undefined constant order_id - assumed 'order_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 87 行.
+SQL: SELECT * FROM `order_product` WHERE ( order_id=100476 )  [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 89 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=3 and product_id=2 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=4 and product_id=2 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=1 and product_id=2 ) LIMIT 1   [ RunTime:0.015600s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 89 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 87 行.
+NOTIC: [8] Use of undefined constant order_id - assumed 'order_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 87 行.
+SQL: SELECT * FROM `order_product` WHERE ( order_id=100474 )  [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 89 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=3 and product_id=2 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=4 and product_id=2 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=1 and product_id=2 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 89 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=3 and product_id=144 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=4 and product_id=144 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=1 and product_id=144 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 89 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 87 行.
+NOTIC: [8] Use of undefined constant order_id - assumed 'order_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 87 行.
+SQL: SELECT * FROM `order_product` WHERE ( order_id=100471 )  [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 89 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 87 行.
+NOTIC: [8] Use of undefined constant order_id - assumed 'order_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 87 行.
+SQL: SELECT * FROM `order_product` WHERE ( order_id=100470 )  [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 89 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=3 and product_id=158 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=4 and product_id=158 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=1 and product_id=158 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 89 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 87 行.
+NOTIC: [8] Use of undefined constant order_id - assumed 'order_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 87 行.
+SQL: SELECT * FROM `order_product` WHERE ( order_id=100469 )  [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 89 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=3 and product_id=158 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=4 and product_id=158 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=1 and product_id=158 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 89 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 87 行.
+NOTIC: [8] Use of undefined constant order_id - assumed 'order_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 87 行.
+SQL: SELECT * FROM `order_product` WHERE ( order_id=100468 )  [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 89 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=3 and product_id=158 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=4 and product_id=158 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=1 and product_id=158 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 89 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 87 行.
+NOTIC: [8] Use of undefined constant order_id - assumed 'order_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 87 行.
+SQL: SELECT * FROM `order_product` WHERE ( order_id=100467 )  [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 89 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=3 and product_id=158 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=4 and product_id=158 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=1 and product_id=158 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 89 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 87 行.
+NOTIC: [8] Use of undefined constant order_id - assumed 'order_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 87 行.
+SQL: SELECT * FROM `order_product` WHERE ( order_id=100466 )  [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 89 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=3 and product_id=158 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=4 and product_id=158 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=1 and product_id=158 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 89 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 87 行.
+NOTIC: [8] Use of undefined constant order_id - assumed 'order_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 87 行.
+SQL: SELECT * FROM `order_product` WHERE ( order_id=100465 )  [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 89 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=3 and product_id=158 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=4 and product_id=158 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=1 and product_id=158 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 89 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000000s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: status D:\wwwroot\pc_dtyd\admin\Runtime\Cache\15322a5d21b66ea86139880190438035.php 第 26 行.
+NOTIC: [8] Undefined index: keyword D:\wwwroot\pc_dtyd\admin\Runtime\Cache\15322a5d21b66ea86139880190438035.php 第 29 行.
+NOTIC: [8] Undefined index: time D:\wwwroot\pc_dtyd\admin\Runtime\Cache\15322a5d21b66ea86139880190438035.php 第 43 行.
+NOTIC: [8] Undefined index: begtime D:\wwwroot\pc_dtyd\admin\Runtime\Cache\15322a5d21b66ea86139880190438035.php 第 46 行.
+NOTIC: [8] Undefined index: endtime D:\wwwroot\pc_dtyd\admin\Runtime\Cache\15322a5d21b66ea86139880190438035.php 第 49 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.031200s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031200s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000000s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000000s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+

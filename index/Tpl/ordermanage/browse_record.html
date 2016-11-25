@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>浏览记录-{$top_content.title}</title>
+<meta name="Keywords" content="{$top_content.keywords}" />
+<meta name="Description" content="{$top_content.description}" />
+	<link rel="stylesheet" href="__PUBLIC__css/base.css">
+	<link rel="stylesheet" href="__PUBLIC__css/main.css">
+	<link rel="stylesheet" href="__PUBLIC__css/other.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__css/L_person.css">
+	<script style="text/javascript" src="__PUBLIC__js/jquery-1.11.0.js"></script>	
+	<script style="text/javascript" src="__PUBLIC__js/rich_lee.js"></script>
+</head>
+	<script type="text/javascript">
+	$(function(){
+		
+
+		nav_down();//
+	});
+		
+	</script>
+<body>
+<!-- top -->
+	<include file="public:header"/>
+<!-- topend -->
+<!-- search -->
+	<include file="public:search"/>
+<!-- searchend -->
+<!-- nav -->
+	<div class="content">
+		<include file="public:nav"/>
+		<!--
+        	作者：rich
+        	时间：2015-10-21
+        	描述：banner右侧
+        -->	
+       <div class="crumbs">
+       		<span>订单管理</span>
+       		<p>the order management</p> 
+       		<p class="crumbs02">浏览记录</p>
+       </div>
+       <include file="public:left"/>
+       <!--
+       	作者：rich_lee
+       	描述：面包屑 面包屑导航 完成
+       -->
+
+
+       <!-- 浏览记录 -->
+       <div class="see_history">
+       		<div class="see_title">浏览记录</div>
+       		<ul>
+       		<volist name="his" id="his">
+       			<li>
+       				<dl>
+       					<dt><a href="/shop/content/product_id/{$his.product_id}"><img src="/Uploads/{$his['img']}"></a></dt>
+       					<dd class="price">￥<span>{$his.price2}</span></dd>
+       					<dd class="goods_name">{$his.title}</dd>
+       					<dd class="goods_detail">{$his.subhead}</dd>
+       				</dl>
+              <div>{$his.time|date='Y-m-d H:i:s',###}</div>
+       			</li>
+       		</volist>
+       		</ul>
+       		<div class="L_page">
+       			{$page}
+       		</div>
+       </div>
+       <!-- 浏览记录-结束 -->    
+       
+	</div>	
+    	</div>
+
+    
+	<!--
+    	作者：rich
+    	描述：friend ++ content end
+    -->	
+	<include file="public:bottom"/>
+</body>
+</html>

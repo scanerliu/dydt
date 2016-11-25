@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+<title>{$top_content.title}</title>
+<meta name="Keywords" content="{$top_content.keywords}" />
+<meta name="Description" content="{$top_content.description}" />
+	<link rel="stylesheet" href="__PUBLIC__css/base.css">
+	<link rel="stylesheet" href="__PUBLIC__css/main.css">
+	<link rel="stylesheet" href="__PUBLIC__css/other.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__css/L_person.css">
+	<script style="text/javascript" src="__PUBLIC__js/jquery-1.11.0.js"></script>	
+	<script style="text/javascript" src="__PUBLIC__js/rich_lee.js"></script>
+</head>
+	<script type="text/javascript">
+	$(function(){
+		
+
+		nav_down();//
+	});
+		
+	</script>
+<body>
+<!-- top -->
+	<include file="public:header"/>
+<!-- topend -->
+<!-- search -->
+	<include file="public:search"/>
+<!-- searchend -->
+<!-- nav -->
+	<div class="content">
+		<include file="public:nav"/>
+		<!--
+        	作者：rich
+        	时间：2015-10-21
+        	描述：banner右侧
+        -->	
+       <div class="crumbs">
+       		<span>互动管理</span>
+       		<p>the Interactive management</p> 
+       		<p class="crumbs02">投诉建议</p>
+       </div>
+       <include file="public:left"/>
+       <!--
+       	作者：rich_lee
+       	描述：面包屑 面包屑导航 完成
+       -->
+
+        <div class="right_name"><a>历史反馈记录</a></div>
+          <section class="new_add">
+          <volist name="list" id="vo">
+            <dl style="margin-top:0;margin-left:13px;" class="right_service">
+              <dd><span>you : {$vo.note}</span><span style="float:right">{$vo.date|date='Y-m-d H:i:s',###}</span></dd>
+              <dd><span>{$vo.back_admin} : {$vo.back}</span><span style="float:right">{$vo.back_date|date='Y-m-d H:i:s',###}</span></dd>
+            </dl>
+          </volist>
+          </section>
+        <div class="L_page">{$page}</div>
+       <!-- 投诉建议 -->
+       <dl class="L_advice">
+       		<form method="post" action="{:U('manage/save_sug')}">
+	       		<dt>投诉建议</dt>
+	       		<dd class="your_advice">
+	       			<label>请您对我们服务不周处，留下您的宝贵意见，我们将竭诚为您服务</label>
+	       			<textarea placeholder="请留下您的投诉及建议" name="note"></textarea>
+	       		</dd>
+	       		<dd class="our_contact">
+	       			<label>为了方便我们联系您，请留下您的联系方式：</label>
+       				<div>
+       					<span>手机号码 :</span>
+       					<input type="text" name="mobile_phone"/>
+       				</div>
+       				
+       				<div>
+       					<span>E-Mial :</span>
+       					<input type="text" name="email"/>
+       				</div>
+       				<div>
+       					<span>QQ号码 :</span>
+       					<input type="text" name="qq"/>
+       				</div> 
+	       		</dd>
+	       		<dd>
+	       			<input class="advice_save" type="submit" name="" id="" value="保存" />
+	       		</dd>     				
+       		</form>
+       </dl>
+       <!-- 投诉建议-结束 -->
+       
+       
+       
+	</div>	
+	<!--
+    	作者：rich
+    	描述：friend ++ content end
+    -->	
+    	</div>
+
+	<include file="public:bottom"/>
+</body>
+</html>

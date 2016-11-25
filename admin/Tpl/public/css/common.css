@@ -1,0 +1,98 @@
+@charset "utf-8";
+*{ margin:0px; padding:0px;} 
+body{font-size:12px; color: #333333; line-height:18px; font-family:"宋体"; -webkit-text-size-adjust:none; background:#fcfcfc}
+a{TEXT-DECORATION: none; color: #333333;}
+i{ font-style:normal}
+b { font-weight:normal}
+ul{width:100%}
+ul ,li{list-style:none; }
+.clear{ font: 0px/0px sans-serif;clear:both;display: block; height:0px; overflow:hidden}
+img { border:none;}
+.hidden{display:none;}
+
+.i_login{ background:#f7f7f7; padding-top:200px;  }
+.i_login .content{ width:630px;  border:7px solid #eeeeee; margin:0px auto; background:#FFF url(../images/a4.jpg) right 60px no-repeat }
+.i_login  .s_part1 { background: url(../images/a1.jpg) repeat-x; height:46px; line-height:46px; padding:0px 10px;}
+.i_login  .s_part1 .L{ float:left; font-family:"微软雅黑"; font-size:20px; padding-left:10px; color:#333}
+.i_login  .s_part1 .R{ float:right}
+.i_login  .s_part1 .R a{ color:#999}
+.i_login  .s_part2 { padding-top:30px; padding-bottom:20px;}
+.i_login  .s_part2 .h1{ height:35px;}
+.i_login  .s_part2 .h1 .L{  width:115px; text-align:right; padding-right:10px; float:left; line-height:24px; font-size:14px; font-weight:bolder; color:#666}
+.i_login  .s_part2 .h1 .R1{float:left }
+.i_login  .s_part2 .h1 .R1 input{ width:135px; padding-left:5px;  height:22px; line-height:22px; border:1px solid #ccc}
+.i_login  .s_part2 .h1 .R2{float:left }
+.i_login  .s_part2 .h1 .R2 input{ width:50px; padding-left:5px;  height:22px; line-height:22px; border:1px solid #ccc}
+.i_login  .s_part2 .h1 .R3{ float:left; padding:0px 5px;}
+.i_login  .s_part2 .h1 .R4{ float:left;line-height:24px; }
+.i_login  .s_part2 .h1 .R5{ float:left; padding-top:5px; margin-right:5px;}
+.i_login  .s_part2 .h1 .R6{ float:left;line-height:24px; }
+.i_login  .s_part2 .h1 .R7{ float:left; cursor:pointer}
+.i_login  .s_part2 .h1 .R8{ float:left; color:#F00; line-height:24px; padding-left:5px;}
+
+
+.i_top{ background:url(../images/a12.jpg) repeat-x; height:44px;  border-bottom:4px solid #ef705b; }
+.i_top .co{ background:url(../images/a19.jpg) left top no-repeat; text-align:right;line-height:44px;}
+.i_top .co .part1{ float:right; line-height:44px; color:#FFF; font-size:14px;  padding-right:10px; font-family:"微软雅黑"}
+.i_top .co .part1 img{ vertical-align:middle}
+.i_top .co .part2{ float:right; margin:0px 10px;}
+.i_top .co .part3{ float:right; color:#fff; font-weight:normal}
+
+.i_top a{ color:#FFF; }
+
+
+
+.pleft{  position:absolute; left:0px; width:250px; background: url(../images/a16.jpg) right top repeat-y }
+.i_catalog{width:210px; margin-left:20px; margin-top:20px;}
+.i_catalog .part1{ height:42px; line-height:42px; border:1px solid #d5d5d5; background:url(../images/a18.jpg) repeat-x; margin-bottom:1px; }
+.i_catalog .part1 div{padding-left:35px; cursor:pointer}
+.i_catalog .part1.sel{ background:#db6969; color:#FFF;}
+
+
+
+.i_catalog .part1.a1 div{ background:url(../images/a25.png) 15px center no-repeat; }
+.i_catalog .part1.a1.sel div{ background:url(../images/a25-1.png) 15px center no-repeat;  }
+
+.i_catalog .part1.a2 div{ background:url(../images/a20.png) 15px center no-repeat; }
+.i_catalog .part1.a2.sel div{ background:url(../images/a20-1.png) 15px center no-repeat;  }
+
+.i_catalog .part1.a3 div{ background:url(../images/a21.png) 15px center no-repeat; }
+.i_catalog .part1.a3.sel div{ background:url(../images/a21-1.png) 15px center no-repeat;  }
+
+.i_catalog .part1.a4 div{ background:url(../images/a22.png) 15px center no-repeat; }
+.i_catalog .part1.a4.sel div{ background:url(../images/a22-1.png) 15px center no-repeat;  }
+
+.i_catalog .part1.a5 div{ background:url(../images/a23.png) 15px center no-repeat; }
+.i_catalog .part1.a5.sel div{ background:url(../images/a23-1.png) 15px center no-repeat;  }
+
+.i_catalog .part1.a6 div{ background:url(../images/a24.png) 15px center no-repeat; }
+.i_catalog .part1.a6.sel div{ background:url(../images/a24-1.png) 15px center no-repeat;  }
+
+.i_catalog .part1.a7 div{ background:url(../images/a17.png) 15px center no-repeat; }
+.i_catalog .part1.a7.sel div{ background:url(../images/a17-1.png) 15px center no-repeat;  }
+
+
+
+.i_catalog .part2{ border-top:1px solid #dddddd; margin-bottom:2px; display:none}
+.i_catalog .part2 a{ display:block; border:1px solid #dddddd; border-top:0px; height:36px; line-height:36px; padding-left:20px; color:#777;}
+.i_catalog .part2 a.sel{ color:#ef705b; border-left: 3px solid #ef705b; padding-left:18px;}
+
+.pright{ position:absolute; left:250px; right:0px;padding-top:10px; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,117 @@
+                                           <!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>我的评价-{$top_content.title}</title>
+	<link rel="stylesheet" href="__PUBLIC__css/base.css">
+	<link rel="stylesheet" href="__PUBLIC__css/main.css">
+	<link rel="stylesheet" href="__PUBLIC__css/other.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__css/L_person.css">
+	<script style="text/javascript" src="__PUBLIC__js/jquery-1.11.0.js"></script>	
+	<script style="text/javascript" src="__PUBLIC__js/rich_lee.js"></script>
+</head>
+	<script type="text/javascript">
+	$(function(){
+		
+
+		nav_down();//
+	});
+		
+	</script>
+<body>
+<!-- top -->
+	<include file="public:header"/>
+<!-- topend -->
+<!-- search -->
+	<include file="public:search"/>
+<!-- searchend -->
+<!-- nav -->
+	<div class="content">
+		<include file="public:nav"/>
+		<!--
+        	作者：rich
+        	时间：2015-10-21
+        	描述：banner右侧
+        -->	
+       <div class="crumbs">
+       		<span>订单管理</span>
+       		<p>the Interactive management</p> 
+       		<p class="crumbs02">我的评价</p>
+       </div>
+       <include file="public:left"/>
+       <!--
+       	作者：rich_lee
+       	描述：面包屑 面包屑导航 完成
+       -->
+
+
+       <!-- 我的评价 -->
+       <div class="L_discuss">
+       		<div class="reget_name">我的评价</div>
+       		<!-- <div class="now_score">
+       			当前积分：200
+       		</div> -->
+       		<dl class="reget_title">
+       			<dt>
+       				<span>产品名称</span>
+       			</dt>
+       			<dd class="mdd"><span>产品图片</span></dd>
+       			<dd class="mdd_content">评价内容</dd>
+       			<dd class="mdd">评价等级</dd>
+       			<dd class="mdd_time">评价时间</dd>
+       		</dl>
+       		<ul>
+       		<volist name="list" id="vo">
+       			<li  class="reget_box">
+	       			<dl>
+	       				<dt>
+	       					{$vo.title}
+			       		</dt>
+			       		<dd class="num">
+	       					<a href="/shop/content/product_id/{$vo.product_id}">
+			       				<img src="/Uploads/{$vo.img}"  />
+			       			</a>
+			       		</dd>
+			       		<dd class="numx">
+			       			{$vo.content}
+			       		</dd>
+			       		<dd class="nump">
+			       		<if condition="$vo.score eq '1'">
+			       			<label>差评</label>
+			       			<img src="__PUBLIC__images/L_ping.png">
+		       			<elseif condition="$vo.score eq '2'" />
+							<label>差评</label>
+							<img src="__PUBLIC__images/L_ping.png">
+		       			<elseif condition="$vo.score eq '3'" />
+		       				<label>中评</label>
+		       				<img src="__PUBLIC__images/L_ping.png">
+		       			<elseif condition="$vo.score eq '4'" />
+			       			<label>中评</label>
+			       			<img src="__PUBLIC__images/L_ping.png">
+			       		<else />
+			       			<label>好评</label>
+			       			<img src="__PUBLIC__images/L_ping.png">
+			       		</if>
+			       		</dd>
+			       		<dd class="score_time">
+			       			<label class="latime">{$vo.time|date='Y-m-d H:i:s',###}</label>
+			       		</dd>
+			       	</dl>
+       			</li>
+       		</volist>
+       		</ul>
+       	<div class="feny">{$page}</div>
+       </div>
+       <!-- 我的评价     -结束 -->    
+	</div>	
+	<!--
+    	作者：rich
+    	描述：friend ++ content end
+    -->	
+	<include file="public:bottom"/>
+	
+		
+	
+
+</body>
+</html>

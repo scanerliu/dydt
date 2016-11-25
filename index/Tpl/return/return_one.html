@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+	<title>退货第一步</title>
+	<link rel="stylesheet" href="__PUBLIC__css/base.css">
+	<link rel="stylesheet" href="__PUBLIC__css/main.css">
+		<!--<link rel="stylesheet" href="css/other.css">-->
+		<link rel="stylesheet" href="__PUBLIC__css/cssforml.css">
+	<script style="text/javascript" src="__PUBLIC__js/jquery-1.11.0.js"></script>	
+	<script style="text/javascript" src="__PUBLIC__js/rich_lee.js"></script>
+</head>
+	<script type="text/javascript">
+	$(function(){
+		
+
+		nav_down();//
+	});
+		
+	</script>
+<body>
+<!-- top -->
+	<include file="public:header"/>
+<!-- topend -->
+<!-- search -->
+	<include file="public:search"/>
+<!-- searchend -->
+<!-- nav -->
+	<div class="content">
+		<include file="public:nav"/>
+		<!--
+        	作者：rich
+        	时间：2015-10-21
+        	描述：banner右侧
+        -->	
+       <div class="crumbs">
+       		<span>您的位置：</span>
+       		<h6>首页</h6>
+       		<h6>退款/退货</h6>
+       		<p>refund/return</p>   	
+       </div>
+       <table class="return_tb">
+       		<tr>
+       			<td>买家申请退款</td>
+       			<td>商家 处理退款申请</td>
+       			<td>退款完成</td>
+       		</tr>
+       		<tr>
+       			<td colspan="3" class="row3" style="width:100%"><img src="__PUBLIC__images/return01.png" alt=""></td>
+       		</tr>
+       </table>
+       <form method="post" action="{:U('return/add_return')}" enctype="multipart/form-data">
+    	<div class="return_content">
+    		<table class="return_content_left">
+    			<tr class="return_tr_first">
+    				<td class="return_td_first">商品信息</td>
+    				<td class="return_td_secend">单价</td>
+    				<td class="return_td_third">小计</td>
+    				<td class="return_td_fouth">商家</td>
+    			</tr>
+    			<tr class="return_tr_secend">
+    				<td class="return_td02_first clear">
+    					<img style="width:60px;height:60px;" src="/Uploads/{$list.img}" alt="">
+    					<div class="return_td02_first_text">
+    						<h3>{$list_p.title}</h3>
+    						<p>{$list_p.subhead}</p>
+    					</div>
+    				</td>
+    				<input type="text" name="order_id" value="{$list.order_id}" hidden="hidden">
+    				<input type="text" name="product_id" value="{$list.product_id}" hidden="hidden">
+    				<input type="text" name="order_num" value="{$list_or.order_num}" hidden="hidden">
+    				<td class="return_td02_secend">{$list.price} 元</td>
+    				<td class="return_td02_third">{$list.product_num}</td>
+    				<td class="return_td02_fourth">单体药店专卖网</td>
+    			</tr>
+    			<tr class="return_tr_first">
+    				<td colspan="4">订单信息</td>
+    			</tr>
+    			<tr class="return_tr_third">
+    				<td colspan="2">订单编号：{$list_or.order_num}</td>
+    				<td colspan="2">运费：{$list_or.express_fee} 元</td>
+    			</tr>
+    			<tr class="return_tr_third">
+    				<td colspan="2">总优惠：-12元</td>
+    				<td colspan="2">成交时间：{$list_or.time|date='Y-m-d H:i:s',###}</td>
+    			</tr>
+    			<tr class="return_tr_third">
+    				<td colspan="4">总计：{$list.total_price}元</td>
+    			</tr>
+    		</table>
+    		<div class="return_content_right">
+    			<p class="return_right_title clear">
+    				<span class="active">我要退货 </span>
+    				<span>我要退款（无需退货）</span>
+    			</p>
+    			<p class="reason">
+    				<span>退款原因：</span>
+    				<select name="cause">
+    					<option value ="volvo">请选择退款原因</option>
+						<option value ="volvo" checked="checked">后悔了</option>
+						<option value ="saab">修改订单</option>
+						<option value="opel">选错商品</option>
+						<option value="audi">暂时不需要</option>
+					</select>
+					<span class="red">*</span>
+					<span class="yesorno">是否收到商品：</span>
+					<input name="fruit" type="radio" value="1" id="is_y" onclick="dis(1)" /><span>是</span>
+					<input name="fruit" type="radio" value="0" id="is_n" onclick="dis(0)" checked="checked" /><span>否</span>
+                    <div id="is_g" style="margin-top:-31px;margin-right:6%;float:right;display:none;">
+                        <span class="yesorno">是否退货：</span>
+                        <input name="is_back" type="radio" value="1" /><span>是</span>
+                        <input name="is_back" type="radio" value="0" checked="checked" /><span>否</span>
+                    </div>
+    			</p>
+    			<p class="returnmoney">
+    				<span>退款金额：</span>
+    				<input type="text" style="width:100px;" name="price" id="price" onKeyUp="change_v()" value="{$return.money}"> 元
+    				<span class="maxmoney">最多{$list.total_price}元</span>
+                    <input type="hidden" name="max" value="{$list.total_price}">
+    				<span class="red">*</span>
+    			</p>
+    			<p class="returnexplain clear">
+    				<span>退款说明：</span>
+                    <input type="hidden" name="r_id" value="{$return.return_id}">
+    				<textarea name="note" id="" cols="60" rows="4" placeholder="可以输入两百个文字">{$return.note}</textarea>
+    			</p>
+    			<p class="voucher">
+    				<span>上传图片：</span>
+    				<input style="width:200px;" type="file" name="ph">
+    				<label>支持GIF、JPG、PNG、BMP格式，大小不超过5M</label>
+    			</p>
+    		</div>
+
+
+    		<input type="submit" class="submitreturn" value="提交退款申请">
+    	</div>
+    </form>
+
+   <script type="text/javascript">
+        $(function (){
+            var a=document.getElementById('is_y').checked;
+            if (a==true) {
+                document.getElementById('is_g').style.display="block";
+            } else {
+                document.getElementById('is_g').style.display="none";
+            }; 
+        });
+        function dis(ss) {
+            if (ss==1) {
+                document.getElementById('is_g').style.display="block";
+            } else {
+                document.getElementById('is_g').style.display="none";
+            };
+        }
+        function change_v() {
+            var m=document.getElementById('price').value;
+            var max={$list.total_price};
+            if (m>max) {
+                alert('您申请的退款金额超过了最大退款金额！');return;
+            };
+        }
+   </script>  
+
+	</div>	
+	<!--
+    	作者：rich
+    	描述：friend ++ content end
+    -->	
+	<include file="public:bottom"/>	
+
+</body>
+</html>

@@ -1,0 +1,1 @@
+<?php	return array ( 0 => 'comment_right_id', 1 => 'product_id', 2 => 'user_id', 3 => 'order_id', '_autoinc' => true, '_pk' => 'comment_right_id', '_type' => array ( 'comment_right_id' => 'int(100)', 'product_id' => 'varchar(100)', 'user_id' => 'varchar(100)', 'order_id' => 'varchar(100)', ), );?>

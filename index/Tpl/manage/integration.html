@@ -1,0 +1,103 @@
+                                           <!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>L_我的积分</title>
+	<link rel="stylesheet" href="__PUBLIC__css/base.css">
+	<link rel="stylesheet" href="__PUBLIC__css/main.css">
+	<link rel="stylesheet" href="__PUBLIC__css/other.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__css/L_person.css">
+	<script style="text/javascript" src="__PUBLIC__js/jquery-1.11.0.js"></script>	
+	<script style="text/javascript" src="__PUBLIC__js/rich_lee.js"></script>
+</head>
+	<script type="text/javascript">
+	$(function(){
+		
+
+		nav_down();//
+	});
+		
+	</script>
+<body>
+<!-- top -->
+	<include file="public:header"/>
+<!-- topend -->
+<!-- search -->
+	<include file="public:search"/>
+<!-- searchend -->
+<!-- nav -->
+	<div class="content">
+		<include file="public:nav"/>
+		<!--
+        	作者：rich
+        	时间：2015-10-21
+        	描述：banner右侧
+        -->	
+       <div class="crumbs">
+       		<span>订单管理</span>
+       		<p>the Interactive management</p> 
+       		<p class="crumbs02">我的积分</p>
+       	</div>
+       	<include file="public:left"/>
+       <!--
+       	作者：rich_lee
+       	描述：面包屑 面包屑导航 完成
+       -->
+
+
+       <!-- 我的积分 -->
+       <div class="L_myscore">
+       		<div class="reget_name">我的积分</div>
+       		<div class="now_score">
+       			当前积分：{$sum}
+       		</div>
+       		<dl class="reget_title">
+       			<dt>
+       				<span>商品信息</span>
+       			</dt>
+       			<dd><span>积分变化</span></dd>
+       			<dd>退款/退货</dd>
+       		</dl>
+       		<ul>
+       		<volist name="list" id="vo">
+       			<li>
+       			<div class="resheet_head">
+		            <label>&nbsp;&nbsp;{$vo.time|date='Y年m月d日 H:i:s',###}</label>
+		            <label>订单号：<span>{$vo.order_num}</span></label>
+		            <?php $vo['points_reduce']=$vo['points_reduce']/100?>
+	                <label style="padding-left:269px;">运费：<span>{$vo.express_fee}</span></label>
+	                <label style="padding-left:22px;">积分抵用金额：<span>{$vo.points_reduce}元</span></label>
+		        </div>
+		        <volist name="vo.p" id="vo1">
+	       			<dl class="reget_box">
+	       				<dt>
+	       					<a href="#">
+			       				<img src="/Uploads/{$vo1.img}"  />
+			       				<div>
+			       					<h3>{$vo1.title}</h3>
+			       					<p>{$vo1.subhead}</p>	
+			       				</div>
+			       			</a>
+			       		</dt>
+			       		<dd class="numx">
+			       			+{$vo1.total_price}
+			       		</dd>
+			       		<dd class="num">
+			       			-{$vo1.return}
+			       		</dd>
+			       	</dl>
+			    </volist>
+       			</li>
+       		</volist>
+       		</ul>
+       		<div class="feny">{$page}</div>
+       </div>
+       <!-- 我的积分     -结束 -->      
+	</div>	
+	<!--
+    	作者：rich
+    	描述：friend ++ content end
+    -->	
+	<include file="public:bottom"/>
+</body>
+</html>

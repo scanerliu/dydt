@@ -1,0 +1,1993 @@
+/* 文件名：L_person.css */
+
+/* ******************会员信息********************* */
+
+/* 会员中心 */
+.L_member_infor{
+	width: 950px; 
+	overflow: hidden; 
+	float: right; 
+	margin-top: 30px; 
+	min-height: 480px;
+}
+.L_member_infor form dt{
+	width: 950px;
+	height: 45px; 
+	background: #f2f2f2; 
+	line-height: 50px; 
+	color: black; 
+	font-size: 16px; 
+	text-align: center;
+}
+.L_member_infor form dd{
+	margin-top: 20px;
+	width:950px;
+	overflow:hidden;
+}
+.L_member_infor form dd:after{
+	content:"clear";
+	height:0px;
+	overflow:hidden;
+	display:block;
+	clear:both;
+}
+.L_member_infor form dd label{
+	font-size: 14px;
+	float:left;
+	display: inline-block;
+	height:30px;
+	line-height:30px;
+}
+.L_member_infor form dd input{
+	display:inline-block;
+	float:left;
+	outline:none;
+	/*margin-top:34px;*/
+	margin-left:6px;
+}
+.L_member_infor form dd select{
+	display:inline-block;
+	font-size:12px;
+	color:#999999;
+	/*width:80px;*/
+	height:28px;
+	line-height:28px\9;
+	border:solid 1px #dddddd;
+	outline:none;
+	float:left;
+	margin-left:10px;
+}
+.L_member_infor form dd select option{
+	width:178px;
+	height:28px;
+	line-height:28px\9;
+}
+.L_member_infor form dd span{
+	float:left;
+	display:inline-block;
+	height:30px;
+	line-height:30px;
+}
+.L_member_infor form .se input{
+	margin-top:9px;
+	*+margin-top:6px;
+}
+.L_member_infor form .se span{
+	margin-left:4px;
+}
+.L_member_infor form .now_headpic label{
+	margin-top:12px;
+}
+.L_member_infor form .now_headpic img{
+	width:50px;
+	height:50px;
+	border-radius:50%;
+	border:1px solid #dddddd;
+	margin-left:10px;
+}
+.L_member_infor form .L_memnber_infor_same input{
+	width:168px;
+	height:28px;
+	line-height:28px\9;
+	padding-left:10px;
+	border:1px solid #dddddd;
+}	
+.L_member_infor form .Ladr_memnber input{
+	width:500px;
+	height:28px;
+	line-height:28px\9;
+	padding-left:10px;
+	border:1px solid #dddddd;
+}
+.L_member_infor form .L_memnber_infor_same img{
+	display:inline-block;
+	margin-top:4px;
+	margin-left:10px;
+}
+.L_member_infor form .L_select_same1 .prompt_label{
+	color:#999999;
+	font-size:10px;
+	margin-left:10px;
+}
+.buy_identify  .buy_dt{
+	background: #f6fbfe;
+	margin-top:50px;
+}
+.buy_identify dt span{
+	color:#c63232;
+}
+/* 会员中心-结束 */
+
+
+/* 购买认证 */
+.buy_identify dd label{
+	height:36px;
+	line-height:36px;
+	font-size:14px;
+	display:block;
+	text-align:center;
+	float:left;
+}
+.buy_identify dd .label1{
+	width:172px;
+}
+.buy_identify dd .label2{
+	width:270px;
+}
+.buy_identify dd .label3{
+	width:150px;
+}
+.buy_identify dd .label4{
+	width:358px;
+}
+.buy_identify dd ul{
+	overflow:hidden;
+}
+.buy_identify dd ul li{
+	_height:100px;
+	overflow:hidden;
+	border:1px solid #dddddd;
+	border-top:none;
+	padding-bottom:1px;
+}
+.buy_identify dd ul .member_first_li{
+	border-top:1px solid #dddddd;
+	padding-bottom:0px;
+}
+.buy_identify dd ul li div{
+	height:100px;
+	float:left;
+}
+.buy_identify dd ul li .identify_infor{
+	width:160px;
+}
+.buy_identify dd ul li .identify_infor select{
+	margin-top:34px;
+	margin-left:10px;
+	width:140px;
+	height:30px;
+}
+.buy_identify dd ul li .identify_uestime{
+	width:290px;
+	padding-left:10px;
+	border-left:1px solid #dddddd;
+}
+.buy_identify dd ul li .identify_uestime a{
+	width:108px;
+	height:28px;
+	line-height:30px;
+	text-align:center;
+	border:1px solid #dddddd;
+	display:block;
+	float:left;
+	margin-top:34px;
+}
+.buy_identify dd ul li .identify_uestime label{
+	display:block;
+	float:left;
+	margin:0px 4px;
+	margin-top:34px;
+}
+.buy_identify dd ul li .identify_name{
+	width:129px;
+	border-left:1px solid #dddddd;
+}
+.buy_identify dd ul li .identify_name input{
+	width:100px;
+	padding-left:8px;
+	height:28px;
+	line-height:28px\9;
+	margin-top:34px;
+	margin-left:10px;
+	border:1px solid #dddddd;
+}
+.buy_identify dd ul li .identify_upload{
+	width:355px;
+	border-left:1px solid #dddddd;
+}
+.buy_identify dd ul li .identify_upload a{
+	width:100px;
+	height:30px;
+	line-height:30px;
+	background-color:#58a8e5;
+	color:#ffffff;
+	display:inline-block;
+	margin-top:16px;
+	margin-left:130px;
+	text-align:center;
+	float:left;
+}
+.buy_identify dd ul li .identify_upload label{
+	width:200px;
+	height:38px;
+	line-height:18px;
+	text-align:left;
+	display:inline-block;
+	float:left;
+	margin-left:90px;
+	margin-top:10px;
+	overflow:hidden;
+	color:#999999;
+	font-size:12px;
+}
+.buy_identify dd .L_save{
+    width: 100px;
+    height: 30px;
+    margin-left: 420px;
+    margin-top:30px;
+    background: #58a8e5;
+    color: white;
+    font-size: 16px;
+    border: none;
+    line-height: 30px;
+    cursor:pointer;
+}
+/* 购买认证-结束 */
+
+
+
+
+/* ******************会员信息-结束********************* */
+
+
+
+
+
+
+
+/* ******************浏览记录********************* */
+.see_history{
+    width: 950px;
+    overflow: hidden;
+    float: right;
+    margin-top: 30px;
+    min-height: 480px;
+	overflow:hidden;
+}
+.see_history .see_title{
+	width: 950px;
+    height: 45px;
+    background: #f2f2f2;
+    line-height: 50px;
+    color: black;
+    font-size: 16px;
+    text-align: center;
+}
+.see_history ul{
+	overflow:hidden;
+	margin-top:40px;
+}
+.see_history ul li {
+	margin:0px 19px 20px;
+	_margin:0px 17px 20px;
+	width:120px;
+	height:220px;
+	line-height:16px;
+	overflow:hidden;
+	float:left;
+}
+.see_history ul li img{
+	width:120px;
+	height:120px;
+}
+.see_history ul li .price{
+	color:#58a8e5;
+	font-size:20px;
+	margin-top:18px;
+}
+.see_history ul li .goods_name{
+	font-size:14px;
+	color:#333333;
+	margin-top:6px;
+}
+.see_history ul li .goods_detail{
+	font-size:12px;
+	margin-top:10px;
+	color:#999999;
+	line-height:16px;
+}
+.see_history .L_page{
+	overflow:hidden;
+	float:right;
+	margin-top:40px;
+	line-height:30px;
+}
+.see_history .L_page a{
+	height:30px;
+	line-height:30px;
+	padding:0 5px;
+	text-align:center;
+	display:block;
+	float:left;
+	margin-right:10px;
+	border:1px #dddddd solid;
+	color:#58A8E5;
+}
+.see_history .L_page .current{
+	height:30px;
+	line-height:30px;
+	padding:0 8px;
+	text-align:center;
+	display:block;
+	float:left;
+	margin-right:10px;
+	border:1px #dddddd solid;
+}
+.see_history .L_page .pre_page, .see_history .L_page .next_page{
+	width:100px;
+}
+.see_history .L_page .dot{
+	border:none;
+	padding:1px;
+}
+.see_history .L_page .now_page{
+	background-color:#58a8e5;
+	color:#ffffff;
+	border:none;
+	padding:1px;
+}
+/* ******************浏览记录-结束********************* */
+
+
+
+
+/* ******************收货地址********************* */
+/* 新增收货地址 */
+.L_adress{
+    width: 950px;
+    overflow: hidden;
+    float: right;
+    margin-top: 30px;
+    min-height: 480px;
+    overflow: hidden;
+}
+.L_adress dt{
+    width: 950px;
+    height: 45px;
+    background: #f2f2f2;
+    line-height: 50px;
+    color: black;
+    font-size: 16px;
+    text-align: center;
+}
+.L_adress dd{
+	width:950px;
+	font-size:14px;
+	margin-top:20px;
+	overflow:hidden;
+}
+.L_adress dd label{
+	display:inline-block;
+	float:left;
+	width:80px;
+	height:24px;
+	line-height:24px;
+	padding-right:20px;
+	text-align:right;
+	/*background:url(../images/L_dot.png) no-repeat 84px 3px;*/
+}
+.L_adress dd select{
+	display:inline-block;
+	width:110px;
+	height:28px;
+	line-height:24px;
+	float:left;
+	margin-right:10px;
+}
+.L_adress dd input{
+	float:left;
+	width:220px;
+	padding-left:10px;
+	height:24px;
+	line-height:24px\9;
+	outline:none;
+}
+.L_adress .add_new{
+	color:#333333;
+}
+.L_adress .add_new a{
+	color:#58a8e5;
+	float:left;
+	margin-right:10px;
+}
+.L_adress .detail_ad textarea{
+	width:390px;
+	height:70px;
+	outline:none;
+	float:left;
+}
+.L_adress .table_phone b{
+	float:left;
+	font-weight:normal;
+	margin:4px 6px 0px;
+}
+.L_adress .table_phone input{
+	width:78px;
+	text-align:center;
+	padding:0px;
+}
+.L_adress .design_common{
+	font-size:14px;
+	height:24px;
+	line-height:24px;
+	color:#666666;
+}
+.L_adress .design_common input{
+	width:14px;
+	height:14px;
+	margin:5px 6px 0px 100px;
+	border:solid 1px #dddddd;
+}
+.L_adress dd .getgoods_save{
+	width:100px;
+	height:30px;
+	line-height:30px;
+	text-align:center;
+	display:block;
+	background-color:#58a8e5;
+	color:#ffffff;
+	margin-left:139px;
+	border: none;
+	cursor: pointer;
+}
+/* 新增收货地址-结束 */
+
+/* 已经保存的地址 */
+.L_adress .had_adress{
+	margin-top:20px;
+}
+.L_adress .had_adress .ad_limit{
+	color:#58a8e5;
+	font-size:14px;
+}
+.L_adress .had_adress .had_sheet_head{
+	margin-top:10px;
+	height:40px;
+}
+.L_adress .had_adress .had_sheet_head label{
+	height:40px;
+	line-height:40px;
+	display:block;
+	text-align:center;
+	float:left;
+	font-size:14px;
+	color:#666666;
+	overflow:hidden;
+}
+.L_adress .had_adress .had_sheet_head:after{
+	content:"clear";
+	clear:both;
+	height:0px;
+	overflow:hidden;
+	display:block;
+}
+.L_adress .had_adress .had_sheet_head .hadad_label1{
+	width:54px;
+}
+.L_adress .had_adress .had_sheet_head .hadad_label2{
+	width:240px;
+}
+.L_adress .had_adress .had_sheet_head .hadad_label3{
+	width:236px;
+}
+.L_adress .had_adress .had_sheet_head .hadad_label4{
+	width:90px;
+}
+.L_adress .had_adress .had_sheet_head .hadad_label5{
+	width:120px;
+}
+.L_adress .had_adress .had_sheet_head .hadad_label6{
+	width:128px;
+}
+.L_adress .had_adress ul {
+	overflow:hidden;
+}
+.L_adress .had_adress ul li{
+	width:948px;
+	height:50px;
+	border:1px solid #dddddd;
+	border-top:none;
+	padding-top:1px;
+	overflow:hidden;
+}
+.L_adress .had_adress ul .getgood_firstli{
+	border-top:1px solid #dddddd;
+	padding-top:0px;
+}
+.L_adress .had_adress ul li div{
+	float:left;
+	height:50px;
+	line-height:50px;
+	text-align:center;
+	font-size:14px;
+	overflow:hidden;
+}
+.L_adress .had_adress ul li .get_porson{
+	width:54px;
+}
+.L_adress .had_adress ul li .where{
+	width:240px;
+}
+.L_adress .had_adress ul li .detail_adress{
+	width:236px;
+}
+.L_adress .had_adress ul li .zip_code{
+	width:90px;
+}
+.L_adress .had_adress ul li .phone{
+	width:120px;
+}
+.L_adress .had_adress ul li .operate{
+	width:128px;
+}
+.L_adress .had_adress ul li .operate a{
+	color:#58a8e5;
+}
+.L_adress .had_adress ul li .operate label{
+	margin:0px 4px;
+}
+.L_adress .had_adress ul li .mo_sure{
+	width:80px;
+}
+.L_adress .had_adress ul li .mo_sure a{
+	padding:2px 4px;
+	border:1px solid #dddddd;
+}
+/* 已经保存的地址-结束 */
+
+
+
+/* ******************收货地址-结束********************* */
+
+
+
+
+/* ******************投诉建议********************* */
+.L_advice {
+	width: 952px; 
+	overflow: hidden; 
+	float: right; 
+	margin-top: 30px; 
+	min-height: 480px;
+}
+.L_advice form dt{
+	width: 950px; 
+	height: 45px; 
+	background: #f2f2f2; 
+	line-height: 50px; 
+	color: black; 
+	font-size: 16px; 
+	text-align: center;
+}
+.L_advice form .your_advice label{
+	color:#58a8e5;
+	margin-top:20px;
+	width:950px;
+	display:block;
+	overflow:hidden;
+	font-size:14px;
+	height:30px;
+	line-height:30px;
+}
+.L_advice form dd{
+	width:950px;
+}
+.L_advice form .your_advice textarea{
+	width:950px;
+	height:150px;
+	line-height:24px;
+	text-indent:1em;
+	outline:none;
+	font-size:14px;
+}
+.L_advice form .our_contact{
+	margin-top:30px;
+}
+.L_advice form .our_contact label{
+	width:950px;
+	height:30px;
+	line-height:30px;
+	display:block;
+	overflow:hidden;
+	font-size:14px;
+	color:#666666;
+}
+.L_advice form .our_contact div{
+	width:950px;
+	margin-top:12px;
+}
+.L_advice form .our_contact div span{
+	display:block;
+	width:60px;
+	text-align:right;
+	height:30px;
+	line-height:30px;
+	float:left;
+}
+.L_advice form .our_contact div input{
+	width:178px;
+	height:28px;
+	border:1px solid #dddddd;
+	margin-left:10px;
+	padding-left:8px;
+	outline:none;
+}
+.L_advice form  dd .advice_save{
+	width:100px;
+	height:30px;
+	line-height:30px;
+	margin-top:20px;
+	display:block;
+	color:#ffffff;
+	background-color:#58a8e5;
+	text-align:center;
+	margin-left:70px;
+	cursor:pointer;
+}
+.L_page{
+	overflow:hidden;
+	margin-left:50%;
+	margin-top:22px;
+	line-height:30px;
+}
+.L_page a{
+	height:30px;
+	line-height:30px;
+	padding:0 5px;
+	text-align:center;
+	display:block;
+	float:left;
+	margin-right:10px;
+	border:1px #dddddd solid;
+	color:#58A8E5;
+}
+.L_page .current{
+	height:30px;
+	line-height:30px;
+	padding:0 8px;
+	text-align:center;
+	display:block;
+	float:left;
+	margin-right:10px;
+	border:1px #dddddd solid;
+}
+.L_page .pre_page, .L_page .next_page{
+	width:100px;
+}
+.L_page .dot{
+	border:none;
+	padding:1px;
+}
+.L_page .now_page{
+	background-color:#58a8e5;
+	color:#ffffff;
+	border:none;
+	padding:1px;
+}
+.right_service{ 
+	width:933px; display:block; overflow:hidden; float:left; margin-top:10px;padding-bottom: 10px;border-bottom:#DDDDDD 1px solid;
+}
+.right_service dd{ 
+	width:933px; display:block; overflow:hidden; float:left; margin-top:20px;
+}
+.new_add{
+	overflow:auto;
+}
+/* ******************投诉建议-结束********************* */
+
+
+
+/* ******************退、换货********************* */
+.reget{
+	width: 950px; 
+	overflow: hidden; 
+	float: right; 
+	margin-top: 30px;
+	min-height: 480px;
+}
+.reget .reget_name{
+	width: 950px; 
+	height: 45px; 
+	background: #f2f2f2; 
+	line-height: 50px; 
+	color: black; 
+	font-size: 16px; 
+	text-align: center;
+}
+/* 填写信息 */
+.reget .reget_infor{
+	font-size:14px;
+	height:36px;
+	line-height:36px;
+	margin-top: 10px;
+}
+.reget .reget_infor label{
+	width:140px;
+	display:inline-block;
+	text-align:center;
+	float:left;
+	color:#333333;
+}
+.reget .reget_infor label span{
+	color:#666666;
+}
+.reget .reget_infor .regoods_label1{
+	width:510px;
+	text-align:left;
+}
+.reget .reget_infor .regoods_label4{
+	width:160px;
+	text-align:right;
+}
+.reget .write_reget{
+	overflow:hidden;
+}
+.reget .write_reget dt{
+	margin-top:10px;
+}
+.reget .write_reget dt select{
+	height:28px;
+	width:106px;
+	font-size:14px;
+	color:#666666;
+	margin-left:10px;
+	outline:none;
+}
+.reget .write_reget dd{
+	width:950px;
+	display:block;
+	overflow:hidden;
+	margin-top:10px;
+}
+.reget .write_reget label{
+	width:70px;
+	height:24px;
+	font-size:14px;
+	color:#666666;
+	line-height: 24px;
+	float:left;
+	display: block;
+	text-align:right;
+}
+.reget .write_reget input{
+	height: 24px;
+	line-height: 24px;
+	float:left;
+	padding-left:6px;
+	outline:none;
+	width:300px;
+	margin-left:10px;
+}
+.reget .reget_title{ 
+	width: 950px; 
+	height: 53px;
+	text-align:center;
+	margin-top:20px;
+}
+.reget .reget_title dt{ 
+	width:502px; 
+	height: 100%; 
+	float: left; 
+	font-size: 14px; 
+	color: black;
+	line-height: 68px;
+}
+.reget .reget_title dt input{
+	margin-left: 56px; 
+	margin-top:26px;
+	width: 16px; 
+	height: 16px; 
+	float: left; 
+	margin-right: 10px;
+}
+.reget .reget_title dd{
+	width: 112px; 
+	height: 100%; 
+	font-size: 14px; 
+	color: black;
+	line-height: 68px; 
+	float: left; 
+	text-align: center;
+}
+/* 填写信息-结束 */
+
+
+/* 商品信息 */
+.reget ul li{
+	border-top:#e5e5e5 1px solid;
+	margin-bottom: 20px;
+}
+.reget ul li .resheet_head{
+	border-left:#e5e5e5 1px solid;
+	border-right:#e5e5e5 1px solid;
+}
+.reget ul li .resheet_head{
+	background-color:#eef6fc;
+	width:948px;
+	height:40px;
+	line-height:40px;
+	overflow:hidden;
+}
+.reget ul li .resheet_head label{
+	margin-left:20px;
+}
+.reget .reget_box{
+	width: 948px; 
+	height: 110px; 
+	border: #e5e5e5 1px solid; 
+	border-top:none;
+}
+.reget .reget_box dt{ 
+	width:508px; 
+	height: 100%; 
+	float: left; 
+}
+.reget .reget_box dt a{
+	width: 508px; 
+	height: 100%; 
+	display: block; 
+	float: left;
+}
+.reget .reget_box dt input{
+	margin-top:42px;
+	width: 16px; 
+	height: 16px; 
+	float: left; 
+	margin-right: 10px; 
+	margin-left: 10px;
+}
+.reget .reget_box dt img{ 
+	width: 70px; 
+	height: 70px; 
+	margin-top: 20px; 
+	margin-left:28px;
+	float: left;
+}
+.reget .reget_box dt div{ 
+	float: left; 
+	margin-left: 10px; 
+	width: 360px;
+	overflow:hidden;
+}
+.reget .reget_box dt div h3{
+	font-size: 14px; 
+	color: #58a8e5; 
+	margin-top:20px ;
+	font-weight:normal;
+}
+.reget .reget_box dt div p{ 
+	width: 360px; 
+	height:32px;
+	overflow:hidden;
+	color:#333333;
+	margin-top: 6px;
+}
+.reget .reget_box dt div label{
+	color:#999999;
+	float:left;
+	height:16px;
+	margin-right:20px;
+}
+.reget .reget_box dd{
+	width: 110px; 
+	height: 100%;  
+	float: left; 
+	text-align: center;
+}
+.reget .reget_box dd label{
+	display:inline-block;
+	width:100%;
+	font-size:14px;
+	margin-top: 4px;
+}
+.reget .reget_box dd  .uesd_price{
+	color:#999999;
+	text-decoration:line-through;
+}
+.reget .reget_box dd  .now_price{
+	font-size:16px;
+	color:#333333;
+}
+.reget .reget_box dd  .uesd_price,
+.reget .reget_box dd  .all_price{
+	margin-top:30px;
+}
+.reget .reget_box .num{
+	line-height:110px;
+	font-size:14px;
+	color:#666666;
+}
+.reget .reget_box dd .car_btnl{ 
+	width: 20px; 
+	height: 24px; 
+	float: left;
+	left;
+	*+height: 22px; 
+	margin-top: 38px; 
+	margin-left: 4px;
+}
+.reget .reget_box dd .car_text{
+	width: 60px; 
+	height: 20px;
+	float: left; 
+	text-align: center;
+	margin-top: 38px;
+}
+.reget .reget_box dd .car_btnr{ 
+	width: 20px; 
+	height: 24px;
+	float: left;
+	*+height: 22px;
+	margin-top: 38px;
+}
+.reget .reget_box dd a{ 
+	width: 100px; 
+	height: 30px;
+	line-height:30px; 
+	color:#666666;
+	text-align:center;
+	background-color:#f2f2f2;
+	margin-top:10px;
+	display: block;
+}
+.reget .reget_box dd .re_a1{
+	margin-top:20px;
+	background-color:#58a8e5;
+	color:#ffffff;
+}
+.reget .pay_bill input{
+	width:100px;
+	height:30px;
+	background-color:#58a8e5;
+	margin-left:430px;
+	margin-top:30px;
+	border:none;
+	color:#ffffff;
+}
+/* 商品信息 */
+/* ******************退、换货-结束********************* */
+
+
+
+
+/* ******************我的订单********************* */
+.my_fill{
+	width: 950px; 
+	overflow: hidden; 
+	float: right; 
+	margin-top: 30px;
+	min-height: 480px;
+}
+.my_fill .reget_name{
+	width: 950px; 
+	height: 45px; 
+	background: #f2f2f2; 
+	line-height: 50px; 
+	color: black; 
+	font-size: 16px; 
+	text-align: center;
+}
+/* 选择所有订单或者已接收 */
+.my_fill .Lfill_select {
+	height:60px;
+}
+.my_fill .Lfill_select .Lfill_a{
+	font-size:14px;
+	padding-left:30px;
+	width:580px;
+	height:60px;
+	line-height:60px;
+	float:left;
+}
+.my_fill .Lfill_select .Lfill_a a{
+	padding:0px 12px;
+	border-right:1px solid #dddddd;
+}
+.my_fill .Lfill_select .Lfill_a .Lfill_a1{
+	color:#58A8E5;
+}
+.my_fill .Lfill_select .Lfill_search {
+	width:340px;
+	height:60px;
+	float:left;
+}
+.my_fill .Lfill_select .Lfill_search input{
+	width:200px;
+	height:30px;
+	float:left;
+	border:1px solid #dddddd;
+	border-right:none;
+	margin-top:14px;
+	margin-left:20px;
+}
+.my_fill .Lfill_select .Lfill_search .Ls_button{
+	width:76px;
+	margin-top:14px;
+	height:30px;
+	line-height:30px;
+	display:inline-block;
+	text-align:center;
+	border:1px solid #dddddd;
+	background-color:#ffffff;
+	cursor: pointer;
+}
+.my_fill .Lfill_select label{
+	width:140px;
+	display:inline-block;
+	text-align:center;
+	float:left;
+	color:#333333;
+}
+.my_fill .Lfill_select label span{
+	color:#666666;
+}
+.my_fill .Lfill_select .regoods_label1{
+	width:510px;
+	text-align:left;
+}
+.my_fill .Lfill_select .regoods_label4{
+	width:160px;
+	text-align:right;
+}
+.my_fill .write_reget{
+	overflow:hidden;
+}
+.my_fill .write_reget dt{
+	margin-top:10px;
+}
+.my_fill .write_reget dt select{
+	height:28px;
+	width:106px;
+	font-size:14px;
+	color:#666666;
+	margin-left:10px;
+	outline:none;
+}
+.my_fill .write_reget dd{
+	width:950px;
+	display:block;
+	overflow:hidden;
+	margin-top:10px;
+}
+.my_fill .write_reget label{
+	width:70px;
+	height:24px;
+	font-size:14px;
+	color:#666666;
+	line-height: 24px;
+	float:left;
+	display: block;
+	text-align:right;
+}
+.my_fill .write_reget input{
+	height: 24px;
+	line-height: 24px;
+	float:left;
+	padding-left:6px;
+	outline:none;
+	width:300px;
+	margin-left:10px;
+}
+.my_fill .Lfill_title{ 
+	width: 950px; 
+	height: 53px;
+	text-align:center;
+	background-color:#f2f2f2;
+}
+.my_fill .Lfill_title dt{ 
+	width:332px; 
+	height: 100%; 
+	float: left; 
+	font-size: 14px; 
+	color: black;
+	line-height: 68px;
+}
+.my_fill .Lfill_title dt input{
+	margin-left: 56px; 
+	margin-top:26px;
+	width: 16px; 
+	height: 16px; 
+	float: left; 
+	margin-right: 10px;
+}
+.my_fill .Lfill_title dd{
+	width: 122px; 
+	height: 100%; 
+	font-size: 14px; 
+	color: black;
+	line-height: 68px; 
+	float: left; 
+	text-align: center;
+	    cursor: pointer;
+}
+.my_fill .Lfill_title .wid1{
+	width:84px;
+}
+.my_fill .all_select{
+	height:54px;
+	line-height:54px;
+	font-size:14px;
+	color:#666666;
+}
+.my_fill .all_select dt{
+	float:left;
+}
+.my_fill .all_select dt input{
+	margin-top:20px;
+	margin-left:12px;
+	margin-right:6px;
+	float:left;
+}
+.my_fill .all_select dd{
+	float:left;
+	margin-left:20px;
+	font-size:14px;
+	color:#666666;
+}
+.my_fill .all_select dt input{
+	width:14px;
+	height:14px;
+	float:left;
+}
+/* 选择所有订单或者已接收-结束 */
+
+
+/* 商品信息 */
+.my_fill ul li{
+	border-top:#e5e5e5 1px solid;
+	margin-bottom: 20px;
+}
+.my_fill ul li .resheet_head{
+	border-left:#e5e5e5 1px solid;
+	border-right:#e5e5e5 1px solid;
+}
+.my_fill ul li .resheet_head{
+	background-color:#eef6fc;
+	width:948px;
+	height:40px;
+	line-height:40px;
+}
+.my_fill ul li .resheet_head input{
+	width:14px;
+	height:14px;
+	margin-left:12px;
+	margin-top:13px;
+	margin-right:10px;
+	float:left;
+}
+.my_fill ul li .resheet_head label{
+	margin-right:20px;
+	float:left;
+}
+.my_fill .reget_box{
+	width: 948px; 
+	height: 110px; 
+	overflow:hidden;
+	border: #e5e5e5 1px solid; 
+	border-top:none;
+}
+.my_fill .reget_box dt{ 
+	width:331px; 
+	overflow:hidden;
+	height: 100%; 
+	float: left; 
+}
+.my_fill .reget_box dt a{
+	width: 331px; 
+	height: 100%; 
+	display: block; 
+	float: left;
+	overflow:hidden;
+}
+.my_fill .reget_box dt input{
+	margin-top:42px;
+	width: 16px; 
+	height: 16px; 
+	float: left; 
+	margin-right: 10px; 
+	margin-left: 10px;
+}
+.my_fill .reget_box dt img{ 
+	width: 70px; 
+	height: 70px; 
+	margin-top: 20px; 
+	margin-left:18px;
+	float: left;
+}
+.my_fill .reget_box dt div{ 
+	float: left; 
+	margin-left: 10px; 
+	width: 230px;
+	overflow:hidden;
+}
+.my_fill .reget_box dt div h3{
+	font-size: 14px; 
+	color: #58a8e5; 
+	margin-top:20px ;
+	font-weight:normal;
+}
+.my_fill .reget_box dt div p{ 
+	width: 230px; 
+	height:32px;
+	overflow:hidden;
+	color:#333333;
+	margin-top: 6px;
+}
+.my_fill .reget_box dt div label{
+	color:#999999;
+	float:left;
+	height:16px;
+	margin-right:20px;
+}
+.my_fill .reget_box dd{
+	width:122px; 
+	height: 100%;  
+	float: left; 
+	text-align: center;
+}
+.my_fill .reget_box .wid2{
+	width:84px;
+}
+.my_fill .reget_box dd label{
+	display:inline-block;
+	width:100%;
+	font-size:14px;
+	margin-top: 4px;
+}
+.my_fill .reget_box .goods_note{
+	height:16px;
+	overflow:hidden;
+}
+.my_fill .reget_box dd  .uesd_price{
+	color:#999999;
+	text-decoration:line-through;
+}
+.my_fill .reget_box dd  .now_price{
+	font-size:16px;
+	color:#333333;
+}
+.my_fill .reget_box .godds_operate{
+	line-height:110px;
+}
+.my_fill .reget_box dd  .uesd_price,
+.my_fill .reget_box dd  .all_price{
+	margin-top:30px;
+}
+.my_fill .reget_box .num{
+	line-height:110px;
+	font-size:14px;
+	color:#666666;
+}
+.my_fill .reget_box dd .car_btnl{ 
+	width: 20px; 
+	height: 24px; 
+	float: left;
+	left;
+	*+height: 22px; 
+	margin-top: 38px; 
+	margin-left: 4px;
+}
+.my_fill .reget_box dd .car_text{
+	width: 60px; 
+	height: 20px;
+	float: left; 
+	text-align: center;
+	margin-top: 38px;
+}
+.my_fill .reget_box dd .car_btnr{ 
+	width: 20px; 
+	height: 24px;
+	float: left;
+	*+height: 22px;
+	margin-top: 38px;
+}
+.my_fill .reget_box .operatea .yo_label{
+	margin-top:24px;
+}
+.my_fill .reget_box .operatea label a{
+	font-size:12px;
+	color:#999999;
+}
+.my_fill .reget_box .now_ha{
+	width:121px;
+}
+.my_fill .reget_box .now_ha img{ 
+	width:20px;
+	height:20px;
+	margin-top:12px;
+	margin-left:0px;
+}
+.my_fill .reget_box .now_ha label{
+	height:16px;
+	font-size:12px;
+	color:#999999;
+	line-height:16px;
+	overflow:hidden;
+	margin-top:6px;
+}
+.my_fill .reget_box .now_ha .re_a1{
+	width: 100px; 
+	height: 30px;
+	line-height:30px; 
+	text-align:center;
+	display: block;
+	margin-top:4px;
+	margin-left:10px;
+	background-color:#58a8e5;
+	color:#ffffff;
+}
+.my_fill .secure{
+	height:62px;
+	line-height:62px;
+	font-size:14px;
+	border:1px solid #dddddd;
+	border-top:none;
+}
+.my_fill .secure label{
+	width:84px;
+	display:inline-block;
+	text-align:center;
+	float:left;
+}
+.my_fill .secure .selabel1{
+	width:292px;
+	padding-left:40px;
+	text-align:left;
+}
+.my_fill .L_page{
+	overflow:hidden;
+	float:right;
+	margin-top:40px;
+}
+.my_fill .L_page a{
+	height:30px;
+	line-height:30px;
+	width:36px;
+	text-align:center;
+	display:block;
+	float:left;
+	margin-right:10px;
+	border:1px #dddddd solid;
+}
+.my_fill .L_page .pre_page, .my_fill .L_page .next_page{
+	width:100px;
+}
+.my_fill .L_page .dot{
+	border:none;
+	padding:1px;
+}
+.my_fill .L_page .now_page{
+	background-color:#58a8e5;
+	color:#ffffff;
+	border:none;
+	padding:1px;
+}
+/* 商品信息 */
+/* ******************我的订单-结束********************* */
+
+
+
+
+
+
+/* ******************我的积分********************* */
+
+.L_myscore{
+	width: 950px; 
+	overflow: hidden; 
+	float: right; 
+	margin-top: 30px;
+	min-height: 480px;
+}
+.L_myscore .reget_name{
+	width: 950px; 
+	height: 45px; 
+	background: #f2f2f2; 
+	line-height: 50px; 
+	color: black; 
+	font-size: 16px; 
+	text-align: center;
+}
+/* 填写信息 */
+.L_myscore .reget_infor{
+	font-size:14px;
+	height:36px;
+	line-height:36px;
+	margin-top: 10px;
+}
+.L_myscore .reget_infor label{
+	width:140px;
+	display:inline-block;
+	text-align:center;
+	float:left;
+	color:#333333;
+}
+.L_myscore .reget_infor label span{
+	color:#666666;
+}
+.L_myscore .reget_infor .regoods_label1{
+	width:510px;
+	text-align:left;
+}
+.L_myscore .reget_infor .regoods_label4{
+	width:160px;
+	text-align:right;
+}
+.L_myscore .write_reget{
+	overflow:hidden;
+}
+.L_myscore .write_reget dt{
+	margin-top:10px;
+}
+.L_myscore .write_reget dt select{
+	height:28px;
+	width:106px;
+	font-size:14px;
+	color:#666666;
+	margin-left:10px;
+	outline:none;
+}
+.L_myscore .write_reget dd{
+	width:950px;
+	display:block;
+	overflow:hidden;
+	margin-top:10px;
+}
+.L_myscore .write_reget label{
+	width:70px;
+	height:24px;
+	font-size:14px;
+	color:#666666;
+	line-height: 24px;
+	float:left;
+	display: block;
+	text-align:right;
+}
+.L_myscore .write_reget input{
+	height: 24px;
+	line-height: 24px;
+	float:left;
+	padding-left:6px;
+	outline:none;
+	width:300px;
+	margin-left:10px;
+}
+.L_myscore .now_score{
+	height:50px;
+	line-height:74px;
+	padding-left:40px;
+	color:#58a8e5;
+	font-size:16px;
+}
+.L_myscore .reget_title{ 
+	width: 950px; 
+	height: 53px;
+	text-align:center;
+}
+.L_myscore .reget_title dt{ 
+	width:502px; 
+	height: 100%; 
+	float: left; 
+	font-size: 14px; 
+	color: black;
+	line-height: 68px;
+}
+.L_myscore .reget_title dt input{
+	margin-left: 56px; 
+	margin-top:26px;
+	width: 16px; 
+	height: 16px; 
+	float: left; 
+	margin-right: 10px;
+}
+.L_myscore .reget_title dd{
+	width: 149px; 
+	height: 100%; 
+	font-size: 14px; 
+	color: black;
+	line-height: 68px; 
+	float: left; 
+	text-align: center;
+}
+/* 填写信息-结束 */
+
+
+/* 商品信息 */
+.L_myscore ul li{
+	border-top:#e5e5e5 1px solid;
+	margin-bottom: 20px;
+}
+.L_myscore ul li .resheet_head{
+	border-left:#e5e5e5 1px solid;
+	border-right:#e5e5e5 1px solid;
+}
+.L_myscore ul li .resheet_head{
+	background-color:#eef6fc;
+	width:948px;
+	height:40px;
+	line-height:40px;
+	overflow:hidden;
+}
+.L_myscore ul li .resheet_head label{
+	margin-left:20px;
+}
+.L_myscore .reget_box{
+	width: 948px; 
+	height: 110px; 
+	border: #e5e5e5 1px solid; 
+	border-top:none;
+}
+.L_myscore .reget_box dt{ 
+	width:501px; 
+	height: 100%; 
+	float: left; 
+}
+.L_myscore .reget_box dt a{
+	width: 502px; 
+	height: 100%; 
+	display: block; 
+	float: left;
+}
+.L_myscore .reget_box dt input{
+	margin-top:42px;
+	width: 16px; 
+	height: 16px; 
+	float: left; 
+	margin-right: 10px; 
+	margin-left: 10px;
+}
+.L_myscore .reget_box dt img{ 
+	width: 70px; 
+	height: 70px; 
+	margin-top: 20px; 
+	margin-left:28px;
+	float: left;
+}
+.L_myscore .reget_box dt div{ 
+	float: left; 
+	margin-left: 10px; 
+	width: 360px;
+	overflow:hidden;
+}
+.L_myscore .reget_box dt div h3{
+	font-size: 14px; 
+	color: #58a8e5; 
+	margin-top:20px ;
+	font-weight:normal;
+}
+.L_myscore .reget_box dt div p{ 
+	width: 360px; 
+	height:32px;
+	overflow:hidden;
+	color:#333333;
+	margin-top: 6px;
+}
+.L_myscore .reget_box dt div label{
+	color:#999999;
+	float:left;
+	height:16px;
+	margin-right:20px;
+}
+.L_myscore .reget_box dd{
+	width: 149px; 
+	height: 100%;  
+	float: left; 
+	text-align: center;
+}
+.L_myscore .reget_box dd label{
+	display:inline-block;
+	width:100%;
+	font-size:14px;
+	margin-top: 4px;
+}
+.L_myscore .reget_box dd  .uesd_price{
+	color:#999999;
+	text-decoration:line-through;
+}
+.L_myscore .reget_box dd  .now_price{
+	font-size:16px;
+	color:#333333;
+}
+.L_myscore .reget_box dd  .uesd_price,
+.L_myscore .reget_box dd  .all_price{
+	margin-top:30px;
+}
+.L_myscore .reget_box .numx{
+	line-height:110px;
+	font-size:14px;
+	color:#666666;
+}
+.L_myscore .reget_box .num{
+	line-height:110px;
+	font-size:14px;
+	color:#666666;
+}
+.L_myscore .reget_box dd .car_btnl{ 
+	width: 20px; 
+	height: 24px; 
+	float: left;
+	left;
+	*+height: 22px; 
+	margin-top: 38px; 
+	margin-left: 4px;
+}
+.L_myscore .reget_box dd .car_text{
+	width: 60px; 
+	height: 20px;
+	float: left; 
+	text-align: center;
+	margin-top: 38px;
+}
+.L_myscore .reget_box dd .car_btnr{ 
+	width: 20px; 
+	height: 24px;
+	float: left;
+	*+height: 22px;
+	margin-top: 38px;
+}
+.L_myscore .reget_box dd a{ 
+	width: 100px; 
+	height: 30px;
+	line-height:30px; 
+	color:#666666;
+	text-align:center;
+	background-color:#f2f2f2;
+	margin-top:10px;
+	display: block;
+}
+.L_myscore .reget_box dd .re_a1{
+	margin-top:40px;
+	background-color:#58a8e5;
+	color:#ffffff;
+	margin-left:26px;
+}
+.L_myscore .pay_bill input{
+	width:100px;
+	height:30px;
+	background-color:#58a8e5;
+	margin-left:430px;
+	margin-top:30px;
+	border:none;
+	color:#ffffff;
+}
+/* 商品信息 */
+/* ******************我的积分-结束********************* */
+
+
+
+
+
+/* ******************我的评价********************* */
+.L_discuss{
+	width: 950px; 
+	overflow: hidden; 
+	float: right; 
+	margin-top: 30px;
+	min-height: 480px;
+}
+.L_discuss .reget_name{
+	width: 950px; 
+	height: 45px; 
+	background: #f2f2f2; 
+	line-height: 50px; 
+	color: black; 
+	font-size: 16px; 
+	text-align: center;
+}
+/* 填写信息 */
+.L_discuss .reget_infor{
+	font-size:14px;
+	height:36px;
+	line-height:36px;
+	margin-top: 10px;
+}
+.L_discuss .reget_infor label{
+	width:140px;
+	display:inline-block;
+	text-align:center;
+	float:left;
+	color:#333333;
+}
+.L_discuss .reget_infor label span{
+	color:#666666;
+}
+.L_discuss .reget_infor .regoods_label1{
+	width:510px;
+	text-align:left;
+}
+.L_discuss .reget_infor .regoods_label4{
+	width:160px;
+	text-align:right;
+}
+.L_discuss .write_reget{
+	overflow:hidden;
+}
+.L_discuss .write_reget dt{
+	margin-top:10px;
+}
+.L_discuss .write_reget dt select{
+	height:28px;
+	width:106px;
+	font-size:14px;
+	color:#666666;
+	margin-left:10px;
+	outline:none;
+}
+.L_discuss .write_reget dd{
+	width:950px;
+	display:block;
+	overflow:hidden;
+	margin-top:10px;
+}
+.L_discuss .write_reget label{
+	width:70px;
+	height:24px;
+	font-size:14px;
+	color:#666666;
+	line-height: 24px;
+	float:left;
+	display: block;
+	text-align:right;
+}
+.L_discuss .write_reget input{
+	height: 24px;
+	line-height: 24px;
+	float:left;
+	padding-left:6px;
+	outline:none;
+	width:300px;
+	margin-left:10px;
+}
+.L_discuss .now_score{
+	height:50px;
+	line-height:74px;
+	padding-left:40px;
+	color:#58a8e5;
+	font-size:16px;
+}
+.L_discuss .reget_title{ 
+	width: 950px; 
+	height: 53px;
+	text-align:center;
+}
+.L_discuss .reget_title dt{ 
+	width:120px; 
+	height: 100%; 
+	float: left; 
+	font-size: 14px; 
+	color: black;
+	line-height: 68px;
+}
+.L_discuss .reget_title dt input{
+	margin-left: 56px; 
+	margin-top:26px;
+	width: 16px; 
+	height: 16px; 
+	float: left; 
+	margin-right: 10px;
+}
+.L_discuss .reget_title dd{
+	height: 100%; 
+	font-size: 14px; 
+	color: black;
+	line-height: 68px; 
+	float: left; 
+	text-align: center;
+}
+.L_discuss .reget_title .mdd_content{
+	width:390px;
+}
+.L_discuss .reget_title .mdd{
+	width:130px;
+}
+.L_discuss .reget_title .mdd_time{
+	width:180px;
+}
+/* 填写信息-结束 */
+
+
+/* 商品信息 */
+.L_discuss ul li{
+	margin-bottom: 0px;
+	border-top:#e5e5e5 1px solid;
+	overflow:hidden;
+}
+.L_discuss ul .reget_box{
+	border-top:none;
+	padding-top:1px;
+}
+.L_discuss ul li dt label{
+	margin-left:20px;
+}
+.L_discuss ul li dt{ 
+	width:99px; 
+	padding:0px 10px;
+	height: 110px; 
+	line-height:110px;
+	overflow:hidden;
+	font-size:14px;
+	float: left; 
+	text-align:center;
+}
+.L_discuss ul li dt a{
+	width: 502px; 
+	height: 100%; 
+	display: block; 
+	float: left;
+}
+.L_discuss ul li dt input{
+	margin-top:42px;
+	width: 16px; 
+	height: 16px; 
+	float: left; 
+	margin-right: 10px; 
+	margin-left: 10px;
+}
+.L_discuss ul li dt img{ 
+	width: 70px; 
+	height: 70px; 
+	margin-top: 20px; 
+	margin-left:28px;
+	float: left;
+}
+.L_discuss ul li dt div{ 
+	float: left; 
+	margin-left: 10px; 
+	width: 360px;
+	overflow:hidden;
+}
+.L_discuss ul li dt div h3{
+	font-size: 14px; 
+	color: #58a8e5; 
+	margin-top:20px ;
+	font-weight:normal;
+}
+.L_discuss ul li dt div p{ 
+	width: 360px; 
+	height:32px;
+	overflow:hidden;
+	color:#333333;
+	margin-top: 6px;
+}
+.L_discuss ul li dt div label{
+	color:#999999;
+	float:left;
+	height:16px;
+	margin-right:20px;
+}
+.L_discuss ul li dd{
+	width: 149px; 
+	height: 110px;  
+	float: left; 
+	overflow:hidden;
+	text-align: center;
+}
+.L_discuss ul li .score_time{
+	width:179px;
+	color:#999999;
+}
+.L_discuss ul li dd label{
+	display:inline-block;
+	font-size:14px;
+	margin-top: 4px;
+	float:left;
+}
+.L_discuss ul li dd  .uesd_price{
+	color:#999999;
+	text-decoration:line-through;
+}
+.L_discuss ul li dd  .now_price{
+	font-size:16px;
+	color:#333333;
+}
+.L_discuss ul li dd  .uesd_price,
+.L_discuss ul li dd  .all_price{
+	margin-top:30px;
+}
+.L_discuss ul li .numx{
+	width:350px;
+	padding:20px 20px;
+	height:70px;
+	line-height:20px;
+	font-size:12px;
+	color:#999;
+	text-align:left;
+}
+.L_discuss ul li .num{
+	width:130px;
+	line-height:110px;
+	font-size:14px;
+	color:#666666;
+}
+.L_discuss ul li .num img{
+	width:70px;
+	height:70px;
+	margin-top:20px;
+}
+.L_discuss ul li .nump{
+    width: 130px;
+    line-height: 110px;
+    font-size: 14px;
+    color: #666666;
+}
+.L_discuss ul li .nump label{
+	width:100%;
+	height:16px;
+	line-height:16px;
+	margin-top:36px;
+}
+.L_discuss ul li .nump img{
+	width:80px;
+	height:12px;
+	display:inline-block;
+	margin-top:6px;
+}
+.L_discuss ul li .score_time label{
+	float:left;
+	display:block;
+	margin-left:10px;
+	margin-top:40px;
+}
+.L_discuss ul li .score_time .latime{
+	margin-left:26px;
+}
+.L_discuss ul li dd .car_btnl{ 
+	width: 20px; 
+	height: 24px; 
+	float: left;
+	left;
+	*+height: 22px; 
+	margin-top: 38px; 
+	margin-left: 4px;
+}
+.L_discuss ul li dd .car_text{
+	width: 60px; 
+	height: 20px;
+	float: left; 
+	text-align: center;
+	margin-top: 38px;
+}
+.L_discuss ul li dd .car_btnr{ 
+	width: 20px; 
+	height: 24px;
+	float: left;
+	*+height: 22px;
+	margin-top: 38px;
+}
+.L_discuss ul li dd .re_a1{
+	margin-top:40px;
+	background-color:#58a8e5;
+	color:#ffffff;
+	margin-left:26px;
+}
+.L_discuss .pay_bill input{
+	width:100px;
+	height:30px;
+	background-color:#58a8e5;
+	margin-left:430px;
+	margin-top:30px;
+	border:none;
+	color:#ffffff;
+}
+/* 商品信息 */
+/* ******************我的评价-结束********************* */

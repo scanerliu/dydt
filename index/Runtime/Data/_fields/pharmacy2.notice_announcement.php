@@ -1,0 +1,1 @@
+<?php	return array ( 0 => 'id', 1 => 'arc_name', 2 => 'time', 3 => 'content', 4 => 'father_id', '_autoinc' => true, '_pk' => 'id', '_type' => array ( 'id' => 'int(10)', 'arc_name' => 'varchar(1000)', 'time' => 'varchar(100)', 'content' => 'mediumtext', 'father_id' => 'int(10)', ), );?>

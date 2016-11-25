@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+<title>{$top_content.title}</title>
+<meta name="Keywords" content="{$top_content.keywords}" />
+<meta name="Description" content="{$top_content.description}" />
+	<link rel="stylesheet" href="__PUBLIC__css/base.css">
+	<link rel="stylesheet" href="__PUBLIC__css/main.css">
+		<link rel="stylesheet" href="__PUBLIC__css/other.css">
+		<link rel="shortcut icon" href="__PUBLIC__images/favico.ico" />
+	<script style="text/javascript" src="__PUBLIC__js/jquery-1.11.0.js"></script>	
+	<script style="text/javascript" src="__PUBLIC__js/rich_lee.js"></script>
+</head>
+	<script type="text/javascript">
+	$(function(){
+		
+
+		nav_down();//
+	});
+		
+	</script>
+<body>
+<!-- top -->
+	<include file="public:header"/> <include file="public:search"/>
+		<div class="content">
+		<include file="public:nav"/>
+        
+       <div class="crumbs">
+       		<a>您的位置：</a>
+       		<p style="border: none;" class="crumbs02">首页</p>
+       		<p class="crumbs02">金牌厂家</p>
+       		<p>Gold factory</p> 
+
+       </div>
+      <!--
+      	作者：rich
+
+      	描述：面包屑
+      -->
+       <ul class="compan">
+       		<li>
+       		<volist name="gold_manu" id="vo">
+       			<a href="__APP__/goldcontent/goldcontent/id/{$vo['gold_id']}">
+       				<img src="/Uploads/{$vo['gold_pic']}"  />
+       			</a>
+       		 </volist>
+       		</li>
+       </ul>
+	</div>	
+	<include file="public:bottom"/>
+</body>
+</html>

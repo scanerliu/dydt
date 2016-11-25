@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>{$top_content.title}</title>
+<meta name="Keywords" content="{$top_content.keywords}" />
+<meta name="Description" content="{$top_content.description}" />
+	<link rel="stylesheet" href="__PUBLIC__css/base.css">
+	<link rel="stylesheet" href="__PUBLIC__css/base01.css">
+	<link rel="stylesheet" href="__PUBLIC__css/main.css">
+	<link href="__PUBLIC__css/innerpage.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="__PUBLIC__css/other.css">
+	<script style="text/javascript" src="__PUBLIC__js/jquery-1.11.0.js"></script>	
+	<script style="text/javascript" src="__PUBLIC__js/rich_lee.js"></script>
+	<script type="text/javascript" src="__PUBLIC__js/innerpage.js"></script>
+	<script src="__PUBLIC__js/ljs-v1.01.js"></script>
+    <script type="text/javascript">
+  $(document).ready(function(){
+ 	nav_down();//
+});
+</script>
+ </head>
+<body>
+<include file="public:header"/> <include file="public:search"/>
+<div class="content">
+<include file="public:nav"/>
+<div class="good_content">
+   		<dl class="good_cru">
+   			<dt><a href="/">首页</a><span>></span></dt>
+   			<dd>团购</dd>
+        </dl>
+   		<div class="team_buybox">
+        <volist name='list' id='vol'>
+        <dl class="team_buy">
+	   			<dt>
+	   				<a href="/shop/content/product_id/{$vol.product_id}"><img src="/Uploads/{$vol.img}" /></a>
+	   				<span>剩余时间：{$vol.remainingTime}</span>
+	   			</dt>
+	   			<dd>
+	   				<h3><a href="/shop/content/product_id/{$vol.product_id}">{$vol.title}</a></h3>
+	   				<span>￥{$vol.price3}</span>
+	   				<s>￥{$vol.price1}</s>
+                    <a href="/shop/content/product_id/{$vol.product_id}">马上购买</a>
+	   			</dd>
+	   		</dl>
+             </volist>
+             
+             <div style="clear:both"></div>
+             <div style="text-align:center; margin-top:20px">
+             {$page}
+             </div>
+   		</div>
+   </div>
+</div>
+
+
+
+<include file="public:bottom"/>
+</body>
+</html>

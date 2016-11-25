@@ -1,0 +1,1 @@
+<?php	return array ( 0 => 'express_fee_id', 1 => 'area', 2 => 'fee', '_autoinc' => false, '_type' => array ( 'express_fee_id' => 'int(10)', 'area' => 'varchar(10)', 'fee' => 'int(10)', ), );?>

@@ -1,0 +1,1 @@
+<?php	return array ( 0 => 'product_img_id', 1 => 'product_id', 2 => 'img', '_autoinc' => true, '_pk' => 'product_img_id', '_type' => array ( 'product_img_id' => 'int(100)', 'product_id' => 'int(100)', 'img' => 'varchar(100)', ), );?>

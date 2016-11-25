@@ -1,0 +1,601 @@
+/* ******************我的积分********************* */
+
+.L_myscore{
+	width: 950px; 
+	overflow: hidden; 
+	float: left; 
+	/*margin-top: 30px;*/
+	min-height: 480px;
+}
+.L_myscore .reget_name{
+	width: 950px; 
+	height: 45px; 
+	background: #f2f2f2; 
+	line-height: 50px; 
+	color: black; 
+	font-size: 16px; 
+	text-align: center;
+}
+/* 填写信息 */
+.L_myscore .reget_infor{
+	font-size:14px;
+	height:36px;
+	line-height:36px;
+	margin-top: 10px;
+}
+.L_myscore .reget_infor label{
+	width:140px;
+	display:inline-block;
+	text-align:center;
+	float:left;
+	color:#333333;
+}
+.L_myscore .reget_infor label span{
+	color:#666666;
+}
+.L_myscore .reget_infor .regoods_label1{
+	width:510px;
+	text-align:left;
+}
+.L_myscore .reget_infor .regoods_label4{
+	width:160px;
+	text-align:right;
+}
+.L_myscore .write_reget{
+	overflow:hidden;
+}
+.L_myscore .write_reget dt{
+	margin-top:10px;
+}
+.L_myscore .write_reget dt select{
+	height:28px;
+	width:106px;
+	font-size:14px;
+	color:#666666;
+	margin-left:10px;
+	outline:none;
+}
+.L_myscore .write_reget dd{
+	width:950px;
+	display:block;
+	overflow:hidden;
+	margin-top:10px;
+}
+.L_myscore .write_reget label{
+	width:70px;
+	height:24px;
+	font-size:14px;
+	color:#666666;
+	line-height: 24px;
+	float:left;
+	display: block;
+	text-align:right;
+}
+.L_myscore .write_reget input{
+	height: 24px;
+	line-height: 24px;
+	float:left;
+	padding-left:6px;
+	outline:none;
+	width:300px;
+	margin-left:10px;
+}
+.L_myscore .now_score{
+	height:50px;
+	line-height:74px;
+	padding-left:40px;
+	color:#58a8e5;
+	font-size:16px;
+}
+.L_myscore .reget_title{ 
+	width: 950px; 
+	height: 53px;
+	text-align:center;
+}
+.L_myscore .reget_title dt{ 
+	width:502px; 
+	height: 100%; 
+	float: left; 
+	font-size: 14px; 
+	color: black;
+	line-height: 68px;
+}
+.L_myscore .reget_title dt input{
+	margin-left: 56px; 
+	margin-top:26px;
+	width: 16px; 
+	height: 16px; 
+	float: left; 
+	margin-right: 10px;
+}
+.L_myscore .reget_title dd{
+	width: 149px; 
+	height: 100%; 
+	font-size: 14px; 
+	color: black;
+	line-height: 68px; 
+	float: left; 
+	text-align: center;
+}
+/* 填写信息-结束 */
+
+
+/* 商品信息 */
+.L_myscore ul li{
+	border-top:#e5e5e5 1px solid;
+	margin-bottom: 20px;
+}
+.L_myscore ul li .resheet_head{
+	border-left:#e5e5e5 1px solid;
+	border-right:#e5e5e5 1px solid;
+}
+.L_myscore ul li .resheet_head{
+	background-color:#eef6fc;
+	width:948px;
+	height:40px;
+	line-height:40px;
+	overflow:hidden;
+}
+.L_myscore ul li .resheet_head label{
+	margin-left:20px;
+}
+.L_myscore .reget_box{
+	width: 948px; 
+	height: 110px; 
+	border: #e5e5e5 1px solid; 
+	border-top:none;
+}
+.L_myscore .reget_box dt{ 
+	width:501px; 
+	height: 100%; 
+	float: left; 
+}
+.L_myscore .reget_box dt a{
+	width: 502px; 
+	height: 100%; 
+	display: block; 
+	float: left;
+}
+.L_myscore .reget_box dt input{
+	margin-top:42px;
+	width: 16px; 
+	height: 16px; 
+	float: left; 
+	margin-right: 10px; 
+	margin-left: 10px;
+}
+.L_myscore .reget_box dt img{ 
+	width: 70px; 
+	height: 70px; 
+	margin-top: 20px; 
+	margin-left:28px;
+	float: left;
+}
+.L_myscore .reget_box dt div{ 
+	float: left; 
+	margin-left: 10px; 
+	width: 360px;
+	overflow:hidden;
+}
+.L_myscore .reget_box dt div h3{
+	font-size: 14px; 
+	color: #58a8e5; 
+	margin-top:20px ;
+	font-weight:normal;
+}
+.L_myscore .reget_box dt div p{ 
+	width: 360px; 
+	height:32px;
+	overflow:hidden;
+	color:#333333;
+	margin-top: 6px;
+}
+.L_myscore .reget_box dt div label{
+	color:#999999;
+	float:left;
+	height:16px;
+	margin-right:20px;
+}
+.L_myscore .reget_box dd{
+	width: 149px; 
+	height: 100%;  
+	float: left; 
+	text-align: center;
+}
+.L_myscore .reget_box dd label{
+	display:inline-block;
+	width:100%;
+	font-size:14px;
+	margin-top: 4px;
+}
+.L_myscore .reget_box dd  .uesd_price{
+	color:#999999;
+	text-decoration:line-through;
+}
+.L_myscore .reget_box dd  .now_price{
+	font-size:16px;
+	color:#333333;
+}
+.L_myscore .reget_box dd  .uesd_price,
+.L_myscore .reget_box dd  .all_price{
+	margin-top:30px;
+}
+.L_myscore .reget_box .numx{
+	line-height:110px;
+	font-size:14px;
+	color:#666666;
+}
+.L_myscore .reget_box .num{
+	line-height:110px;
+	font-size:14px;
+	color:#666666;
+}
+.L_myscore .reget_box dd .car_btnl{ 
+	width: 20px; 
+	height: 24px; 
+	float: left;
+	left;
+	*+height: 22px; 
+	margin-top: 38px; 
+	margin-left: 4px;
+}
+.L_myscore .reget_box dd .car_text{
+	width: 60px; 
+	height: 20px;
+	float: left; 
+	text-align: center;
+	margin-top: 38px;
+}
+.L_myscore .reget_box dd .car_btnr{ 
+	width: 20px; 
+	height: 24px;
+	float: left;
+	*+height: 22px;
+	margin-top: 38px;
+}
+.L_myscore .reget_box dd a{ 
+	width: 100px; 
+	height: 30px;
+	line-height:30px; 
+	color:#666666;
+	text-align:center;
+	background-color:#f2f2f2;
+	margin-top:10px;
+	display: block;
+}
+.L_myscore .reget_box dd .re_a1{
+	margin-top:40px;
+	background-color:#58a8e5;
+	color:#ffffff;
+	margin-left:26px;
+}
+.L_myscore .pay_bill input{
+	width:100px;
+	height:30px;
+	background-color:#58a8e5;
+	margin-left:430px;
+	margin-top:30px;
+	border:none;
+	color:#ffffff;
+}
+/* 商品信息 */
+/* ******************我的积分-结束********************* */
+
+
+
+
+
+/* ******************我的评价********************* */
+.L_discuss{
+	width: 950px; 
+	overflow: hidden; 
+	float: right; 
+	margin-top: 30px;
+	min-height: 480px;
+}
+.L_discuss .reget_name{
+	width: 950px; 
+	height: 45px; 
+	background: #f2f2f2; 
+	line-height: 50px; 
+	color: black; 
+	font-size: 16px; 
+	text-align: center;
+}
+/* 填写信息 */
+.L_discuss .reget_infor{
+	font-size:14px;
+	height:36px;
+	line-height:36px;
+	margin-top: 10px;
+}
+.L_discuss .reget_infor label{
+	width:140px;
+	display:inline-block;
+	text-align:center;
+	float:left;
+	color:#333333;
+}
+.L_discuss .reget_infor label span{
+	color:#666666;
+}
+.L_discuss .reget_infor .regoods_label1{
+	width:510px;
+	text-align:left;
+}
+.L_discuss .reget_infor .regoods_label4{
+	width:160px;
+	text-align:right;
+}
+.L_discuss .write_reget{
+	overflow:hidden;
+}
+.L_discuss .write_reget dt{
+	margin-top:10px;
+}
+.L_discuss .write_reget dt select{
+	height:28px;
+	width:106px;
+	font-size:14px;
+	color:#666666;
+	margin-left:10px;
+	outline:none;
+}
+.L_discuss .write_reget dd{
+	width:950px;
+	display:block;
+	overflow:hidden;
+	margin-top:10px;
+}
+.L_discuss .write_reget label{
+	width:70px;
+	height:24px;
+	font-size:14px;
+	color:#666666;
+	line-height: 24px;
+	float:left;
+	display: block;
+	text-align:right;
+}
+.L_discuss .write_reget input{
+	height: 24px;
+	line-height: 24px;
+	float:left;
+	padding-left:6px;
+	outline:none;
+	width:300px;
+	margin-left:10px;
+}
+.L_discuss .now_score{
+	height:50px;
+	line-height:74px;
+	padding-left:40px;
+	color:#58a8e5;
+	font-size:16px;
+}
+.L_discuss .reget_title{ 
+	width: 950px; 
+	height: 53px;
+	text-align:center;
+}
+.L_discuss .reget_title dt{ 
+	width:120px; 
+	height: 100%; 
+	float: left; 
+	font-size: 14px; 
+	color: black;
+	line-height: 68px;
+}
+.L_discuss .reget_title dt input{
+	margin-left: 56px; 
+	margin-top:26px;
+	width: 16px; 
+	height: 16px; 
+	float: left; 
+	margin-right: 10px;
+}
+.L_discuss .reget_title dd{
+	height: 100%; 
+	font-size: 14px; 
+	color: black;
+	line-height: 68px; 
+	float: left; 
+	text-align: center;
+}
+.L_discuss .reget_title .mdd_content{
+	width:390px;
+}
+.L_discuss .reget_title .mdd{
+	width:130px;
+}
+.L_discuss .reget_title .mdd_time{
+	width:180px;
+}
+/* 填写信息-结束 */
+
+
+/* 商品信息 */
+.L_discuss ul li{
+	margin-bottom: 0px;
+	border-top:#e5e5e5 1px solid;
+	overflow:hidden;
+}
+.L_discuss ul .reget_box{
+	border-top:none;
+	padding-top:1px;
+}
+.L_discuss ul li dt label{
+	margin-left:20px;
+}
+.L_discuss ul li dt{ 
+	width:99px; 
+	padding:0px 10px;
+	height: 110px; 
+	line-height:110px;
+	overflow:hidden;
+	font-size:14px;
+	float: left; 
+	text-align:center;
+}
+.L_discuss ul li dt a{
+	width: 502px; 
+	height: 100%; 
+	display: block; 
+	float: left;
+}
+.L_discuss ul li dt input{
+	margin-top:42px;
+	width: 16px; 
+	height: 16px; 
+	float: left; 
+	margin-right: 10px; 
+	margin-left: 10px;
+}
+.L_discuss ul li dt img{ 
+	width: 70px; 
+	height: 70px; 
+	margin-top: 20px; 
+	margin-left:28px;
+	float: left;
+}
+.L_discuss ul li dt div{ 
+	float: left; 
+	margin-left: 10px; 
+	width: 360px;
+	overflow:hidden;
+}
+.L_discuss ul li dt div h3{
+	font-size: 14px; 
+	color: #58a8e5; 
+	margin-top:20px ;
+	font-weight:normal;
+}
+.L_discuss ul li dt div p{ 
+	width: 360px; 
+	height:32px;
+	overflow:hidden;
+	color:#333333;
+	margin-top: 6px;
+}
+.L_discuss ul li dt div label{
+	color:#999999;
+	float:left;
+	height:16px;
+	margin-right:20px;
+}
+.L_discuss ul li dd{
+	width: 149px; 
+	height: 110px;  
+	float: left; 
+	overflow:hidden;
+	text-align: center;
+}
+.L_discuss ul li .score_time{
+	width:179px;
+	color:#999999;
+}
+.L_discuss ul li dd label{
+	display:inline-block;
+	font-size:14px;
+	margin-top: 4px;
+	float:left;
+}
+.L_discuss ul li dd  .uesd_price{
+	color:#999999;
+	text-decoration:line-through;
+}
+.L_discuss ul li dd  .now_price{
+	font-size:16px;
+	color:#333333;
+}
+.L_discuss ul li dd  .uesd_price,
+.L_discuss ul li dd  .all_price{
+	margin-top:30px;
+}
+.L_discuss ul li .numx{
+	width:350px;
+	padding:20px 20px;
+	height:70px;
+	line-height:20px;
+	font-size:12px;
+	color:#999;
+	text-align:left;
+}
+.L_discuss ul li .num{
+	width:130px;
+	line-height:110px;
+	font-size:14px;
+	color:#666666;
+}
+.L_discuss ul li .num img{
+	width:70px;
+	height:70px;
+	margin-top:20px;
+}
+.L_discuss ul li .nump{
+    width: 130px;
+    line-height: 110px;
+    font-size: 14px;
+    color: #666666;
+}
+.L_discuss ul li .nump label{
+	width:100%;
+	height:16px;
+	line-height:16px;
+	margin-top:36px;
+}
+.L_discuss ul li .nump img{
+	width:80px;
+	height:12px;
+	display:inline-block;
+	margin-top:6px;
+}
+.L_discuss ul li .score_time label{
+	float:left;
+	display:block;
+	margin-left:10px;
+	margin-top:40px;
+}
+.L_discuss ul li .score_time .latime{
+	margin-left:26px;
+}
+.L_discuss ul li dd .car_btnl{ 
+	width: 20px; 
+	height: 24px; 
+	float: left;
+	left;
+	*+height: 22px; 
+	margin-top: 38px; 
+	margin-left: 4px;
+}
+.L_discuss ul li dd .car_text{
+	width: 60px; 
+	height: 20px;
+	float: left; 
+	text-align: center;
+	margin-top: 38px;
+}
+.L_discuss ul li dd .car_btnr{ 
+	width: 20px; 
+	height: 24px;
+	float: left;
+	*+height: 22px;
+	margin-top: 38px;
+}
+.L_discuss ul li dd .re_a1{
+	margin-top:40px;
+	background-color:#58a8e5;
+	color:#ffffff;
+	margin-left:26px;
+}
+.L_discuss .pay_bill input{
+	width:100px;
+	height:30px;
+	background-color:#58a8e5;
+	margin-left:430px;
+	margin-top:30px;
+	border:none;
+	color:#ffffff;
+}
+/* 商品信息 */
+/* ******************我的评价-结束********************* */

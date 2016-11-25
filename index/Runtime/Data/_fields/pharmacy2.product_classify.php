@@ -1,0 +1,1 @@
+<?php	return array ( 0 => 'product_classify_id', 1 => 'fid', 2 => 'title', '_autoinc' => true, '_pk' => 'product_classify_id', '_type' => array ( 'product_classify_id' => 'int(100)', 'fid' => 'varchar(100)', 'title' => 'varchar(100)', ), );?>

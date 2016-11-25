@@ -1,0 +1,193 @@
+                                           <!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>退款/退货-{$top_content.title}</title>
+	<link rel="stylesheet" href="__PUBLIC__css/base.css">
+	<link rel="stylesheet" href="__PUBLIC__css/main.css">
+	<link rel="stylesheet" href="__PUBLIC__css/other.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__css/L_person.css">
+	<script style="text/javascript" src="__PUBLIC__js/jquery-1.11.0.js"></script>	
+	<script style="text/javascript" src="__PUBLIC__js/rich_lee.js"></script>
+</head>
+	<script type="text/javascript">
+	$(function(){
+		
+
+		nav_down();//
+	});
+		
+	</script>
+<body>
+<!-- top -->
+	<include file="public:header"/>
+<!-- topend -->
+<!-- search -->
+	<include file="public:search"/>
+<!-- searchend -->
+<!-- nav -->
+	<div class="content">
+		<include file="public:nav"/>
+		<!--
+        	作者：rich
+        	时间：2015-10-21
+        	描述：banner右侧
+        -->	
+       <div class="crumbs">
+       		<span>订单管理</span>
+       		<p>the order management</p> 
+       		<p class="crumbs02">退款/退货</p>
+       </div>
+        <include file="public:left"/> 
+       <!--
+       	作者：rich_lee
+       	描述：面包屑 面包屑导航 完成
+       -->
+
+
+       <!-- 退/换货-查看 -->
+       <form class="reget">
+       		<div class="reget_name">退款/退货</div>
+       		<dl class="reget_title">
+       			<dt>
+       				<span>商品信息</span>
+       			</dt>
+       			<dd><span>金额（元）</span></dd>
+       			<dd>状态</dd>
+       			<dd>总价（元）</dd>
+       			<dd>操作</dd>
+       		</dl>
+       		<ul>
+       		<volist name="list" id="vo">
+       			<li>
+       				<div class="resheet_head">
+   						<label>{$vo.date|date='Y-m-d',###}</label>
+   						<label>订单号：<span>{$vo.order_num}</span></label>
+   					</div>
+	       			<dl class="reget_box">
+	       				<dt>
+	       					<a href="/shop/content/product_id/{$vo.product_id}">
+			       				<img src="/Uploads/{$vo.img}"  />
+			       				<div>
+			       					<h3>{$vo.title}</h3>
+			       					<p>{$vo.subhead}</p>
+			       				</div>
+			       			</a>
+			       		</dt>
+			       		<dd>
+			       			<label style="line-height:110px;" class="money">{$vo.money}</label>
+		       			</dd>
+			       		
+			       		<if condition="$vo['status'] eq 0">
+				       		<dd class="num">
+				       			审核中...
+				       		</dd>
+				       		<dd>
+				       			<label class="all_price">26</label>
+				       			<label>（含运费：0）</label>
+			       			</dd>
+				       		<dd>
+				       			<a href="/return/return_over/id/{$vo.return_id}" onClick="return confirm('确认要取消此申请？')" class="re_a1">取消申请</a>
+				       			<a href="/return/sta/order_id/{$vo.order_id}/product_id/{$vo.product_id}">查看详情</a>
+				       		</dd>
+			       		<elseif condition="$vo['status'] eq 1" />
+		       				<dd class="num">审核通过</dd>
+		       				<dd>
+				       			<label class="all_price">26</label>
+				       			<label>（含运费：0）</label>
+			       			</dd>
+				       		<dd>
+				       			<if condition="$vo['express_num'] eq ''">
+					       			<a href="/return/express/id/{$vo.return_id}" class="re_a1">填写物流信息</a>
+					       		<else />
+					       			<a href="/return/express/id/{$vo.return_id}" class="re_a1">查看物流信息</a>
+					       		</if>
+					       			<a href="/return/sta/order_id/{$vo.order_id}/product_id/{$vo.product_id}">查看详情</a>
+				       		</dd>
+			       		<elseif condition="$vo['status'] eq 2" />
+		       				<dd class="num">
+		       					审核未通过
+		       					<!-- <br>{$vo.back} -->
+		       				</dd>
+		       				<dd>
+				       			<label class="all_price">26</label>
+				       			<label>（含运费：0）</label>
+			       			</dd>
+				       		<dd>
+				       			<a  href="/return/return_over/id/{$vo.return_id}" onClick="return confirm('确认要取消此申请？')" class="re_a1">取消申请</a>
+				       			<a href="/return/return_err/id/{$vo.return_id}/order_id/{$vo.order_id}/product_id/{$vo.product_id}">查看详情</a>
+				       		</dd>
+				       	<elseif condition="$vo['status'] eq 3" />
+				       		<dd class="num">已取消</dd>
+		       				<dd>
+				       			<label class="all_price">26</label>
+				       			<label>（含运费：0）</label>
+			       			</dd>
+			       			<dd>
+			       				<a  href="/return/del_return/id/{$vo.return_id}" onClick="return confirm('确认要删除此申请记录吗？')" class="re_a1">删除记录</a>
+				       			<a href="/return/sta/order_id/{$vo.order_id}/product_id/{$vo.product_id}/id/{$vo.return_id}">重新提交</a>
+				       		</dd>
+				 		<else />
+				 			<dd class="num">已完成</dd>
+		       				<dd>
+				       			<label class="all_price">26</label>
+				       			<label>（含运费：0）</label>
+			       			</dd>
+			       			<dd>
+			       				<a  href="/return/del_return/id/{$vo.return_id}" onClick="return confirm('确认要删除此申请记录吗？')" class="re_a1">删除记录</a>
+				       			<!-- <a href="/return/sta/order_id/{$vo.order_id}/product_id/{$vo.product_id}">重新提交</a> -->
+				       		</dd>
+			       		</if>
+			       	</dl>
+       			</li>
+       		</volist>
+       		</ul>
+       		<div class="feny">{$page}</div>
+       </form>
+
+       <!-- 退/换货-查看     -结束 -->
+
+
+
+
+
+       
+       
+       
+       
+       
+	</div>	
+	<!--
+    	作者：rich
+    	描述：friend ++ content end
+    -->	
+	<include file="public:bottom"/>		
+	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	
+
+</body>
+</html>

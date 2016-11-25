@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>我的订单-{$top_content.title}</title>
+<meta name="Keywords" content="{$top_content.keywords}" />
+<meta name="Description" content="{$top_content.description}" />
+<link rel="stylesheet" href="__PUBLIC__css/base.css">
+<link rel="stylesheet" href="__PUBLIC__css/main.css">
+<link rel="stylesheet" href="__PUBLIC__css/other.css">
+<link rel="stylesheet" type="text/css" href="__PUBLIC__css/L_person.css">
+<script style="text/javascript" src="__PUBLIC__js/jquery-1.11.0.js"></script>
+<script style="text/javascript" src="__PUBLIC__js/rich_lee.js"></script>
+</head>
+<script type="text/javascript">
+	$(function(){
+  		nav_down();//
+	});
+ 	</script>
+ <body>
+<!-- top --> 
+<include file="public:header"/> <include file="public:search"/>
+<div class="content"> <include file="public:nav"/>
+  <div class="crumbs"> <span>订单管理  </span>
+    <p>the order management</p>
+  </div>
+  <include file="public:left"/> 
+  <!-- 我的订单 -->
+  <div class="my_fill">
+    <div class="reget_name">我的订单</div>
+    <div class="Lfill_select">
+      <div class="Lfill_a"><a href="/order/orderList"  >所有订单</a><a href="/order/orderList/status/1">待付款</a> <a href="/order/orderList/status/2">待发货</a><a href="/order/orderList/status/3">待收货</a><a href="/order/orderList/status/4">待评价</a><a href="/order/orderList/status/5">已评价</a></div>
+    <script type="text/javascript">
+	   <if condition="$_GET['status']"> 
+	    $('.Lfill_a a').eq({$_GET['status']}).attr('class','Lfill_a1')
+		<else/> $('.Lfill_a a').eq(0).attr('class','Lfill_a1')
+      </if>
+    </script>
+      <div class="Lfill_search">
+        <form action="/order/orderList" method="get" name="order_search">
+        <input type="text" name="order_key_word" value="{$_GET['order_key_word']}">
+        <a class="Ls_button" onClick="order_search.submit()">订单搜索</a> </div>
+        </form>
+    </div>
+    <dl class="Lfill_title">
+      <dt> <span>商品信息</span> </dt>
+      <dd class="wid1"><span>单价（元）</span></dd>
+      <dd class="wid1">数量</dd>
+      <dd>商品操作</dd>
+      <dd class="wid1">总价（元）</dd>
+      <dd>交易状态</dd>
+      <dd>交易操作</dd>
+    </dl>
+    <ul>
+      <volist name='list' id='vol'>
+        <li>
+          <div class="resheet_head">
+            <label>&nbsp;&nbsp;{$vol.time|date='Y年m月d日 H:i:s',###}</label>
+            <label>订单号：<span>{$vol.order_num}</span> &nbsp;&nbsp;  运费 <span style="color:#F00; font-size:16px">{$vol.express_fee}</span>元 &nbsp;&nbsp;&nbsp;总价(包含运费) <span style="color:#F00; font-size:16px">{$vol.total}</span>元</label>
+          </div>
+          <volist name='vol.product' id='vol2'>
+            <dl class="reget_box">
+              <dt> <a href="/shop/content/product_id/{$vol2.product_id}"> <img src="/Uploads/{$vol2.img}"  />
+                <div>
+                  <h3>{$vol2.title}</h3>
+                  <p>{$vol2.subhead}</p>
+                </div>
+                </a> </dt>
+              <dd class="wid2">
+                <div style="margin-top:50px;">{$vol2.price}</div>
+              </dd>
+              <dd class="num wid2"> {$vol2.product_num} </dd>
+              <dd class="godds_operate"> 
+                <if condition="$vol.status eq 1 ">
+                  <a href="/order/orderListFunorderDel/order_id/{$vol.order_id}">取消订单</a>
+                <elseif condition="$vol.status eq  2   and $vol2.is_return neq  1 " />
+                  <a href="/return/return_one/order_id/{$vol.order_id}/product_id/{$vol2.product_id}">退款/退货</a>
+               <elseif condition="$vol.status neq  2  and   $vol.status neq  1  and $vol2.is_return neq  1 " />
+                  <a href="/return/return_one/order_id/{$vol.order_id}/product_id/{$vol2.product_id}">退款/退货</a>
+                </if>
+                   <if condition="$vol2.is_return eq  1"><a href="/return/return_two/order_id/{$vol.order_id}/product_id/{$vol2.product_id}">退款/退货处理中</a></if>
+                   <if condition="$vol2.is_return eq  2">退货已经完成</if>
+                  <if condition="$vol2.is_have_comment_right eq 1 "> <a href="/shop/content/product_id/{$vol2.product_id}/order_id/{$vol.order_id}" style="margin-left:9px">去评价</a> </if>
+                   </dd>
+              <dd class="wid2">
+                <div style="margin-top:50px;">{$vol2.total_price}</div>
+              </dd>
+              <dd class="operatea">
+                <div style=" margin-top:50px;">
+                  <if condition="$vol.status eq  1"> 待付款
+                  <elseif condition="$vol.status eq  2"/>待发货 
+                  <elseif condition="$vol.status eq  3"/>待确认 
+                  <elseif condition="$vol.status eq  4"/>
+                     <if condition="$vol2.is_have_comment_right eq 1"> 未评价
+                       <else/> 已评价
+                      </if>  
+                   <elseif condition="$vol.status eq  5"/>已经评价 
+               </if>
+                 </div>
+              </dd>
+              <dd class="now_ha">
+                 <div style="margin-top:40px;">
+                 <a href="/order/orderDetail/order_id/{$vol.order_id}" class="re_a1">查看详情</a>
+                  </div>
+              </dd>
+            </dl>
+          </volist>
+        </li>
+      </volist>
+    </ul>
+    <div class="feny">{$page}</div>
+  </div>
+  <!-- 我的订单-结束 --> 
+ </div>
+<include file="public:bottom"/>
+</body>
+</html>

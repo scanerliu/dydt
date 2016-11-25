@@ -1,0 +1,191 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>{$top_content.title}</title>
+<meta name="Keywords" content="{$top_content.keywords}" />
+<meta name="Description" content="{$top_content.description}" />
+<link rel="stylesheet" href=" __PUBLIC__css/base.css">
+<link rel="stylesheet" href="__PUBLIC__css/main.css">
+<link rel="stylesheet" href="__PUBLIC__css/other.css">
+<script style="text/javascript" src="__PUBLIC__js/jquery-1.11.0.js"></script>
+<script style="text/javascript" src="__PUBLIC__js/rich_lee.js"></script>
+</head>
+<body>
+<!-- top -->
+<include file="public:header"/>
+<div class="search_index">
+  <div class="search_index_left"> <a href="/"> <img src="__PUBLIC__images/logo.png" alt="真善美"> </a> </div>
+</div>
+<!-- searchend --> 
+<!-- nav -->
+<div class="my_content"> <img class="reg_img" src="__PUBLIC__img/reg_img.png"  />
+  <form id="form" class="reg" action="/account/registerFunDo" method="post">
+    <ul>
+      <dt>
+        <h3>免费注册</h3>
+        <span>已有账号？<a href="/account/login">立即登陆</a></span> </dt>
+      <dd> <em></em>
+        <select id="identity" name="identity" style="height:38px;float:right;border: #e5e5e5 1px solid;font-size:14px;margin-top:1px;margin-left:5px">
+          <option value="0">身份</option>
+          <option value="1">诊所</option>
+          <option value="2">药房</option>
+        </select>
+        <input type="text" id="name" name="name" style="width:193px" onchange="ss(this)" placeholder="请输入用户名"/>
+        <span>用户名：</span>
+      </dd>
+      <dd id="err" style="display:none">
+        <label id="err_lb" style="margin-left:77px;color:red;"></label>
+      </dd>
+      <dd>
+        <input type="button" value="验证码" id="get_code" onclick="getcode()" style="margin-left:5px;width:52px"/>
+        <input type="text" id="tel" name="tel" style="width:193px" placeholder="请输入手机号码"/>
+        <span>手机号码：</span>
+      </dd>
+      <dd id="tel_err" style="display:none">
+        <label id="tel_err_lb" style="margin-left:77px;color:red;"></label>
+      </dd>
+      <dd>
+        <input type="text" id="code" name="code" placeholder="请输入验证码"/>
+        <span>验证码：</span>
+      </dd>
+      <dd id="code_err" style="display:none">
+        <label id="code_err_lb" style="margin-left:77px;color:red;"></label>
+      </dd>
+      <dd>
+        <input type="password" id="password" name="password" placeholder="请输入登录密码"/>
+        <span>登陆密码：</span>
+      </dd>
+      <dd id="pwd_err" style="display:none">
+        <label id="pwd_err_lb" style="margin-left:77px;color:red;"></label>
+      </dd>
+      <dd>
+        <input type="password" id="password2" name="password2" placeholder="请再次输入登录密码"/>
+        <span>确认密码：</span>
+      </dd>
+      <dd id="pwdd_err" style="display:none">
+        <label id="pwdd_err_lb" style="margin-left:77px;color:red;"></label>
+      </dd>
+      <dt>
+        <input type="button" id="but" onclick="" value="同意协议并注册"   style="background:#BEBEBE" />
+        <input style="width:15px;height:15px;" type="checkbox" onclick="arg(this)"/>
+        <a href="/newsmanu/newsmanu/id/73" class="reg_sub">《单体药房网用户协议》</a> </dt>
+    </ul>
+  </form>
+  <div class="reg_shadow"></div>
+</div>
+<script type="text/javascript">
+
+
+
+  function ss (s) {
+    var name = s.value;
+    $.post("/account/is_name",{name:name},function(data){
+      if (data==0) {
+        $('#err').css('display','none');
+      } else {
+        $('#err').css('display','block');
+        $('#err_lb').html('用户名已存在！');
+      };
+    });
+  }
+  function arg (obj) {
+    if (obj.checked==true) {
+      $('#but').attr('onclick','sub()');
+      $('#but').css('background','#58a8e5');
+    } else {
+      $('#but').attr('onclick','');
+      $('#but').css('background','#BEBEBE');
+    };
+  }
+  function getcode () {
+    var tel = document.getElementById('tel').value;
+    var get_code = document.getElementById('get_code');
+    var myreg = /^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1}))+\d{8})$/;
+    if(!myreg.test(tel)) {
+      alert('请输入正确的手机号！');
+    } else {
+      send();
+      time(get_code);
+    }
+  }
+  var wait = 60;
+  function send () {
+    var phonenumber = document.getElementById('tel').value;
+    $.ajax({
+      type: "POST",
+      url:'/account/yzm',
+      data:{tel:phonenumber},
+      success: function(data){
+        if(data == 2){
+          alert('该手机号已注册！');
+        }
+      }
+    });
+  }
+  function time(btn){
+    if (wait==0) {
+        btn.value = "验证码";
+        btn.setAttribute("onclick","getcode()");
+        wait = 60;
+    }else{
+        btn.value = wait + "S";
+        wait--;
+        btn.setAttribute("onclick","");
+        setTimeout(function(){
+          time(btn);
+        },1000);
+    }
+  }
+  function sub () {
+    var name = document.getElementById('name').value;
+    if (!name) {
+      $('#err').css('display','block');
+      $('#err_lb').html('请输入用户名！');
+    } else {
+      $('#err').css('display','none');
+    };
+    var identity = document.getElementById('identity').value;
+    if (identity==0) {
+      alert('请选择要注册的身份！');
+    };
+    var tel = document.getElementById('tel').value;
+    var myreg = /^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1}))+\d{8})$/;
+    if (!myreg.test(tel)) {
+      $('#tel_err').css('display','block');
+      $('#tel_err_lb').html('请输入有效的手机号！');
+    } else {
+      $('#tel_err').css('display','none');
+    };
+    var code = document.getElementById('code').value;
+    if (!code) {
+      $('#code_err').css('display','block');
+      $('#code_err_lb').html('请输入手机验证码！');
+    } else {
+      $('#code_err').css('display','none');
+    };
+    var password = document.getElementById('password').value;
+    if (!password || password.length<6 || password.length>16) {
+      $('#pwd_err').css('display','block');
+      $('#pwd_err_lb').html('请输入6-16位字符组成的密码！');
+    } else {
+      $('#pwd_err').css('display','none');
+    };
+    var password2 = document.getElementById('password2').value;
+    if (!password2) {
+      $('#pwdd_err').css('display','block');
+      $('#pwdd_err_lb').html('请再次输入密码！');
+    } else if (password2 != password) {
+      $('#pwdd_err').css('display','block');
+      $('#pwdd_err_lb').html('密码不一致！');
+    } else {
+      $('#pwdd_err').css('display','none');
+    };
+    if (identity!=0 && name && myreg.test(tel) && code && password && 6<password.length<16 && password2 && password2==password) {
+      $('#form').submit();
+    };
+  }
+</script>
+<include file="public:bottom"/>
+</body>
+</html>

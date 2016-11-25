@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>{$top_content.title}</title>
+<meta name="Keywords" content="{$top_content.keywords}" />
+<meta name="Description" content="{$top_content.description}" />
+<link rel="stylesheet" href="__PUBLIC__css/base.css">
+<link rel="stylesheet" href="__PUBLIC__css/main.css">
+<script style="text/javascript" src="__PUBLIC__js/jquery-1.11.0.js"></script>
+<script style="text/javascript" src="__PUBLIC__js/rich_lee.js"></script>
+</head>
+<body>
+<!-- top --> 
+  <script type="text/javascript">
+<volist name='coupon' id='vol'>
+  alert('您已经获得一张代金券 金额 {$vol.num}  开始时间 {$vol.begtime|date='Y年m月d日',###}------- 结束时间 开始时间 {$vol.endtime |date='Y年m月d日',###}')
+</volist>
+</script>
+<include file="public:header"/> <include file="public:search"/>
+{$index_cache}
+
+<div class="index_onload_cache"  style="display:none"">
+ <if condition="$_SESSION['user_id'] eq null "> <img src='__PUBLIC__img/index_onload_img.png'>
+              <p>Hi,您好！<br>
+                <a href='/account/login'>点此登录</a>,更多惊喜等着您 </p>
+              <span> <a class='a1' href='/account/login'>查看订单</a> <a class='a2' href='/account/login'>查看购物车</a> </span>
+              <else/>
+              <img src='/Uploads/{$top.img}'  style='width:60px; height:60px;'>
+              <p>Hi,您好！{$top.name}<br>
+                欢迎来到药房网商城</p>
+  <span> <a class='a1' href='/order/orderList'>查看订单</a> <a class='a2' href='/ordermanage/shop_cart'>查看购物车</a> </span> </if>
+ </div>
+      <script type="text/javascript">
+ 		 $('.index_onload').html( $('.index_onload_cache').html()) 
+    </script>
+   <include file="public:bottom"/>
+</body>
+</html>

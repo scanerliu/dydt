@@ -1,0 +1,1 @@
+<?php	return array ( 0 => 'gold_id', 1 => 'gold_name', 2 => 'gold_pic', 3 => 'gold_content', 4 => 'browse_num', '_autoinc' => true, '_pk' => 'gold_id', '_type' => array ( 'gold_id' => 'int(10)', 'gold_name' => 'varchar(20)', 'gold_pic' => 'varchar(100)', 'gold_content' => 'varchar(10000)', 'browse_num' => 'int(20)', ), );?>

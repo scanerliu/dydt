@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>购买认证-真善美</title>
+	<link rel="stylesheet" href="__PUBLIC__css/base.css">
+	<link rel="stylesheet" href="__PUBLIC__css/main.css">
+	<link rel="stylesheet" href="__PUBLIC__css/other.css">
+	<link rel="stylesheet" type="text/css" media="all" href="__PUBLIC__css/style1.css">
+	<link rel="stylesheet" type="text/css" media="all" href="__PUBLIC__css/style.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__css/L_person.css">
+	<script style="text/javascript" src="__PUBLIC__js/jquery-1.11.0.js"></script>	
+	<script style="text/javascript" src="__PUBLIC__js/rich_lee.js"></script>
+	<script type="text/javascript" src="__PUBLIC__js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="__PUBLIC__js/jquery.leanModal.min.js"></script>
+</head>
+	<script type="text/javascript">
+	$(function(){
+		
+
+		nav_down();//
+	});
+		
+	</script>
+<body>
+<!-- top -->
+	<include file="public:header"/>
+<!-- topend -->
+<!-- search -->
+	<include file="public:search"/>
+<!-- searchend -->
+<!-- nav -->
+	<div class="content">
+		<include file="public:nav"/>
+
+		<!--
+        	作者：rich
+        	时间：2015-10-21
+        	描述：banner右侧
+        -->	
+       <div class="crumbs">
+       		<span>账号管理</span>
+       		<p>the account management</p> 
+       		<p class="crumbs02">购买认证</p>
+       </div>
+       <include file="public:left"/>
+<!-- 购买认证 -->
+<div class="L_member_infor">
+	<form>
+    <div class="buy_identify">
+       <dl>
+       	<dt>购买认证</dt>
+       	<if condition="$status eq 1">
+   			<label style="margin-left:390px;color:red;">您已经上传并审核通过所有(必要)认证！</label>
+		<elseif condition="$status eq 2" />
+			<label style="margin-left:300px;color:red;">您还有没通过审核的(必要)认证！（上传所有(必要)认证并通过审核才能购买商品）</label>
+		<else />
+			<label style="margin-left:300px;color:red;">您还有没上传的(必要)认证！（上传所有(必要)认证并通过审核才能购买商品）</label>
+		</if>
+       	<if condition="$doc_user neq ''">
+	       	<dd>
+	       		<label class="label1">证件信息(<a style="color:red">红色为必要认证</a>)</label>
+	       		<label class="label2">证件有效日期</label>
+	       		<label class="label3">证件持有者姓名</label>
+	       		<label class="label4">上传凭证</label>
+	       	</dd>
+	       	<dd>
+	       		<ul>
+		       		<volist name="doc_user" id="doc">
+		       			<li class="member_first_li">
+		       				<div class="identify_infor">
+			       				<if condition="$doc.status eq 0">
+			       					<label style="margin-left:35px;margin-top:30px;" name="doc_type">
+				       					<if condition="$doc.m eq 1">
+				       						<a style="color:red">{$doc.doc_type2}</a>
+				       					<else />
+				       						{$doc.doc_type2}
+				       					</if>
+			       					</label>
+			       					<label style="margin-left:46px;">(待审核...)</label>
+			       				<elseif condition="$doc.status eq 1" />
+			       					<label style="margin-left:35px;margin-top:30px;" name="doc_type">
+				       					<if condition="$doc.m eq 1">
+				       						<a style="color:red;">{$doc.doc_type2}</a>
+				       					<else />
+				       						{$doc.doc_type2}
+				       					</if>
+			       					</label>
+			       					<label style="margin-left:46px;">(审核通过)</label>
+			       				<else />
+			       					<label style="margin-left:35px;margin-top:10px;" name="doc_type">
+				       					<if condition="$doc.m eq 1">
+				       						<a style="color:red">{$doc.doc_type2}</a>
+				       					<else />
+				       						{$doc.doc_type2}
+				       					</if>
+			       					</label>
+			       					<label style="font-size:8px;">(审核失败,请删除后重新上传)</label>
+			       				</if>
+		       				</div>
+		       				<if condition="$doc.status eq 2">
+			       				<div style="width:270px;padding-left:10px;border-left:1px solid #dddddd;padding-top:22px">
+			       					<a style="font-size:18px;color:#8E8E8E;">失败原因：</a><br>
+			       					<a style="font-size:16px;margin-left:79px;color:#8E8E8E;">{$doc.back}</a>
+			       				</div>
+			       			<else />
+			       				<div class="identify_uestime">
+			       				<if condition="$doc.er neq ''">
+			       					<label style="margin-left:39px;color:#db6969">{$doc['get_date']}~{$doc['lose_date']}<br>{$doc.er}</label>
+			       					<else />
+			       					<label style="margin-left:39px;">{$doc['get_date']}~{$doc['lose_date']}<br>{$doc.er}</label>
+			       					</if>
+			       				</div>
+			       			</if>
+		       				<div class="identify_name">
+		       					<label style="margin-left:50px;margin-top:35px;">{$doc['name']}</label>
+		       				</div>
+			       			<div class="identify_upload">
+			       				<img style="width:200px;height:100px;margin-left:39px;" src="/Uploads/{$doc['img']}">
+			       				<a onClick="return confirm('确认要删除此认证吗,没有完整上传认证将无法购买商品！')" href="{:U('userinfo/del_doc',array('id'=>$doc['id']))}" style="width:80px;;margin-left:259px;margin-top:-66px;">删除</a>
+			       			</div>
+		       			</li>
+		       		</volist>
+		       	</ul>
+       		</dd>	
+       	</if>
+   		<dd>
+	   		<if condition="($st neq 3)">
+				<center><a href="#loginmodal" class="flatbtn" id="modaltrigger">上传</a></center>
+			</if>
+		</dd>
+       	</dl>
+    </div>
+    </form>
+
+    <div id="loginmodal" style="display:none;">
+		<h1>上传认证</h1>
+		<form id="loginmodal" name="loginmodal" method="post" action="{:U('userinfo/up')}" enctype="multipart/form-data">
+			<div class="buy_identify">
+			    <dl>
+			       	<dt class="buy_dt">购买认证<span>（以下信息必填，否则无法购买商品）</span></dt>
+			       	<dd>
+			       		<label class="label1">证件信息</label>
+			       		<label class="label2">证件有效日期</label>
+			       		<label class="label3">证件持有者姓名</label>
+			       		<label class="label4">上传凭证</label>
+			       	</dd>
+			       	<dd>
+			       		<ul>
+			       			<li class="member_first_li">
+			       				<div class="identify_infor">
+			       					<select name="doc_type">
+			       					<option>-请选择-</option>
+				       					<volist name="doc_d" id="dd">
+				       						<option>{$dd.doc_type}<if condition="$dd.status eq 1">(必要)</if></option>
+				       					</volist>
+			       					</select>
+			       				</div>
+			       				<div class="identify_uestime">
+			       					<input type="date" name="get_date" style="width:120px;height:18px;margin-left:0px;margin-top:33px;line-height:20px;padding:4px;" />
+			       					<label>~</label>
+			       					<input type="date" name="lose_date" style="width:120px;height:18px;line-height:20px;margin-left:0px;margin-top:33px;padding:4px;" />
+			       				</div>
+			       				<div class="identify_name">
+			       					<input type="text" name="name" placeholder="请填写持有者姓名">
+			       				</div>
+			       				<div class="identify_upload">
+			       					<input style="margin-top:16px;margin-left:130px;" type="file" name="photo">
+			       					<label>图片大小不超过5M，仅支持GIF、JPG、PNG、BMP格式</label>
+			       				</div>
+			       			</li>
+			       		</ul>
+			       	</dd>
+		       		<dd>
+       					<input class="L_save" type="submit" name="submit" value="保存" />
+       				</dd>
+       			</if>
+			    </dl>
+		    </div>
+		</form>
+	</div>
+</div>
+<script type="text/javascript">
+$(function(){
+	//弹出层调用语句
+	$('#modaltrigger').leanModal({
+		top:110,
+		overlay:0.45,
+		closeButton:".hidemodal"
+	});
+});
+</script>
+    <!-- 购买认证-结束 -->
+    	</div>
+    <include file="public:bottom"/>

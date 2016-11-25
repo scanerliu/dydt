@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>{$top_content.title}</title>
+<meta name="Keywords" content="{$top_content.keywords}" />
+<meta name="Description" content="{$top_content.description}" />
+<link rel="stylesheet" href="__PUBLIC__css/base.css">
+<link rel="stylesheet" href="__PUBLIC__css/base01.css">
+<link rel="stylesheet" href="__PUBLIC__css/main.css">
+<link href="__PUBLIC__css/innerpage.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="__PUBLIC__css/other.css">
+<script style="text/javascript" src="__PUBLIC__js/jquery-1.11.0.js"></script>
+<script style="text/javascript" src="__PUBLIC__js/rich_lee.js"></script>
+<script type="text/javascript" src="__PUBLIC__js/innerpage.js"></script>
+<script src="__PUBLIC__js/ljs-v1.01.js"></script>
+</head>
+<script type="text/javascript">
+  $(document).ready(function(){
+	productImgShow("proshowimg","li","proshowmenu","sel",396,396);
+	checkBoxShow("assort_menu","a","assort_sum","li","sel");
+	productBoxShow("assort_menu","a","assort_ol","li","assort_sum","ul","sel");
+	productBoxWidth(".partside");
+	topTitFloat("detail_tit",1100,"detail_tit_sel");
+	menuNextPage("#proshowmenubox","menu","li",340,80,"#proshowlast","#proshownext",85,4);
+	nav_down();//
+});
+</script>
+<body>
+<include file="public:header"/> <include file="public:search"/>
+<div class="content i_shop_detail">
+<include file="public:nav"/>
+<div class="good_content">
+<dl class="good_cru">
+  <dt><a href="/">首页 </a><span>></span></dt>
+  <dd><a href="/shop/shopList">药品超市</a><span>></span></dd>
+  <dd><a href="/shop/shopList/class1/{$content_part_weiz.class1}">{$content_part_weiz.class1Title}</a><span>></span></dd>
+  <dd><a href="/shop/shopList/class1/{$content_part_weiz.class1}/class2/{$content_part_weiz.class2}">{$content_part_weiz.class2Title}</a><span>></span></dd>
+  <dd><a href="/shop/shopList/class1/{$content_part_weiz.class1}/class2/{$content_part_weiz.class2}/class3/{$content_part_weiz.class3}">{$content_part_weiz.class3Title}</a><span>></span></dd>
+  <dd>{$product_detail.title}</dd>
+</dl>
+<div class="good_box">
+<div class="good_left">
+  <div class="wrapper" style="width:410px; float:left; overflow:inherit;">
+    <div class="scrool_box">
+      <section class="proinfo_left"> <menu id="proshowimg">
+         <volist name='product_img' id='vol'>
+          <li><img src="/Uploads/{$vol.img}" /></li>
+        </volist>
+        </menu>
+        <div class="clear h15"></div>
+        <div class="clear h15"></div>
+        <div style=" width:100%;z-index:50; position: relative;"> <a id="proshowlast" href="javascript:void(0);"> < </a> <a id="proshownext" href="javascript:void(0);"> > </a> </div>
+        <div id="proshowmenubox" class="mga" style="position:relative;"> <menu id="proshowmenu"></menu> </div>
+        <div class="clear"></div>
+      </section>
+    </div>
+  </div>
+</div>
+<div class="good_cen">
+<h3>{$product_detail.title}</h3>
+<p>{$product_detail.subhead}</p>
+<if condition="$contentFunIsDiscount eq 1">
+<dl class="dl01">
+  <dt>价  格 ：</dt>
+  <dd> <a>￥{$product_detail.price3}</a> <span>特价出售</span> </dd>
+</dl>
+<else/>
+<dl class="dl01">
+<dt>价  格 ：</dt>
+<dd> <a>￥{$product_detail.price2}</a> </dd>
+</if>
+<dl class="dl02">
+  <dt>原   价 ：</dt>
+  <dd><s>￥{$product_detail.price1}</s></dd>
+</dl>
+<dl class="dl04" style="display:none">
+  <dt>快递费 ：</dt>
+  <dd><select onChange="express_fee_check()" id="express_fee">
+  <option value="{$top_content.express_fee}">默认</option>
+   <option value={$top_content.express_fee} title="北京市">北京市</option><option value={$top_content.express_fee} title="天津市">天津市</option><option value={$top_content.express_fee} title="上海市">上海市</option><option value={$top_content.express_fee} title="重庆市">重庆市</option><option value={$top_content.express_fee} title="河北省">河北省</option><option value={$top_content.express_fee} title="山西省">山西省</option><option value={$top_content.express_fee} title="内蒙古">内蒙古</option><option value={$top_content.express_fee} title="辽宁省">辽宁省</option><option value={$top_content.express_fee} title="吉林省">吉林省</option><option value={$top_content.express_fee} title="黑龙江省">黑龙江省</option><option value={$top_content.express_fee} title="江苏省">江苏省</option><option value={$top_content.express_fee} title="浙江省">浙江省</option><option value={$top_content.express_fee} title="安徽省">安徽省</option><option value={$top_content.express_fee} title="福建省">福建省</option><option value={$top_content.express_fee} title="江西省">江西省</option><option value={$top_content.express_fee} title="山东省">山东省</option><option value={$top_content.express_fee} title="河南省">河南省</option><option value={$top_content.express_fee} title="湖北省">湖北省</option><option value={$top_content.express_fee} title="湖南省">湖南省</option><option value={$top_content.express_fee} title="广东省">广东省</option><option value={$top_content.express_fee} title="广西">广西</option><option value={$top_content.express_fee} title="海南省">海南省</option><option value={$top_content.express_fee} title="四川省">四川省</option><option value={$top_content.express_fee} title="贵州省">贵州省</option><option value={$top_content.express_fee} title="云南省">云南省</option><option value={$top_content.express_fee} title="西藏">西藏</option><option value={$top_content.express_fee} title="陕西省">陕西省</option><option value={$top_content.express_fee} title="甘肃省">甘肃省</option><option value={$top_content.express_fee} title="青海省">青海省</option><option value={$top_content.express_fee} title="宁夏">宁夏</option><option value={$top_content.express_fee} title="新疆">新疆</option><option value={$top_content.express_fee} title="香港">香港</option><option value={$top_content.express_fee} title="澳门">澳门</option><option value={$top_content.express_fee} title="台湾省">台湾省</option>
+   </select>&nbsp;<i style="font-style:normal" id="express_fee_val">{$top_content.express_fee}</i>元
+   </dd>
+   <script type="text/javascript">
+   <volist name='express_fee' id='vol'>
+  $("option[title='{$vol.area}']").attr('value',{$vol.fee});
+ </volist>
+    
+	  function express_fee_check(){
+ 		  $("#express_fee_val").html( $("#express_fee").val())
+ 		  }
+      </script>
+</dl>
+<dl class="dl02">
+  <dt>库 &nbsp;存 ：</dt>
+  <dd> {$product_detail.stock}</dd>
+</dl>
+ <volist name='product_detail1' id='vol'>
+ <dl class="dl04">
+  <dt>{$vol.title}:</dt>
+   <if condition="$vol.title eq 批准文号">
+   <dd><a href="http://app1.sfda.gov.cn/datasearch/face3/base.jsp?tableId=25&tableName=TABLE25&title=%E5%9B%BD%E4%BA%A7%E8%8D%AF%E5%93%81&bcId=124356560303886909015737447882" style="color:#03C; font-size:14px">&nbsp;{$vol.value}</a></dd>
+   <else/><dd>&nbsp;{$vol.value}</dd>
+ </if>
+ 
+</dl>
+</volist>
+<if  condition="$contentFunIsDiscount eq 1">
+  <dl class="dl08">
+    <dt>折扣时间 ：</dt>
+    <dd>{$product_detail.discount_beg_time|date='Y-m-d',###} ~ {$product_detail.discount_end_time|date='Y-m-d',###}</dd>
+  </dl>
+</if>
+<dl class="dl09">
+  <dt>购买数量 ：</dt>
+  <dd> <span onClick="num_reduce()">-</span>
+    <input type="text" name="num"  value="1"  class="input_num" />
+    <span onClick="num_add()">+</span> </dd>
+  <script type="text/javascript">
+	     num=1;
+	 	function num_add(){
+		   num++;
+		   $('.input_num').val(num)
+		}
+		function num_reduce(){
+			num--;
+			if(num==0){
+			  num=1;	
+			}
+			 $('.input_num').val(num)
+		}
+     </script>
+</dl>
+<dl class="dl10">
+  <dt>
+    <div onClick="shopping_cart_add()" style="cursor:pointer">加入购物车</div>
+    <script type="text/javascript">
+ 	 function shopping_cart_add(){
+		          <if condition="$_SESSION['user_id']"> 
+                      alert('加入成功');
+                  </if>
+			    str="/shop/shopping_cart_add/product_id/{$product_detail.product_id}/num/"+$('.input_num').val();
+                window.location.href=str; 		 
+		 }
+       </script> 
+  </dt>
+  <dd>
+    <div onClick="orderFunAdd()">立刻购买</div>
+      <script type="text/javascript">
+ 	 function orderFunAdd(){
+  		         str="/order/orderFunAdd/product_id/{$product_detail.product_id}/product_num/"+$('.input_num').val();
+                window.location.href=str; 		 
+		 }
+       </script> 
+    
+    
+  </dd>
+</dl>
+</div>
+<dl class="good_right">
+  <dt>
+    <h3>放心购买</h3>
+    <p>互联网药品交易资格证：</p>
+  </dt>
+  <dd><img src="__PUBLIC__images/good_mark.png"  style="display:none"/> </dd>
+</dl>
+</div>
+<if condition="$product_detail.product_group neq null" >
+  <dl class="good_add" >
+    <dd> <img src="/Uploads/<volist name="product_img" id="vol"   offset="0" length='1'>{$vol.img}
+      </volist>
+      ">
+      <p>{$product_detail.title|mb_substr=0,16,'utf-8'} </p>
+      <span>￥
+      <if condition="$contentFunIsDiscount eq 1 ">
+        <ss class="a1">{$product_detail.price3} </ss>
+        <else/>
+        <ss class="a1" >{$product_detail.price2}</ss>
+      </if>
+      </span> <s class="a2"  style="display:none">{$product_detail.price1}</s> </dd>
+    <volist name='product_group' id='vol'>
+      <dd> <a href="/shop/content/product_id/{$vol.product_id}" target="_blank"><img src="/Uploads/{$vol.img}"></a>
+        <p>{$vol.title|mb_substr=0,16,'utf-8'} </p>
+        <span>￥
+        <ss class="a1" >{$vol.price}</ss>
+        <div>
+          <input name="product" type="checkbox" id="" value="{$vol.product_id}" checked>
+        </div>
+        </span> </dd>
+      <s class="a2"  style="display:none">{$vol.price1}</s> </volist>
+    <dt>
+      <p class="p2"  style="margin-top:20px;">套餐价 : <span>￥
+        <ss class="price_now"></ss>
+        </span></p>
+      <p class="p3">原价： <s>
+        <ss  class="price_now2"></ss>
+        </s></p>
+      <p class="p4">已节省：
+        <ss  class="price_now3"></ss>
+      </p>
+      <div onClick="product_group_form()">加入购物车</div>
+      <script type="text/javascript">
+	   function  product_group_form(){
+ 		    selId= new Array();   
+			selId.push({$product_detail.product_id});
+           for(  i=0;i<$("input[name='product']:checked").length;i++   ){
+		    var val = $("input[name='product']:checked:eq("+ i +")").val()
+			selId.push(val);
+		   }
+		  selId= selId.toString(); 
+		   window.location.href='/shop/content_part_product_group_add/id/'+selId;
+ 		  }
+		  </script> 
+    </dt>
+  </dl>
+  <script type="text/javascript">
+		     	price_now=0; //现在的价格
+ 			   for( i=0;i< $('.good_add .a1').length;i++){
+				   price_now=price_now+$('.good_add .a1:eq('+i+')').html()*1
+				   }
+				   $('.price_now').html(price_now)
+				   
+				  price_now2=0; //原价
+ 			   for( i=0;i< $('.good_add .a2').length;i++){
+				   price_now2=price_now2+$('.good_add .a2:eq('+i+')').html()*1
+				   } 
+				   
+                  $('.price_now2').html(price_now2)
+				  price_now3=price_now2-price_now
+ 				  $('.price_now3').html(price_now3)
+	       </script> 
+</if>
+<div class="good_det">
+  <div class="good_oth">
+    <div class="good_otht">
+      <dl>
+        <dt><span>同类其他商品</span></dt>
+        <dd>
+          <volist name='content_part_product_other' id='vol'> <a href="/shop/content/product_id/{$vol.product_id}">{$vol.title|mb_substr=0,5,'utf-8'}</a> </volist>
+        </dd>
+      </dl>
+    </div>
+    <div class="good_see">
+      <div class="left_goodslist">
+        <h4 class="title_left">热销药品</h4>
+        <ul class="selling_list">
+         <volist name='shopList_part_hotSell' id='vol'>
+          <li> <a href="/shop/content/product_id/{$vol.product_id}" style="display:block"><img src="/Uploads/{$vol.img}" alt=""  style="width:218px; height:218px;" />
+            <h3 class="selling_title">{$vol.title}.</h3>
+            <h5 class="selling_newprice">￥{$vol.price}</h5>
+            <h5 class="selling_oldprice">￥{$vol.price1}</h5>
+            </a> </li>
+        </volist>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="good_introbox">
+    <dl class="good_intr">
+      <dt> <span class="span1"><a href="#good_intrimg">商品介绍</a></span> <span class="span2"><a href="#good_repl">商品评价（{$content_part_comment_count_1}）</a></span>
+        <div onClick="shopping_cart_add()" style="cursor:pointer">加入购物车</div>
+      </dt>
+      <dd>
+        <div><span>商品名称：</span>
+          <p>{$product_detail.title}</p>
+        </div>
+        <volist name='product_detail2' id='vol'>
+          <div><span>{$vol.title}：</span>
+          <p>{$vol.value}</p>
+        </div>
+        </volist>
+        
+        <div><span>温馨提示：</span>
+          <p>部分商品包装更换频繁，如货品与图片 不完全一致，请以收到的商品实物为准 </p>
+        </div>
+      </dd>
+    </dl>
+    <dl class="good_intrimg" id="good_intrimg">
+      <dt> <span>产品详情</span> </dt>
+    </dl>
+    <div style="margin-bottom:20px; line-height:22px; font-size:14px"> {$product_detail.introduction|stripslashes} </div>
+    <dl class="good_repl" id="good_repl">
+      <dt>
+      <a id="mao" href="/shop/content/product_id/{$_GET['product_id']}#mao"  >全部评价（{$content_part_comment_count_1}）</a>
+      <a id="mao" href="/shop/content/product_id/{$_GET['product_id']}/class_comment/2#mao" >好评（{$content_part_comment_count_2}）</a>
+      <a id="mao" href="/shop/content/product_id/{$_GET['product_id']}/class_comment/3#mao"  >中评（{$content_part_comment_count_3}）</a>
+      <a id="mao" href="/shop/content/product_id/{$_GET['product_id']}/class_comment/4#mao" >差评（{$content_part_comment_count_4}）</a>
+      <a id="mao" href="/shop/content/product_id/{$_GET['product_id']}/class_comment/5#mao"  >有图（{$content_part_comment_count_5}）</a> </dt>
+    <script type="text/javascript">
+	  <if condition="$_GET['class_comment'] eq 2 ">
+	  $('.i_shop_detail  .good_repl dt a').eq(1).attr('class','sel')
+      <elseif condition="$_GET['class_comment'] eq 3"/>
+	  $('.i_shop_detail  .good_repl dt a').eq(2).attr('class','sel')
+	    <elseif condition="$_GET['class_comment'] eq 4"/>
+	  $('.i_shop_detail  .good_repl dt a').eq(3).attr('class','sel')  
+	    <elseif condition="$_GET['class_comment'] eq 5"/>
+	  $('.i_shop_detail  .good_repl dt a').eq(4).attr('class','sel')    
+       <else/>
+	   $('.i_shop_detail  .good_repl dt a').eq(0).attr('class','sel')    
+       </if>
+     </script>
+       <volist name='content_part_comment_list' id='vol'>
+      <dd>
+        <div class="redd_left"> <img src="/Uploads/{$vol.img}" />
+          <p>{$vol.name}</p>
+        </div>
+        <div class="redd_cen">
+          <div class="redd_star"> 
+             <if condition="$vol.score eq 5">
+              <span></span> <span></span> <span></span> <span></span> <span></span> 
+              <elseif condition="$vol.score eq 4"/>
+               <span></span> <span></span> <span></span> <span></span>
+                <elseif condition="$vol.score eq 3"/>
+               <span></span> <span></span> <span></span>
+                 <elseif condition="$vol.score eq 2"/>
+               <span></span> <span></span>
+                 <elseif condition="$vol.score eq 1"/>
+               <span></span>
+             </if>
+            </div>
+          <p>
+          {$vol.content}<if condition="$vol.reply neq null "><span style="color:#F00; padding-left:10px;">管理员回复：{$vol.reply}</span></if>
+          </p>
+          <if condition="$vol.comment_img neq null">   <div class="redd_show"> <span><a href="/Uploads/{$vol.comment_img}" target="_blank"><img src="/Uploads/{$vol.comment_img}" /></a></span></div></if>
+        </div>
+        <div class="redd_right">
+        {$vol.time|date='Y年m月d日 H:i:s',###}
+        </div>
+      </dd>
+</volist>
+     </dl>
+  </div>
+  <div class="pagebox">
+    <div>{$content_part_comment_page}</div>
+  </div>
+  
+  <if condition="$content_part_commentFunIsCan eq 1">
+ <form action="/shop/content_part_commentFunAdd/product_id/{$_GET['product_id']}/order_id/{$_GET['order_id']}" method="post" enctype="multipart/form-data" name="comment">
+      <div class="s_part1">
+        <div class="h1">
+          <div class="L">请评分</div>
+          <div class="R">
+            <input name="score" type="radio"  value="1" >
+            1
+            <input name="score" type="radio" value="2">
+            2
+            <input name="score" type="radio"  value="3">
+            3
+            <input name="score" type="radio"  value="4">
+            4
+            <input name="score" type="radio" value="5" checked>
+            5 </div>
+          <div class="clear"></div>
+        </div>
+        <!--h1-->
+        <div class="h2">
+          <textarea  name="content" ></textarea>
+        </div>
+        <div class="h4"> 产品图片
+         <input name="file" type="file">
+         </div>
+        <div class="h3">
+          <div class="btn" onClick="comment.submit()">提交</div>
+        </div>
+      </div>
+      <!--s_part1-->
+    </form>
+  
+    
+  </if>
+</div>
+</div>
+</div>
+<include file="public:bottom"/>
+</body>
+</html>

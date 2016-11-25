@@ -1,0 +1,35 @@
+<div class="search_index">
+  <div class="search_index_left"> 
+     <div><a href="/"> <img src="__PUBLIC__images/logo.png" alt="真善美"> </a></div>
+     <div style="text-align:right">渝B20160001</div>
+   </div>
+  <div class="search_index_middle">
+    <div class="search_index_form">
+     <form action="/shop/shopList" method="get" name="search_form">     
+     <input type="text" class="search_index_text" placeholder="请输入商品名称\批准文号\厂家\适应症" name='keyword'>
+      <input type="button" class="search_index_button" value="搜索"  onclick="search_form.submit()" >
+      </form>
+    </div>
+    <ul class="search_index_hot">
+    <volist name='top_content.search_keyword' id='vol'>
+          <li> <a href="/shop/shopList/keyword/">{$vol}</a> <span>|</span> </li>
+     </volist> 
+     </ul>
+  </div>
+   <script type="text/javascript">
+     function search_encodeURI(){
+		 var i;
+	 	 for( i=0;i<$('.search_index_hot a').length;i++){
+			   var html=encodeURI($('.search_index_hot a').eq(i).html());
+			   html="/shop/shopList/keyword/"+html;
+			   $('.search_index_hot a').eq(i).attr('href',html);
+ 			 }
+ 	    }
+        search_encodeURI()
+     </script>
+   <div class="search_index_right"> <a href="/ordermanage/shop_cart">
+    <p> <span class="search_index_right_car"></span> 
+      <!-- 这个span是小图标不能删 --> 
+      我的购物车 </p>
+    </a> <span class="search_index_right_number">{$shopping_cart_sum}</span> </div>
+</div>

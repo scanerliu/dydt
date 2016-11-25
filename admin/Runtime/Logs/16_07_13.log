@@ -1,0 +1,885 @@
+[ 2016-07-13T08:56:05+08:00 ] 183.69.193.190 /admin.php/login/login
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000000s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.062400s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.062400s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000000s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000000s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.015600s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.015600s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.015600s ]
+INFO: [ view_end ] --END-- [ RunTime:0.015600s ]
+
+[ 2016-07-13T08:56:05+08:00 ] 183.69.193.190 /admin.php/login/verify
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-07-13T08:57:25+08:00 ] 183.69.193.190 /admin.php/login/loginFunAjaxName
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `admin_user` [ RunTime:0.062400s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_user` WHERE ( name ='root' ) LIMIT 1   [ RunTime:0.015600s ]
+
+[ 2016-07-13T08:57:25+08:00 ] 183.69.193.190 /admin.php/login/loginFunAjaxPassword
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `admin_user` [ RunTime:0.015600s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_user` WHERE ( `password` = 'd9b1d7db4cd6e70935368a1efb10e377' ) AND ( `name` = 'root' ) LIMIT 1   [ RunTime:0.000000s ]
+
+[ 2016-07-13T08:57:25+08:00 ] 183.69.193.190 /admin.php/login/loginFunAjaxCode
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-07-13T08:57:25+08:00 ] 183.69.193.190 /admin.php/login/loginFundo
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `admin_user` [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_user` WHERE ( `password` = 'd9b1d7db4cd6e70935368a1efb10e377' ) AND ( `name` = 'root' ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: sessionName D:\wwwroot\pc_dtyd\admin\Lib\Action\loginAction.class.php 第 63 行.
+SQL: UPDATE `admin_user` SET `loginTime`=1468371445 WHERE ( `name` = 'root' ) [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `record` [ RunTime:0.046800s ]
+SQL: INSERT INTO `record` (`time`,`remark`) VALUES (1468371445,'用户登录') [ RunTime:0.031201s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000000s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.031200s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031200s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000000s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000000s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-07-13T08:57:31+08:00 ] 183.69.193.190 /admin.php/Index/index
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `system` [ RunTime:0.000000s ]
+SQL: SELECT `atuo_time` FROM `system` LIMIT 1   [ RunTime:0.015600s ]
+SQL: SHOW COLUMNS FROM `order` [ RunTime:0.015600s ]
+SQL: SELECT `endtime`,`order_id`,`need_pay` FROM `order` WHERE ( `status` = 3 )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `system` WHERE ( system_id=1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `product` [ RunTime:0.015600s ]
+SQL: SELECT `product_id` FROM `product` WHERE ( `able_discount` = 1 )  [ RunTime:0.015600s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 2 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 2 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 2 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 144 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 144 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 144 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 146 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 146 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 146 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 147 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 147 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 147 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 148 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 148 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 148 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 149 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 149 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 149 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 150 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 150 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 150 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 151 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 151 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 151 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 154 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 154 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 154 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 155 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 155 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 155 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 156 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 156 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 156 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 135 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 135 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 135 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 141 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 141 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 141 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 142 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 142 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 142 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 143 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 143 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 143 ) [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `able_discount` = '' ) [ RunTime:0.982802s ]
+SQL: select product_id  , product_num   from `order_product`  where order_id  in (  select  order_id  from  `order`  where  status = 2   and stock_reduce <> 1) [ RunTime:1.794003s ]
+SQL: update `order` set stock_reduce=1 , time2=1468371449 where  stock_reduce<>1 and status <> 1  [ RunTime:1.294802s ]
+SQL: UPDATE `system` SET `atuo_time`=1468371451 WHERE ( `system_id` = 1 ) [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `record` [ RunTime:0.000000s ]
+SQL: INSERT INTO `record` (`time`,`remark`) VALUES (1468371451,'网站正常访问操作') [ RunTime:0.015600s ]
+SQL: SHOW COLUMNS FROM `admin_user` [ RunTime:0.015600s ]
+SQL: SELECT `loginTime` FROM `admin_user` WHERE ( `name` = 'root' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `admin_user` WHERE ( name	= 'root' ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000000s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant admin_name - assumed 'admin_name' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\4c18d5952d0dbf1eedb8a1ec796fa788.php 第 23 行.
+NOTIC: [8] Use of undefined constant root - assumed 'root' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\4c18d5952d0dbf1eedb8a1ec796fa788.php 第 23 行.
+NOTIC: [8] Use of undefined constant admin_name - assumed 'admin_name' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\4c18d5952d0dbf1eedb8a1ec796fa788.php 第 27 行.
+NOTIC: [8] Use of undefined constant root - assumed 'root' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\4c18d5952d0dbf1eedb8a1ec796fa788.php 第 27 行.
+NOTIC: [8] Use of undefined constant admin_name - assumed 'admin_name' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\4c18d5952d0dbf1eedb8a1ec796fa788.php 第 31 行.
+NOTIC: [8] Use of undefined constant root - assumed 'root' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\4c18d5952d0dbf1eedb8a1ec796fa788.php 第 31 行.
+NOTIC: [8] Use of undefined constant admin_name - assumed 'admin_name' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\4c18d5952d0dbf1eedb8a1ec796fa788.php 第 35 行.
+NOTIC: [8] Use of undefined constant root - assumed 'root' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\4c18d5952d0dbf1eedb8a1ec796fa788.php 第 35 行.
+NOTIC: [8] Use of undefined constant admin_name - assumed 'admin_name' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\4c18d5952d0dbf1eedb8a1ec796fa788.php 第 39 行.
+NOTIC: [8] Use of undefined constant root - assumed 'root' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\4c18d5952d0dbf1eedb8a1ec796fa788.php 第 39 行.
+NOTIC: [8] Use of undefined constant admin_name - assumed 'admin_name' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\4c18d5952d0dbf1eedb8a1ec796fa788.php 第 43 行.
+NOTIC: [8] Use of undefined constant root - assumed 'root' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\4c18d5952d0dbf1eedb8a1ec796fa788.php 第 43 行.
+NOTIC: [8] Use of undefined constant admin_name - assumed 'admin_name' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\4c18d5952d0dbf1eedb8a1ec796fa788.php 第 47 行.
+NOTIC: [8] Use of undefined constant root - assumed 'root' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\4c18d5952d0dbf1eedb8a1ec796fa788.php 第 47 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.109200s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.109200s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000000s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000000s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-07-13T08:57:31+08:00 ] 183.69.193.190 /admin.php/indexManagement/bannerList/class/banner
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `system` [ RunTime:0.000000s ]
+SQL: SELECT `atuo_time` FROM `system` LIMIT 1   [ RunTime:0.015600s ]
+SQL: SHOW COLUMNS FROM `record` [ RunTime:0.015600s ]
+SQL: INSERT INTO `record` (`time`,`remark`) VALUES (1468371451,'网站正常访问操作') [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `index_banner` [ RunTime:0.015600s ]
+NOTIC: [8] Undefined variable: where D:\wwwroot\pc_dtyd\admin\Lib\Action\indexManagementAction.class.php 第 18 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `index_banner` LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: where D:\wwwroot\pc_dtyd\admin\Lib\Action\indexManagementAction.class.php 第 21 行.
+SQL: SELECT * FROM `index_banner` LIMIT 0,10   [ RunTime:0.000000s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000000s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant index_ad2 - assumed 'index_ad2' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\d6265d428dbf68aa6dc3848ef43fac70.php 第 11 行.
+NOTIC: [8] Use of undefined constant index_ad2 - assumed 'index_ad2' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\d6265d428dbf68aa6dc3848ef43fac70.php 第 23 行.
+NOTIC: [8] Use of undefined constant index_ad2 - assumed 'index_ad2' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\d6265d428dbf68aa6dc3848ef43fac70.php 第 31 行.
+NOTIC: [8] Use of undefined constant index_ad2 - assumed 'index_ad2' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\d6265d428dbf68aa6dc3848ef43fac70.php 第 34 行.
+NOTIC: [8] Use of undefined constant index_ad2 - assumed 'index_ad2' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\d6265d428dbf68aa6dc3848ef43fac70.php 第 31 行.
+NOTIC: [8] Use of undefined constant index_ad2 - assumed 'index_ad2' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\d6265d428dbf68aa6dc3848ef43fac70.php 第 34 行.
+NOTIC: [8] Use of undefined constant index_ad2 - assumed 'index_ad2' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\d6265d428dbf68aa6dc3848ef43fac70.php 第 31 行.
+NOTIC: [8] Use of undefined constant index_ad2 - assumed 'index_ad2' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\d6265d428dbf68aa6dc3848ef43fac70.php 第 34 行.
+NOTIC: [8] Use of undefined constant index_ad2 - assumed 'index_ad2' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\d6265d428dbf68aa6dc3848ef43fac70.php 第 31 行.
+NOTIC: [8] Use of undefined constant index_ad2 - assumed 'index_ad2' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\d6265d428dbf68aa6dc3848ef43fac70.php 第 34 行.
+NOTIC: [8] Use of undefined constant index_ad2 - assumed 'index_ad2' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\d6265d428dbf68aa6dc3848ef43fac70.php 第 31 行.
+NOTIC: [8] Use of undefined constant index_ad2 - assumed 'index_ad2' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\d6265d428dbf68aa6dc3848ef43fac70.php 第 34 行.
+NOTIC: [8] Use of undefined constant index_ad2 - assumed 'index_ad2' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\d6265d428dbf68aa6dc3848ef43fac70.php 第 36 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.031200s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031200s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000000s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000000s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-07-13T08:57:34+08:00 ] 183.69.193.190 /admin.php/order/coupon
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.015600s ]
+INFO: [ route_check ] --END-- [ RunTime:0.015600s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `system` [ RunTime:0.000000s ]
+SQL: SELECT `atuo_time` FROM `system` LIMIT 1   [ RunTime:0.015600s ]
+SQL: SHOW COLUMNS FROM `record` [ RunTime:0.015600s ]
+SQL: INSERT INTO `record` (`time`,`remark`) VALUES (1468371454,'网站正常访问操作') [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: user_id D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 348 行.
+NOTIC: [8] Undefined index: status D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 351 行.
+NOTIC: [8] Undefined index: status D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 361 行.
+NOTIC: [8] Undefined index: status D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 367 行.
+SQL: SHOW COLUMNS FROM `coupon` [ RunTime:0.031200s ]
+NOTIC: [8] Undefined variable: where D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 378 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `coupon` LIMIT 1   [ RunTime:0.015600s ]
+NOTIC: [8] Undefined variable: where D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 385 行.
+SQL: SELECT DISTINCT  * FROM `coupon` ORDER BY coupon_id desc LIMIT 0,10   [ RunTime:0.000000s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000000s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: begtime D:\wwwroot\pc_dtyd\admin\Runtime\Cache\dec1060c5ccb93b107f77834c9efcbc4.php 第 26 行.
+NOTIC: [8] Undefined index: endtime D:\wwwroot\pc_dtyd\admin\Runtime\Cache\dec1060c5ccb93b107f77834c9efcbc4.php 第 29 行.
+NOTIC: [8] Undefined index: user_id D:\wwwroot\pc_dtyd\admin\Runtime\Cache\dec1060c5ccb93b107f77834c9efcbc4.php 第 77 行.
+NOTIC: [8] Undefined index: status D:\wwwroot\pc_dtyd\admin\Runtime\Cache\dec1060c5ccb93b107f77834c9efcbc4.php 第 87 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.015600s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015600s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000000s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000000s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.015600s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.015600s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-07-13T08:57:42+08:00 ] 183.69.193.190 /admin.php/order/orderList
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `system` [ RunTime:0.000000s ]
+SQL: SELECT `atuo_time` FROM `system` LIMIT 1   [ RunTime:0.015600s ]
+SQL: SHOW COLUMNS FROM `record` [ RunTime:0.015600s ]
+SQL: INSERT INTO `record` (`time`,`remark`) VALUES (1468371455,'网站正常访问操作') [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: status D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 28 行.
+NOTIC: [8] Undefined index: keyword D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 31 行.
+NOTIC: [8] Undefined index: begtime D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 48 行.
+NOTIC: [8] Undefined index: begtime D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 56 行.
+NOTIC: [8] Undefined index: endtime D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 63 行.
+NOTIC: [8] Undefined index: _string D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 106 行.
+SQL: SHOW COLUMNS FROM `order` [ RunTime:0.015600s ]
+SQL: SELECT DISTINCT  SUM(need_pay) AS tp_sum FROM `order` WHERE ( `confirm` <> 2 ) AND ( status  in (2,3,4,5) ) LIMIT 1   [ RunTime:0.124801s ]
+NOTIC: [8] Undefined index: _string D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 115 行.
+SQL: SELECT DISTINCT  SUM(need_pay) AS tp_sum FROM `order` WHERE ( `confirm` <> 2 ) AND ( status  in (3,4,5) ) LIMIT 1   [ RunTime:0.124800s ]
+NOTIC: [8] Undefined index: _string D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 124 行.
+SQL: SELECT DISTINCT  SUM(need_pay) AS tp_sum FROM `order` WHERE ( `confirm` <> 2 ) AND ( status  in (2) ) LIMIT 1   [ RunTime:0.124800s ]
+SQL: SELECT DISTINCT  COUNT(*) AS tp_count FROM `order` WHERE ( `confirm` <> 2 ) LIMIT 1   [ RunTime:0.109200s ]
+SQL: SELECT DISTINCT  * FROM `order` left join `user` on user.user_id=order.user_id  WHERE ( `confirm` <> 2 ) ORDER BY order_id desc LIMIT 0,10   [ RunTime:5.616010s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 87 行.
+SQL: SHOW COLUMNS FROM `order_product` [ RunTime:0.015600s ]
+NOTIC: [8] Use of undefined constant order_id - assumed 'order_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 87 行.
+SQL: SELECT * FROM `order_product` WHERE ( order_id=100511 )  [ RunTime:0.078000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 89 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+SQL: SHOW COLUMNS FROM `product_attribute_list` [ RunTime:0.062400s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=3 and product_id=144 ) LIMIT 1   [ RunTime:0.156001s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=4 and product_id=144 ) LIMIT 1   [ RunTime:0.015600s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=1 and product_id=144 ) LIMIT 1   [ RunTime:0.031200s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 89 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 87 行.
+NOTIC: [8] Use of undefined constant order_id - assumed 'order_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 87 行.
+SQL: SELECT * FROM `order_product` WHERE ( order_id=100508 )  [ RunTime:0.078000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 89 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=3 and product_id=144 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=4 and product_id=144 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=1 and product_id=144 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 89 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 87 行.
+NOTIC: [8] Use of undefined constant order_id - assumed 'order_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 87 行.
+SQL: SELECT * FROM `order_product` WHERE ( order_id=100505 )  [ RunTime:0.062400s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 89 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=3 and product_id=2 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=4 and product_id=2 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=1 and product_id=2 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 89 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 87 行.
+NOTIC: [8] Use of undefined constant order_id - assumed 'order_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 87 行.
+SQL: SELECT * FROM `order_product` WHERE ( order_id=100503 )  [ RunTime:0.078000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 89 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=3 and product_id=2 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=4 and product_id=2 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=1 and product_id=2 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 89 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 87 行.
+NOTIC: [8] Use of undefined constant order_id - assumed 'order_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 87 行.
+SQL: SELECT * FROM `order_product` WHERE ( order_id=100495 )  [ RunTime:0.078000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 89 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=3 and product_id=2 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=4 and product_id=2 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=1 and product_id=2 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 89 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 87 行.
+NOTIC: [8] Use of undefined constant order_id - assumed 'order_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 87 行.
+SQL: SELECT * FROM `order_product` WHERE ( order_id=100494 )  [ RunTime:0.062400s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 89 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=3 and product_id=2 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=4 and product_id=2 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=1 and product_id=2 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 89 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 87 行.
+NOTIC: [8] Use of undefined constant order_id - assumed 'order_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 87 行.
+SQL: SELECT * FROM `order_product` WHERE ( order_id=100486 )  [ RunTime:0.078001s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 89 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=3 and product_id=2 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=4 and product_id=2 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=1 and product_id=2 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 89 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 87 行.
+NOTIC: [8] Use of undefined constant order_id - assumed 'order_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 87 行.
+SQL: SELECT * FROM `order_product` WHERE ( order_id=100485 )  [ RunTime:0.062400s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 89 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=3 and product_id=2 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=4 and product_id=2 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=1 and product_id=2 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 89 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 87 行.
+NOTIC: [8] Use of undefined constant order_id - assumed 'order_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 87 行.
+SQL: SELECT * FROM `order_product` WHERE ( order_id=100481 )  [ RunTime:0.078000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 89 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=3 and product_id=2 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=4 and product_id=2 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=1 and product_id=2 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 89 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 87 行.
+NOTIC: [8] Use of undefined constant order_id - assumed 'order_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 87 行.
+SQL: SELECT * FROM `order_product` WHERE ( order_id=100476 )  [ RunTime:0.078000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 89 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 90 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=3 and product_id=2 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 91 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=4 and product_id=2 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+NOTIC: [8] Use of undefined constant product_id - assumed 'product_id' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 92 行.
+SQL: SELECT `value` FROM `product_attribute_list` WHERE ( attribute_id=1 and product_id=2 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant pro - assumed 'pro' D:\wwwroot\pc_dtyd\admin\Lib\Action\orderAction.class.php 第 89 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000000s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: status D:\wwwroot\pc_dtyd\admin\Runtime\Cache\15322a5d21b66ea86139880190438035.php 第 26 行.
+NOTIC: [8] Undefined index: keyword D:\wwwroot\pc_dtyd\admin\Runtime\Cache\15322a5d21b66ea86139880190438035.php 第 29 行.
+NOTIC: [8] Undefined index: time D:\wwwroot\pc_dtyd\admin\Runtime\Cache\15322a5d21b66ea86139880190438035.php 第 43 行.
+NOTIC: [8] Undefined index: begtime D:\wwwroot\pc_dtyd\admin\Runtime\Cache\15322a5d21b66ea86139880190438035.php 第 46 行.
+NOTIC: [8] Undefined index: endtime D:\wwwroot\pc_dtyd\admin\Runtime\Cache\15322a5d21b66ea86139880190438035.php 第 49 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.156000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.156000s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000000s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000000s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-07-13T08:58:18+08:00 ] 183.69.193.190 /admin.php/manage/document
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `system` [ RunTime:0.000000s ]
+SQL: SELECT `atuo_time` FROM `system` LIMIT 1   [ RunTime:0.015600s ]
+SQL: SHOW COLUMNS FROM `order` [ RunTime:0.015600s ]
+SQL: SELECT `endtime`,`order_id`,`need_pay` FROM `order` WHERE ( `status` = 3 )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `system` WHERE ( system_id=1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `product` [ RunTime:0.015600s ]
+SQL: SELECT `product_id` FROM `product` WHERE ( `able_discount` = 1 )  [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 2 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 2 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 2 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 144 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 144 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 144 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 146 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 146 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 146 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 147 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 147 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 147 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 148 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 148 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 148 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 149 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 149 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 149 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 150 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 150 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 150 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 151 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 151 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 151 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 154 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 154 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 154 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 155 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 155 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 155 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 156 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 156 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 156 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 135 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 135 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 135 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 141 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 141 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 141 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 142 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 142 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 142 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 143 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 143 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 143 ) [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `able_discount` = '' ) [ RunTime:0.967202s ]
+SQL: select product_id  , product_num   from `order_product`  where order_id  in (  select  order_id  from  `order`  where  status = 2   and stock_reduce <> 1) [ RunTime:0.000000s ]
+SQL: update `order` set stock_reduce=1 , time2=1468371497 where  stock_reduce<>1 and status <> 1  [ RunTime:0.982802s ]
+SQL: UPDATE `system` SET `atuo_time`=1468371498 WHERE ( `system_id` = 1 ) [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `record` [ RunTime:0.015600s ]
+SQL: INSERT INTO `record` (`time`,`remark`) VALUES (1468371498,'网站正常访问操作') [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `document` [ RunTime:0.031200s ]
+SQL: SELECT * FROM `document` ORDER BY identity  [ RunTime:0.000000s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.015600s ]
+INFO: [ view_template ] --END-- [ RunTime:0.015600s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: page D:\wwwroot\pc_dtyd\admin\Runtime\Cache\cb2b0d547c36447042cbb6856f1f5c73.php 第 57 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.015600s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015600s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000000s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000000s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-07-13T08:58:24+08:00 ] 183.69.193.190 /admin.php/manage/user
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `system` [ RunTime:0.000000s ]
+SQL: SELECT `atuo_time` FROM `system` LIMIT 1   [ RunTime:0.015600s ]
+SQL: SHOW COLUMNS FROM `record` [ RunTime:0.015600s ]
+SQL: INSERT INTO `record` (`time`,`remark`) VALUES (1468371500,'网站正常访问操作') [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: key D:\wwwroot\pc_dtyd\admin\Lib\Action\manageAction.class.php 第 6 行.
+NOTIC: [8] Undefined index: key D:\wwwroot\pc_dtyd\admin\Lib\Action\manageAction.class.php 第 9 行.
+NOTIC: [8] Undefined index: keyword D:\wwwroot\pc_dtyd\admin\Lib\Action\manageAction.class.php 第 13 行.
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.015600s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `user` WHERE ( `mobile_phone` LIKE '%%' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `user` WHERE ( `mobile_phone` LIKE '%%' ) LIMIT 0,20   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `document_user` [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `document_user` WHERE ( user_id=1 ) LIMIT 1   [ RunTime:0.015600s ]
+SQL: SELECT * FROM `document_user` WHERE ( user_id=1 )  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `order` [ RunTime:0.015600s ]
+SQL: SELECT SUM(total) as sum FROM `order` WHERE ( user_id=1 and status!=1 )  [ RunTime:0.124800s ]
+SQL: SHOW COLUMNS FROM `return` [ RunTime:0.031200s ]
+SQL: SELECT SUM(back) as sum_re FROM `return` WHERE ( user_id=1 and status=4 )  [ RunTime:0.015600s ]
+SQL: SELECT SUM(points_reduce) as sum_j FROM `order` WHERE ( user_id=1 and status!=1 )  [ RunTime:0.124800s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `document_user` WHERE ( user_id=2 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `document_user` WHERE ( user_id=2 )  [ RunTime:0.000000s ]
+SQL: SELECT SUM(total) as sum FROM `order` WHERE ( user_id=2 and status!=1 )  [ RunTime:0.109201s ]
+SQL: SELECT SUM(back) as sum_re FROM `return` WHERE ( user_id=2 and status=4 )  [ RunTime:0.000000s ]
+SQL: SELECT SUM(points_reduce) as sum_j FROM `order` WHERE ( user_id=2 and status!=1 )  [ RunTime:0.109200s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `document_user` WHERE ( user_id=3 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `document_user` WHERE ( user_id=3 )  [ RunTime:0.000000s ]
+SQL: SELECT SUM(total) as sum FROM `order` WHERE ( user_id=3 and status!=1 )  [ RunTime:0.109200s ]
+SQL: SELECT SUM(back) as sum_re FROM `return` WHERE ( user_id=3 and status=4 )  [ RunTime:0.000000s ]
+SQL: SELECT SUM(points_reduce) as sum_j FROM `order` WHERE ( user_id=3 and status!=1 )  [ RunTime:0.124800s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `document_user` WHERE ( user_id=4 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `document_user` WHERE ( user_id=4 )  [ RunTime:0.000000s ]
+SQL: SELECT SUM(total) as sum FROM `order` WHERE ( user_id=4 and status!=1 )  [ RunTime:0.109200s ]
+SQL: SELECT SUM(back) as sum_re FROM `return` WHERE ( user_id=4 and status=4 )  [ RunTime:0.000000s ]
+SQL: SELECT SUM(points_reduce) as sum_j FROM `order` WHERE ( user_id=4 and status!=1 )  [ RunTime:0.124801s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `document_user` WHERE ( user_id=5 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `document_user` WHERE ( user_id=5 )  [ RunTime:0.000000s ]
+SQL: SELECT SUM(total) as sum FROM `order` WHERE ( user_id=5 and status!=1 )  [ RunTime:0.109200s ]
+SQL: SELECT SUM(back) as sum_re FROM `return` WHERE ( user_id=5 and status=4 )  [ RunTime:0.000000s ]
+SQL: SELECT SUM(points_reduce) as sum_j FROM `order` WHERE ( user_id=5 and status!=1 )  [ RunTime:0.109200s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `document_user` WHERE ( user_id=6 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `document_user` WHERE ( user_id=6 )  [ RunTime:0.000000s ]
+SQL: SELECT SUM(total) as sum FROM `order` WHERE ( user_id=6 and status!=1 )  [ RunTime:0.124800s ]
+SQL: SELECT SUM(back) as sum_re FROM `return` WHERE ( user_id=6 and status=4 )  [ RunTime:0.000000s ]
+SQL: SELECT SUM(points_reduce) as sum_j FROM `order` WHERE ( user_id=6 and status!=1 )  [ RunTime:0.109200s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `document_user` WHERE ( user_id=7 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `document_user` WHERE ( user_id=7 )  [ RunTime:0.000000s ]
+SQL: SELECT SUM(total) as sum FROM `order` WHERE ( user_id=7 and status!=1 )  [ RunTime:0.124801s ]
+SQL: SELECT SUM(back) as sum_re FROM `return` WHERE ( user_id=7 and status=4 )  [ RunTime:0.000000s ]
+SQL: SELECT SUM(points_reduce) as sum_j FROM `order` WHERE ( user_id=7 and status!=1 )  [ RunTime:0.109200s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `document_user` WHERE ( user_id=8 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `document_user` WHERE ( user_id=8 )  [ RunTime:0.000000s ]
+SQL: SELECT SUM(total) as sum FROM `order` WHERE ( user_id=8 and status!=1 )  [ RunTime:0.124800s ]
+SQL: SELECT SUM(back) as sum_re FROM `return` WHERE ( user_id=8 and status=4 )  [ RunTime:0.000000s ]
+SQL: SELECT SUM(points_reduce) as sum_j FROM `order` WHERE ( user_id=8 and status!=1 )  [ RunTime:0.109200s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `document_user` WHERE ( user_id=9 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `document_user` WHERE ( user_id=9 )  [ RunTime:0.000000s ]
+SQL: SELECT SUM(total) as sum FROM `order` WHERE ( user_id=9 and status!=1 )  [ RunTime:0.109200s ]
+SQL: SELECT SUM(back) as sum_re FROM `return` WHERE ( user_id=9 and status=4 )  [ RunTime:0.000000s ]
+SQL: SELECT SUM(points_reduce) as sum_j FROM `order` WHERE ( user_id=9 and status!=1 )  [ RunTime:0.124801s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `document_user` WHERE ( user_id=10 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `document_user` WHERE ( user_id=10 )  [ RunTime:0.000000s ]
+SQL: SELECT SUM(total) as sum FROM `order` WHERE ( user_id=10 and status!=1 )  [ RunTime:0.109200s ]
+SQL: SELECT SUM(back) as sum_re FROM `return` WHERE ( user_id=10 and status=4 )  [ RunTime:0.000000s ]
+SQL: SELECT SUM(points_reduce) as sum_j FROM `order` WHERE ( user_id=10 and status!=1 )  [ RunTime:0.124800s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `document_user` WHERE ( user_id=11 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `document_user` WHERE ( user_id=11 )  [ RunTime:0.000000s ]
+SQL: SELECT SUM(total) as sum FROM `order` WHERE ( user_id=11 and status!=1 )  [ RunTime:0.109200s ]
+SQL: SELECT SUM(back) as sum_re FROM `return` WHERE ( user_id=11 and status=4 )  [ RunTime:0.000000s ]
+SQL: SELECT SUM(points_reduce) as sum_j FROM `order` WHERE ( user_id=11 and status!=1 )  [ RunTime:0.124801s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `document_user` WHERE ( user_id=12 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `document_user` WHERE ( user_id=12 )  [ RunTime:0.000000s ]
+SQL: SELECT SUM(total) as sum FROM `order` WHERE ( user_id=12 and status!=1 )  [ RunTime:0.109200s ]
+SQL: SELECT SUM(back) as sum_re FROM `return` WHERE ( user_id=12 and status=4 )  [ RunTime:0.000000s ]
+SQL: SELECT SUM(points_reduce) as sum_j FROM `order` WHERE ( user_id=12 and status!=1 )  [ RunTime:0.109200s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `document_user` WHERE ( user_id=13 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `document_user` WHERE ( user_id=13 )  [ RunTime:0.000000s ]
+SQL: SELECT SUM(total) as sum FROM `order` WHERE ( user_id=13 and status!=1 )  [ RunTime:0.124800s ]
+SQL: SELECT SUM(back) as sum_re FROM `return` WHERE ( user_id=13 and status=4 )  [ RunTime:0.000000s ]
+SQL: SELECT SUM(points_reduce) as sum_j FROM `order` WHERE ( user_id=13 and status!=1 )  [ RunTime:0.109200s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `document_user` WHERE ( user_id=14 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `document_user` WHERE ( user_id=14 )  [ RunTime:0.000000s ]
+SQL: SELECT SUM(total) as sum FROM `order` WHERE ( user_id=14 and status!=1 )  [ RunTime:0.093600s ]
+SQL: SELECT SUM(back) as sum_re FROM `return` WHERE ( user_id=14 and status=4 )  [ RunTime:0.000000s ]
+SQL: SELECT SUM(points_reduce) as sum_j FROM `order` WHERE ( user_id=14 and status!=1 )  [ RunTime:0.078001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `document_user` WHERE ( user_id=15 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `document_user` WHERE ( user_id=15 )  [ RunTime:0.000000s ]
+SQL: SELECT SUM(total) as sum FROM `order` WHERE ( user_id=15 and status!=1 )  [ RunTime:0.078000s ]
+SQL: SELECT SUM(back) as sum_re FROM `return` WHERE ( user_id=15 and status=4 )  [ RunTime:0.000000s ]
+SQL: SELECT SUM(points_reduce) as sum_j FROM `order` WHERE ( user_id=15 and status!=1 )  [ RunTime:0.078000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `document_user` WHERE ( user_id=16 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `document_user` WHERE ( user_id=16 )  [ RunTime:0.000000s ]
+SQL: SELECT SUM(total) as sum FROM `order` WHERE ( user_id=16 and status!=1 )  [ RunTime:0.078000s ]
+SQL: SELECT SUM(back) as sum_re FROM `return` WHERE ( user_id=16 and status=4 )  [ RunTime:0.000000s ]
+SQL: SELECT SUM(points_reduce) as sum_j FROM `order` WHERE ( user_id=16 and status!=1 )  [ RunTime:0.062400s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `document_user` WHERE ( user_id=17 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `document_user` WHERE ( user_id=17 )  [ RunTime:0.000000s ]
+SQL: SELECT SUM(total) as sum FROM `order` WHERE ( user_id=17 and status!=1 )  [ RunTime:0.078000s ]
+SQL: SELECT SUM(back) as sum_re FROM `return` WHERE ( user_id=17 and status=4 )  [ RunTime:0.000000s ]
+SQL: SELECT SUM(points_reduce) as sum_j FROM `order` WHERE ( user_id=17 and status!=1 )  [ RunTime:0.078000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `document_user` WHERE ( user_id=18 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `document_user` WHERE ( user_id=18 )  [ RunTime:0.000000s ]
+SQL: SELECT SUM(total) as sum FROM `order` WHERE ( user_id=18 and status!=1 )  [ RunTime:0.078001s ]
+SQL: SELECT SUM(back) as sum_re FROM `return` WHERE ( user_id=18 and status=4 )  [ RunTime:0.000000s ]
+SQL: SELECT SUM(points_reduce) as sum_j FROM `order` WHERE ( user_id=18 and status!=1 )  [ RunTime:0.078000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `document_user` WHERE ( user_id=19 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `document_user` WHERE ( user_id=19 )  [ RunTime:0.000000s ]
+SQL: SELECT SUM(total) as sum FROM `order` WHERE ( user_id=19 and status!=1 )  [ RunTime:0.078000s ]
+SQL: SELECT SUM(back) as sum_re FROM `return` WHERE ( user_id=19 and status=4 )  [ RunTime:0.000000s ]
+SQL: SELECT SUM(points_reduce) as sum_j FROM `order` WHERE ( user_id=19 and status!=1 )  [ RunTime:0.062400s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `document_user` WHERE ( user_id=20 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `document_user` WHERE ( user_id=20 )  [ RunTime:0.000000s ]
+SQL: SELECT SUM(total) as sum FROM `order` WHERE ( user_id=20 and status!=1 )  [ RunTime:0.078000s ]
+SQL: SELECT SUM(back) as sum_re FROM `return` WHERE ( user_id=20 and status=4 )  [ RunTime:0.000000s ]
+SQL: SELECT SUM(points_reduce) as sum_j FROM `order` WHERE ( user_id=20 and status!=1 )  [ RunTime:0.078000s ]
+NOTIC: [8] Undefined index: keyword D:\wwwroot\pc_dtyd\admin\Lib\Action\manageAction.class.php 第 57 行.
+NOTIC: [8] Undefined index: key D:\wwwroot\pc_dtyd\admin\Lib\Action\manageAction.class.php 第 58 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000000s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.031200s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031200s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000000s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000000s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-07-13T14:34:34+08:00 ] 183.69.193.190 /admin.php/Index/index
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.015600s ]
+INFO: [ route_check ] --END-- [ RunTime:0.015600s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `system` [ RunTime:0.000000s ]
+SQL: SELECT `atuo_time` FROM `system` LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `record` [ RunTime:0.046800s ]
+SQL: INSERT INTO `record` (`time`,`remark`) VALUES (1468391673,'网站正常访问操作') [ RunTime:0.015600s ]
+SQL: SHOW COLUMNS FROM `admin_user` [ RunTime:0.046801s ]
+SQL: SELECT `loginTime` FROM `admin_user` WHERE ( `name` = 'root' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `admin_user` WHERE ( name	= 'root' ) LIMIT 1   [ RunTime:0.015600s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000000s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant admin_name - assumed 'admin_name' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\4c18d5952d0dbf1eedb8a1ec796fa788.php 第 23 行.
+NOTIC: [8] Use of undefined constant root - assumed 'root' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\4c18d5952d0dbf1eedb8a1ec796fa788.php 第 23 行.
+NOTIC: [8] Use of undefined constant admin_name - assumed 'admin_name' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\4c18d5952d0dbf1eedb8a1ec796fa788.php 第 27 行.
+NOTIC: [8] Use of undefined constant root - assumed 'root' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\4c18d5952d0dbf1eedb8a1ec796fa788.php 第 27 行.
+NOTIC: [8] Use of undefined constant admin_name - assumed 'admin_name' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\4c18d5952d0dbf1eedb8a1ec796fa788.php 第 31 行.
+NOTIC: [8] Use of undefined constant root - assumed 'root' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\4c18d5952d0dbf1eedb8a1ec796fa788.php 第 31 行.
+NOTIC: [8] Use of undefined constant admin_name - assumed 'admin_name' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\4c18d5952d0dbf1eedb8a1ec796fa788.php 第 35 行.
+NOTIC: [8] Use of undefined constant root - assumed 'root' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\4c18d5952d0dbf1eedb8a1ec796fa788.php 第 35 行.
+NOTIC: [8] Use of undefined constant admin_name - assumed 'admin_name' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\4c18d5952d0dbf1eedb8a1ec796fa788.php 第 39 行.
+NOTIC: [8] Use of undefined constant root - assumed 'root' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\4c18d5952d0dbf1eedb8a1ec796fa788.php 第 39 行.
+NOTIC: [8] Use of undefined constant admin_name - assumed 'admin_name' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\4c18d5952d0dbf1eedb8a1ec796fa788.php 第 43 行.
+NOTIC: [8] Use of undefined constant root - assumed 'root' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\4c18d5952d0dbf1eedb8a1ec796fa788.php 第 43 行.
+NOTIC: [8] Use of undefined constant admin_name - assumed 'admin_name' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\4c18d5952d0dbf1eedb8a1ec796fa788.php 第 47 行.
+NOTIC: [8] Use of undefined constant root - assumed 'root' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\4c18d5952d0dbf1eedb8a1ec796fa788.php 第 47 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.093600s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.093600s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000000s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.015600s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.015600s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.031200s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-07-13T14:34:38+08:00 ] 183.69.193.190 /admin.php/indexManagement/bannerList/class/banner
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `system` [ RunTime:0.000000s ]
+SQL: SELECT `atuo_time` FROM `system` LIMIT 1   [ RunTime:0.015600s ]
+SQL: SHOW COLUMNS FROM `order` [ RunTime:0.015600s ]
+SQL: SELECT `endtime`,`order_id`,`need_pay` FROM `order` WHERE ( `status` = 3 )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `system` WHERE ( system_id=1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `product` [ RunTime:0.015600s ]
+SQL: SELECT `product_id` FROM `product` WHERE ( `able_discount` = 1 )  [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 2 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 2 )  [ RunTime:0.015600s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 2 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 144 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 144 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 144 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 146 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 146 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 146 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 147 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 147 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 147 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 148 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 148 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 148 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 149 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 149 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 149 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 150 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 150 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 150 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 151 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 151 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 151 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 154 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 154 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 154 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 155 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 155 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 155 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 156 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 156 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 156 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 135 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 135 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 135 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 141 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 141 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 141 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 142 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 142 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 142 ) [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 143 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `discount_beg_time`,`discount_end_time`,`price3` FROM `product` WHERE ( `able_discount` = 1 ) AND ( `product_id` = 143 )  [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `product_id` = 143 ) [ RunTime:0.000000s ]
+SQL: UPDATE `product` SET `is_discount`='' WHERE ( `able_discount` = '' ) [ RunTime:0.982801s ]
+SQL: select product_id  , product_num   from `order_product`  where order_id  in (  select  order_id  from  `order`  where  status = 2   and stock_reduce <> 1) [ RunTime:1.996804s ]
+SQL: update `order` set stock_reduce=1 , time2=1468391677 where  stock_reduce<>1 and status <> 1  [ RunTime:1.092002s ]
+SQL: UPDATE `system` SET `atuo_time`=1468391678 WHERE ( `system_id` = 1 ) [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `record` [ RunTime:0.000000s ]
+SQL: INSERT INTO `record` (`time`,`remark`) VALUES (1468391678,'网站正常访问操作') [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `index_banner` [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: where D:\wwwroot\pc_dtyd\admin\Lib\Action\indexManagementAction.class.php 第 18 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `index_banner` LIMIT 1   [ RunTime:0.015600s ]
+NOTIC: [8] Undefined variable: where D:\wwwroot\pc_dtyd\admin\Lib\Action\indexManagementAction.class.php 第 21 行.
+SQL: SELECT * FROM `index_banner` LIMIT 0,10   [ RunTime:0.000000s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000000s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant index_ad2 - assumed 'index_ad2' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\d6265d428dbf68aa6dc3848ef43fac70.php 第 11 行.
+NOTIC: [8] Use of undefined constant index_ad2 - assumed 'index_ad2' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\d6265d428dbf68aa6dc3848ef43fac70.php 第 23 行.
+NOTIC: [8] Use of undefined constant index_ad2 - assumed 'index_ad2' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\d6265d428dbf68aa6dc3848ef43fac70.php 第 31 行.
+NOTIC: [8] Use of undefined constant index_ad2 - assumed 'index_ad2' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\d6265d428dbf68aa6dc3848ef43fac70.php 第 34 行.
+NOTIC: [8] Use of undefined constant index_ad2 - assumed 'index_ad2' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\d6265d428dbf68aa6dc3848ef43fac70.php 第 31 行.
+NOTIC: [8] Use of undefined constant index_ad2 - assumed 'index_ad2' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\d6265d428dbf68aa6dc3848ef43fac70.php 第 34 行.
+NOTIC: [8] Use of undefined constant index_ad2 - assumed 'index_ad2' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\d6265d428dbf68aa6dc3848ef43fac70.php 第 31 行.
+NOTIC: [8] Use of undefined constant index_ad2 - assumed 'index_ad2' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\d6265d428dbf68aa6dc3848ef43fac70.php 第 34 行.
+NOTIC: [8] Use of undefined constant index_ad2 - assumed 'index_ad2' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\d6265d428dbf68aa6dc3848ef43fac70.php 第 31 行.
+NOTIC: [8] Use of undefined constant index_ad2 - assumed 'index_ad2' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\d6265d428dbf68aa6dc3848ef43fac70.php 第 34 行.
+NOTIC: [8] Use of undefined constant index_ad2 - assumed 'index_ad2' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\d6265d428dbf68aa6dc3848ef43fac70.php 第 31 行.
+NOTIC: [8] Use of undefined constant index_ad2 - assumed 'index_ad2' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\d6265d428dbf68aa6dc3848ef43fac70.php 第 34 行.
+NOTIC: [8] Use of undefined constant index_ad2 - assumed 'index_ad2' D:\wwwroot\pc_dtyd\admin\Runtime\Cache\d6265d428dbf68aa6dc3848ef43fac70.php 第 36 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.015600s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015600s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000000s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000000s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-07-13T17:36:04+08:00 ] 183.69.196.92 /admin.php/login/login
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000000s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.031200s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031200s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000000s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000000s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-07-13T17:36:04+08:00 ] 183.69.196.92 /admin.php/login/verify
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+

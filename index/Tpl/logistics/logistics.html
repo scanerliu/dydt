@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>查看物流</title>
+	<link rel="stylesheet" href="__PUBLIC__/css/base.css">
+	<link rel="stylesheet" href="__PUBLIC__/css/main.css">
+	<link rel="stylesheet" href="__PUBLIC__/css/other.css">
+	<link rel="stylesheet" href="__PUBLIC__/css/cssforml.css">
+	<script style="text/javascript" src="__PUBLIC__/js/jquery-1.11.0.js"></script>	
+	<script style="text/javascript" src="__PUBLIC__/js/rich_lee.js"></script>
+</head>
+	<script type="text/javascript">
+	$(function(){
+		nav_down();
+	});
+	</script>
+<body>
+<!-- top -->
+<include file="public:header"/> <include file="public:search"/>
+	<div class="content">
+		<include file="public:nav"/>
+       <div class="crumbs">
+       		<span>您的位置：</span>
+       		<h6>首页</h6>
+       		<h6>查看物流</h6>
+       		<p>check the logisticscheck the logistics</p>   	
+       </div>
+       <div class="processout">
+       		<hr class="process_hr">
+       		<div style="text-align:center;">
+                {$erro}
+    			<iframe src="{$get_content}" align="center" width="580" height="400px" frameborder="no" border="0" scrolling="no"><br/></iframe>
+    		</div>
+       		<hr class="process_hr">
+       		<div class="process_massage">
+       			<p>运单号码：
+                 <span>{$order.transport_code}</span>物流公司：<span>
+                 <if condition="$order.transport_company eq zhongtong"> 中通
+               <elseif condition="$order.transport_company eq yunda"/> 韵达
+               <elseif condition="$order.transport_company eq yuantong"/> 圆通
+               <elseif condition="$order.transport_company eq shunfeng"/> 顺丰
+               <elseif condition="$order.transport_company eq ems"/> EMS
+               </if> 
+                  </span></p>
+				<p>卖家昵称：<span>单体药店专卖网</span></p>
+ 				<p>收货地址： {$order.real_address} </p>
+       		</div>
+       </div>
+ 	</div>	
+	<!--
+    	作者：rich
+    	描述：friend ++ content end
+    -->	
+	 <include file="public:bottom"/>
+
+</body>
+</html>

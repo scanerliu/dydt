@@ -1,0 +1,288 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>{$top_content.title}</title>
+<meta name="Keywords" content="{$top_content.keywords}" />
+<meta name="Description" content="{$top_content.description}" />
+<link rel="stylesheet" href="__PUBLIC__css/base.css">
+<link rel="stylesheet" href="__PUBLIC__css/main.css">
+<link rel="stylesheet" href="__PUBLIC__css/cssforml.css">
+<script style="text/javascript" src="__PUBLIC__js/jquery-1.11.0.js"></script>
+<script style="text/javascript" src="__PUBLIC__js/rich_lee.js"></script>
+<script src="__PUBLIC__js/l_goods.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script type="text/javascript">
+  $(document).ready(function(){
+ 	nav_down();//
+});
+</script>
+</head>
+<body>
+<include file="public:header"/> <include file="public:search"/>
+<div class="content"> <include file="public:nav"/>
+  <div class="positionlock" style="clear:both">
+    <p><a href="/">首页</a>&nbsp;>&nbsp;药品超市</p>
+  </div>
+  
+  <!-- 所在位置end --> 
+  <!-- 中间区域 -->
+  <div class="goodslistcontent clear" style="min-height:2400px;"> 
+    <!-- 左边热销商品 -->
+    <div class="left_goodslist">
+      <h4 class="title_left">热销药品</h4>
+      <ul class="selling_list">
+        <volist name='shopList_part_hotSell' id='vol'>
+          <li> <a href="/shop/content/product_id/{$vol.product_id}" style="display:block"><img src="/Uploads/{$vol.img}" alt=""  style="width:218px; height:218px;" />
+            <h3 class="selling_title">{$vol.title}.</h3>
+            <h5 class="selling_newprice">￥{$vol.price}</h5>
+            <h5 class="selling_oldprice">￥{$vol.price1}</h5>
+            </a></li>
+        </volist>
+      </ul>
+    </div>
+    <!-- 左边热销商品end --> 
+    <!-- 右边 -->
+    <div class="goods_right"> 
+      <!-- 右边热卖推荐 -->
+      <div class="bestsellers">
+        <h4 class="title_bestsellers">热卖推荐</h4>
+        <div class="shop_list_recommend">
+          <volist name='shopList_part_recommend' id='vol'>
+            <div class="part">
+              <div class="L"><a href="/shop/content/product_id/{$vol.product_id}"><img src="/Uploads/{$vol.img}" alt=""></a></div>
+              <div class="R">
+                <div class="a1"><a href="/shop/content/product_id/{$vol.product_id}">{$vol.title|mb_substr=0,16,'utf-8'}</a></div>
+                <div class="a2">￥{$vol.price}</div>
+                <div class="a3"><a href="/shop/shopping_cart_add/product_id/{$vol.product_id}"><img src="__PUBLIC__images/a1.jpg" alt=""></a></div>
+              </div>
+              <div class="clearx"></div>
+            </div>
+            <!--part--> 
+          </volist>
+          <style type="text/css">
+.shop_list_recommend{  padding:10px 10px; border:1px solid #dddddd}
+.shop_list_recommend .part { float:left}
+.shop_list_recommend .part  .L{ float:left}
+.shop_list_recommend .part  .L img{ width:100px; height:100px;}
+.shop_list_recommend .part  .R{ float:left; padding-left:10px; padding-right:5px; width:120px;}
+.shop_list_recommend .part  .R .a2{ font-size:16px; color:#F00; font-weight:bolder}
+.clearx{ clear:both; height:0px; overflow:hidden}
+  </style>
+          <div class="clearx"></div>
+        </div>
+        <!--shop_list_recommend--> 
+        
+      </div>
+      <!-- 右边热卖推荐end --> 
+      
+      <!-- 右边药品超市 -->
+      <div class="drugs_market_top clear">
+        <h4>药品超市
+          <h5 class="market_top_h5">找到<span class="market_top_num">{$count}</span>件相关产品  {$keyword}</h5>
+        </h4>
+        <a href="/shop/shopList">重新筛选</a> </div>
+      <form action="/shop/shopList" method="get" name="form">
+        <ul class="drugs_market_ul clear">
+          <li class="drugs_market_ul_li clear search_class1"><a class="drugs_market_lg">大类:</a>
+            <ul class="drugs_market_in clear">
+              <li onClick="search_class1_fun()">全部</li>
+              <volist name='search_class1' id='vol'>
+                <li data='{$vol.product_classify_id}'>{$vol.title}</li>
+              </volist>
+            </ul>
+          </li>
+          <input name="class1" type="hidden" value="{$_GET['class1']}">
+          <script type="text/javascript">
+	          function  search_class1_fun(){
+ 				  $("input[name='class2']").val('');
+ 				  $("input[name='class3']").val('');
+				  }
+	  
+	  
+	           search_class1='{$_GET['class1']}';
+             if( search_class1==''){
+				 $('.search_class1 li:eq(0)').attr('class','drugs_market_active')
+			 }
+			 else{
+				 $(".search_class1 li[data='"+search_class1+"']").attr('class','drugs_market_active')
+ 			 }
+       </script>
+          <if condition="$_GET['class1'] neq null">
+            <li class="drugs_market_ul_li clear search_class2"><a class="drugs_market_lg">小类:</a>
+              <ul class="drugs_market_in clear">
+                <li onClick="search_class2_fun()">全部</li>
+                <volist name='search_class2' id='vol'>
+                  <li data='{$vol.product_classify_id}'>{$vol.title}</li>
+                </volist>
+              </ul>
+            </li>
+            <input name="class2" type="hidden" value="{$_GET['class2']}">
+            <script type="text/javascript">
+	        function  search_class2_fun(){
+ 				  $("input[name='class2']").val('');
+ 				  $("input[name='class3']").val('');
+				  }
+	  
+	          search_class2='{$_GET['class2']}';
+             if( search_class2==''){
+				 $('.search_class2 li:eq(0)').attr('class','drugs_market_active')
+			 }
+			 else{
+				 $(".search_class2 li[data='"+search_class2+"']").attr('class','drugs_market_active')
+ 			 }
+       </script> 
+          </if>
+          <if condition="$_GET['class2'] neq null">
+            <li class="drugs_market_ul_li clear search_class3"><a class="drugs_market_lg">子类:</a>
+              <ul class="drugs_market_in clear">
+                <li>全部</li>
+                <volist name='search_class3' id='vol'>
+                  <li data='{$vol.product_classify_id}'>{$vol.title}</li>
+                </volist>
+              </ul>
+            </li>
+            <input name="class3" type="hidden" value="{$_GET['class3']}">
+            <script type="text/javascript">
+	           search_class3='{$_GET['class3']}';
+             if( search_class3==''){
+				 $('.search_class3 li:eq(0)').attr('class','drugs_market_active')
+			 }
+			 else{
+				 $(".search_class3 li[data='"+search_class3+"']").attr('class','drugs_market_active')
+ 			 }
+       </script> 
+          </if>
+          
+          <script type="text/javascript">
+		//拆分字符串 beg
+		  str=$("input[name='attribute']").val();
+          str=str.split("x"); 
+		  for (i=0;i<str.length ;i++ )  { 
+		    str[i]=str[i].split("-"); 
+           } 
+		  //拆分字符串 end
+		  // 根据  <input name="attribute" type="hidden" 的值给 自定义属性加上状态的式样   beg
+		 for (i=0;i<str.length ;i++ )  { 
+		      if(str[i][1]){
+				 $('#'+str[i][0]+" li[data='"+str[i][1]+"']").parent().find('li').attr('class','')
+   			     $('#'+str[i][0]+" li[data='"+str[i][1]+"']").attr('class','drugs_market_active')
+			  }
+             }  
+	     // 根据  <input name="attribute" type="hidden" 的值给自定义属性加上状态的式样   end
+		 // 提交 页面的时候  根据 自定义 属性的 状态 给  <input name="attribute" type="hidden"  赋值  beg
+		   		     function  attributeInput(){
+				       for (i=0;i<$("ul[data='attribute']").length ;i++ )  { 
+				        if(i==0){
+ 				            str=$("ul[data='attribute']").eq(i).attr('id')+'-'+$("ul[data='attribute']").eq(i).find('.drugs_market_active').attr('data')
+   						}
+						else{
+						 str=str+'x'+$("ul[data='attribute']").eq(i).attr('id')+'-'+$("ul[data='attribute']").eq(i).find('.drugs_market_active').attr('data')
+							}
+                      } 
+					  $("input[name='attribute']").val(str)
+					  
+   				 }
+				 
+ 		  // 提交 页面的时候  根据 自定义 属性的 状态 给  <input name="attribute" type="hidden"  赋值  end
+              </script>
+        </ul>
+        <input name="order" type="hidden" value="{$_GET['order']}" id="input_order">
+        <input type="hidden" value="{$_GET['price_min']}" name="price_min"  class="input_price_min"/>
+        <input type="hidden" value="{$_GET['price_max']}" name='price_max' class="input_price_max" />
+      </form>
+      <script type="text/javascript">
+	$(".drugs_market_ul .drugs_market_in li").on("click", function(){
+		// 自定义属性的提交 beg
+ 		if($(this).parent().attr('data')=='attribute'  ){
+				$(this).parent().find('li').attr('class','');
+				$(this).attr('class','drugs_market_active');
+				 attributeInput();
+ 				form.submit();
+				return ;
+				}
+			// 自定义属性的提交end	
+ 		
+		
+		if( $(this).index()== 0 ){
+			
+				
+			$(this).parent().parent().next().val('');
+			}
+		   else{
+			 $(this).parent().parent().next().val( $(this).attr('data')  );  
+ 			  }
+ 		  form.submit();
+     });
+</script> 
+        <!-- 右边药品超市end --> 
+      <!-- 右边下部商品列表 -->
+      <div class="goodslist_under_top clear">
+        <ul class="goodssort">
+          <li  onClick="$('#input_order').val(''); form.submit()" >默认</li>
+          <li onClick="$('#input_order').val('1'); form.submit()">销量</li>
+          <li onClick="$('#input_order').val('2'); form.submit()">价格</li>
+          <li class="pricerange">价格区间
+            <input type="text" value="{$_GET['price_min']}" class="input_price_min2" />
+            <span>-</span>
+            <input type="text" value="{$_GET['price_max']}" class='input_price_max2'/>
+            <a onClick="price_search_submit()" style=" background: #06F">确定</a> </li>
+        </ul>
+      </div>
+      <script type="text/javascript">
+	  <if condition="$_GET['order']  eq  null ">
+	       $('.goodssort li').eq(0).attr('class','active')
+	  <elseif condition="$_GET['order']  eq 1 "/>
+	   $('.goodssort li').eq(1).attr('class','active')
+	  	  <elseif condition="$_GET['order']  eq 2 "/>
+	   $('.goodssort li').eq(2).attr('class','active') ;
+     </if>
+	function price_search_submit(){ //价格的搜索提交
+		$('.input_price_min').val(  $('.input_price_min2').val() )
+	    $('.input_price_max').val(  $('.input_price_max2').val() )
+ 		form.submit();
+		}
+    </script>
+      <div class="goodslist_under">
+        <ul class="goodslist_under_ul">
+          <volist name='list' id='vol'>
+            <li class="goodslist_under_li"><a href="/shop/content/product_id/{$vol.product_id}"><img src="/Uploads/{$vol.img}" alt=""></a>
+              <h3><a href="/shop/content/product_id/{$vol.product_id}">{$vol.title|mb_substr=0,16,'utf-8'}</a> </h3>
+              <h6 class="newprice">￥{$vol.price2}</h6>
+              <h6 class="oldprice">￥1088.00</h6>
+              <a href="/shop/shopping_cart_add/product_id/{$vol.product_id}" class="addcar">加入购物车</a>
+              <if condition="$vol.isFavorite  eq 1"> <a class="attention" href="/shop/favorite_delete/product_id/{$vol.product_id}" >已关注</a>
+                <else/>
+                <a href="/shop/favorite_add/product_id/{$vol.product_id}"   class="attention">关注</a> </if>
+            </li>
+          </volist>
+        </ul>
+      </div>
+      <!-- 右边下部商品列表end -->
+      <div style="clear:both; text-align:center;" class="page"> {$page} </div>
+      <style type="text/css">
+      .page a{ display:inline-block;   height:25px; line-height:25px; text-align:center; border:1px solid #eeeeee; margin-right:10px; padding:0px 15px; }
+	  .page span{ display:inline-block;  height:25px; line-height:25px; text-align:center;border:1px solid #3b93de; background:#3b93de; margin-right:10px;color:#FFF;padding:0px 15px;}
+     </style>
+    </div>
+    <!-- 右边end --> 
+    <!-- 中间区域end --> 
+  </div>
+  <!-- 猜您需要 -->
+  <div class="guess_need" >
+    <div class="guess_need_title clear"> <span>猜您需要</span> </div>
+    <ul class="guess_need_underul clear">
+      <volist name='shopList_part_search_discount' id='vol'>
+        <li class="goodslist_under_li"> <a href="/shop/content/product_id/{$vol.product_id}" style="display:block"><img src="/Uploads/{$vol.img}" alt="">
+          <h3>{$vol.title}</h3>
+          <h6 class="newprice">¥{$vol.price3}</h6>
+          <h6 class="oldprice">￥{$vol.price1}</h6>
+          </a> </li>
+      </volist>
+    </ul>
+  </div>
+  <!-- 猜您需要end --> 
+</div>
+<include file="public:bottom"/>
+</body>
+</html>

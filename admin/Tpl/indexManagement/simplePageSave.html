@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="__PUBLIC__css/indexManagement/common.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="__PUBLIC__js/jquery.1.10.js"></script>
+</head>
+<body>
+
+ <div class="bannerAdd"> 
+   <form action="__APP__/indexManagement/simplePageSaveFunUpload/simple_page_id/{$data.simple_page_id}" method="post" enctype="multipart/form-data"  name="form">   
+   <table  width="99%" border="0" cellpadding="0" cellspacing="0" style=" margin-bottom:5px;" >
+  <tr style="background:url(__PUBLIC__images/a10.gif) repeat-x; height:36px;">
+    <td style="text-align:left">
+     <a href="__APP__/indexManagement/simplePageList">文章列表</a> >> 文章修改
+     </td>
+  </tr>
+</table>
+   <table  width="99%" border="0" cellpadding="0" cellspacing="0" style=" margin-bottom:5px;" >
+      <tr style="height:36px;">
+       <td style="text-align:left">
+        <span>标题:</span><span>{$data.title}</span>
+     </td> 
+   </tr>
+
+    
+    <tr>
+        <td style="text-align:left"><div style="line-height:30px;">文章内容</div>
+          <div> 
+            <script charset="utf-8" src="__ROOT__/kindeditor-4.1.10/themes/default/default.css"></script> 
+            <script charset="utf-8" src="__ROOT__/kindeditor-4.1.10/kindeditor-min.js"></script> 
+            <script charset="utf-8" src="__ROOT__/kindeditor-4.1.10/lang/zh_CN.js"></script> 
+            <script>
+			KindEditor.ready(function(K) {
+		  editor=K.create('#content1', {
+			  fileManagerJson : '__ROOT__/kindeditor-4.1.10/php/file_manager_json.php',
+				allowFileManager : true,
+					themeType : 'default'
+				});
+			});
+		</script>
+               <textarea id="content1"  style="width:700px;height:200px;visibility:hidden;">{$data.content|stripslashes}</textarea>
+               <textarea  id="content" name="content" style="display:none"></textarea>
+          </div></td>
+      </tr>
+    
+    
+   
+   
+       <tr style="height:36px;">
+       <td style="text-align:left">
+       <a href="javascript:void(0)" class="button1"  onclick="formSubmit()">确定</a> <a href="__APP__/indexManagement/simplePageList" class="button1">返回</a>
+     </td> 
+   </tr>
+</table>
+</form>
+<script type="text/javascript">
+function formSubmit(){
+	   	$('#content').html( editor.html() )   ;   
+		      form.submit();
+	}
+</script>
+
+
+
+
+
+</div>
+</body>
+</html>

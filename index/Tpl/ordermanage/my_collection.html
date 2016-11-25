@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>我的收藏-{$top_content.title}</title>
+<meta name="Keywords" content="{$top_content.keywords}" />
+<meta name="Description" content="{$top_content.description}" />
+<link rel="stylesheet" href="__PUBLIC__css/base.css">
+<link rel="stylesheet" href="__PUBLIC__css/main.css">
+<link rel="stylesheet" href="__PUBLIC__css/other.css">
+<link rel="stylesheet" type="text/css" href="__PUBLIC__css/L_person.css">
+<script style="text/javascript" src="__PUBLIC__js/jquery-1.11.0.js"></script>
+<script style="text/javascript" src="__PUBLIC__js/rich_lee.js"></script>
+</head>
+<script type="text/javascript">
+	$(function(){
+		
+
+		nav_down();//
+	});
+		
+	</script>
+<body>
+<!-- top --> 
+<include file="public:header"/> 
+<!-- topend --> 
+<!-- search --> 
+<include file="public:search"/> 
+<!-- searchend --> 
+<!-- nav -->
+<div class="content"> <include file="public:nav"/> 
+  <!--
+        	作者：rich
+        	时间：2015-10-21
+        	描述：banner右侧
+        -->
+  <div class="crumbs"> <span>订单管理</span>
+    <p>the order management</p>
+    <p class="crumbs02">我的收藏</p>
+  </div>
+  <include file="public:left"/> 
+  <!--
+       	作者：rich_lee
+       	描述：面包屑 面包屑导航 完成
+       --> 
+  
+  <!-- 浏览记录 -->
+  <div class="see_history">
+    <div class="see_title">我的收藏</div>
+    <ul>
+      <volist name="col" id="col">
+        <li>
+          <dl>
+            <a style="margin-left:30px;color:red;" href="{:U('ordermanage/del_mycol',array('id' => $col['favorite_id']))}">移出收藏夹</a>
+            <dt><a href="/shop/content/product_id/{$col['favorite_id']}"><img src="/Uploads/{$col['img']}"></a></dt>
+            <dd class="price">￥<span>{$col.price2}</span></dd>
+            <dd class="goods_name">{$col.title}</dd>
+            <dd class="goods_detail">{$col.subhead}</dd>
+          </dl>
+        </li>
+      </volist>
+    </ul>
+    <div class="L_page">{$page}</div>
+  </div>
+  <!-- 浏览记录-结束 --> 
+</div>
+</div>
+<include file="public:bottom"/>
+</body>
+</html>

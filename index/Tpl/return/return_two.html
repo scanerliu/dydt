@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>退货第一步</title>
+	<link rel="stylesheet" href="__PUBLIC__css/base.css">
+	<link rel="stylesheet" href="__PUBLIC__css/main.css">
+		<!--<link rel="stylesheet" href="css/other.css">-->
+		<link rel="stylesheet" href="__PUBLIC__css/cssforml.css">
+	<script style="text/javascript" src="__PUBLIC__js/jquery-1.11.0.js"></script>	
+	<script style="text/javascript" src="__PUBLIC__js/rich_lee.js"></script>
+</head>
+	<script type="text/javascript">
+	$(function(){
+		
+
+		nav_down();//
+	});
+		
+	</script>
+<body>
+<!-- top -->
+	<include file="public:header"/>
+<!-- topend -->
+<!-- search -->
+	<include file="public:search"/>
+<!-- searchend -->
+<!-- nav -->
+	<div class="content">
+		<include file="public:nav"/>
+		<!--
+        	作者：rich
+        	时间：2015-10-21
+        	描述：banner右侧
+        -->	
+       <div class="crumbs">
+       		<span>您的位置：</span>
+       		<h6>首页</h6>
+       		<h6>退款/退货</h6>
+       		<p>refund/return</p>   	
+       </div>
+       <table class="return_tb">
+       		<tr>
+       			<td>买家申请退款</td>
+       			<td>商家 处理退款申请</td>
+       			<td>退款完成</td>
+       		</tr>
+       		<tr>
+       			<td colspan="3" class="row3" style="width:100%"><img src="__PUBLIC__images/return01.png" alt=""></td>
+       		</tr>
+       </table>
+       
+    	<div class="return_content">
+    		<table class="return_content_left">
+    			<tr class="return_tr_first">
+    				<td class="return_td_first">商品信息</td>
+    				<td class="return_td_secend">单价</td>
+    				<td class="return_td_third">小计</td>
+    				<td class="return_td_fouth">商家</td>
+    			</tr>
+    			<tr class="return_tr_secend">
+    				<td class="return_td02_first clear">
+    					<img style="width:60px;height:60px;" src="/Uploads/{$list.img}" alt="">
+    					<div class="return_td02_first_text">
+    						<h3>{$list_p.title}</h3>
+    						<p>{$list_p.subhead}</p>
+    					</div>
+    				</td>
+    				<td class="return_td02_secend">{$list.price} 元</td>
+    				<td class="return_td02_third">{$list.product_num}</td>
+    				<td class="return_td02_fourth">单体药店专卖网</td>
+    			</tr>
+    			<tr class="return_tr_first">
+    				<td colspan="4">订单信息</td>
+    			</tr>
+    			<tr class="return_tr_third">
+    				<td colspan="2">订单编号：{$list_or.order_num}</td>
+    				<td colspan="2">运费：{$list_or.express_fee} 元</td>
+    			</tr>
+    			<tr class="return_tr_third">
+    				<td colspan="2">总优惠：-12元</td>
+    				<td colspan="2">成交时间：{$list_or.time|date='Y-m-d H:i:s',###}</td>
+    			</tr>
+    			<tr class="return_tr_third">
+    				<td colspan="4">总计：{$list.total_price}元</td>
+    			</tr>
+    		</table>
+    		<div class="return_content_right2">
+    			<p class="title_secend_return">等待商家处理申请</p>
+    			<h6 class="first_h6">如果商家同意，退货申请将达成需要您退货给商家</h6>
+    			<h6>如果商家拒绝，将需要您修改退货申请</h6>
+    		</div>
+
+    	</div>
+    	
+       
+       
+       
+       
+	</div>	
+	<!--
+    	作者：rich
+    	描述：friend ++ content end
+    -->	
+	<include file="public:bottom"/>	
+</body>
+</html>

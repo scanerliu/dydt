@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="__PUBLIC__css/indexManagement/common.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="__PUBLIC__js/jquery.1.10.js"></script>
+</head>
+<body>
+<div class="bannerAdd">
+  <form action="__APP__/productManagement/productClassifyAddFun" method="post" enctype="multipart/form-data"  name="form">
+    <table  width="99%" border="0" cellpadding="0" cellspacing="0" style=" margin-bottom:5px;" >
+      <tr style="background:url(__PUBLIC__images/a10.gif) repeat-x; height:36px;">
+        <td style="text-align:left"><a href="__APP__/productManagement/productClassify">文章列表</a> >> 分类新增 </td>
+      </tr>
+    </table>
+    <table  width="99%" border="0" cellpadding="0" cellspacing="0" style=" margin-bottom:5px;" >
+      <tr style="height:36px;">
+        <td style="text-align:left"><span>类别选择:</span><span>
+          <select name="fid">
+             <volist name='class' id='vol'>
+              <option value="{$vol.product_classify_id}">{$vol.title}</option>
+              <volist name='vol.class2' id='vol2'>
+                <option value="{$vol2.product_classify_id}">--小类：{$vol2.title}</option>
+              </volist>
+            </volist>
+          </select>
+          </span></td>          
+      </tr>
+      <tr style="height:36px;">
+        <td style="text-align:left"><span>类别名称:</span><span><input name="title" type="text"  class="input1"/></span>
+          
+          </td>          
+      </tr>
+      
+      <tr style="height:36px;">
+        <td style="text-align:left"><a href="javascript:void(0)" class="button1"  onclick="form.submit()">确定</a> <a href="__APP__/productManagement/productClassify" class="button1">返回</a></td>
+      </tr>
+    </table>
+  </form>
+  <script type="text/javascript">
+ $("select[name='fid'] ").find("option[value='{$_GET['product_classify_id']}'] ").get(0).selected = true;
+</script>
+
+  
+  
+ </div>
+</body>
+</html>

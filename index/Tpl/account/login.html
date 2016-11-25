@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>{$top_content.title}</title>
+<meta name="Keywords" content="{$top_content.keywords}" />
+<meta name="Description" content="{$top_content.description}" />
+<link rel="stylesheet" href="__PUBLIC__css/base.css">
+<link rel="stylesheet" href="__PUBLIC__css/main.css">
+<link rel="stylesheet" href="__PUBLIC__css/other.css">
+<script style="text/javascript" src="__PUBLIC__js/jquery-1.11.0.js"></script>
+<script style="text/javascript" src="__PUBLIC__js/rich_lee.js"></script>
+</head>
+<body>
+<include file="public:header"/> 
+<!-- search -->
+<div class="search_index">
+  <div class="search_index_left"> <a href="/"> <img src="__PUBLIC__images/logo.png" alt="真善美"> </a> </div>
+</div>
+<!-- searchend --> 
+<!-- nav -->
+<div class="my_content"> <img class="reg_img" src="__PUBLIC__img/reg_img.png"  />
+  <form action="/account/loginFunDo" method="post" class="on_load">
+    <ul>
+      <dt>
+        <h3>欢迎登录</h3>
+        <span>没有账号？<a href="/account/register">立即注册</a></span> </dt>
+      <dd>
+        <input class="on_inp01" type="text" name="name" id="" value="" />
+       </dd>
+      <dd>
+        <input class="on_inp02" type="password" name="password" id="" value="" />
+       </dd>
+      <dd class="on_dd">
+        <input class="on_inp03" type="checkbox" name="session" id="" value="1" />
+        <span class="on_span">记住用户名</span> <a class="on_a" href="/account/forget_pwd">忘记密码？</a> </dd>
+      <dt>
+        <input type="submit" name="" id="" value="立即登录" />
+      </dt>
+      <dt style="margin-top:16px">
+        <a id="cancel" style="color:#666666;float:right;cursor:pointer">取消登录</a> <a href="/account/certificate">数字证书登录</a>
+      </dt>
+      <dt class="on_oter_box" style="display:none">
+        <div class="on_title">使用其它方式登录：</div>
+        <div class="on_other"> <a href="#"><img src="__PUBLIC__images/on_icon01.png" /></a> <a href="#"><img src="__PUBLIC__images/on_icon02.png" /></a> <a href="#"><img src="__PUBLIC__images/on_icon03.png" /></a> <a href="#"><img src="__PUBLIC__images/on_icon04.png" /></a> </div>
+      </dt>
+    </ul>
+  </form>
+  <div class="on_shadow"></div>
+</div>
+<script type="text/javascript">
+  $('#cancel').click(function () {
+    $('.on_inp01').val('');
+    $('.on_inp02').val('');
+  });
+</script>
+<include file="public:bottom"/>
+</body>
+</html>

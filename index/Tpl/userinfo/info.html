@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>会员信息-{$top_content.title}</title>
+<meta name="Keywords" content="{$top_content.keywords}" />
+<meta name="Description" content="{$top_content.description}" />
+	<link rel="stylesheet" href="__PUBLIC__css/base.css">
+	<link rel="stylesheet" href="__PUBLIC__css/main.css">
+	<link rel="stylesheet" href="__PUBLIC__css/other.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__css/jcDate.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__css/L_person.css">
+	<script style="text/javascript" src="__PUBLIC__js/jquery-1.11.0.js"></script>	
+	<script style="text/javascript" src="__PUBLIC__js/rich_lee.js"></script>
+	<script type="text/javascript" src="__PUBLIC__js/jquery.min.js"></script>
+	<script type="text/javascript" src="__PUBLIC__js/jQuery-jcDate.js"></script>
+</head>
+	<script type="text/javascript">
+	$(function(){
+		
+
+		nav_down();//
+	});
+		
+	</script>
+<body>
+<!-- top -->
+	<include file="public:header"/>
+<!-- topend -->
+<!-- search -->
+	<include file="public:search"/>
+<!-- searchend -->
+<!-- nav -->
+	<div class="content">
+		<include file="public:nav"/>
+		<!--
+        	作者：rich
+        	时间：2015-10-21
+        	描述：banner右侧
+        -->	
+       <div class="crumbs">
+       		<span>账号管理</span>
+       		<p>the account management</p> 
+       		<p class="crumbs02">会员信息</p>
+       </div>
+       <include file="public:left"/>
+       <!--
+       	作者：rich_lee
+       	描述：面包屑 面包屑导航 完成
+       -->
+
+
+       <!-- 会员信息 -->
+       <div class="L_member_infor">
+       		<form method="post" action="{:U('userinfo/save_info')}" enctype="multipart/form-data">
+	       		<dl>
+	       			<dt>会员信息</dt>
+		       		<dd class="now_headpic">
+		       			<label>当前头像：</label>
+		       			<if condition="$info['img'] eq ''">
+		       				<input style="margin-top:16px;" type="file" name="head_p">
+		       			<else />
+		       			<div id="aaa">
+		       				<img src="/Uploads/{$info['img']}">
+		       				<input type="hidden" name="img_h" value="{$info['img']}">
+		       				<label style="float:right;margin-right:50px;margin-top:16px;"><a style="color:red;" onclick="edit_h()">修改</a></label>
+		       			</div>
+		       			<div id="bbb" style="display:none">
+		       				<input style="margin-top:16px;" type="file" name="head_p">
+		       			</div>	
+		       			</if>
+		       		</dd>
+		       		<dd>
+		       			<label>当前昵称：</label>
+		       			<span>{$info.name}</span>
+		       		</dd>
+		       		<dd class="L_memnber_infor_same">
+		       			<label>采购商名称：</label>
+		       			<input type="text" name="real_name" required value="{$info['real_name']}">
+		       			<img src="__PUBLIC__images/L_dot.png">
+		       		</dd>
+		       		<dd class="se">
+		       			<label>性别：</label>
+		       			<if condition="($info['sex'] eq '') or ($info['sex'] eq '男')">
+			       			<input type="radio" name="sex" checked="true" value="男"><span>男</span>
+			       			<input type="radio" name="sex" value="女"><span>女</span>
+		       			<else />
+							<input type="radio" name="sex" value="男"><span>男</span>
+			       			<input type="radio" checked="true" name="sex" value="女"><span>女</span>
+		       			</if>
+		       		</dd>
+		       		<dd class="se">
+		       			<label>婚配：</label>
+		       			<if condition="($info['marriage'] eq '') or ($info['marriage'] eq '未婚')">
+			       			<input type="radio" name="marriage" checked="true" value="未婚"><span>未婚</span>
+			       			<input type="radio" name="marriage" value="已婚"><span>已婚</span>
+		       			<else />
+							<input type="radio" name="marriage" value="未婚"><span>未婚</span>
+			       			<input type="radio" checked="true" name="marriage" value="已婚"><span>已婚</span>
+		       			</if>
+		       		</dd>
+		       		<dd class="L_select_same1">
+		       			<label>出生日期：</label>
+		       				<input type="date" required style="width:178px;height:28px;margin-top:3px;border:1px solid #dddddd;" name="birthday" value="{$info['birthday']}">
+		       			<label class="prompt_label">（出生日期我们将为您保密）</label>
+		       		</dd>
+		       		<dd class="L_memnber_infor_same">
+		       			<label>手机号码：</label>
+		       			<input type="text" value="{$info['mobile_phone']}" required name="mobile_phone">
+		       			<img src="__PUBLIC__images/L_dot.png">
+		       		</dd>
+		       		<dd class="L_memnber_infor_same">
+		       			<label>邮箱地址：</label>
+		       			<input type="email" value="{$info['email']}" required name="email">
+		       			<img src="__PUBLIC__images/L_dot.png">
+		       		</dd>
+		       		<script type="text/javascript" src="__PUBLIC__js/area/jquery.cityselect.js"></script>
+		       		<dd class="L_select_same1">
+		       			<label>所在城市：</label>
+		       			<div id="city">  
+		                    <select name="prov" class="prov"></select>   
+		                    <select name="city" class="city" disabled="disabled"></select> 
+		                    <select name="dist" class="dist" disabled="disabled"></select>
+		                </div>
+		                <style type="text/css">
+		                  .prov{
+		                    height: 28px;
+		                    border: 1px solid #ddd;
+		                    padding: 0 10px;
+		                    color: #666;
+		                  }
+		                  .city{
+		                    height: 28px;
+		                    border: 1px solid #ddd;
+		                    padding: 0 10px;
+		                    color: #666;
+		                  }
+		                  .dist{
+		                    height: 28px;
+		                    border: 1px solid #ddd;
+		                    padding: 0 10px;
+		                    color: #666;
+		                  }
+		                </style>
+    					<script type="text/javascript">
+		                  $(function() {
+		                    var prov = "{$info.city1}";
+		                    var city = "{$info.city2}";
+		                    var dist = "{$info.city3}";
+		                    if (prov=="" || city=="") {
+		                      $("#city").citySelect({ 
+		                        url:"__PUBLIC__js/area/city.min.js",   
+		                        prov:"省份", //省份  
+		                        city:"地级市", //城市  
+		                        dist:"市、县级市", //区县  
+		                        nodata:"none" //当子集无数据时，隐藏select   
+		                      });
+		                    } else {
+		                      $("#city").citySelect({ 
+		                        url:"__PUBLIC__js/area/city.min.js",   
+		                        prov:prov, //省份  
+		                        city:city, //城市
+		                        dist:dist, //区县  
+		                        nodata:"none" //当子集无数据时，隐藏select   
+		                      });
+		                    }
+		                  });
+                		</script>
+		       		</dd>
+		       		<dd class="Ladr_memnber">
+		       			<label>具体地址：</label>
+		       			<input type="text" value="{$info['address']}" required name="address">
+		       			<img src="__PUBLIC__images/L_dot.png">
+		       		</dd>
+		       		<dd class="L_memnber_infor_same">
+		       			<label>家庭电话：</label>
+		       			<input type="text" value="{$info['home_phone']}" required name="home_phone">
+		       			<img src="__PUBLIC__images/L_dot.png">
+		       		</dd>
+                    <dd class="L_memnber_infor_same">
+		       			<label>数字证书绑定：</label>
+		       			<input type="text" value="{$info['cert_serialnumber']}"  name="cert_serialnumber"  placeholder='请输入您的数字证书序号' style=' width:260px;'> <span style="line-height:30px; padding-left:10px;">您当前的数字证书序号为<if condition="$_SERVER[CERT_SERIALNUMBER] neq null">{$_SERVER[CERT_SERIALNUMBER]}<else/>空</if>
+                        </span>
+		       		</dd>
+ 		       		<dd>
+       					<input style="width:100px;height:30px;margin-left:100px;background:#58a8e5;color:white;font-size:16px;border:none;line-height:30px;cursor:pointer;" type="submit" name="" id="" value="保存" />
+       				</dd>
+	       		</dl>   
+	       	</form>	
+       </div>
+       <!-- 会员信息-结束 -->
+	<script type="text/javascript">
+		$(function (){
+			$("input.jcDate").jcDate({					       
+				IcoClass : "jcDateIco",
+				Event : "click",
+				Speed : 100,
+				Left : 0,
+				Top : 28,
+				format : "-",
+				Timeout : 100
+			});
+		});
+		function edit() {
+			document.getElementById("spanposition").style.display="none";//隐藏
+			document.getElementById("iptposition").style.display="block";//显示
+			// document.getElementById("s_county").style.visibility="visible";//显示
+		}
+		function edit_h() {
+			document.getElementById("aaa").style.display="none";//隐藏
+			document.getElementById("bbb").style.display="block";//显示
+		}
+		var Gid  = document.getElementById ;
+		var showArea = function(){
+			Gid('show').innerHTML = "<h3>省" + Gid('s_province').value + " - 市" + 	
+			Gid('s_city').value + " - 县/区" + 
+			Gid('s_county').value + "</h3>"
+		}
+		Gid('s_county').setAttribute('onchange','showArea()');
+	</script>
+
+	<style type="text/css">
+		
+		.clear{clear:both;height:0;visibility:hidden;}
+		a{text-decoration:none;cursor:pointer;}
+		a:hover{color:red;text-decoration:underline;}
+		a img{border:0;vertical-align:middle;}
+	</style>
+	<!--
+    	作者：rich
+    	描述：friend ++ content end
+    -->	
+    
+    </div>
+	<include file="public:bottom"/>
+</body>
+</html>

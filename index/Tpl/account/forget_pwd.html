@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>忘记密码</title>
+	<link rel="stylesheet" href="__PUBLIC__css/base.css">
+	<link rel="stylesheet" href="__PUBLIC__css/main.css">
+		<link rel="stylesheet" href="__PUBLIC__css/other.css">
+		<link rel="stylesheet" href="__PUBLIC__css/cssforml.css">
+	<script style="text/javascript" src="__PUBLIC__js/jquery-1.11.0.js"></script>	
+	<script style="text/javascript" src="__PUBLIC__js/rich_lee.js"></script>
+</head>
+	<script type="text/javascript">
+	$(function(){
+		nav_down();//
+	});
+		
+	</script>
+<body>
+ <include file="public:header"/> <include file="public:search"/>
+	<div class="content">
+	<include file="public:nav"/>
+       <div class="crumbs">
+       		<span>您的位置：</span>
+       		<h6>首页</h6>
+       		<h6>找回密码</h6>
+       		<p>retrieve password</p>   	
+       </div>
+       <form action="__APP__/account/forget_pwd" method="post">
+	        <dl class="fin_sec">
+	       		<dt>找回密码</dt>
+	       		<dd>
+       				<div class="fin_se01">
+       					<a class="fin_semark" onclick="send()">获取验证码</a>
+       					<input type="text" name="phonenumber" id="phonenumber" />
+       					<span>请输入手机号：</span>	
+       				</div>
+       				
+       				<div>      					
+
+       					<input type="text" name="identify"/>
+       					<span>请输入验证码：</span>      					      					
+       				</div>
+       				<div>
+
+       					<input type="password" name="password"/>
+       					<span>新密码：</span>      				       					
+       				</div> 
+       				<div>
+     					
+       					<input type="password" name="password1"/>
+       					<span>确认新密码：</span>      				
+       				</div>
+       			
+	       		</dd>
+	       		<dd>
+	       			<input class="rsec_sub" type="submit" value="保存" />
+	       		</dd>
+	       </dl>
+       </form>
+	</div>
+	<script type="text/javascript">
+		function send(){
+			var phonenumber = document.getElementById('phonenumber').value;
+			$.ajax({
+				type:"post",
+				url:"__APP__/account/yanzhengma",
+				data:{phonenumber:phonenumber},
+				success: function(data){
+			   		if(data.status == 0) {
+			    		alert('验证码已发送，请注意接收！');
+			   		}
+		   		}
+			});
+		}
+	</script>	
+	<!--
+    	作者：rich
+    	描述：friend ++ content end
+    -->	
+	<include file="public:bottom"/>
+</body>
+</html>
