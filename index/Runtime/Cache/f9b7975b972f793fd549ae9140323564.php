@@ -198,7 +198,7 @@ function move()
   <dt>原   价 ：</dt>
   <dd><s>￥<?php echo ($product_detail["price1"]); ?></s></dd>
 </dl>
-<dl class="dl04" style="display:none">
+<dl class="dl04">
   <dt>快递费 ：</dt>
   <dd><select onChange="express_fee_check()" id="express_fee">
   <option value="<?php echo ($top_content["express_fee"]); ?>">默认</option>

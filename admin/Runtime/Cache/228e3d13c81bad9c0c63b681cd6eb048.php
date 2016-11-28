@@ -84,10 +84,26 @@
           </span></td>
       </tr>
       <tr style="height:36px;">
-        <td style="text-align:left"><span>厂家:</span><span>
-                <select name="manu_id" my_check='number_need' error='厂家错误'>
-                    <option value="">--请选择厂家--</option>
+        <td style="text-align:left"><span>品牌:</span><span>
+                <select name="manu_id" my_check='number_need' error='品牌错误'>
+                    <option value="">--请选择品牌--</option>
                     <?php if(is_array($managelist)): $i = 0; $__LIST__ = $managelist;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$mana): $mod = ($i % 2 );++$i;?><option value="<?php echo ($mana["gold_id"]); ?>"><?php echo ($mana["gold_name"]); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
+                </select>
+          </span></td>
+      </tr>
+      <tr style="height:36px;">
+        <td style="text-align:left"><span>药品属性类型:</span><span>
+                <select name="aptitudes" my_check='number_need' error='药品属性类型错误'>
+                    <?php if(is_array($aptitudelist)): $i = 0; $__LIST__ = $aptitudelist;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$aptitude): $mod = ($i % 2 );++$i;?><option value="<?php echo ($aptitude["id"]); ?>"><?php echo ($aptitude["name"]); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
+                </select>
+          </span></td>
+      </tr>
+      <tr style="height:36px;">
+        <td style="text-align:left"><span>药品类型:</span><span>
+                <select name="ptype" my_check='number_need' error='药品类型错误'>
+                    <option value="1">普通药品</option>
+                    <option value="2">控销药品</option>
+                    </volist>
                 </select>
           </span></td>
       </tr>

@@ -132,7 +132,28 @@
        	</dl>
     </div>
     </form>
-
+    <br/>
+    <br/>
+    <div class="buy_identify">
+        <form id="registerform" name="registerform" method="post" action="{:U('userinfo/aptitude')}">
+       <dl>
+       	<dt>经营药品种类</dt>
+            <dd>
+                <volist name="aptitudelist" id="aptitude">
+                    <label style="margin-left:35px;margin-top:30px;" name="doc_type" class="check">
+                        <if condition="($is_authentication neq 1)"><input type="checkbox" name="aptitudeids[]" value="{$aptitude.id}" <if condition="$aptitude.checked eq 1">checked="checked"</if>></if> {$aptitude.name}
+                    </label>
+                </volist>		
+            </dd>	
+            <dd>
+                    <if condition="($is_authentication neq 1)">
+                            <center><a href="javascript:;" class="flatbtn" id="savebtn" onclick="registeraptitude()">提交申请</a></center>
+                    </if>
+            </dd>
+       	</dl>
+        </form>
+    </div>
+    
     <div id="loginmodal" style="display:none;">
 		<h1>上传认证</h1>
 		<form id="loginmodal" name="loginmodal" method="post" action="{:U('userinfo/up')}" enctype="multipart/form-data">
@@ -189,6 +210,14 @@ $(function(){
 		closeButton:".hidemodal"
 	});
 });
+function registeraptitude(){
+    var tips = $("#registerform input[name='aptitudeids[]']:checked");
+    if(tips.length<=0){
+        alert("请选择经营药品种类？");
+        return false;
+    }
+    $("#registerform").submit();
+}
 </script>
     <!-- 购买认证-结束 -->
     	</div>

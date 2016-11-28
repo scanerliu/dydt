@@ -20,6 +20,27 @@ img,a{border:0;}
  <table width="99%" border="0" cellpadding="0" cellspacing="0" style=" margin-bottom:5px;">
     <tbody><tr style="background:url(/admin/Tpl/public/images/a10.gif) repeat-x; height:36px;"></tr>
   </tbody></table>
+   <form id="registerform" name="registerform" method="post" action="__APP__/manage/saveaptitude">
+       <input type="hidden" name="cuser_id" value="<?php echo ($user_id); ?>">
+  <table width="99%" border="0" cellpadding="0" cellspacing="0" style=" margin-bottom:5px;" >
+    <tr bgcolor="#fbfce2">
+      <td>药品经营种类：</td>
+      <td style="width:80px;">操作</td>
+    </tr>
+    <tr>
+        <td>
+            <?php if(is_array($aptitudelist)): $i = 0; $__LIST__ = $aptitudelist;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$aptitude): $mod = ($i % 2 );++$i;?><label style="margin-left:35px;margin-top:30px;" name="doc_type" class="check">
+                    <input type="checkbox" name="aptitudeids[]" value="<?php echo ($aptitude["id"]); ?>" <?php if($aptitude["checked"] == 1): ?>checked="checked"<?php endif; ?>> <?php echo ($aptitude["name"]); ?>
+                </label><?php endforeach; endif; else: echo "" ;endif; ?>
+        </td>
+      <td>
+            <a onClick="registeraptitude()" style="cursor:pointer;color:green">保存</a>
+      </td>
+    </tr>
+    <tr>
+    </tr>
+  </table>
+   </form>
   <table width="99%" border="0" cellpadding="0" cellspacing="0" style=" margin-bottom:5px;" >
     <tr bgcolor="#fbfce2">
       <td style="width:20px;"></td>
@@ -85,7 +106,7 @@ img,a{border:0;}
     </tr>
   </tbody></table>
 </div>
-<div style="margin-left:40%;margin-top:13%;"><?php echo ($page); ?></div>
+<div style="margin-left:40%;margin-top:3%;" class="feny"><?php echo ($page); ?></div>
 <script type="text/javascript">
   function ss () {
     var key=document.getElementById('key').value;
@@ -114,6 +135,17 @@ img,a{border:0;}
   }
   function selectAllNo(){         //取消
    $("input[type='checkbox']").attr("checked",false);
+  }
+  
+  function registeraptitude(){
+    if(confirm('确认保存客户的品种修改吗？')){
+        var tips = $("#registerform input[name='aptitudeids[]']:checked");
+        if(tips.length<=0){
+            alert("请选择经营药品种类？");
+            return false;
+        }
+        $("#registerform").submit();
+    }
   }
 </script>
 </body>

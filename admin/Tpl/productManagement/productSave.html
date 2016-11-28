@@ -111,6 +111,24 @@
           </span></td>
       </tr>
       <tr style="height:36px;">
+        <td style="text-align:left"><span>药品属性类型:</span><span>
+                <select name="aptitudes" my_check='number_need' error='药品属性类型错误'>
+                    <volist name='aptitudelist' id='aptitude'>
+                    <option value="{$aptitude.id}" <eq name="data.aptitudes" value="$aptitude.id">selected="selected"</eq>>{$aptitude.name}</option>
+                    </volist>
+                </select>
+          </span></td>
+      </tr>
+      <tr style="height:36px;">
+        <td style="text-align:left"><span>药品类型:</span><span>
+                <select name="ptype" my_check='number_need' error='药品类型错误'>
+                    <option value="1" <eq name="data.ptype" value="1">selected="selected"</eq>>普通药品</option>
+                    <option value="2" <eq name="data.ptype" value="2">selected="selected"</eq>>控销药品</option>
+                    </volist>
+                </select>
+          </span></td>
+      </tr>
+      <tr style="height:36px;">
         <td style="text-align:left"><span>状态:</span><span>
           <select name="frame" >
             <option value="1">上架</option>

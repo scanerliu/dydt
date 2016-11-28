@@ -2,17 +2,18 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>购买认证-真善美</title>
+	<title>会员信息-<?php echo ($top_content["title"]); ?></title>
+<meta name="Keywords" content="<?php echo ($top_content["keywords"]); ?>" />
+<meta name="Description" content="<?php echo ($top_content["description"]); ?>" />
 	<link rel="stylesheet" href="__PUBLIC__css/base.css">
 	<link rel="stylesheet" href="__PUBLIC__css/main.css">
 	<link rel="stylesheet" href="__PUBLIC__css/other.css">
-	<link rel="stylesheet" type="text/css" media="all" href="__PUBLIC__css/style1.css">
-	<link rel="stylesheet" type="text/css" media="all" href="__PUBLIC__css/style.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__css/jcDate.css" media="all" />
 	<link rel="stylesheet" type="text/css" href="__PUBLIC__css/L_person.css">
 	<script style="text/javascript" src="__PUBLIC__js/jquery-1.11.0.js"></script>	
 	<script style="text/javascript" src="__PUBLIC__js/rich_lee.js"></script>
-	<script type="text/javascript" src="__PUBLIC__js/jquery-1.9.1.min.js"></script>
-	<script type="text/javascript" src="__PUBLIC__js/jquery.leanModal.min.js"></script>
+	<script type="text/javascript" src="__PUBLIC__js/jquery.min.js"></script>
+	<script type="text/javascript" src="__PUBLIC__js/jQuery-jcDate.js"></script>
 </head>
 	<script type="text/javascript">
 	$(function(){
@@ -160,7 +161,6 @@ function move()
   </ul>
 </div>
 
-
 		<!--
         	作者：rich
         	时间：2015-10-21
@@ -169,7 +169,7 @@ function move()
        <div class="crumbs">
        		<span>账号管理</span>
        		<p>the account management</p> 
-       		<p class="crumbs02">购买认证</p>
+       		<p class="crumbs02">会员信息</p>
        </div>
        <div class="crumbs_nav">
        <dl>
@@ -194,158 +194,189 @@ function move()
               <dd><a href="/manage/integration">我的积分</a></dd>
        </dl>
 </div>
-<!-- 购买认证 -->
-<div class="L_member_infor">
-	<form>
-    <div class="buy_identify">
-       <dl>
-       	<dt>购买认证</dt>
-       	<?php if($status == 1): ?><label style="margin-left:390px;color:red;">您已经上传并审核通过所有(必要)认证！</label>
-		<?php elseif($status == 2): ?>
-			<label style="margin-left:300px;color:red;">您还有没通过审核的(必要)认证！（上传所有(必要)认证并通过审核才能购买商品）</label>
-		<?php else: ?>
-			<label style="margin-left:300px;color:red;">您还有没上传的(必要)认证！（上传所有(必要)认证并通过审核才能购买商品）</label><?php endif; ?>
-       	<?php if($doc_user != ''): ?><dd>
-	       		<label class="label1">证件信息(<a style="color:red">红色为必要认证</a>)</label>
-	       		<label class="label2">证件有效日期</label>
-	       		<label class="label3">证件持有者姓名</label>
-	       		<label class="label4">上传凭证</label>
-	       	</dd>
-	       	<dd>
-	       		<ul>
-		       		<?php if(is_array($doc_user)): $i = 0; $__LIST__ = $doc_user;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$doc): $mod = ($i % 2 );++$i;?><li class="member_first_li">
-		       				<div class="identify_infor">
-			       				<?php if($doc["status"] == 0): ?><label style="margin-left:35px;margin-top:30px;" name="doc_type">
-				       					<?php if($doc["m"] == 1): ?><a style="color:red"><?php echo ($doc["doc_type2"]); ?></a>
-				       					<?php else: ?>
-				       						<?php echo ($doc["doc_type2"]); endif; ?>
-			       					</label>
-			       					<label style="margin-left:46px;">(待审核...)</label>
-			       				<?php elseif($doc["status"] == 1): ?>
-			       					<label style="margin-left:35px;margin-top:30px;" name="doc_type">
-				       					<?php if($doc["m"] == 1): ?><a style="color:red;"><?php echo ($doc["doc_type2"]); ?></a>
-				       					<?php else: ?>
-				       						<?php echo ($doc["doc_type2"]); endif; ?>
-			       					</label>
-			       					<label style="margin-left:46px;">(审核通过)</label>
-			       				<?php else: ?>
-			       					<label style="margin-left:35px;margin-top:10px;" name="doc_type">
-				       					<?php if($doc["m"] == 1): ?><a style="color:red"><?php echo ($doc["doc_type2"]); ?></a>
-				       					<?php else: ?>
-				       						<?php echo ($doc["doc_type2"]); endif; ?>
-			       					</label>
-			       					<label style="font-size:8px;">(审核失败,请删除后重新上传)</label><?php endif; ?>
-		       				</div>
-		       				<?php if($doc["status"] == 2): ?><div style="width:270px;padding-left:10px;border-left:1px solid #dddddd;padding-top:22px">
-			       					<a style="font-size:18px;color:#8E8E8E;">失败原因：</a><br>
-			       					<a style="font-size:16px;margin-left:79px;color:#8E8E8E;"><?php echo ($doc["back"]); ?></a>
-			       				</div>
-			       			<?php else: ?>
-			       				<div class="identify_uestime">
-			       				<?php if($doc["er"] != ''): ?><label style="margin-left:39px;color:#db6969"><?php echo ($doc['get_date']); ?>~<?php echo ($doc['lose_date']); ?><br><?php echo ($doc["er"]); ?></label>
-			       					<?php else: ?>
-			       					<label style="margin-left:39px;"><?php echo ($doc['get_date']); ?>~<?php echo ($doc['lose_date']); ?><br><?php echo ($doc["er"]); ?></label><?php endif; ?>
-			       				</div><?php endif; ?>
-		       				<div class="identify_name">
-		       					<label style="margin-left:50px;margin-top:35px;"><?php echo ($doc['name']); ?></label>
-		       				</div>
-			       			<div class="identify_upload">
-			       				<img style="width:200px;height:100px;margin-left:39px;" src="/Uploads/<?php echo ($doc['img']); ?>">
-			       				<a onClick="return confirm('确认要删除此认证吗,没有完整上传认证将无法购买商品！')" href="<?php echo U('userinfo/del_doc',array('id'=>$doc['id']));?>" style="width:80px;;margin-left:259px;margin-top:-66px;">删除</a>
-			       			</div>
-		       			</li><?php endforeach; endif; else: echo "" ;endif; ?>
-		       	</ul>
-       		</dd><?php endif; ?>
-   		<dd>
-	   		<?php if(($st != 3)): ?><center><a href="#loginmodal" class="flatbtn" id="modaltrigger">上传</a></center><?php endif; ?>
-		</dd>
-       	</dl>
-    </div>
-    </form>
-    <br/>
-    <br/>
-    <div class="buy_identify">
-        <form id="registerform" name="registerform" method="post" action="<?php echo U('userinfo/aptitude');?>">
-       <dl>
-       	<dt>经营药品种类</dt>
-            <dd>
-                <?php if(is_array($aptitudelist)): $i = 0; $__LIST__ = $aptitudelist;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$aptitude): $mod = ($i % 2 );++$i;?><label style="margin-left:35px;margin-top:30px;" name="doc_type" class="check">
-                        <?php if(($is_authentication != 1)): ?><input type="checkbox" name="aptitudeids[]" value="<?php echo ($aptitude["id"]); ?>" <?php if($aptitude["checked"] == 1): ?>checked="checked"<?php endif; ?>><?php endif; ?> <?php echo ($aptitude["name"]); ?>
-                    </label><?php endforeach; endif; else: echo "" ;endif; ?>		
-            </dd>	
-            <dd>
-                    <?php if(($is_authentication != 1)): ?><center><a href="javascript:;" class="flatbtn" id="savebtn" onclick="registeraptitude()">提交申请</a></center><?php endif; ?>
-            </dd>
-       	</dl>
-        </form>
-    </div>
-    
-    <div id="loginmodal" style="display:none;">
-		<h1>上传认证</h1>
-		<form id="loginmodal" name="loginmodal" method="post" action="<?php echo U('userinfo/up');?>" enctype="multipart/form-data">
-			<div class="buy_identify">
-			    <dl>
-			       	<dt class="buy_dt">购买认证<span>（以下信息必填，否则无法购买商品）</span></dt>
-			       	<dd>
-			       		<label class="label1">证件信息</label>
-			       		<label class="label2">证件有效日期</label>
-			       		<label class="label3">证件持有者姓名</label>
-			       		<label class="label4">上传凭证</label>
-			       	</dd>
-			       	<dd>
-			       		<ul>
-			       			<li class="member_first_li">
-			       				<div class="identify_infor">
-			       					<select name="doc_type">
-			       					<option>-请选择-</option>
-				       					<?php if(is_array($doc_d)): $i = 0; $__LIST__ = $doc_d;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$dd): $mod = ($i % 2 );++$i;?><option><?php echo ($dd["doc_type"]); if($dd["status"] == 1): ?>(必要)<?php endif; ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
-			       					</select>
-			       				</div>
-			       				<div class="identify_uestime">
-			       					<input type="date" name="get_date" style="width:120px;height:18px;margin-left:0px;margin-top:33px;line-height:20px;padding:4px;" />
-			       					<label>~</label>
-			       					<input type="date" name="lose_date" style="width:120px;height:18px;line-height:20px;margin-left:0px;margin-top:33px;padding:4px;" />
-			       				</div>
-			       				<div class="identify_name">
-			       					<input type="text" name="name" placeholder="请填写持有者姓名">
-			       				</div>
-			       				<div class="identify_upload">
-			       					<input style="margin-top:16px;margin-left:130px;" type="file" name="photo">
-			       					<label>图片大小不超过5M，仅支持GIF、JPG、PNG、BMP格式</label>
-			       				</div>
-			       			</li>
-			       		</ul>
-			       	</dd>
+       <!--
+       	作者：rich_lee
+       	描述：面包屑 面包屑导航 完成
+       -->
+
+
+       <!-- 会员信息 -->
+       <div class="L_member_infor">
+       		<form method="post" action="<?php echo U('userinfo/save_info');?>" enctype="multipart/form-data">
+	       		<dl>
+	       			<dt>会员信息</dt>
+		       		<dd class="now_headpic">
+		       			<label>当前头像：</label>
+		       			<?php if($info['img'] == ''): ?><input style="margin-top:16px;" type="file" name="head_p">
+		       			<?php else: ?>
+		       			<div id="aaa">
+		       				<img src="/Uploads/<?php echo ($info['img']); ?>">
+		       				<input type="hidden" name="img_h" value="<?php echo ($info['img']); ?>">
+		       				<label style="float:right;margin-right:50px;margin-top:16px;"><a style="color:red;" onclick="edit_h()">修改</a></label>
+		       			</div>
+		       			<div id="bbb" style="display:none">
+		       				<input style="margin-top:16px;" type="file" name="head_p">
+		       			</div><?php endif; ?>
+		       		</dd>
 		       		<dd>
-       					<input class="L_save" type="submit" name="submit" value="保存" />
+		       			<label>当前昵称：</label>
+		       			<span><?php echo ($info["name"]); ?></span>
+		       		</dd>
+		       		<dd class="L_memnber_infor_same">
+		       			<label>采购商名称：</label>
+		       			<input type="text" name="real_name" required value="<?php echo ($info['real_name']); ?>">
+		       			<img src="__PUBLIC__images/L_dot.png">
+		       		</dd>
+		       		<dd class="se">
+		       			<label>性别：</label>
+		       			<?php if(($info['sex'] == '') or ($info['sex'] == '男')): ?><input type="radio" name="sex" checked="true" value="男"><span>男</span>
+			       			<input type="radio" name="sex" value="女"><span>女</span>
+		       			<?php else: ?>
+							<input type="radio" name="sex" value="男"><span>男</span>
+			       			<input type="radio" checked="true" name="sex" value="女"><span>女</span><?php endif; ?>
+		       		</dd>
+		       		<dd class="se">
+		       			<label>婚配：</label>
+		       			<?php if(($info['marriage'] == '') or ($info['marriage'] == '未婚')): ?><input type="radio" name="marriage" checked="true" value="未婚"><span>未婚</span>
+			       			<input type="radio" name="marriage" value="已婚"><span>已婚</span>
+		       			<?php else: ?>
+							<input type="radio" name="marriage" value="未婚"><span>未婚</span>
+			       			<input type="radio" checked="true" name="marriage" value="已婚"><span>已婚</span><?php endif; ?>
+		       		</dd>
+		       		<dd class="L_select_same1">
+		       			<label>出生日期：</label>
+		       				<input type="date" required style="width:178px;height:28px;margin-top:3px;border:1px solid #dddddd;" name="birthday" value="<?php echo ($info['birthday']); ?>">
+		       			<label class="prompt_label">（出生日期我们将为您保密）</label>
+		       		</dd>
+		       		<dd class="L_memnber_infor_same">
+		       			<label>手机号码：</label>
+		       			<input type="text" value="<?php echo ($info['mobile_phone']); ?>" required name="mobile_phone">
+		       			<img src="__PUBLIC__images/L_dot.png">
+		       		</dd>
+		       		<dd class="L_memnber_infor_same">
+		       			<label>邮箱地址：</label>
+		       			<input type="email" value="<?php echo ($info['email']); ?>" required name="email">
+		       			<img src="__PUBLIC__images/L_dot.png">
+		       		</dd>
+		       		<script type="text/javascript" src="__PUBLIC__js/area/jquery.cityselect.js"></script>
+		       		<dd class="L_select_same1">
+		       			<label>所在城市：</label>
+		       			<div id="city">  
+		                    <select name="prov" class="prov"></select>   
+		                    <select name="city" class="city" disabled="disabled"></select> 
+		                    <select name="dist" class="dist" disabled="disabled"></select>
+		                </div>
+		                <style type="text/css">
+		                  .prov{
+		                    height: 28px;
+		                    border: 1px solid #ddd;
+		                    padding: 0 10px;
+		                    color: #666;
+		                  }
+		                  .city{
+		                    height: 28px;
+		                    border: 1px solid #ddd;
+		                    padding: 0 10px;
+		                    color: #666;
+		                  }
+		                  .dist{
+		                    height: 28px;
+		                    border: 1px solid #ddd;
+		                    padding: 0 10px;
+		                    color: #666;
+		                  }
+		                </style>
+    					<script type="text/javascript">
+		                  $(function() {
+		                    var prov = "<?php echo ($info["city1"]); ?>";
+		                    var city = "<?php echo ($info["city2"]); ?>";
+		                    var dist = "<?php echo ($info["city3"]); ?>";
+		                    if (prov=="" || city=="") {
+		                      $("#city").citySelect({ 
+		                        url:"__PUBLIC__js/area/city.min.js",   
+		                        prov:"省份", //省份  
+		                        city:"地级市", //城市  
+		                        dist:"市、县级市", //区县  
+		                        nodata:"none" //当子集无数据时，隐藏select   
+		                      });
+		                    } else {
+		                      $("#city").citySelect({ 
+		                        url:"__PUBLIC__js/area/city.min.js",   
+		                        prov:prov, //省份  
+		                        city:city, //城市
+		                        dist:dist, //区县  
+		                        nodata:"none" //当子集无数据时，隐藏select   
+		                      });
+		                    }
+		                  });
+                		</script>
+		       		</dd>
+		       		<dd class="Ladr_memnber">
+		       			<label>具体地址：</label>
+		       			<input type="text" value="<?php echo ($info['address']); ?>" required name="address">
+		       			<img src="__PUBLIC__images/L_dot.png">
+		       		</dd>
+		       		<dd class="L_memnber_infor_same">
+		       			<label>家庭电话：</label>
+		       			<input type="text" value="<?php echo ($info['home_phone']); ?>" required name="home_phone">
+		       			<img src="__PUBLIC__images/L_dot.png">
+		       		</dd>
+                    <dd class="L_memnber_infor_same">
+		       			<label>数字证书绑定：</label>
+		       			<input type="text" value="<?php echo ($info['cert_serialnumber']); ?>"  name="cert_serialnumber"  placeholder='请输入您的数字证书序号' style=' width:260px;'> <span style="line-height:30px; padding-left:10px;">您当前的数字证书序号为<?php if($_SERVER[CERT_SERIALNUMBER] != null): echo ($_SERVER[CERT_SERIALNUMBER]); else: ?>空<?php endif; ?>
+                        </span>
+		       		</dd>
+ 		       		<dd>
+       					<input style="width:100px;height:30px;margin-left:100px;background:#58a8e5;color:white;font-size:16px;border:none;line-height:30px;cursor:pointer;" type="submit" name="" id="" value="保存" />
        				</dd>
-       			</if>
-			    </dl>
-		    </div>
-		</form>
-	</div>
-</div>
-<script type="text/javascript">
-$(function(){
-	//弹出层调用语句
-	$('#modaltrigger').leanModal({
-		top:110,
-		overlay:0.45,
-		closeButton:".hidemodal"
-	});
-});
-function registeraptitude(){
-    var tips = $("#registerform input[name='aptitudeids[]']:checked");
-    if(tips.length<=0){
-        alert("请选择经营药品种类？");
-        return false;
-    }
-    $("#registerform").submit();
-}
-</script>
-    <!-- 购买认证-结束 -->
-    	</div>
-    <div class="footer">
+	       		</dl>   
+	       	</form>	
+       </div>
+       <!-- 会员信息-结束 -->
+	<script type="text/javascript">
+		$(function (){
+			$("input.jcDate").jcDate({					       
+				IcoClass : "jcDateIco",
+				Event : "click",
+				Speed : 100,
+				Left : 0,
+				Top : 28,
+				format : "-",
+				Timeout : 100
+			});
+		});
+		function edit() {
+			document.getElementById("spanposition").style.display="none";//隐藏
+			document.getElementById("iptposition").style.display="block";//显示
+			// document.getElementById("s_county").style.visibility="visible";//显示
+		}
+		function edit_h() {
+			document.getElementById("aaa").style.display="none";//隐藏
+			document.getElementById("bbb").style.display="block";//显示
+		}
+		var Gid  = document.getElementById ;
+		var showArea = function(){
+			Gid('show').innerHTML = "<h3>省" + Gid('s_province').value + " - 市" + 	
+			Gid('s_city').value + " - 县/区" + 
+			Gid('s_county').value + "</h3>"
+		}
+		Gid('s_county').setAttribute('onchange','showArea()');
+	</script>
+
+	<style type="text/css">
+		
+		.clear{clear:both;height:0;visibility:hidden;}
+		a{text-decoration:none;cursor:pointer;}
+		a:hover{color:red;text-decoration:underline;}
+		a img{border:0;vertical-align:middle;}
+	</style>
+	<!--
+    	作者：rich
+    	描述：friend ++ content end
+    -->	
+    
+    </div>
+	<div class="footer">
 		<dl>
 			<dd>
 				<h2>消费者保障</h2>
@@ -440,3 +471,16 @@ function registeraptitude(){
 
 
 </style>
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</body>
+</html>

@@ -1,18 +1,14 @@
-<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
+<?php if (!defined('THINK_PATH')) exit();?>                                           <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>购买认证-真善美</title>
+	<title>退款/退货-<?php echo ($top_content["title"]); ?></title>
 	<link rel="stylesheet" href="__PUBLIC__css/base.css">
 	<link rel="stylesheet" href="__PUBLIC__css/main.css">
 	<link rel="stylesheet" href="__PUBLIC__css/other.css">
-	<link rel="stylesheet" type="text/css" media="all" href="__PUBLIC__css/style1.css">
-	<link rel="stylesheet" type="text/css" media="all" href="__PUBLIC__css/style.css">
 	<link rel="stylesheet" type="text/css" href="__PUBLIC__css/L_person.css">
 	<script style="text/javascript" src="__PUBLIC__js/jquery-1.11.0.js"></script>	
 	<script style="text/javascript" src="__PUBLIC__js/rich_lee.js"></script>
-	<script type="text/javascript" src="__PUBLIC__js/jquery-1.9.1.min.js"></script>
-	<script type="text/javascript" src="__PUBLIC__js/jquery.leanModal.min.js"></script>
 </head>
 	<script type="text/javascript">
 	$(function(){
@@ -160,18 +156,17 @@ function move()
   </ul>
 </div>
 
-
 		<!--
         	作者：rich
         	时间：2015-10-21
         	描述：banner右侧
         -->	
        <div class="crumbs">
-       		<span>账号管理</span>
-       		<p>the account management</p> 
-       		<p class="crumbs02">购买认证</p>
+       		<span>订单管理</span>
+       		<p>the order management</p> 
+       		<p class="crumbs02">退款/退货</p>
        </div>
-       <div class="crumbs_nav">
+        <div class="crumbs_nav">
        <dl>
               <dt><a href="#">账号管理</a></dt>
               <dd><a href="/userinfo/info">会员信息</a></dd>
@@ -193,159 +188,124 @@ function move()
               <dd><a href="/manage/evaluate">我的评价</a></dd>
               <dd><a href="/manage/integration">我的积分</a></dd>
        </dl>
-</div>
-<!-- 购买认证 -->
-<div class="L_member_infor">
-	<form>
-    <div class="buy_identify">
-       <dl>
-       	<dt>购买认证</dt>
-       	<?php if($status == 1): ?><label style="margin-left:390px;color:red;">您已经上传并审核通过所有(必要)认证！</label>
-		<?php elseif($status == 2): ?>
-			<label style="margin-left:300px;color:red;">您还有没通过审核的(必要)认证！（上传所有(必要)认证并通过审核才能购买商品）</label>
-		<?php else: ?>
-			<label style="margin-left:300px;color:red;">您还有没上传的(必要)认证！（上传所有(必要)认证并通过审核才能购买商品）</label><?php endif; ?>
-       	<?php if($doc_user != ''): ?><dd>
-	       		<label class="label1">证件信息(<a style="color:red">红色为必要认证</a>)</label>
-	       		<label class="label2">证件有效日期</label>
-	       		<label class="label3">证件持有者姓名</label>
-	       		<label class="label4">上传凭证</label>
-	       	</dd>
-	       	<dd>
-	       		<ul>
-		       		<?php if(is_array($doc_user)): $i = 0; $__LIST__ = $doc_user;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$doc): $mod = ($i % 2 );++$i;?><li class="member_first_li">
-		       				<div class="identify_infor">
-			       				<?php if($doc["status"] == 0): ?><label style="margin-left:35px;margin-top:30px;" name="doc_type">
-				       					<?php if($doc["m"] == 1): ?><a style="color:red"><?php echo ($doc["doc_type2"]); ?></a>
-				       					<?php else: ?>
-				       						<?php echo ($doc["doc_type2"]); endif; ?>
-			       					</label>
-			       					<label style="margin-left:46px;">(待审核...)</label>
-			       				<?php elseif($doc["status"] == 1): ?>
-			       					<label style="margin-left:35px;margin-top:30px;" name="doc_type">
-				       					<?php if($doc["m"] == 1): ?><a style="color:red;"><?php echo ($doc["doc_type2"]); ?></a>
-				       					<?php else: ?>
-				       						<?php echo ($doc["doc_type2"]); endif; ?>
-			       					</label>
-			       					<label style="margin-left:46px;">(审核通过)</label>
-			       				<?php else: ?>
-			       					<label style="margin-left:35px;margin-top:10px;" name="doc_type">
-				       					<?php if($doc["m"] == 1): ?><a style="color:red"><?php echo ($doc["doc_type2"]); ?></a>
-				       					<?php else: ?>
-				       						<?php echo ($doc["doc_type2"]); endif; ?>
-			       					</label>
-			       					<label style="font-size:8px;">(审核失败,请删除后重新上传)</label><?php endif; ?>
-		       				</div>
-		       				<?php if($doc["status"] == 2): ?><div style="width:270px;padding-left:10px;border-left:1px solid #dddddd;padding-top:22px">
-			       					<a style="font-size:18px;color:#8E8E8E;">失败原因：</a><br>
-			       					<a style="font-size:16px;margin-left:79px;color:#8E8E8E;"><?php echo ($doc["back"]); ?></a>
+</div> 
+       <!--
+       	作者：rich_lee
+       	描述：面包屑 面包屑导航 完成
+       -->
+
+
+       <!-- 退/换货-查看 -->
+       <form class="reget">
+       		<div class="reget_name">退款/退货</div>
+       		<dl class="reget_title">
+       			<dt>
+       				<span>商品信息</span>
+       			</dt>
+       			<dd><span>金额（元）</span></dd>
+       			<dd>状态</dd>
+       			<dd>总价（元）</dd>
+       			<dd>操作</dd>
+       		</dl>
+       		<ul>
+       		<?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><li>
+       				<div class="resheet_head">
+   						<label><?php echo (date('Y-m-d',$vo["date"])); ?></label>
+   						<label>订单号：<span><?php echo ($vo["order_num"]); ?></span></label>
+   					</div>
+	       			<dl class="reget_box">
+	       				<dt>
+	       					<a href="/shop/content/product_id/<?php echo ($vo["product_id"]); ?>">
+			       				<img src="/Uploads/<?php echo ($vo["img"]); ?>"  />
+			       				<div>
+			       					<h3><?php echo ($vo["title"]); ?></h3>
+			       					<p><?php echo ($vo["subhead"]); ?></p>
 			       				</div>
-			       			<?php else: ?>
-			       				<div class="identify_uestime">
-			       				<?php if($doc["er"] != ''): ?><label style="margin-left:39px;color:#db6969"><?php echo ($doc['get_date']); ?>~<?php echo ($doc['lose_date']); ?><br><?php echo ($doc["er"]); ?></label>
-			       					<?php else: ?>
-			       					<label style="margin-left:39px;"><?php echo ($doc['get_date']); ?>~<?php echo ($doc['lose_date']); ?><br><?php echo ($doc["er"]); ?></label><?php endif; ?>
-			       				</div><?php endif; ?>
-		       				<div class="identify_name">
-		       					<label style="margin-left:50px;margin-top:35px;"><?php echo ($doc['name']); ?></label>
-		       				</div>
-			       			<div class="identify_upload">
-			       				<img style="width:200px;height:100px;margin-left:39px;" src="/Uploads/<?php echo ($doc['img']); ?>">
-			       				<a onClick="return confirm('确认要删除此认证吗,没有完整上传认证将无法购买商品！')" href="<?php echo U('userinfo/del_doc',array('id'=>$doc['id']));?>" style="width:80px;;margin-left:259px;margin-top:-66px;">删除</a>
-			       			</div>
-		       			</li><?php endforeach; endif; else: echo "" ;endif; ?>
-		       	</ul>
-       		</dd><?php endif; ?>
-   		<dd>
-	   		<?php if(($st != 3)): ?><center><a href="#loginmodal" class="flatbtn" id="modaltrigger">上传</a></center><?php endif; ?>
-		</dd>
-       	</dl>
-    </div>
-    </form>
-    <br/>
-    <br/>
-    <div class="buy_identify">
-        <form id="registerform" name="registerform" method="post" action="<?php echo U('userinfo/aptitude');?>">
-       <dl>
-       	<dt>经营药品种类</dt>
-            <dd>
-                <?php if(is_array($aptitudelist)): $i = 0; $__LIST__ = $aptitudelist;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$aptitude): $mod = ($i % 2 );++$i;?><label style="margin-left:35px;margin-top:30px;" name="doc_type" class="check">
-                        <?php if(($is_authentication != 1)): ?><input type="checkbox" name="aptitudeids[]" value="<?php echo ($aptitude["id"]); ?>" <?php if($aptitude["checked"] == 1): ?>checked="checked"<?php endif; ?>><?php endif; ?> <?php echo ($aptitude["name"]); ?>
-                    </label><?php endforeach; endif; else: echo "" ;endif; ?>		
-            </dd>	
-            <dd>
-                    <?php if(($is_authentication != 1)): ?><center><a href="javascript:;" class="flatbtn" id="savebtn" onclick="registeraptitude()">提交申请</a></center><?php endif; ?>
-            </dd>
-       	</dl>
-        </form>
-    </div>
-    
-    <div id="loginmodal" style="display:none;">
-		<h1>上传认证</h1>
-		<form id="loginmodal" name="loginmodal" method="post" action="<?php echo U('userinfo/up');?>" enctype="multipart/form-data">
-			<div class="buy_identify">
-			    <dl>
-			       	<dt class="buy_dt">购买认证<span>（以下信息必填，否则无法购买商品）</span></dt>
-			       	<dd>
-			       		<label class="label1">证件信息</label>
-			       		<label class="label2">证件有效日期</label>
-			       		<label class="label3">证件持有者姓名</label>
-			       		<label class="label4">上传凭证</label>
-			       	</dd>
-			       	<dd>
-			       		<ul>
-			       			<li class="member_first_li">
-			       				<div class="identify_infor">
-			       					<select name="doc_type">
-			       					<option>-请选择-</option>
-				       					<?php if(is_array($doc_d)): $i = 0; $__LIST__ = $doc_d;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$dd): $mod = ($i % 2 );++$i;?><option><?php echo ($dd["doc_type"]); if($dd["status"] == 1): ?>(必要)<?php endif; ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
-			       					</select>
-			       				</div>
-			       				<div class="identify_uestime">
-			       					<input type="date" name="get_date" style="width:120px;height:18px;margin-left:0px;margin-top:33px;line-height:20px;padding:4px;" />
-			       					<label>~</label>
-			       					<input type="date" name="lose_date" style="width:120px;height:18px;line-height:20px;margin-left:0px;margin-top:33px;padding:4px;" />
-			       				</div>
-			       				<div class="identify_name">
-			       					<input type="text" name="name" placeholder="请填写持有者姓名">
-			       				</div>
-			       				<div class="identify_upload">
-			       					<input style="margin-top:16px;margin-left:130px;" type="file" name="photo">
-			       					<label>图片大小不超过5M，仅支持GIF、JPG、PNG、BMP格式</label>
-			       				</div>
-			       			</li>
-			       		</ul>
-			       	</dd>
-		       		<dd>
-       					<input class="L_save" type="submit" name="submit" value="保存" />
-       				</dd>
-       			</if>
-			    </dl>
-		    </div>
-		</form>
-	</div>
-</div>
-<script type="text/javascript">
-$(function(){
-	//弹出层调用语句
-	$('#modaltrigger').leanModal({
-		top:110,
-		overlay:0.45,
-		closeButton:".hidemodal"
-	});
-});
-function registeraptitude(){
-    var tips = $("#registerform input[name='aptitudeids[]']:checked");
-    if(tips.length<=0){
-        alert("请选择经营药品种类？");
-        return false;
-    }
-    $("#registerform").submit();
-}
-</script>
-    <!-- 购买认证-结束 -->
-    	</div>
-    <div class="footer">
+			       			</a>
+			       		</dt>
+			       		<dd>
+			       			<label style="line-height:110px;" class="money"><?php echo ($vo["money"]); ?></label>
+		       			</dd>
+			       		
+			       		<?php if($vo['status'] == 0): ?><dd class="num">
+				       			审核中...
+				       		</dd>
+				       		<dd>
+				       			<label class="all_price">26</label>
+				       			<label>（含运费：0）</label>
+			       			</dd>
+				       		<dd>
+				       			<a href="/return/return_over/id/<?php echo ($vo["return_id"]); ?>" onClick="return confirm('确认要取消此申请？')" class="re_a1">取消申请</a>
+				       			<a href="/return/sta/order_id/<?php echo ($vo["order_id"]); ?>/product_id/<?php echo ($vo["product_id"]); ?>">查看详情</a>
+				       		</dd>
+			       		<?php elseif($vo['status'] == 1): ?>
+		       				<dd class="num">审核通过</dd>
+		       				<dd>
+				       			<label class="all_price">26</label>
+				       			<label>（含运费：0）</label>
+			       			</dd>
+				       		<dd>
+				       			<?php if($vo['express_num'] == ''): ?><a href="/return/express/id/<?php echo ($vo["return_id"]); ?>" class="re_a1">填写物流信息</a>
+					       		<?php else: ?>
+					       			<a href="/return/express/id/<?php echo ($vo["return_id"]); ?>" class="re_a1">查看物流信息</a><?php endif; ?>
+					       			<a href="/return/sta/order_id/<?php echo ($vo["order_id"]); ?>/product_id/<?php echo ($vo["product_id"]); ?>">查看详情</a>
+				       		</dd>
+			       		<?php elseif($vo['status'] == 2): ?>
+		       				<dd class="num">
+		       					审核未通过
+		       					<!-- <br><?php echo ($vo["back"]); ?> -->
+		       				</dd>
+		       				<dd>
+				       			<label class="all_price">26</label>
+				       			<label>（含运费：0）</label>
+			       			</dd>
+				       		<dd>
+				       			<a  href="/return/return_over/id/<?php echo ($vo["return_id"]); ?>" onClick="return confirm('确认要取消此申请？')" class="re_a1">取消申请</a>
+				       			<a href="/return/return_err/id/<?php echo ($vo["return_id"]); ?>/order_id/<?php echo ($vo["order_id"]); ?>/product_id/<?php echo ($vo["product_id"]); ?>">查看详情</a>
+				       		</dd>
+				       	<?php elseif($vo['status'] == 3): ?>
+				       		<dd class="num">已取消</dd>
+		       				<dd>
+				       			<label class="all_price">26</label>
+				       			<label>（含运费：0）</label>
+			       			</dd>
+			       			<dd>
+			       				<a  href="/return/del_return/id/<?php echo ($vo["return_id"]); ?>" onClick="return confirm('确认要删除此申请记录吗？')" class="re_a1">删除记录</a>
+				       			<a href="/return/sta/order_id/<?php echo ($vo["order_id"]); ?>/product_id/<?php echo ($vo["product_id"]); ?>/id/<?php echo ($vo["return_id"]); ?>">重新提交</a>
+				       		</dd>
+				 		<?php else: ?>
+				 			<dd class="num">已完成</dd>
+		       				<dd>
+				       			<label class="all_price">26</label>
+				       			<label>（含运费：0）</label>
+			       			</dd>
+			       			<dd>
+			       				<a  href="/return/del_return/id/<?php echo ($vo["return_id"]); ?>" onClick="return confirm('确认要删除此申请记录吗？')" class="re_a1">删除记录</a>
+				       			<!-- <a href="/return/sta/order_id/<?php echo ($vo["order_id"]); ?>/product_id/<?php echo ($vo["product_id"]); ?>">重新提交</a> -->
+				       		</dd><?php endif; ?>
+			       	</dl>
+       			</li><?php endforeach; endif; else: echo "" ;endif; ?>
+       		</ul>
+       		<div class="feny"><?php echo ($page); ?></div>
+       </form>
+
+       <!-- 退/换货-查看     -结束 -->
+
+
+
+
+
+       
+       
+       
+       
+       
+	</div>	
+	<!--
+    	作者：rich
+    	描述：friend ++ content end
+    -->	
+	<div class="footer">
 		<dl>
 			<dd>
 				<h2>消费者保障</h2>
@@ -440,3 +400,43 @@ function registeraptitude(){
 
 
 </style>
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    		
+	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	
+
+</body>
+</html>

@@ -81,7 +81,7 @@
     </tr>
   </table>
 </div>
-<div style="margin-left:40%;margin-top:13%;"><?php echo ($page); ?></div>
+<div style="margin-left:40%;margin-top:3%;" class="feny"><?php echo ($page); ?></div>
 
 <div class="layerwrap" id="layertxwlwrap" style="display:none">
   <div class="layertxwlwrap">

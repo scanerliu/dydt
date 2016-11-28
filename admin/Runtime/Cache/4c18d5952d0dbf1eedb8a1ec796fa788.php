@@ -27,7 +27,7 @@
   <?php if( $_SESSION[admin_name] == root or $admin_user["right2"] == 1): ?><div class="part1 a2">
       <div>商品</div>
     </div>
-    <div class="part2"><a href="__APP__/productManagement/productList/" target="frmMain" > - 产品列表</a> <a href="__APP__/productManagement/productClassify" target="frmMain" > - 分类管理</a> <a href="__APP__/productManagement/recommend" target="frmMain" > - 推荐管理</a> <!-- <a href="__APP__/productManagement/discount" target="frmMain" > - 打折商品管理</a> --></div><?php endif; ?>
+    <div class="part2"><a href="__APP__/productManagement/productList/" target="frmMain" > - 产品列表</a> <a href="__APP__/productManagement/productClassify" target="frmMain" > - 分类管理</a> <a href="__APP__/productManagement/productAptitudes" target="frmMain" > - 药品类型管理</a> <a href="__APP__/productManagement/recommend" target="frmMain" > - 推荐管理</a> <a href="__APP__/productManagement/discount" target="frmMain" > - 打折商品管理</a></div><?php endif; ?>
   <?php if( $_SESSION[admin_name] == root or $admin_user["right3"] == 1): ?><div class="part1 a3">
       <div>订单</div>
     </div>

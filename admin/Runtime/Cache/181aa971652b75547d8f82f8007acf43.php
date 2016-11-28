@@ -103,6 +103,22 @@
           </span></td>
       </tr>
       <tr style="height:36px;">
+        <td style="text-align:left"><span>药品属性类型:</span><span>
+                <select name="aptitudes" my_check='number_need' error='药品属性类型错误'>
+                    <?php if(is_array($aptitudelist)): $i = 0; $__LIST__ = $aptitudelist;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$aptitude): $mod = ($i % 2 );++$i;?><option value="<?php echo ($aptitude["id"]); ?>" <?php if(($data["aptitudes"]) == $aptitude["id"]): ?>selected="selected"<?php endif; ?>><?php echo ($aptitude["name"]); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
+                </select>
+          </span></td>
+      </tr>
+      <tr style="height:36px;">
+        <td style="text-align:left"><span>药品类型:</span><span>
+                <select name="ptype" my_check='number_need' error='药品类型错误'>
+                    <option value="1" <?php if(($data["ptype"]) == "1"): ?>selected="selected"<?php endif; ?>>普通药品</option>
+                    <option value="2" <?php if(($data["ptype"]) == "2"): ?>selected="selected"<?php endif; ?>>控销药品</option>
+                    </volist>
+                </select>
+          </span></td>
+      </tr>
+      <tr style="height:36px;">
         <td style="text-align:left"><span>状态:</span><span>
           <select name="frame" >
             <option value="1">上架</option>

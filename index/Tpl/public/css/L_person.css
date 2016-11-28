@@ -45,6 +45,10 @@
 	/*margin-top:34px;*/
 	margin-left:6px;
 }
+.L_member_infor form dd .check input{
+        height:36px;
+	line-height:36px;
+}
 .L_member_infor form dd select{
 	display:inline-block;
 	font-size:12px;

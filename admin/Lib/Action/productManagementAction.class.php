@@ -19,6 +19,46 @@
 //
 // $Id:$
 class productManagementAction extends beginAction {
+    
+     //  --药品类型管理beg--
+    public function productAptitudes() {
+        $where = '';
+        $data = M('aptitude')->where($where)->select();
+        $this->assign('aptitudes', $data);
+        $this->display();
+    }
+    public function productAptitudeFunDel() {
+        //删除分类
+        $where['id'] = $_GET['id'];
+        M('aptitude')->where($where)->delete();
+        $this->success('删除成功');
+    }
+    public function productAptitudeSave() {
+        // 修改类名称
+        $where['id'] = $_GET['id'];
+        $data = M('aptitude')->where($where)->select();
+        $this->assign('data', $data[0]);
+        $this->display();
+    }
+    public function productAptitudeSaveFun() {
+        // 修改类名称
+        if(empty($_GET['id'])){
+            $data['name'] = $_POST['name'];
+            $data['sort_by'] = $_POST['sort_by'];
+            $data['update_time'] = time();
+            M('aptitude')->add($data);
+            $this->success('添加成功');
+        }else{
+            $where['id'] = $_GET['id'];
+            $data['name'] = $_POST['name'];
+            $data['sort_by'] = $_POST['sort_by'];
+            $data['update_time'] = time();
+            M('aptitude')->where($where)->save($data);
+            $this->success('修改成功');
+        }
+    }
+    //--药品类型管理end
+    
     //  --   分类管理 beg--
     public function productClassify() {
         $where['fid'] = '';
@@ -411,6 +451,10 @@ class productManagementAction extends beginAction {
         //厂家列表
         $data = M('gold_manu')->order('gold_name asc')->select();
         $this->assign('managelist', $data);
+        
+        //药品分类
+        $data = M('aptitude')->order('sort_by asc')->select();
+        $this->assign('aptitudelist', $data);
         //子类属性
         //--- 自定义属性  end
         $this->display();
@@ -471,6 +515,8 @@ class productManagementAction extends beginAction {
         $data['frame'] = $_POST['frame'];
         $data['stock'] = $_POST['stock'];
         $data['manu_id'] = $_POST['manu_id'];
+        $data['aptitudes'] = $_POST['aptitudes'];
+        $data['ptype'] = $_POST['ptype'];
         M('product')->add($data);
         $data_var1 = $data['time'];
         // 获取 product_id beg
@@ -552,6 +598,9 @@ class productManagementAction extends beginAction {
         //厂家列表
         $data = M('gold_manu')->order('gold_name asc')->select();
         $this->assign('managelist', $data);
+        //药品分类
+        $data = M('aptitude')->order('sort_by asc')->select();
+        $this->assign('aptitudelist', $data);
         
         $this->display();
     }
@@ -590,6 +639,8 @@ class productManagementAction extends beginAction {
         $data['product_group'] = $_POST['product_group'];
         $data['stock'] = $_POST['stock'];
         $data['manu_id'] = $_POST['manu_id'];
+        $data['aptitudes'] = $_POST['aptitudes'];
+        $data['ptype'] = $_POST['ptype'];
         $data['frame'] = $_POST['frame'];
         $data['time'] = time();
         M('product')->where($where)->save($data);

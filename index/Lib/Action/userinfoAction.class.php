@@ -123,8 +123,30 @@ class userinfoAction extends commonAction
     {
         if (session('user_id')) {
             $user_id = session('user_id');
-            $identity = M('user')->where('user_id='.$user_id)->getfield('identity');
-
+            $data = M('user')->where('user_id='.$user_id)->find();
+            $identity = $data['identity'];
+            $aptitudes = $data['aptitudes'];
+            $is_authentication = $data['is_authentication'];
+            $aptitudeArr = array();
+            if(!empty($aptitudes)){
+                $aptitudes = str_replace("[", '', $aptitudes);
+                $aptitudeArr = explode("]", $aptitudes);
+            }
+            $this->assign('aptitudeArr',$aptitudeArr);
+            $this->assign('is_authentication',$is_authentication);
+            $where = '';
+            $data = M('aptitude')->where($where)->select();
+            for($i=0;$i<count($data);$i++){
+                if(in_array($data[$i]['id'], $aptitudeArr)){
+                    $data[$i]['checked'] =1;
+                }else{ 
+                    $data[$i]['checked'] =0;
+                }
+            }
+            
+            $this->assign('aptitudelist',$data);
+            
+            
             $doc_user = M('document_user')->where('user_id='.$user_id)->select();
 			
             for ($i=0; $i < count($doc_user); $i++) { 
@@ -218,6 +240,24 @@ class userinfoAction extends commonAction
                 M('document_user')->add($data);
                 $this->success("上传成功!");
             } 
+        }
+    }
+    public function aptitude()
+    {
+        if (IS_POST) {
+            $user_id = session('user_id');
+            $aptitudeids = $_POST['aptitudeids'];
+            $aptitude = '';
+            $count = count($aptitudeids);
+            if($count >0 ){
+                for($i=0;$i<$count;$i++){
+                    $aptitude .="[".$aptitudeids[$i]."]";
+                }
+            }
+            $data['aptitudes']=$aptitude;
+            $data['is_authentication']=0;
+            M('user')->where('user_id='.$user_id)->save($data);
+            $this->success("提交申请成功!");
         }
     }
 

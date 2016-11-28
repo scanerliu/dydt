@@ -506,7 +506,58 @@ class manageAction extends beginAction
 
 		$this->assign('keyv',$_GET['key']);
 		$this->assign('keyword',$_GET['keyword']);
+                
+            //经营范围
+            $data = M('user')->where('user_id='.$_GET['id'])->find();
+            $aptitudes = $data['aptitudes'];
+            $aptitudeArr = array();
+            if(!empty($aptitudes)){
+                $aptitudes = str_replace("[", '', $aptitudes);
+                $aptitudeArr = explode("]", $aptitudes);
+            }
+            $this->assign('aptitudeArr',$aptitudeArr);
+            $where = '';
+            $data = M('aptitude')->where($where)->select();
+            for($i=0;$i<count($data);$i++){
+                if(in_array($data[$i]['id'], $aptitudeArr)){
+                    $data[$i]['checked'] =1;
+                }else{ 
+                    $data[$i]['checked'] =0;
+                }
+            }            
+            $this->assign('aptitudelist',$data);
+            $this->assign('user_id',$_GET['id']);
+                
 		$this->display();
+	}
+        
+        public function saveaptitude()
+	{
+            $user_id =  $_POST['cuser_id'];
+            $aptitudeids = $_POST['aptitudeids'];
+            $aptitude = '';
+            $count = count($aptitudeids);
+            if($count >0 ){
+                for($i=0;$i<$count;$i++){
+                    $aptitude .="[".$aptitudeids[$i]."]";
+                }
+            }
+            $data['aptitudes']=$aptitude;
+            
+            $identity = M('user')->where('user_id='.$user_id)->getfield('identity');
+            $doc_m = M('document')->where("status=1 and (identity=0 or identity=".$identity.")")->select();
+            for ($i=0; $i < count($doc_m); $i++) { 
+                $type_m[$i] = "{$doc_m[$i]['doc_type']}(必要)";
+            }
+            $type_m=implode("','", $type_m);
+            $type_c=M('document')->where("status=1 and (identity=0 or identity=".$identity.")")->count();
+            $user_c=M('document_user')->where("user_id=$user_id and status=1 and doc_type in('".$type_m."')")->count();
+            if ($type_c==$user_c) {
+                $data['is_authentication']=1;
+            } 
+            
+            M('user')->where('user_id='.$user_id)->save($data);
+            $this->success("客户经营种类保存成功!");
 	}
 
 	 function download()
