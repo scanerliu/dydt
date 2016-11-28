@@ -101,10 +101,20 @@ class orderAction extends commonAction
 	     /*用户锁定 end*/
          //--资质审核 beg
         $where['user_id'] = $_SESSION['user_id'];
-        $data = M('user')->where($where)->getField('is_authentication');
-        if ($data != 1) {
+        //$data = M('user')->where($where)->getField('is_authentication');
+        $data = M('user')->where($where)->find();
+        if ($data['is_authentication'] != 1) {
             $this->error('资质没有审核', '/userinfo/authentication');
         }
+        
+        $aptitudes = $data['aptitudes'];//会员经营范围
+        $aptitudeArr = array();
+        if(!empty($aptitudes)){
+            $aptitudes = str_replace("[", '', $aptitudes);
+            $aptitudeArr = explode("]", $aptitudes);
+        }
+        //控销药品
+        $au_vip = $data['is_vip'];
         $where = '';
         $data = '';
         //--资质审核 end
@@ -120,6 +130,14 @@ class orderAction extends commonAction
             if (!M('product')->where($where)->count()) {
                 unset($product_id[$i]);
                 unset($product_num[$i]);
+            }
+            $product  = M('product')->where($where)->find();
+            if(!in_array($product['aptitudes'], $aptitudeArr)){
+                   $this->error($product['title'].' 的药品种类不在经营范围内！');
+            }
+            //控销药品购买限制
+            if($product['ptype']==2 && $au_vip!=1){
+                   $this->error($product['title'].' 是控销药品，请先升级成为平台大客户！','/userinfo/authentication');
             }
 			if(  M('product')->where($where)->getField('frame') != 1 ){
 				    unset($product_id[$i]);

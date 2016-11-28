@@ -60,20 +60,36 @@
 <div class="good_cen">
 <h3>{$product_detail.title}</h3>
 <p>{$product_detail.subhead}</p>
-<if condition="$contentFunIsDiscount eq 1">
-<dl class="dl01">
-  <dt>价  格 ：</dt>
-  <dd> <a>￥{$product_detail.price3}</a> <span>特价出售</span> </dd>
-</dl>
+<if condition="$_SESSION['user_id'] eq null">
+    <dl class="dl01">
+    <dt>价  格 ：</dt>
+    <dd> <a href="/account/login">登录查看价格</a> </dd>
+<elseif condition="$top.is_authentication eq 1"/>
+    <if condition="$contentFunIsDiscount eq 1">
+        <dl class="dl01">
+          <dt>价  格 ：</dt>
+          <dd> <a>￥{$product_detail.price3}</a> <span>特价出售</span> <eq name="product_detail.ptype" value="2"><span>控销药品</span></eq></dd>
+        </dl>
+    <else/>
+        <dl class="dl01">
+        <dt>价  格 ：</dt>
+        <dd> <a>￥{$product_detail.price2}</a><eq name="product_detail.ptype" value="2"><span>控销药品</span></eq></dd>
+    </if>
+    <eq name="product_detail.ptype" value="2">
+        <dl class="dl01">
+          <dt>控销价格：</dt>
+          <dd>￥{$product_detail.limitprice}</dd>
+        </dl>
+    </eq>
+    <dl class="dl02">
+      <dt>原   价 ：</dt>
+      <dd><s>￥{$product_detail.price1}</s></dd>
+    </dl>
 <else/>
-<dl class="dl01">
-<dt>价  格 ：</dt>
-<dd> <a>￥{$product_detail.price2}</a> </dd>
+    <dl class="dl01">
+    <dt>价  格 ：</dt>
+    <dd> <a href="/userinfo/authentication">认证查看价格</a> </dd>
 </if>
-<dl class="dl02">
-  <dt>原   价 ：</dt>
-  <dd><s>￥{$product_detail.price1}</s></dd>
-</dl>
 <dl class="dl04">
   <dt>快递费 ：</dt>
   <dd><select onChange="express_fee_check()" id="express_fee">
@@ -105,6 +121,10 @@
  
 </dl>
 </volist>
+ <dl class="dl04">
+  <dt>厂家:</dt>
+  <dd>&nbsp;{$product_detail.manu_name}</dd>
+</dl>
 <if  condition="$contentFunIsDiscount eq 1">
   <dl class="dl08">
     <dt>折扣时间 ：</dt>

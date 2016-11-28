@@ -130,6 +130,8 @@ class shopAction extends commonAction
 		
         $where['product_id'] = $_GET['product_id'];
         $data = M('product')->where($where)->find();
+        $pmanner = M('gold_manu')->where("gold_id=".$data['manu_id'])->find();
+        $data['manu_name'] = $pmanner['gold_name'];
         $this->assign('product_detail', $data);
         $where = '';
         $where['product_id'] = $_GET['product_id'];
