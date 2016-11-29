@@ -1993,5 +1993,15 @@
 	border:none;
 	color:#ffffff;
 }
+.vidd input{
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    cursor: pointer;
+}
+
+.vidd a{
+    color: blue;
+}
 /* 商品信息 */
 /* ******************我的评价-结束********************* */

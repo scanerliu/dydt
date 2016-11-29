@@ -312,8 +312,8 @@
 .pro_title .pro_title02{ width: 229px;border-bottom: #3f73b1 2px solid; }
 .products dl{ width:1200px; overflow: hidden;}
 .products dl dt{ width: 971px; float: left; overflow: hidden;border-right: #f3f3f3 1px solid;}
-.products dl dt a{width: 193px; height: 255px; display: block; overflow: hidden;border-bottom: #f3f3f3 1px solid;border-left: #f3f3f3 1px solid; float: left;}
-.products dl dt a p{width: 80%; margin: 0 auto; margin-top: 10px; text-align: left; font-size: 14px; color: #333333; 
+.products dl dt .ptbanner{width: 193px; height: 255px; display: block; overflow: hidden;border-bottom: #f3f3f3 1px solid;border-left: #f3f3f3 1px solid; float: left;}
+.products dl dt .ptbanner p{width: 80%; margin: 0 auto; margin-top: 10px; text-align: left; font-size: 14px; color: #333333; 
 word-break:break-all;
 	  display:-webkit-box;
 	  -webkit-line-clamp:2; 	/*显示2行*/
@@ -321,8 +321,8 @@ word-break:break-all;
 	  overflow:hidden;
           height:38px;
  }
- .products dl dt a p:hover{color:#58A8E5}
-.products dl dt a span{width: 80%; margin: 0 auto; margin-top: 10px; text-align: left; display: block;font-size: 16px; color: #ef0000;font-weight: 600;}
+ .products dl dt .ptbanner p:hover{color:#58A8E5}
+.products dl dt .ptbanner span{width: 80%; margin: 0 auto; margin-top: 10px; text-align: left; display: block;font-size: 16px; color: #ef0000;font-weight: 600;}
 .products dl dt a img{ display: block; margin: 0 auto;margin-top: 23px;}
 .products dl dt a img:hover{transform: scale(1.1);
     transition: all 0.3s ease 0s;
@@ -330,8 +330,8 @@ word-break:break-all;
 	-webkit-transform: all 0.3s ease 0s;}
 
 .products dl dd{ width: 227px;height: 255px; float: left; overflow: hidden;border-right: #f3f3f3 1px solid;}
-.products dl dd a{ display: block; height: 84px; overflow: hidden;border-bottom: #f3f3f3 1px solid;}
-.products dl dd a p{ width: 130px; margin-top: 10px; margin-left: 10px; float: left;
+.products dl dd .ptbanner{ display: block; height: 84px; overflow: hidden;border-bottom: #f3f3f3 1px solid;}
+.products dl dd .ptbanner p{ width: 130px; margin-top: 10px; margin-left: 10px; float: left;
 word-break:break-all;
 	  display:-webkit-box;
 	  -webkit-line-clamp:2; 	/*显示2行*/
@@ -340,7 +340,7 @@ word-break:break-all;
           height:38px;
 }
 .products dl dd a p:hover{color:#58A8E5}
-.products dl dd a span{ width: 130px; margin-top: 10px; margin-left: 10px; float: left;font-size: 16px; color: #ef0000; font-weight: 600;}
+.products dl dd .ptbanner span{ width: 130px; margin-top: 10px; margin-left: 10px; float: left;font-size: 16px; color: #ef0000; font-weight: 600;}
 .products dl dd a img{ float: right; margin-top: -30px; margin-right: 10px;}
 .products dl dd a img:hover{transition: all 0.1s ease 0s;
 	-webkit-transform: scale(1.1);
@@ -371,16 +371,16 @@ transform: scale(1.1);
 .sale_center{ width:776px; height: auto; overflow: hidden;border-top: #f3f3f3 1px solid; float: left;}
 .sale_center li{ float: left;}
 .sale_center li:hover{border:2px solid #BEBEBE;width: 190px; height: 251px;}
-.sale_center li a{width: 193px; height: 254px; display: block; overflow: hidden; border-right: #f3f3f3 1px solid;border-bottom: #f3f3f3 1px solid; float: left;}
+.sale_center li .ctbaner{width: 193px; height: 254px; display: block; overflow: hidden; border-right: #f3f3f3 1px solid;border-bottom: #f3f3f3 1px solid; float: left;}
 .sale_center li a img{ width: 140px; height: 140px; display: block; margin: 0 auto; margin-top: 20px;}
-.sale_center li a p{ width: 140px; margin: 0 auto; line-height: 18px; color: #333333; margin-top: 10px;word-break:break-all;
+.sale_center li .ctbaner p{ width: 140px; margin: 0 auto; line-height: 18px; color: #333333; margin-top: 10px;word-break:break-all;
 	  display:-webkit-box;
 	  -webkit-line-clamp:2; 	/*显示2行*/
 	  -webkit-box-orient:vertical;
 	  overflow:hidden;
           height:35px;
 }
-.sale_center li a span{ display: block; width: 140px; margin: 0 auto; text-align: left; margin-top: 4px; color: #ef0000; font-size: 16px; font-weight: 600;}
+.sale_center li .ctbaner span{ display: block; width: 140px; margin: 0 auto; text-align: left; margin-top: 4px; color: #ef0000; font-size: 16px; font-weight: 600;}
 
 .sale_right{ width: 231px;height: auto; float: left; _width:200px;_display: inline-block;}
 

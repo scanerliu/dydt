@@ -131,7 +131,8 @@ class IndexAction extends commonAction
 		  
  			   
  			//  测试用，批量上传数据 end   
-    	 $this->assign('index_cache',$this->url_cache_get("http://$_SERVER[SERVER_NAME]/Index/index_cache"));	
+    	 //$this->assign('index_cache',$this->url_cache_get("http://$_SERVER[SERVER_NAME]/Index/index_cache"));	
+             $this->index_cache();
  		 $this->display();	
  		}  	
 	
@@ -175,7 +176,7 @@ class IndexAction extends commonAction
         //产品目录右侧 的广告图
 		 $this->index_part_goldCompany();  
 		 //金牌厂家
-         $this->display('index_cache');
+//         $this->display('index_cache');
     }
 	
 	function index_part_inform(){

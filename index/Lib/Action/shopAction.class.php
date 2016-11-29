@@ -593,4 +593,21 @@ class shopAction extends commonAction
         // 赋值分页输出
         $this->display();
     }
+    /**
+     * 控销列表页
+     */
+    public function control()
+    {
+        $this->run();
+         $this->shopList_part_recommend();
+        //推荐的商品
+        $this->shopList_part_search();
+        //搜索条件
+         $this->shopList_part_search_list();
+         //产品列表
+        $this->shopList_part_search_discount();
+        //猜您需要-显示内容为折扣商品
+ 		 $this->shopList_part_hotSell(); /*热销 商品*/
+           $this->display();
+    }
 }

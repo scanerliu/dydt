@@ -440,6 +440,15 @@
 	line-height: 32px;
         width:50%;
 }
+.goodslist_under_li .login{
+	color: red;
+	font-size: 16px;
+	display: inline-block;
+	margin-left: 10px;
+	float: left;
+	line-height: 32px;
+        width:100%;
+}
 .goodslist_under_li .oldprice{
 	display: inline-block;
 	margin-left: 12px;
@@ -518,7 +527,7 @@
 
 /*猜您喜欢*/
 .guess_need{
-	margin-top: 68px;
+/*	margin-top: 68px;*/
 	width: 1200px;
 	border:1px solid #E6E6E6;
 	border-top: 3px solid #3B93DE;

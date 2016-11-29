@@ -1,0 +1,8 @@
+<if condition="$_SESSION['user_id'] eq null">
+    <a href="/account/login" class="selling_newprice">登录查看价格</a>
+<elseif condition="$top.is_authentication neq 1"/>
+    <a href="/userinfo/authentication" class="selling_newprice">认证查看价格</a>
+<else/>
+    <h5 class="selling_newprice">￥{$vol.price}</h5>
+    <h5 class="selling_oldprice">￥{$vol.price1}</h5>
+</if>

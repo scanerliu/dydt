@@ -641,6 +641,7 @@ class productManagementAction extends beginAction {
         $data['manu_id'] = $_POST['manu_id'];
         $data['aptitudes'] = $_POST['aptitudes'];
         $data['ptype'] = $_POST['ptype'];
+        $data['limitprice'] = $_POST['limitprice'];
         $data['frame'] = $_POST['frame'];
         $data['time'] = time();
         M('product')->where($where)->save($data);

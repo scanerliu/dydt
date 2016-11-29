@@ -59,17 +59,31 @@
       </div>
     </div>
     <div class="products">
-      <div class="pro_title"> <a class="pro_title01">精品推荐</a> <a href="/shop/discount" class="pro_title02" style="display:none">促销活动</a> </div>
+      <div class="pro_title"> <a class="pro_title01">精品推荐</a> <a href="/shop/discount" class="pro_title02" >促销活动</a> </div>
       <dl>
         <dt>
-          <volist name='index_part_recommend' id='vol'> <a href="/shop/content/product_id/{$vol.product_id}">
-            <p>{$vol.title|mb_substr=0,16,'utf-8'}</p>
-            <span>¥{$vol.price}</span> <img src="/Uploads/{$vol.img}" style="width:140px; height:140px;"> </a> </volist>
+        <volist name='index_part_recommend' id='vol'><div class="ptbanner"> <a href="/shop/content/product_id/{$vol.product_id}">
+            <p>{$vol.title|mb_substr=0,16,'utf-8'}</p></a>
+                    <if condition="$_SESSION['user_id'] eq null">
+                        <a href="/account/login" class="selling_newprice"><span>登录查看价格</span></a>
+                    <elseif condition="$top.is_authentication neq 1"/>
+                        <a href="/userinfo/authentication" class="selling_newprice"><span>认证查看价格</span></a>
+                    <else/>
+                    <span>￥{$vol.price}</span>
+                    </if>
+                <a href="/shop/content/product_id/{$vol.product_id}"><img src="/Uploads/{$vol.img}" style="width:140px; height:140px;"> </a> </div></volist>
         </dt>
         <dd>
-          <volist name='index_part_discount' id='vol'> <a href="/shop/content/product_id/{$vol.product_id}">
-            <p>{$vol.title|mb_substr=0,16,'utf-8'}</p>
-            <span>￥{$vol.price3}</span> <img src="/Uploads/{$vol.img}" style="width:65px; height:65px;"> </a> </volist>
+          <volist name='index_part_discount' id='vol'><div class="ptbanner"> <a href="/shop/content/product_id/{$vol.product_id}">
+            <p>{$vol.title|mb_substr=0,16,'utf-8'}</p></a>
+            <if condition="$_SESSION['user_id'] eq null">
+                <a href="/account/login" class="selling_newprice"><span>登录查看价格</span></a>
+            <elseif condition="$top.is_authentication neq 1"/>
+                <a href="/userinfo/authentication" class="selling_newprice"><span>认证查看价格</span></a>
+            <else/>      
+            <span>￥{$vol.price3}</span>
+            </if>
+            <a href="/shop/content/product_id/{$vol.product_id}"><img src="/Uploads/{$vol.img}" style="width:65px; height:65px;"> </a></div> </volist>
         </dd>
       </dl>
     </div>
@@ -90,9 +104,17 @@
         </dl>
         <ul class="sale_center">
           <volist name='vol.product' id='vol3'>
-            <li><a href="/shop/content/product_id/{$vol3.product_id}"> <img src="/Uploads/{$vol3.img}">
-              <p> {$vol3.title|mb_substr=0,27,'utf-8'} </p>
-              <span>¥{$vol3.price2}</span> </a> </li>
+            <li><div class="ctbaner"><a href="/shop/content/product_id/{$vol3.product_id}"> <img src="/Uploads/{$vol3.img}">
+              <p> {$vol3.title|mb_substr=0,27,'utf-8'} </p></a>
+                <if condition="$_SESSION['user_id'] eq null">
+                    <a href="/account/login" class="selling_newprice"><span>登录查看价格</span></a>
+                <elseif condition="$top.is_authentication neq 1"/>
+                    <a href="/userinfo/authentication" class="selling_newprice"><span>认证查看价格</span></a>
+                <else/>
+                    <span>￥{$vol3.price2}</span>
+                </if>
+                </div>
+            </li>
           </volist>
         </ul>
         <div class="sale_right">

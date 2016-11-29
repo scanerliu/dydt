@@ -270,4 +270,98 @@ class userinfoAction extends commonAction
         M('user')->where('user_id='.$user_id)->save($data);
         $this->success("删除认证成功!");
     }
+    
+    /**
+     * 大客户列表页
+     */
+    public function vip()
+    {
+        if (session('user_id')) {
+            $user_id = session('user_id');
+            $data = M('user')->where('user_id='.$user_id)->find();
+            switch ($data['is_vip']){
+                case 0:
+                    $data['vipstatus'] = '未获得大客户权限';
+                    break;
+                case 1:
+                    $data['vipstatus'] = '已获得大客户权限';
+                    break;
+                case 2:
+                    $data['vipstatus'] = '已提交大客户申请';
+                    break;
+                case 3:
+                    $data['vipstatus'] = '平台邀请您成为大客户';
+                    break;
+                case 4:
+                    $data['vipstatus'] = '平台拒绝了您的大客户申请';
+                    break;
+                case 5:
+                    $data['vipstatus'] = '您拒绝了成为平台大客户邀请';
+                    break;
+            }
+            $this->assign('cuser',$data);
+            $this->display();
+        } else {
+           redirect('/', 3, '您还没有登录，页面正跳转到首页...');
+        }
+    }
+    /**
+     * 大客户列表页
+     */
+    public function applyvip()
+    {
+        if (session('user_id')) {
+            $user_id = session('user_id');
+            $data = M('user')->where('user_id='.$user_id)->find();
+            $vipk = 0;
+            $vipf = false;
+            if($_POST['type']==1){
+                switch ($data['is_vip']){
+                    case 0:
+                        $vipk = 2;
+                        $vipf = true;
+                        break;
+                    case 1:
+                        break;
+                    case 2:
+                        break;
+                    case 3:
+                        $vipk = 1;
+                        $vipf = true;
+                        break;
+                    case 4:
+                        $vipk = 2;
+                        $vipf = true;
+                        break;
+                    case 5:
+                        $vipk = 2;
+                        $vipf = true;
+                        break;
+                    default :
+                        break;
+                }
+                if($vipf){
+                    $updata['is_vip'] = $vipk;
+                    M('user')->where('user_id='.$user_id)->save($updata);
+                }
+                $this->success("成功提交大客户申请!");
+            }else{
+                switch ($data['is_vip']){
+                    case 3:
+                        $vipk = 1;
+                        $vipf = true;
+                        break;
+                    default :
+                        break;
+                }
+                if($vipf){
+                    $updata['is_vip'] = $vipk;
+                    M('user')->where('user_id='.$user_id)->save($updata);
+                }
+                $this->success("成功成为大客户!");
+            }
+        } else {
+           redirect('/account/login', 3, '您还没有登录，页面正跳转到首页...');
+        }
+    }
 }

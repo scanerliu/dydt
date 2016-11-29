@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>大客户信息-{$top_content.title}</title>
+<meta name="Keywords" content="{$top_content.keywords}" />
+<meta name="Description" content="{$top_content.description}" />
+	<link rel="stylesheet" href="__PUBLIC__css/base.css">
+	<link rel="stylesheet" href="__PUBLIC__css/main.css">
+	<link rel="stylesheet" href="__PUBLIC__css/other.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__css/jcDate.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__css/L_person.css">
+	<script style="text/javascript" src="__PUBLIC__js/jquery-1.11.0.js"></script>	
+	<script style="text/javascript" src="__PUBLIC__js/rich_lee.js"></script>
+	<script type="text/javascript" src="__PUBLIC__js/jquery.min.js"></script>
+	<script type="text/javascript" src="__PUBLIC__js/jQuery-jcDate.js"></script>
+</head>
+	<script type="text/javascript">
+	$(function(){
+		
+
+		nav_down();//
+	});
+		
+	</script>
+<body>
+<!-- top -->
+	<include file="public:header"/>
+<!-- topend -->
+<!-- search -->
+	<include file="public:search"/>
+<!-- searchend -->
+<!-- nav -->
+	<div class="content">
+		<include file="public:nav"/>
+		<!--
+        	作者：rich
+        	时间：2015-10-21
+        	描述：banner右侧
+        -->	
+       <div class="crumbs">
+       		<span>账号管理</span>
+       		<p>the account management</p> 
+       		<p class="crumbs02">大客户信息</p>
+       </div>
+       <include file="public:left"/>
+       <!--
+       	作者：rich_lee
+       	描述：面包屑 面包屑导航 完成
+       -->
+
+
+       <!-- 会员信息 -->
+       <div class="L_member_infor">
+       		<form method="post" id="vipform" action="{:U('userinfo/applyvip')}">
+	       		<dl>
+	       			<dt>大客户信息</dt>
+                                <dd class="vidd">
+                                    <span> <input class="checkbox" checked="checked" name="agreep" id="agreeonProtocol" type="checkbox">我已阅读并同意<a href="/newsmanu/newsmanu/id/60" target="_blank">《西南云采大客户协议》</a></span>
+		       		</dd>
+		       		<dd>
+		       			<label>状态：</label>
+		       			<span>{$cuser.vipstatus}</span>
+		       		</dd>
+ 		       		<dd>
+                                    <if condition="$cuser.is_vip eq 0 || $cuser.is_vip eq 4">
+                                        <input style="width:100px;height:30px;margin-left:100px;background:#58a8e5;color:white;font-size:16px;border:none;line-height:30px;cursor:pointer;" type="button" id="sbtn" onclick="applyvip(1)" value="提交申请" />
+                                        <elseif condition="$cuser.is_vip eq 3"/>
+                                        <input style="width:160px;height:30px;margin-left:100px;background:#58a8e5;color:white;font-size:16px;border:none;line-height:30px;cursor:pointer;" type="button" id="sbtn" onclick="applyvip(2)" value="同意成为大客户" />
+                                        <else/>
+                                    </if>
+       				</dd>
+	       		</dl> 
+                    <input type="hidden" name="type" id="vtype" value="">
+	       	</form>	
+       </div>
+       <!-- 会员信息-结束 -->
+	<script type="text/javascript">
+		$(function (){
+			$("input.jcDate").jcDate({					       
+				IcoClass : "jcDateIco",
+				Event : "click",
+				Speed : 100,
+				Left : 0,
+				Top : 28,
+				format : "-",
+				Timeout : 100
+			});
+		});
+		function applyvip(t) {
+                    var ti=$("#vipform input[name='agreep']:checked");
+                    if(ti.length!=1){
+                       alert("请先同意大客户协议！");
+                       return false;
+                    }
+                    $("#vtype").val(t);
+                    $("#vipform").submit();
+		}
+		function edit() {
+			document.getElementById("spanposition").style.display="none";//隐藏
+			document.getElementById("iptposition").style.display="block";//显示
+			// document.getElementById("s_county").style.visibility="visible";//显示
+		}
+		function edit_h() {
+			document.getElementById("aaa").style.display="none";//隐藏
+			document.getElementById("bbb").style.display="block";//显示
+		}
+		var Gid  = document.getElementById ;
+		var showArea = function(){
+			Gid('show').innerHTML = "<h3>省" + Gid('s_province').value + " - 市" + 	
+			Gid('s_city').value + " - 县/区" + 
+			Gid('s_county').value + "</h3>"
+		}
+		Gid('s_county').setAttribute('onchange','showArea()');
+	</script>
+
+	<style type="text/css">
+		
+		.clear{clear:both;height:0;visibility:hidden;}
+		a{text-decoration:none;cursor:pointer;}
+		a:hover{color:red;text-decoration:underline;}
+		a img{border:0;vertical-align:middle;}
+	</style>
+	<!--
+    	作者：rich
+    	描述：friend ++ content end
+    -->	
+    
+    </div>
+	<include file="public:bottom"/>
+</body>
+</html>

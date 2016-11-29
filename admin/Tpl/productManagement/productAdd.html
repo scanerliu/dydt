@@ -104,12 +104,16 @@
       </tr>
       <tr style="height:36px;">
         <td style="text-align:left"><span>药品类型:</span><span>
-                <select name="ptype" my_check='number_need' error='药品类型错误'>
+                <select name="ptype"  id="ptype" my_check='number_need' error='药品类型错误' onchange="ptypechange()">
                     <option value="1">普通药品</option>
                     <option value="2">控销药品</option>
                     </volist>
                 </select>
-          </span></td>
+          </span>
+          <span id="limitpricespan" class="hidden">
+          控销价格:<input name="limitprice" id="limitprice" type="text"  class="input1" style="width:400px;"   my_check='float_need'  value="0"  error='控销价格错误' />
+          </span>
+        </td>
       </tr>
       <tr style="height:36px;">
         <td style="text-align:left"><span>状态:</span><span>
@@ -261,6 +265,15 @@ laydate(end);
     </table>
   </form>
   <script type="text/javascript">
+    function ptypechange(){
+      var type = $("#ptype").val();
+      if(type==2){
+          $("#limitpricespan").show();
+      }else{
+          $("#limitprice").val("0");
+          $("#limitpricespan").hide();
+      }
+    }
 function formSubmit(){    
        if(!my_check()){return};
          $("input[name='discount_beg_time']").val( $('#start').html())

@@ -85,28 +85,28 @@
       <dt>原   价 ：</dt>
       <dd><s>￥{$product_detail.price1}</s></dd>
     </dl>
+    <dl class="dl04">
+        <dt>快递费 ：</dt>
+        <dd><select onChange="express_fee_check()" id="express_fee">
+        <option value="{$top_content.express_fee}">默认</option>
+         <option value={$top_content.express_fee} title="北京市">北京市</option><option value={$top_content.express_fee} title="天津市">天津市</option><option value={$top_content.express_fee} title="上海市">上海市</option><option value={$top_content.express_fee} title="重庆市">重庆市</option><option value={$top_content.express_fee} title="河北省">河北省</option><option value={$top_content.express_fee} title="山西省">山西省</option><option value={$top_content.express_fee} title="内蒙古">内蒙古</option><option value={$top_content.express_fee} title="辽宁省">辽宁省</option><option value={$top_content.express_fee} title="吉林省">吉林省</option><option value={$top_content.express_fee} title="黑龙江省">黑龙江省</option><option value={$top_content.express_fee} title="江苏省">江苏省</option><option value={$top_content.express_fee} title="浙江省">浙江省</option><option value={$top_content.express_fee} title="安徽省">安徽省</option><option value={$top_content.express_fee} title="福建省">福建省</option><option value={$top_content.express_fee} title="江西省">江西省</option><option value={$top_content.express_fee} title="山东省">山东省</option><option value={$top_content.express_fee} title="河南省">河南省</option><option value={$top_content.express_fee} title="湖北省">湖北省</option><option value={$top_content.express_fee} title="湖南省">湖南省</option><option value={$top_content.express_fee} title="广东省">广东省</option><option value={$top_content.express_fee} title="广西">广西</option><option value={$top_content.express_fee} title="海南省">海南省</option><option value={$top_content.express_fee} title="四川省">四川省</option><option value={$top_content.express_fee} title="贵州省">贵州省</option><option value={$top_content.express_fee} title="云南省">云南省</option><option value={$top_content.express_fee} title="西藏">西藏</option><option value={$top_content.express_fee} title="陕西省">陕西省</option><option value={$top_content.express_fee} title="甘肃省">甘肃省</option><option value={$top_content.express_fee} title="青海省">青海省</option><option value={$top_content.express_fee} title="宁夏">宁夏</option><option value={$top_content.express_fee} title="新疆">新疆</option><option value={$top_content.express_fee} title="香港">香港</option><option value={$top_content.express_fee} title="澳门">澳门</option><option value={$top_content.express_fee} title="台湾省">台湾省</option>
+         </select>&nbsp;<i style="font-style:normal" id="express_fee_val">{$top_content.express_fee}</i>元
+         </dd>
+         <script type="text/javascript">
+         <volist name='express_fee' id='vol'>
+        $("option[title='{$vol.area}']").attr('value',{$vol.fee});
+       </volist>
+
+                function express_fee_check(){
+                        $("#express_fee_val").html( $("#express_fee").val())
+                        }
+            </script>
+      </dl>
 <else/>
     <dl class="dl01">
     <dt>价  格 ：</dt>
     <dd> <a href="/userinfo/authentication">认证查看价格</a> </dd>
 </if>
-<dl class="dl04">
-  <dt>快递费 ：</dt>
-  <dd><select onChange="express_fee_check()" id="express_fee">
-  <option value="{$top_content.express_fee}">默认</option>
-   <option value={$top_content.express_fee} title="北京市">北京市</option><option value={$top_content.express_fee} title="天津市">天津市</option><option value={$top_content.express_fee} title="上海市">上海市</option><option value={$top_content.express_fee} title="重庆市">重庆市</option><option value={$top_content.express_fee} title="河北省">河北省</option><option value={$top_content.express_fee} title="山西省">山西省</option><option value={$top_content.express_fee} title="内蒙古">内蒙古</option><option value={$top_content.express_fee} title="辽宁省">辽宁省</option><option value={$top_content.express_fee} title="吉林省">吉林省</option><option value={$top_content.express_fee} title="黑龙江省">黑龙江省</option><option value={$top_content.express_fee} title="江苏省">江苏省</option><option value={$top_content.express_fee} title="浙江省">浙江省</option><option value={$top_content.express_fee} title="安徽省">安徽省</option><option value={$top_content.express_fee} title="福建省">福建省</option><option value={$top_content.express_fee} title="江西省">江西省</option><option value={$top_content.express_fee} title="山东省">山东省</option><option value={$top_content.express_fee} title="河南省">河南省</option><option value={$top_content.express_fee} title="湖北省">湖北省</option><option value={$top_content.express_fee} title="湖南省">湖南省</option><option value={$top_content.express_fee} title="广东省">广东省</option><option value={$top_content.express_fee} title="广西">广西</option><option value={$top_content.express_fee} title="海南省">海南省</option><option value={$top_content.express_fee} title="四川省">四川省</option><option value={$top_content.express_fee} title="贵州省">贵州省</option><option value={$top_content.express_fee} title="云南省">云南省</option><option value={$top_content.express_fee} title="西藏">西藏</option><option value={$top_content.express_fee} title="陕西省">陕西省</option><option value={$top_content.express_fee} title="甘肃省">甘肃省</option><option value={$top_content.express_fee} title="青海省">青海省</option><option value={$top_content.express_fee} title="宁夏">宁夏</option><option value={$top_content.express_fee} title="新疆">新疆</option><option value={$top_content.express_fee} title="香港">香港</option><option value={$top_content.express_fee} title="澳门">澳门</option><option value={$top_content.express_fee} title="台湾省">台湾省</option>
-   </select>&nbsp;<i style="font-style:normal" id="express_fee_val">{$top_content.express_fee}</i>元
-   </dd>
-   <script type="text/javascript">
-   <volist name='express_fee' id='vol'>
-  $("option[title='{$vol.area}']").attr('value',{$vol.fee});
- </volist>
-    
-	  function express_fee_check(){
- 		  $("#express_fee_val").html( $("#express_fee").val())
- 		  }
-      </script>
-</dl>
 <dl class="dl02">
   <dt>库 &nbsp;存 ：</dt>
   <dd> {$product_detail.stock}</dd>
@@ -266,10 +266,9 @@
         <ul class="selling_list">
          <volist name='shopList_part_hotSell' id='vol'>
           <li> <a href="/shop/content/product_id/{$vol.product_id}" style="display:block"><img src="/Uploads/{$vol.img}" alt=""  style="width:218px; height:218px;" />
-            <h3 class="selling_title">{$vol.title}.</h3>
-            <h5 class="selling_newprice">￥{$vol.price}</h5>
-            <h5 class="selling_oldprice">￥{$vol.price1}</h5>
-            </a> </li>
+            <h3 class="selling_title">{$vol.title}.</h3></a>
+            <include file="public:pricetag"/>
+            </li>
         </volist>
         </ul>
       </div>
