@@ -569,11 +569,13 @@ class manageAction extends beginAction
             $data = M('user')->where('user_id='.$user_id)->find();
             $vipk = 0;
             $vipf = false;
+            $sms = null;
             if($_GET['type']==1){//邀请成为vip
                 switch ($data['is_vip']){
                     case 0:
                         $vipk = 3;
                         $vipf = true;
+                        $sms = array('tel'=>$data['mobile_phone'],'content'=>'西南云采邀请您成为大客户，请到西南云采网站-个人中心>大客户进行操作');
                         break;
                     case 1:
                         break;
@@ -586,10 +588,12 @@ class manageAction extends beginAction
                     case 4:
                         $vipk = 3;
                         $vipf = true;
+                        $sms = array('tel'=>$data['mobile_phone'],'content'=>'西南云采邀请您成为大客户，请到西南云采网站-个人中心>大客户进行操作');
                         break;
                     case 5:
                         $vipk = 3;
                         $vipf = true;
+                        $sms = array('tel'=>$data['mobile_phone'],'content'=>'西南云采邀请您成为大客户，请到西南云采网站-个人中心>大客户进行操作');
                         break;
                     default :
                         break;
@@ -597,6 +601,9 @@ class manageAction extends beginAction
                 if($vipf){
                     $updata['is_vip'] = $vipk;
                     M('user')->where('user_id='.$user_id)->save($updata);
+                }
+                if(!empty($sms)){
+                    $this->yanzhengma($sms);
                 }
                 $this->success("成功邀请客户成为大客户!");
             }elseif($_GET['type']==2){//同意大客户申请
@@ -604,6 +611,7 @@ class manageAction extends beginAction
                     case 2:
                         $vipk = 1;
                         $vipf = true;
+                        $sms = array('tel'=>$data['mobile_phone'],'content'=>'恭喜您成为西南云采的大客户');
                         break;
                     default :
                         break;
@@ -611,6 +619,9 @@ class manageAction extends beginAction
                 if($vipf){
                     $updata['is_vip'] = $vipk;
                     M('user')->where('user_id='.$user_id)->save($updata);
+                }
+                if(!empty($sms)){
+                    $this->yanzhengma($sms);
                 }
                 $this->success("成功操作同意大客户申请!");
             }elseif($_GET['type']==3){//拒绝大客户申请
@@ -622,6 +633,7 @@ class manageAction extends beginAction
                     case 2:
                         $vipk = 4;
                         $vipf = true;
+                        $sms = array('tel'=>$data['mobile_phone'],'content'=>'西南云采拒绝了您的大客户申请');
                         break;
                     default :
                         break;
@@ -630,9 +642,28 @@ class manageAction extends beginAction
                     $updata['is_vip'] = $vipk;
                     M('user')->where('user_id='.$user_id)->save($updata);
                 }
+                if(!empty($sms)){
+                    $this->yanzhengma($sms);
+                }
                 $this->success("成功操作拒绝大客户申请!");
             }
        }
+       
+       /**
+        * 发送短信 
+        * @param type $sms array(
+        *   'tel' =>'手机号码',
+        *   'content' =>'短信内容'
+        * )
+        */
+       public function yanzhengma($sms) /*短信验证码*/ {
+            $text = $sms['content'];
+            $text = iconv("utf-8", "gb2312", $text);
+            $ch = curl_init("http://www.10086x.com/sends.asp?user=zsmyzm&passw=zsm123456&text=" . $text . "&mobiles=" . $sms['tel'] . "&SEQ=1000");
+            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); // 获取数据返回
+            curl_setopt($ch, CURLOPT_BINARYTRANSFER, true); // 在启用 CURLOPT_RETURNTRANSFER 时候将获取数据返回
+            $output = curl_exec($ch);
+        }
 
 	 function download()
     {

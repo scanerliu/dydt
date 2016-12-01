@@ -478,8 +478,15 @@ class productManagementAction extends beginAction {
             'jpeg'
         );
         // 设置附件上传类型
-        $upload->savePath = './Uploads/';
-	    $upload->saveRule = '';
+        $save_path = './Uploads/';
+        $ymd = date("Ymd");
+        $file_path = "images/".$ymd . "/";
+        $save_path .= $file_path;
+        if (!file_exists($save_path)) {
+                mkdir($save_path);
+        }
+        $upload->savePath = $save_path;
+	//$upload->saveRule = '';
         // 设置附件上传目录
         if (!$upload->upload()) {
             // 上传错误提示错误信息
@@ -534,7 +541,7 @@ class productManagementAction extends beginAction {
         $data = M('product')->where($where)->find();
         $data2['product_id'] = $data['product_id'];
         for ($i = 0; $i < count($info); $i++) {
-            $data2['img'] = $info[$i]['savename'];
+            $data2['img'] = $file_path.$info[$i]['savename'];
             M('product_img')->add($data2);
         }
         $this->success('数据保存成功');
@@ -674,9 +681,17 @@ class productManagementAction extends beginAction {
                 'png',
                 'jpeg'
             );
-            // 设置附件上传类型
-            $upload->savePath = './Uploads/';
-			$upload->saveRule = '';
+            // 设置附件上传目录
+            $save_path = './Uploads/';
+            $ymd = date("Ymd");
+            $file_path = "images/".$ymd . "/";
+            $save_path .= $file_path;
+            if (!file_exists($save_path)) {
+                    mkdir($save_path);
+            }
+                        
+            $upload->savePath = $save_path;
+	    //$upload->saveRule = '';
             // 设置附件上传目录
             if (!$upload->upload()) {
                 // 上传错误提示错误信息
@@ -687,7 +702,7 @@ class productManagementAction extends beginAction {
             }
             $data2['product_id'] = $_GET['product_id'];
             for ($i = 0; $i < count($info); $i++) {
-                $data2['img'] = $info[$i]['savename'];
+                $data2['img'] = $file_path.$info[$i]['savename'];
                 M('product_img')->add($data2);
             }
         }
