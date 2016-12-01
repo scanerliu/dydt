@@ -559,6 +559,80 @@ class manageAction extends beginAction
             M('user')->where('user_id='.$user_id)->save($data);
             $this->success("客户经营种类保存成功!");
 	}
+        
+        /**
+        * 邀请vip
+        */
+       public function invitvip()
+       {
+            $user_id =  $_GET['id'];
+            $data = M('user')->where('user_id='.$user_id)->find();
+            $vipk = 0;
+            $vipf = false;
+            if($_GET['type']==1){//邀请成为vip
+                switch ($data['is_vip']){
+                    case 0:
+                        $vipk = 3;
+                        $vipf = true;
+                        break;
+                    case 1:
+                        break;
+                    case 2:
+                        $vipk = 1;
+                        $vipf = true;
+                        break;
+                    case 3:
+                        break;
+                    case 4:
+                        $vipk = 3;
+                        $vipf = true;
+                        break;
+                    case 5:
+                        $vipk = 3;
+                        $vipf = true;
+                        break;
+                    default :
+                        break;
+                }
+                if($vipf){
+                    $updata['is_vip'] = $vipk;
+                    M('user')->where('user_id='.$user_id)->save($updata);
+                }
+                $this->success("成功邀请客户成为大客户!");
+            }elseif($_GET['type']==2){//同意大客户申请
+                switch ($data['is_vip']){
+                    case 2:
+                        $vipk = 1;
+                        $vipf = true;
+                        break;
+                    default :
+                        break;
+                }
+                if($vipf){
+                    $updata['is_vip'] = $vipk;
+                    M('user')->where('user_id='.$user_id)->save($updata);
+                }
+                $this->success("成功操作同意大客户申请!");
+            }elseif($_GET['type']==3){//拒绝大客户申请
+                switch ($data['is_vip']){
+                    case 1:
+                        $vipk = 4;
+                        $vipf = true;
+                        break;
+                    case 2:
+                        $vipk = 4;
+                        $vipf = true;
+                        break;
+                    default :
+                        break;
+                }
+                if($vipf){
+                    $updata['is_vip'] = $vipk;
+                    M('user')->where('user_id='.$user_id)->save($updata);
+                }
+                $this->success("成功操作拒绝大客户申请!");
+            }
+       }
 
 	 function download()
     {

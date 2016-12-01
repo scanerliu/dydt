@@ -137,7 +137,7 @@ class orderAction extends commonAction
             }
             //控销药品购买限制
             if($product['ptype']==2 && $au_vip!=1){
-                   $this->error($product['title'].' 是控销药品，请先升级成为平台大客户！','/userinfo/authentication');
+                   $this->error($product['title'].' 是控销药品，请先升级成为平台大客户！','/userinfo/vip');
             }
 			if(  M('product')->where($where)->getField('frame') != 1 ){
 				    unset($product_id[$i]);

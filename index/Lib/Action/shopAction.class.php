@@ -494,6 +494,10 @@ class shopAction extends commonAction
         if ($_GET['class3']) {
             $where['class3'] = $_GET['class3'];
         }
+        if ($_GET['ptype']) {
+            $where['ptype'] = $_GET['ptype'];
+        }
+        
         if ($_GET['keyword']) {
  	    /*拆分查询语句 beg*/		
 	    $Model = new Model();
@@ -598,6 +602,8 @@ class shopAction extends commonAction
      */
     public function control()
     {
+        //控销药品条件
+        $_GET['ptype'] = 2;
         $this->run();
          $this->shopList_part_recommend();
         //推荐的商品

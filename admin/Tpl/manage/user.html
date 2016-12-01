@@ -82,6 +82,14 @@
         <else />
           <a href="__APP__/manage/lock_off/id/{$vo.user_id}" style="color:#db6969">开启服务</a>
         </if>
+        <if condition="$vo.is_vip eq 0 or $vo.is_vip eq 4 or $vo.is_vip eq 5">
+          <a href="__APP__/manage/invitvip/id/{$vo.user_id}/type/1" style="color:#db6969">邀请成为vip</a>&nbsp;&nbsp;
+        <elseif condition="$vo.is_vip eq 1"/>
+          <a href="__APP__/manage/invitvip/id/{$vo.user_id}/type/3" style="color:#db6969">关闭vip</a>&nbsp;&nbsp;
+        <elseif condition="$vo.is_vip eq 2"/>
+          <a href="__APP__/manage/invitvip/id/{$vo.user_id}/type/2" style="color:#db6969">同意vip申请</a>&nbsp;&nbsp;
+          <a href="__APP__/manage/invitvip/id/{$vo.user_id}/type/3" style="color:#db6969">拒绝vip申请</a>&nbsp;&nbsp;
+        </if>
         &nbsp;&nbsp;<a onClick="return confirm('确认要删除该企业信息吗？')"  href="__APP__/manage/del_user/id/{$vo.user_id}" style="color:#db6969">删除</a>
         <!-- <a href="__APP__/manage/login_uesr/id/{$vo.user_id}" style="color:#db6969">进入用户个人中心</a> -->
       </td>

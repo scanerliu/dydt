@@ -306,7 +306,7 @@ class userinfoAction extends commonAction
         }
     }
     /**
-     * 大客户列表页
+     * 申请vip
      */
     public function applyvip()
     {
