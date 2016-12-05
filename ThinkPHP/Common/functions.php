@@ -751,3 +751,7 @@ function filter_exp(&$value){
         $value .= ' ';
     }
 }
+
+function genernatefilename(){
+    return time().rand(1,10000);
+}

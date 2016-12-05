@@ -486,7 +486,7 @@ class productManagementAction extends beginAction {
                 mkdir($save_path);
         }
         $upload->savePath = $save_path;
-	//$upload->saveRule = '';
+	$upload->saveRule = 'genernatefilename';
         // 设置附件上传目录
         if (!$upload->upload()) {
             // 上传错误提示错误信息
@@ -691,7 +691,7 @@ class productManagementAction extends beginAction {
             }
                         
             $upload->savePath = $save_path;
-	    //$upload->saveRule = '';
+	    $upload->saveRule = 'genernatefilename';
             // 设置附件上传目录
             if (!$upload->upload()) {
                 // 上传错误提示错误信息

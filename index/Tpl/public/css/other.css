@@ -169,7 +169,7 @@
 .good_right dt p{margin-left: 10px; margin-top: 10px; color: white; font-size: 14px;}
 .good_right dd{width: 260px;overflow: hidden;}
 .good_right dd span{ text-align: center; display: block; margin-top: 26px; font-size: 14px;}
-.good_right dd img{ display: block; width: 172px; height: 172px; margin: auto; margin-top: 36px;}
+.good_right dd img{ display: block; width: 200px; height: 200px; margin: auto; margin-top: 36px;}
 
 .good_add{width: 1198px;float: left; margin-top: 60px; border-top:#58a8e5 3px solid;border-bottom:#DDDDDD 1px solid ;border-left:#DDDDDD 1px solid ;border-right:#DDDDDD 1px solid ;}
 .good_add dd{width: 198px; overflow: hidden; line-height: 20px; float: left;}
