@@ -96,6 +96,13 @@
 	line-height: 32px;
 	float: left;
 }
+.selling_list li .selling_oldprice2{
+	display: inline-block;
+	margin-left: 32px;
+	font-weight: normal;
+	line-height: 32px;
+	float: left;
+}
 /*左边热销商品end*/
 
 /*右边不解释*/
@@ -457,6 +464,13 @@
 	line-height: 32px;
 	float: left;
 }
+.goodslist_under_li .oldprice2{
+	display: inline-block;
+	margin-left: 12px;
+	font-weight: normal;
+	line-height: 32px;
+	float: left;
+}
 .goodslist_under_li .addcar{
 	width: 88px;
 	height: 28px;
@@ -527,7 +541,7 @@
 
 /*猜您喜欢*/
 .guess_need{
-/*	margin-top: 68px;*/
+	margin-top: 68px;
 	width: 1200px;
 	border:1px solid #E6E6E6;
 	border-top: 3px solid #3B93DE;

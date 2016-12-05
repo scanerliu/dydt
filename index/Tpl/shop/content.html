@@ -81,10 +81,12 @@
           <dd>￥{$product_detail.limitprice}</dd>
         </dl>
     </eq>
+    <if condition="$product_detail.price1 neq null">
     <dl class="dl02">
       <dt>原   价 ：</dt>
       <dd><s>￥{$product_detail.price1}</s></dd>
     </dl>
+    </if>
     <dl class="dl04">
         <dt>快递费 ：</dt>
         <dd><select onChange="express_fee_check()" id="express_fee">

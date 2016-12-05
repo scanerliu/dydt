@@ -41,7 +41,7 @@
                 <a href="/userinfo/authentication" class="selling_newprice">认证查看价格</a>
             <else/>
                 <h5 class="selling_newprice">￥{$vol.price2}</h5>
-                <h5 class="selling_oldprice">￥{$vol.price1}</h5>
+                <empty name="vol.price1"><h5 class="selling_oldprice2">&nbsp;</h5><else/><h5 class="selling_oldprice">￥{$vol.price1}</h5></empty>
             </if>
             </li>
         </volist>
@@ -304,8 +304,8 @@
             <elseif condition="$top.is_authentication neq 1"/>
                 <a href="/userinfo/authentication" class="newprice"><span>认证查看价格</span></a>
             <else/>
-          <h6 class="newprice">¥{$vol.price3}</h6>
-          <h6 class="oldprice">￥{$vol.price1}</h6>
+          <h6 class="newprice">￥{$vol.price2}</h6>
+          <empty name="vol.price1"><h6 class="oldprice2">&nbsp;</h6><else/><h6 class="oldprice">￥{$vol.price1}</h6></empty>
           </if>
           </li>
       </volist>

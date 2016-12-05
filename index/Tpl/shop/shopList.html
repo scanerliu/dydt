@@ -58,7 +58,7 @@
                     <elseif condition="$top.is_authentication neq 1"/>
                         <a href="/userinfo/authentication" class="a2"><span>认证查看价格</span></a>
                     <else/>
-                    ￥{$vol.price}
+                    ￥{$vol.price2}
                     </if>
                 </div>
                 <div class="a3"><a href="/shop/shopping_cart_add/product_id/{$vol.product_id}"><img src="__PUBLIC__images/a1.jpg" alt=""></a></div>
@@ -261,7 +261,7 @@
                     <a href="/userinfo/authentication"><h6 class="login">认证查看价格</h6></a>
                 <else/>
                     <h6 class="newprice">￥{$vol.price2}</h6>
-                    <h6 class="oldprice">￥{$vol.price1}</h6>
+                    <empty name="vol.price1"><h6 class="oldprice2">&nbsp;</h6><else/><h6 class="oldprice">￥{$vol.price1}</h6></empty>
                 </if>
               <a href="/shop/shopping_cart_add/product_id/{$vol.product_id}" class="addcar">加入购物车</a>
               <if condition="$vol.isFavorite  eq 1"> <a class="attention" href="/shop/favorite_delete/product_id/{$vol.product_id}" >已关注</a>
@@ -293,8 +293,8 @@
             <elseif condition="$top.is_authentication neq 1"/>
                 <a href="/userinfo/authentication" class="newprice"><span>认证查看价格</span></a>
             <else/>
-          <h6 class="newprice">¥{$vol.price3}</h6>
-          <h6 class="oldprice">￥{$vol.price1}</h6>
+          <h6 class="newprice">￥{$vol.price2}</h6>
+          <empty name="vol.price1"><h6 class="oldprice2">&nbsp;</h6><else/><h6 class="oldprice">￥{$vol.price1}</h6></empty>
           </if>
           </li>
       </volist>
