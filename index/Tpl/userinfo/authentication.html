@@ -141,7 +141,11 @@
             <dd>
                 <volist name="aptitudelist" id="aptitude">
                     <label style="margin-left:35px;margin-top:30px;" name="doc_type" class="check">
-                        <if condition="($is_authentication neq 1)"><input type="checkbox" name="aptitudeids[]" value="{$aptitude.id}" <if condition="$aptitude.checked eq 1">checked="checked"</if>></if> {$aptitude.name}
+                        <if condition="($is_authentication neq 1)"><input type="checkbox" name="aptitudeids[]" value="{$aptitude.id}" <if condition="$aptitude.checked eq 1">checked="checked"</if>>
+                            {$aptitude.name}
+                        <else/>
+                            <if condition="$aptitude.checked eq 1">{$aptitude.name}</if>
+                        </if>
                     </label>
                 </volist>		
             </dd>	

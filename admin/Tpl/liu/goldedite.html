@@ -112,22 +112,28 @@
 </head>
 <body>
 <form action="__APP__/liu/gold_manu"  name="arcipt" method="post" enctype="multipart/form-data">
+    <input type="hidden" name='id' value="{$manu.gold_id}">
 <h1>编辑内容</h1>
 标题：
-<input style="width:160px;" type="text" id="title"  name='title'>
+<input style="width:160px;" type="text" id="title"  name='title' value="{$manu.gold_name}">
 
 <br><br>
 缩略图：
  <input type='file'  name='photo1'>
 (长宽：160px*60px)
+<if condition="$manu.gold_pic neq null">
+<div style="margin-right:10px;" class="imgList">
+<div><img src="/Uploads/{$manu.gold_pic}" style="width:300px;"></div>
+</div>
+</if>
 <br><br>
 内容：
 <br><br>
 <!--style给定宽度可以影响编辑器的最终宽度-->
-<script type="text/plain" id="myEditor" style="width:1000px;height:240px;" name="arccontent"></script>
+<script type="text/plain" id="myEditor" style="width:1000px;height:240px;" name="arccontent">{$manu.gold_content}</script>
 <br><br>
 排序值：
-<input style="width:160px;" type="text" id="sort_by"  name='sort_by' value="0">
+<input style="width:160px;" type="text" id="sort_by"  name='sort_by' value="{$manu.sort_by}">
 (值越大网站排名越靠前)
 <div class="clear"></div>
 <div id="btns">

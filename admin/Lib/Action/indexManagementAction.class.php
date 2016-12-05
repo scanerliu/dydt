@@ -54,11 +54,19 @@ class indexManagementAction extends beginAction {
 	   import('ORG.Net.UploadFile');
 	   $upload = new UploadFile();// 实例化上传类
 	   $upload->maxSize  = 3145728 ;// 设置附件上传大小
-		$upload->allowExts  = array('jpg', 'gif', 'png', 'jpeg');// 设置附件上传类型
-	    $upload->savePath = './Uploads/';// 设置附件上传目录
+	    $upload->allowExts  = array('jpg', 'gif', 'png', 'jpeg');// 设置附件上传类型
+	    $save_path = './Uploads/';
+            $ymd = date("Ymd");
+            $file_path = "images/".$ymd . "/";
+            $save_path .= $file_path;
+            if (!file_exists($save_path)) {
+                    mkdir($save_path);
+            }
+            $upload->savePath = $save_path;
+            //$upload->saveRule = '';
 
-       if(!$upload->upload()) {// 上传错误提示错误信息
-         $this->error($upload->getErrorMsg());
+            if(!$upload->upload()) {// 上传错误提示错误信息
+              $this->error($upload->getErrorMsg());
              }
 	 	 else{// 上传成功 获取上传文件信息
             $info =  $upload->getUploadFileInfo();
@@ -75,7 +83,7 @@ class indexManagementAction extends beginAction {
 			}
 			
 		 
-	     $data['img'] = $info[0]['savename'];
+	     $data['img'] = $file_path.$info[0]['savename'];
 		 $data['link']=$_POST['link'];
 		 $m->add($data);
 		 $this->success('上传成功');
@@ -107,15 +115,22 @@ class indexManagementAction extends beginAction {
  	   import('ORG.Net.UploadFile');
 	   $upload = new UploadFile();// 实例化上传类
 	   $upload->maxSize  = 3145728 ;// 设置附件上传大小
-		$upload->allowExts  = array('jpg', 'gif', 'png', 'jpeg');// 设置附件上传类型
-	    $upload->savePath = './Uploads/';// 设置附件上传目录
+	    $upload->allowExts  = array('jpg', 'gif', 'png', 'jpeg');// 设置附件上传类型
+	    $save_path = './Uploads/';
+            $ymd = date("Ymd");
+            $file_path = "images/".$ymd . "/";
+            $save_path .= $file_path;
+            if (!file_exists($save_path)) {
+                    mkdir($save_path);
+            }
+            $upload->savePath = $save_path;
+            //$upload->saveRule = '';
             if(!$upload->upload()) {// 上传错误提示错误信息
-            $this->error($upload->getErrorMsg());
-              }
- 	        else{// 上传成功 获取上传文件信息
-              $info =  $upload->getUploadFileInfo();
-		      $data['img'] = $info[0]['savename'];
-               } 
+                $this->error($upload->getErrorMsg());
+            }else{// 上传成功 获取上传文件信息
+                $info =  $upload->getUploadFileInfo();
+		$data['img'] = $file_path.$info[0]['savename'];
+            } 
 		endif;	   
 		if(  $_GET['class']=='banner' ){
 		  $m = M('index_banner'); 

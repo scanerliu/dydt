@@ -92,7 +92,15 @@ class liuAction extends beginAction
 			$this->display();
 		}
 
-
+                public function goldedite()
+		{
+                    if(!empty($_GET['id'])){
+			$where['gold_id']=$_GET['id'];
+			$manu=M('gold_manu')->where($where)->find();
+			$this->assign('manu',$manu);
+                    }
+                    $this->display();
+		}
 
 
 		public function gold_manu(){
@@ -100,24 +108,37 @@ class liuAction extends beginAction
 			$data['gold_content']=$_POST['arccontent'];
                         $data['sort_by']=$_POST['sort_by'];
 			// 文件上
-			import('ORG.Net.UploadFile');
-			$upload = new UploadFile();// 实例化上传类
-			$upload->maxSize  = 3145728 ;// 设置附件上传大小
-			$upload->allowExts  = array('jpg', 'gif', 'png', 'jpeg');// 设置附件上传类型
-			$upload->savePath =  './Uploads/';// 设置附件上传目录
-			 if(!$upload->upload()) {
-			 // 上传错误提示错误信息
-			   $this->error($upload->getErrorMsg());
-			 }
-			 else
-			 {// 上传成功 获取上传文件信息
-			$info =  $upload->getUploadFileInfo();
-			};
-			$data['gold_pic']=$info[0]['savename'];
-		M('gold_manu')->add($data);
-		$this->success('添加成功','',4);
-
-
+                        if(!empty($_FILES['file'])){
+                            import('ORG.Net.UploadFile');
+                            $upload = new UploadFile();// 实例化上传类
+                            $upload->maxSize  = 3145728 ;// 设置附件上传大小
+                            $upload->allowExts  = array('jpg', 'gif', 'png', 'jpeg');// 设置附件上传类型
+                            $save_path = './Uploads/';
+                            $ymd = date("Ymd");
+                            $file_path = "images/".$ymd . "/";
+                            $save_path .= $file_path;
+                            if (!file_exists($save_path)) {
+                                    mkdir($save_path);
+                            }
+                            $upload->savePath = $save_path;
+                            //$upload->saveRule = '';
+                             if(!$upload->upload()) {
+                             // 上传错误提示错误信息
+                               $this->error($upload->getErrorMsg());
+                             }
+                             else
+                             {// 上传成功 获取上传文件信息
+                                $info =  $upload->getUploadFileInfo();
+                            };
+                            $data['gold_pic']=$file_path.$info[0]['savename'];
+                        }
+                        if(!empty($_POST['id'])){
+                            M('gold_manu')->where('gold_id='.$_POST['id'])->save($data);
+                            $this->success('修改成功','',4);
+                        }else{                       
+                            M('gold_manu')->add($data);
+                            $this->success('添加成功','',4);
+                        }
 		}
 
 		public function fabu()
@@ -137,7 +158,15 @@ class liuAction extends beginAction
 			$upload = new UploadFile();// 实例化上传类
 			$upload->maxSize  = 3145728 ;// 设置附件上传大小
 			$upload->allowExts  = array('jpg', 'gif', 'png', 'jpeg');// 设置附件上传类型
-			$upload->savePath =  './Uploads/';// 设置附件上传目录
+			$save_path = './Uploads/';
+                        $ymd = date("Ymd");
+                        $file_path = "images/".$ymd . "/";
+                        $save_path .= $file_path;
+                        if (!file_exists($save_path)) {
+                                mkdir($save_path);
+                        }
+                        $upload->savePath = $save_path;
+                        //$upload->saveRule = '';
 			 if(!$upload->upload()) {
 			 // 上传错误提示错误信息
 			   $this->error($upload->getErrorMsg());
@@ -146,7 +175,7 @@ class liuAction extends beginAction
 			 {// 上传成功 获取上传文件信息
 			$info =  $upload->getUploadFileInfo();
 			};
-			$data['thumbnail']=$info[0]['savename'];
+			$data['thumbnail']=$file_path.$info[0]['savename'];
 
 			// 文件上传end
 	     M('arccontent')->add($data);
@@ -312,13 +341,21 @@ $this->success('上传成功！');
 	   $upload = new UploadFile();// 实例化上传类
 	   $upload->maxSize  = 3145728 ;// 设置附件上传大小
 		$upload->allowExts  = array('jpg', 'gif', 'png', 'jpeg');// 设置附件上传类型
-	    $upload->savePath = './Uploads/';// 设置附件上传目录
+	    $save_path = './Uploads/';
+            $ymd = date("Ymd");
+            $file_path = "images/".$ymd . "/";
+            $save_path .= $file_path;
+            if (!file_exists($save_path)) {
+                    mkdir($save_path);
+            }
+            $upload->savePath = $save_path;
+            //$upload->saveRule = '';
             if(!$upload->upload()) {// 上传错误提示错误信息
             $this->error($upload->getErrorMsg());
               }
  	        else{// 上传成功 获取上传文件信息
               $info =  $upload->getUploadFileInfo();
-		      $data['img'] = $info[0]['savename'];
+		      $data['img'] = $file_path.$info[0]['savename'];
                } 
 		endif;	   
 		// if(  $_GET['class']=='banner' ){

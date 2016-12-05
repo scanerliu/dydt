@@ -102,7 +102,15 @@ class userinfoAction extends commonAction
             // 设置附件上传大小
             $upload->allowExts = array('jpg', 'gif', 'png', 'jpeg');
             // 设置附件上传类型
-            $upload->savePath = './Uploads/';
+            $save_path = './Uploads/';
+            $ymd = date("Ymd");
+            $file_path = "images/".$ymd . "/";
+            $save_path .= $file_path;
+            if (!file_exists($save_path)) {
+                    mkdir($save_path);
+            }
+            $upload->savePath = $save_path;
+            //$upload->saveRule = '';
             // 设置附件上传目录
             if (!$upload->upload()) {
                 // 上传错误提示错误信息
@@ -111,7 +119,7 @@ class userinfoAction extends commonAction
             } else {
                 // 上传成功 获取上传文件信息
                 $info = $upload->getUploadFileInfo();
-                $data['img'] = $info[0]['savename'];
+                $data['img'] = $file_path.$info[0]['savename'];
             }
             // var_dump($data);exit;
         M('user')->where('user_id='.$user_id)->save($data);
@@ -227,7 +235,15 @@ class userinfoAction extends commonAction
                 // 设置附件上传大小
                 $upload->allowExts = array('jpg', 'gif', 'png', 'jpeg');
                 // 设置附件上传类型
-                $upload->savePath = './Uploads/';
+                $save_path = './Uploads/';
+                $ymd = date("Ymd");
+                $file_path = "images/".$ymd . "/";
+                $save_path .= $file_path;
+                if (!file_exists($save_path)) {
+                        mkdir($save_path);
+                }
+                $upload->savePath = $save_path;
+                //$upload->saveRule = '';
                 // 设置附件上传目录
                 if (!$upload->upload()) {
                     // 上传错误提示错误信息
@@ -236,7 +252,7 @@ class userinfoAction extends commonAction
                     // 上传成功 获取上传文件信息
                     $info = $upload->getUploadFileInfo();
                 }
-                $data['img'] = $info[0]['savename'];
+                $data['img'] = $file_path.$info[0]['savename'];
                 M('document_user')->add($data);
                 $this->success("上传成功!");
             } 
