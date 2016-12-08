@@ -29,11 +29,12 @@
      支付方式
   </div>
   <!--s_part1-->
+  <form action="/order/orderDetail_2FunPay/order_id/{$_GET['order_id']}" method="post" name="form">
   <div class="s_part2">
-   <img src="__PUBLIC__images/a2.png">
+      <label><input type="radio" name="paymethod" value="1" class="payselect" checked="true"><img src="__PUBLIC__images/a2.png" class="paylogo"></label>
+      <label><input type="radio" name="paymethod" value="2" class="payselect"><img src="__PUBLIC__images/alipay2.png" class="paylogo"></label>
+      <label><input type="radio" name="paymethod" value="3" class="payselect"><img src="__PUBLIC__images/weixinpay.png" class="paylogo"></label>
    </div>
-   <form action="/order/orderDetail_2FunPay/order_id/{$_GET['order_id']}" method="post" name="form">
- 
     </form>
   <div class="s_part3">
     <div class="a1">总价(包括运费): <span>￥<i>{$data.total}</i></span></div>

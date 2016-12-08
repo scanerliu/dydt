@@ -4,7 +4,9 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>无标题文档</title>
 <link href="__PUBLIC__css/indexManagement/common.css" rel="stylesheet" type="text/css" />
+<link href="__PUBLIC__css/combo.select.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="__PUBLIC__js/jquery.1.10.js"></script>
+<script type="text/javascript" src="__PUBLIC__js/jquery.combo.select.js"></script>
 <script type="text/javascript" src="__PUBLIC__js/check.js"></script>
 </head>
 <body>
@@ -85,7 +87,7 @@
       </tr>
       <tr style="height:36px;">
         <td style="text-align:left"><span>品牌:</span><span>
-                <select name="manu_id" my_check='number_need' error='品牌错误'>
+                <select name="manu_id" id="manu_id" my_check='number_need' error='品牌错误'>
                     <option value="">--请选择品牌--</option>
                     <volist name='managelist' id='mana'>
                     <option value="{$mana.gold_id}">{$mana.gold_name}</option>
@@ -265,6 +267,9 @@ laydate(end);
     </table>
   </form>
   <script type="text/javascript">
+        $(function() {
+            $('#manu_id').comboSelect();
+        });
     function ptypechange(){
       var type = $("#ptype").val();
       if(type==2){

@@ -499,14 +499,65 @@ class orderAction extends commonAction
 	
     public function orderDetail_2FunPay_part2() /*到orderDetail_2FunPay_part2 中去 提交表单,并且更新数据，但是不更新积分增加*/
     {     
-	     $this->orderDetail_status_check(1);
-   	      /*orderDetail_2FunPay_part2 提交的数据 获取 beg*/
-	      $data2['orderId']= M('order')->where("order_id=".$_GET['order_id'])->getField('order_num');    
-		  $data2['txnTime']=date('YmdHis',time());
-          $data2['txnAmt'] = M('order')->where("order_id=".$_GET['order_id'])->getField('need_pay')*100;
- 		  $this->assign('data',$data2);
-          $this->display('orderDetail_2FunPay_part2');
+	$this->orderDetail_status_check(1);
+   	/*orderDetail_2FunPay_part2 提交的数据 获取 beg*/
+        $paymenthod = $_POST['paymethod']; //支付方式 1-银联支付，2-支付宝支付，3-微信支付
+        if($paymenthod==2){//支付宝支付
+            vendor('Alipay.Corefunction');
+            vendor('Alipay.Notify');
+            vendor('Alipay.RsaFunction');
+            vendor('Alipay.Submit');
+            $orderp = M('order')->where("order_id=".$_GET['order_id'])->find();
+//            $order['orderId']= $orderp['order_num'];    
+//            $data2['txnTime']=date('YmdHis',time());
+//            $data2['txnAmt'] = M('order')->where("order_id=".$_GET['order_id'])->getField('need_pay')*100;
+//            $this->assign('order',$order);
+//            $this->display('orderDetail_alipay');
+            $alipay_config=C('alipay_config');
+            //商户订单号，商户网站订单系统中唯一订单号，必填
+            $out_trade_no = $orderp['order_num'];
+            //订单名称，必填
+            $subject = "药品采购货款支付";
+            //付款金额，必填
+            $total_fee = $orderp['need_pay'];
+            //商品描述，可空
+            $body = "";
+            //构造要请求的参数数组，无需改动
+            $parameter = array(
+                            "service"       => $alipay_config['service'],
+                            "partner"       => $alipay_config['partner'],
+                            "seller_id"  => $alipay_config['seller_id'],
+                            "payment_type"	=> $alipay_config['payment_type'],
+                            "notify_url"	=> $alipay_config['notify_url'],
+                            "return_url"	=> $alipay_config['return_url'],
+                            "anti_phishing_key"=>$alipay_config['anti_phishing_key'],
+                            "exter_invoke_ip"=>$alipay_config['exter_invoke_ip'],
+                            "out_trade_no"	=> $out_trade_no,
+                            "subject"	=> $subject,
+                            "total_fee"	=> $total_fee,
+                            "body"	=> $body,
+                            "_input_charset"	=> trim(strtolower($alipay_config['input_charset']))
+                            //其他业务参数根据在线开发文档，添加参数.文档地址:https://doc.open.alipay.com/doc2/detail.htm?spm=a219a.7629140.0.0.kiX33I&treeId=62&articleId=103740&docType=1
+                    //如"参数名"=>"参数值"
+            );
+            //建立请求
+            $alipaySubmit = new AlipaySubmit($alipay_config);
+            $html_text = $alipaySubmit->buildRequestForm($parameter,"get", "确认");
+            echo $html_text;
+        }else if($paymenthod==3){//微信支付
+            $data2['orderId']= M('order')->where("order_id=".$_GET['order_id'])->getField('order_num');    
+            $data2['txnTime']=date('YmdHis',time());
+            $data2['txnAmt'] = M('order')->where("order_id=".$_GET['order_id'])->getField('need_pay')*100;
+            $this->assign('data',$data2);
+            $this->display('orderDetail_2FunPay_part2');
+        }else{//银联支付
+	    $data2['orderId']= M('order')->where("order_id=".$_GET['order_id'])->getField('order_num');    
+            $data2['txnTime']=date('YmdHis',time());
+            $data2['txnAmt'] = M('order')->where("order_id=".$_GET['order_id'])->getField('need_pay')*100;
+            $this->assign('data',$data2);
+            $this->display('orderDetail_2FunPay_part2');
         }
+    }
  
     public function orderDetail2_mid()
     {
