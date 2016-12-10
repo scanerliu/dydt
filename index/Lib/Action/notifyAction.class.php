@@ -7,9 +7,19 @@ class notifyAction extends commonAction
         vendor('Alipay.RsaFunction');
         vendor('Alipay.Submit');   
     }
+    
+    /**
+     * 支付宝支付通知
+     */
     public function alipayNotify()
     {
         Log::write('alipay notify info：'.json_encode($_POST), Log::ERR);
+        $paramers = "";
+        foreach ($_POST as $k => $v) {
+            $paramers .= $k."=".$v;
+            $paramers .= "&";
+        }
+        Log::write('alipay notify paramers：'.$paramers, Log::ERR);
         $alipay_config=C('alipay_config');
         $alipayNotify = new AlipayNotify($alipay_config);
         $verify_result = $alipayNotify->verifyNotify();
@@ -35,7 +45,8 @@ class notifyAction extends commonAction
 
                 //调试用，写文本函数记录程序运行情况是否正常
                 //logResult("这里写入想要调试的代码变量值，或其他运行的结果记录");
-                $orderp = M('order')->where("order_num=".$out_trade_no)->find();
+                $whe['order_num'] = $out_trade_no;
+                $orderp = M('order')->where($whe)->find();
                 if($orderp['status']==1){//未支付的修改订单状态
                     $data = NULL;
                     $data['status'] = 2;	
@@ -54,7 +65,8 @@ class notifyAction extends commonAction
 
                 //调试用，写文本函数记录程序运行情况是否正常
                 //logResult("这里写入想要调试的代码变量值，或其他运行的结果记录");
-                $orderp = M('order')->where("order_num=".$out_trade_no)->find();
+                $whe['order_num'] = $out_trade_no;
+                $orderp = M('order')->where($whe)->find();
                 if($orderp['status']==1){//未支付的修改订单状态
                     $data = NULL;
                     $data['status'] = 2;	
@@ -73,8 +85,12 @@ class notifyAction extends commonAction
             //logResult("这里写入想要调试的代码变量值，或其他运行的结果记录");
         }
     }
+    /**
+     * 支付宝支付返回
+     */
     public function alipayReturn()
     {
+        Log::write('alipay return paramers：'.$_SERVER["REQUEST_URI"], Log::ERR);
         Log::write('alipay return info：'.json_encode($_GET), Log::ERR);
         $alipay_config=C('alipay_config');
         $alipayNotify = new AlipayNotify($alipay_config);
@@ -93,7 +109,8 @@ class notifyAction extends commonAction
             //交易状态
             $trade_status = $_GET['trade_status'];
             if($_GET['trade_status'] == 'TRADE_FINISHED' || $_GET['trade_status'] == 'TRADE_SUCCESS') {
-                $orderp = M('order')->where("order_num=".$out_trade_no)->find();
+                $whe['order_num'] = $out_trade_no;
+                $orderp = M('order')->where($whe)->find();
                 if($orderp['status']==1){//未支付的修改订单状态
                     $data = NULL;
                     $data['status'] = 2;	
@@ -103,6 +120,23 @@ class notifyAction extends commonAction
                 }
             }
         }
-        redirect(  '/order/orderDetail2_mid/order_id/' . $_GET['out_trade_no'] );
+        redirect('/order/orderDetail2_mid/order_id/' . $_GET['out_trade_no'] );
+    }
+    /**
+     * 微信支付通知
+     */
+    public function wxpayNotify()
+    {
+        //$GLOBALS['HTTP_RAW_POST_DATA'] = "<xml><appid><![CDATA[wx70392b9cc9989883]]></appid><bank_type><![CDATA[CFT]]></bank_type>\n<cash_fee><![CDATA[1]]></cash_fee>\n<fee_type><![CDATA[CNY]]></fee_type>\n<is_subscribe><![CDATA[Y]]></is_subscribe>\n<mch_id><![CDATA[1421390502]]></mch_id>\n<nonce_str><![CDATA[y67o8fns0ygyvykiglg1sp0b9g9lhnmw]]></nonce_str>\n<openid><![CDATA[o2RLWv7Gr48PZIy6A50ViaJtyTx8]]></openid>\n<out_trade_no><![CDATA[649453ZSM20161210637]]></out_trade_no>\n<result_code><![CDATA[SUCCESS]]></result_code>\n<return_code><![CDATA[SUCCESS]]></return_code>\n<sign><![CDATA[3043A2AF68F239A48AD6F48EF8A69B9B]]></sign>\n<time_end><![CDATA[20161210133915]]></time_end>\n<total_fee>1</total_fee>\n<trade_type><![CDATA[NATIVE]]></trade_type>\n<transaction_id><![CDATA[4003232001201612102353783142]]></transaction_id>\n</xml>";
+        Log::write('wxpay notify info：'.json_encode($GLOBALS['HTTP_RAW_POST_DATA']), Log::ERR);
+        vendor('wxpay.WxPayApi');
+        vendor('wxpay.WxPayNativePay');
+        vendor('wxpay.WxPayData');
+        vendor('wxpay.WxPayException');
+        vendor('wxpay.WxPayNotify');
+        vendor('wxpay.WxPayConfig');
+        vendor('wxpay.PayNotifyCallBack');
+        $notify = new PayNotifyCallBack();
+        $notify->Handle(false);
     }
 }

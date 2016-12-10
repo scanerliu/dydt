@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>{$top_content.title}</title>
+<meta name="Keywords" content="{$top_content.keywords}" />
+<meta name="Description" content="{$top_content.description}" />
+<link rel="stylesheet" href="__PUBLIC__css/base.css">
+<link rel="stylesheet" href="__PUBLIC__css/main.css">
+<link rel="stylesheet" href="__PUBLIC__css/other.css">
+<link rel="stylesheet" href="__PUBLIC__css/cssforml.css">
+<script style="text/javascript" src="__PUBLIC__js/jquery-1.11.0.js"></script>
+<script style="text/javascript" src="__PUBLIC__js/rich_lee.js"></script>
+</head>
+<script type="text/javascript">
+	$(function(){
+ 		nav_down();//
+	});
+		
+	</script>
+<body>
+<!-- top --> 
+<include file="public:header"/> <include file="public:search"/>
+<div class="content i_orderDetail2_mid"> <include file="public:nav"/>
+  <div class="weiz">您的位置：<a href="/">首页</a> <i>|</i> <a href="/order/orderList">订单列表</a> <i>|</i> 订单详情 <i>|</i> <span>TERMS OF PAYMENT</span> </div>
+  <div class="s_part2 s_part3">
+    <div class="h1">
+      请使用微信扫描下方二维码进行支付
+    </div>
+    <!--h1-->
+    <div class="h3"><img src="/order/getwxpaycode/order_id/{$order.order_id}"></div>
+    <!--h2--> 
+  </div>
+  <!--s_part1-->
+  <div class="s_part2 s_part3">
+    <div class="h1">您需付款  {$order.need_pay} 元</div>
+    <div class="h3">
+    <br>
+    <br>
+      安全提醒：请两小时内完成支付，请勿重复扫码支付！<br>
+      <span>微信扫描支付完成后查看</span><a href="/order/orderDetail/order_id/{$order.order_id}">订单支付状态</a><br>
+      <span>您还可以：</span><a href="/order/orderDetail_2/order_id/{$order.order_id}">使用其它支付方式</a> <span>返回</span><a href="/manage/integration">我的积分</a><br>
+    </div>
+  </div>
+</div>
+<include file="public:bottom"/>
+</body>
+</html>

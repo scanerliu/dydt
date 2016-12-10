@@ -42,11 +42,16 @@
        		<li>
        		<volist name="gold_manu" id="vo">
        			<a href="__APP__/goldcontent/goldcontent/id/{$vo['gold_id']}">
-       				<img src="/Uploads/{$vo['gold_pic']}"  />
+       				<img src="/Uploads/{$vo['gold_pic']}"  alt="{$vo['gold_name']}"/>
        			</a>
        		 </volist>
        		</li>
        </ul>
+      <div style="clear:both; text-align:center;" class="compan page"> {$page} </div>
+      <style type="text/css">
+      .page a{ display:inline-block;   height:25px; line-height:25px; text-align:center; border:1px solid #eeeeee; margin-right:10px; padding:0px 15px; }
+	  .page span{ display:inline-block;  height:25px; line-height:25px; text-align:center;border:1px solid #3b93de; background:#3b93de; margin-right:10px;color:#FFF;padding:0px 15px;}
+     </style>
 	</div>	
 	<include file="public:bottom"/>
 </body>

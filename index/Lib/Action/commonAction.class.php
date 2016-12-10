@@ -39,7 +39,7 @@ class commonAction extends Action {
         $this->shopping_cart_sum();
           $this->auto_do(); /*网站的自动收货，打折商品自动 还原等操作*/
   		if( $_SESSION['user_id']){
-			 setcookie(session_name(),session_id(),60*60+time());
+			 setcookie(session_name(),session_id(),60*60+time(),'/');
 	       }
 		   
 		  

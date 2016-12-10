@@ -545,11 +545,9 @@ class orderAction extends commonAction
             $html_text = $alipaySubmit->buildRequestForm($parameter,"get", "确认");
             echo $html_text;
         }else if($paymenthod==3){//微信支付
-            $data2['orderId']= M('order')->where("order_id=".$_GET['order_id'])->getField('order_num');    
-            $data2['txnTime']=date('YmdHis',time());
-            $data2['txnAmt'] = M('order')->where("order_id=".$_GET['order_id'])->getField('need_pay')*100;
-            $this->assign('data',$data2);
-            $this->display('orderDetail_2FunPay_part2');
+            $orderp = M('order')->where("order_id=".$_GET['order_id'])->find();
+            $this->assign('order',$orderp);
+            $this->display('orderDetail_2FunPay_wxpay');
         }else{//银联支付
 	    $data2['orderId']= M('order')->where("order_id=".$_GET['order_id'])->getField('order_num');    
             $data2['txnTime']=date('YmdHis',time());
@@ -558,10 +556,44 @@ class orderAction extends commonAction
             $this->display('orderDetail_2FunPay_part2');
         }
     }
+    
+    public function getwxpaycode(){
+        //$this->orderDetail_status_check(1);
+        vendor('wxpay.WxPayApi');
+        vendor('wxpay.WxPayNativePay');
+        vendor('wxpay.WxPayData');
+        vendor('wxpay.WxPayException');
+        vendor('wxpay.WxPayNotify');
+        vendor('wxpay.WxPayConfig');
+        vendor('phpqrcode.phpqrcode');
+        $orderp = M('order')->where("order_id=".$_GET['order_id'])->find();
+        if($orderp['status']!=1){//订单状态为非支付状态
+            exit;
+        }
+        $input = new WxPayUnifiedOrder();
+        $input->SetBody("药品采购款");
+//        $input->SetAttach("");
+        $orderno = rand(100000,999999).$orderp['order_num'];
+        $input->SetOut_trade_no($orderno);
+        $input->SetTotal_fee($orderp['need_pay']*100);
+//        $input->SetTime_start(date("YmdHis"));
+//        $input->SetTime_expire(date("YmdHis", time() + 600));
+//        $input->SetGoods_tag("test");
+        $input->SetNotify_url("https://www.dtyd.com.cn/notify/wxpaynotify");
+        $input->SetTrade_type("NATIVE");
+        $input->SetProduct_id($orderp['order_num']);
+        Log::write('wxpay codeurl xml：'.$input->ToXml(), Log::ERR);
+        $notify = new NativePay();
+        $result = $notify->GetPayUrl($input);
+        Log::write('wxpay codeurl：'.json_encode($result), Log::ERR);
+        $url = $result["code_url"];
+        $object = new QRcode();
+        $object->png($url, false, 3, 4, 2);
+    }
  
     public function orderDetail2_mid()
     {
-         $this->orderDetail_status_check(2);
+        $this->orderDetail_status_check(2);
         //订单详情 相关页面的 状态验证
         $where['order_id'] = $_GET['order_id'];
         $data = M('order')->where($where)->find();
