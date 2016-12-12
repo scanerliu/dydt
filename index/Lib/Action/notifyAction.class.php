@@ -24,6 +24,7 @@ class notifyAction extends commonAction
         $alipayNotify = new AlipayNotify($alipay_config);
         $verify_result = $alipayNotify->verifyNotify();
         if($verify_result) {//验证成功
+            Log::write('alipay notify opt 1：'.$_POST['out_trade_no'], Log::ERR);
             /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
             //请在这里加上商户的业务逻辑程序代
             //——请根据您的业务逻辑来编写程序（以下代码仅作参考）——
@@ -35,6 +36,7 @@ class notifyAction extends commonAction
             //交易状态
             $trade_status = $_POST['trade_status'];
             if($_POST['trade_status'] == 'TRADE_FINISHED') {
+                Log::write('alipay notify opt 2：'.$_POST['out_trade_no'], Log::ERR);
                         //判断该笔订单是否在商户网站中已经做过处理
                                 //如果没有做过处理，根据订单号（out_trade_no）在商户网站的订单系统中查到该笔订单的详细，并执行商户的业务程序
                                 //请务必判断请求时的total_fee、seller_id与通知时获取的total_fee、seller_id为一致的
@@ -48,6 +50,7 @@ class notifyAction extends commonAction
                 $whe['order_num'] = $out_trade_no;
                 $orderp = M('order')->where($whe)->find();
                 if($orderp['status']==1){//未支付的修改订单状态
+                    Log::write('alipay notify opt 3：'.$_POST['out_trade_no'], Log::ERR);
                     $data = NULL;
                     $data['status'] = 2;	
                     $data['time2'] = time();
@@ -65,9 +68,11 @@ class notifyAction extends commonAction
 
                 //调试用，写文本函数记录程序运行情况是否正常
                 //logResult("这里写入想要调试的代码变量值，或其他运行的结果记录");
+                Log::write('alipay notify opt 4：'.$_POST['out_trade_no'], Log::ERR);
                 $whe['order_num'] = $out_trade_no;
                 $orderp = M('order')->where($whe)->find();
                 if($orderp['status']==1){//未支付的修改订单状态
+                    Log::write('alipay notify opt 5：'.$_POST['out_trade_no'], Log::ERR);
                     $data = NULL;
                     $data['status'] = 2;	
                     $data['time2'] = time();
@@ -80,6 +85,7 @@ class notifyAction extends commonAction
             /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         }else {
             //验证失败
+            Log::write('alipay notify opt fail:'.$_POST['out_trade_no'], Log::ERR);
             echo "fail";
             //调试用，写文本函数记录程序运行情况是否正常
             //logResult("这里写入想要调试的代码变量值，或其他运行的结果记录");
@@ -118,9 +124,11 @@ class notifyAction extends commonAction
                     $where['order_id'] = $orderp['order_id'];
                     M('order')->where($where)->save($data);                    
                 }
+                redirect('/order/orderDetail2_mid/order_id/' . $orderp['order_id'] );
+                exit;
             }
         }
-        redirect('/order/orderDetail2_mid/order_id/' . $_GET['out_trade_no'] );
+        redirect('/order/orderList');
     }
     /**
      * 微信支付通知
