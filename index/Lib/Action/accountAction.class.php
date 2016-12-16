@@ -31,10 +31,11 @@ class accountAction extends commonAction
             $phonenumber = $_POST['tel'];
             $text="验证码：".$checkstr."，请即时输入。请妥善保存，确保帐号安全。";
             $text = iconv("utf-8","gb2312",$text);
-            $ch = curl_init("http://www.10086x.com/sends.asp?user=zsmyzm&passw=zsm123456&text=".$text."&mobiles=".$phonenumber."&SEQ=1000") ;  
+            $ch = curl_init("http://www.10086x.com/sends.asp?user=zsmyzm1&passw=zsm123456&text=".$text."&mobiles=".$phonenumber."&SEQ=1000") ;  
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, true) ; // 获取数据返回  
             curl_setopt($ch, CURLOPT_BINARYTRANSFER, true) ; // 在启用 CURLOPT_RETURNTRANSFER 时候将获取数据返回  
             $output = curl_exec($ch) ;
+            Log::write("验证码发送：http://www.10086x.com/sends.asp?user=zsmyzm1&passw=zsm123456&text=".$text."&mobiles=".$phonenumber."&SEQ=1000 ,result =".$output, Log::ERR);
             session('zcyzm',$checkstr);
         } 
     }
@@ -175,10 +176,11 @@ class accountAction extends commonAction
         $phonenumber = $_POST['phonenumber'];
         $text="验证码：".$checkstr."，请即时输入。请妥善保存，确保帐号安全。";
         $text = iconv("utf-8","gb2312",$text);
-        $ch = curl_init("http://www.10086x.com/sends.asp?user=zsmyzm&passw=zsm123456&text=".$text."&mobiles=".$phonenumber."&SEQ=1000") ;  
+        $ch = curl_init("http://www.10086x.com/sends.asp?user=zsmyzm1&passw=zsm123456&text=".$text."&mobiles=".$phonenumber."&SEQ=1000") ;  
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true) ; // 获取数据返回  
         curl_setopt($ch, CURLOPT_BINARYTRANSFER, true) ; // 在启用 CURLOPT_RETURNTRANSFER 时候将获取数据返回  
         $output = curl_exec($ch) ;
+        Log::write("验证码发送：http://www.10086x.com/sends.asp?user=zsmyzm1&passw=zsm123456&text=".$text."&mobiles=".$phonenumber."&SEQ=1000 ,result =".$output, Log::ERR);
         session('get_identify',$checkstr);
         $this->ajaxReturn(array('status' => $output));
     }

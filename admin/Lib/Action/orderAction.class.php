@@ -338,10 +338,11 @@ class orderAction extends beginAction {
     public function yanzhengma($phonenumber) /*短信验证码*/ {
         $text = "您的商品已经发货,请注意查收";
         $text = iconv("utf-8", "gb2312", $text);
-        $ch = curl_init("http://www.10086x.com/sends.asp?user=zsmyzm&passw=zsm123456&text=" . $text . "&mobiles=" . $phonenumber . "&SEQ=1000");
+        $ch = curl_init("http://www.10086x.com/sends.asp?user=zsmyzm1&passw=zsm123456&text=" . $text . "&mobiles=" . $phonenumber . "&SEQ=1000");
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); // 获取数据返回
         curl_setopt($ch, CURLOPT_BINARYTRANSFER, true); // 在启用 CURLOPT_RETURNTRANSFER 时候将获取数据返回
         $output = curl_exec($ch);
+        Log::write("短信发送：http://www.10086x.com/sends.asp?user=zsmyzm1&passw=zsm123456&text=" . $text . "&mobiles=" . $phonenumber . "&SEQ=1000 ,result =".$output, Log::ERR);
     }
     function coupon() {
         if ($_GET['user_id']) {

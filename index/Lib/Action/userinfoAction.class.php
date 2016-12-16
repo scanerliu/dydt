@@ -160,11 +160,12 @@ class userinfoAction extends commonAction
             for ($i=0; $i < count($doc_user); $i++) { 
 			        if(  substr($doc_user[$i]['doc_type'],-8,8)=='(必要)'):
  					  $doc_user[$i]['doc_type2']= "<i style='color:red; font-style:normal'>{$doc_user[$i]['doc_type']}</i>";
+                                          $type[$i] = substr($doc_user[$i]['doc_type'],0, strlen($doc_user[$i]['doc_type'])-8);
 					  else:  $doc_user[$i]['doc_type2']= $doc_user[$i]['doc_type'];
+                                          $type[$i] = $doc_user[$i]['doc_type'];
  					  endif;
 					  
 					  
-                 $type[$i] = $doc_user[$i]['doc_type'];
                 $doc_user[$i]['m'] = M('document')->where("doc_type='".$doc_user[$i]['doc_type']."'")->getfield('status');
                 $days=abs((strtotime(date("Y-m-d"))-strtotime($doc_user[$i]['lose_date']))/86400);
                 if (date("Y-m-d")>$doc_user[$i]['lose_date']) {
