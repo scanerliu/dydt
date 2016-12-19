@@ -297,7 +297,7 @@ class orderAction extends beginAction {
     public function send_out_goods() {
         //发货
 		if(!$_POST['transport_code']   ){
-			$this->error('选项不能为空');
+			$this->error(' 运单号不能为空');
 			}
          $where['order_id'] = $_GET['order_id'];
          $data['status'] = 3;
@@ -308,8 +308,9 @@ class orderAction extends beginAction {
         M('order')->where($where)->save($data);
         $where = '';
         $where['order_id'] = $_GET['order_id'];
-        $data = M('order')->join('left join user on user.user_id= order.user_id')->where($where)->Distinct(true)->field('mobile_phone')->find();
-        $data = $data['mobile_phone'];
+        $data = M('order')->join('left join user on user.user_id= order.user_id')->where($where)->Distinct(true)->field('mobile_phone,order_num')->find();
+        $data['transport_code'] = $_POST['transport_code'];
+        //$data = $data['mobile_phone'];
         $this->yanzhengma($data);
 		$data='';
 		$data2='';
@@ -335,14 +336,14 @@ class orderAction extends beginAction {
         M('order')->where($where)->save($data);
         redirect($_SERVER['HTTP_REFERER']);
     }
-    public function yanzhengma($phonenumber) /*短信验证码*/ {
-        $text = "您的商品已经发货,请注意查收";
+    public function yanzhengma($sms) /*短信验证码*/ {
+        $text = "您的订单".$sms['order_num']."已经发货,运单号为：".$sms['transport_code']."，请注意查收";
         $text = iconv("utf-8", "gb2312", $text);
-        $ch = curl_init("http://www.10086x.com/sends.asp?user=zsmyzm1&passw=zsm123456&text=" . $text . "&mobiles=" . $phonenumber . "&SEQ=1000");
+        $ch = curl_init("http://www.10086x.com/sends.asp?user=zsmyzm1&passw=zsm123456&text=" . $text . "&mobiles=" . $sms['mobile_phone'] . "&SEQ=1000");
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); // 获取数据返回
         curl_setopt($ch, CURLOPT_BINARYTRANSFER, true); // 在启用 CURLOPT_RETURNTRANSFER 时候将获取数据返回
         $output = curl_exec($ch);
-        Log::write("短信发送：http://www.10086x.com/sends.asp?user=zsmyzm1&passw=zsm123456&text=" . $text . "&mobiles=" . $phonenumber . "&SEQ=1000 ,result =".$output, Log::ERR);
+        Log::write("短信发送：http://www.10086x.com/sends.asp?user=zsmyzm1&passw=zsm123456&text=" . $text . "&mobiles=" . $sms['mobile_phone'] . "&SEQ=1000 ,result =".$output, Log::ERR);
     }
     function coupon() {
         if ($_GET['user_id']) {

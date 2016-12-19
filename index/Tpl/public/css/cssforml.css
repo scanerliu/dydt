@@ -109,7 +109,8 @@
 .goods_right{
 	width: 970px;
 	/*border: 1px solid red;*/
-	height: 1000px;
+	/*height: 1000px;*/
+	height: auto;
 	float: right;
 }
 /*右边不解释end*/
@@ -541,11 +542,12 @@
 
 /*猜您喜欢*/
 .guess_need{
-	margin-top: 68px;
+	margin-top: 30px;
 	width: 1200px;
 	border:1px solid #E6E6E6;
 	border-top: 3px solid #3B93DE;
 	background: #F5F5F5;
+        position: relative;
 }
 .guess_need_title span{
     font-size: 14px;

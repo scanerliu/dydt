@@ -103,31 +103,32 @@
 	       				<img style="margin-left:10px" src="__PUBLIC__images/L_dot.png">
 	       			</dd>
 					<script>
-					 var phonenumber = document.getElementById("phonenumber");
-					 var mobile = parseInt(phonenumber.value);
-						phonenumber.onblur =  function(){
+                                            function saveaddress(){
+                                                var phonenumber = document.getElementById("phonenumber");
+                                                var mobile = parseInt(phonenumber.value);
 						
-        if(phonenumber.value.length==0)
-        {
-			alert('不允许为空！');
-           phonenumber.focus();
-           return false;
-        }    
-        if(phonenumber.value.length!=11)
-        {
-            alert('手机号码的长度为11位！');
-            phonenumber.focus();
-            return false;
-        }
-        
-        var myreg = /^0?1[3|4|5|7|8][0-9]\d{8}$/;
-        if(!myreg.test(phonenumber.value))
-        {
-            alert('请输入有效的手机号码！');
-            phonenumber.focus();
-            return false;
-        }
-    }
+                                                    if(phonenumber.value.length==0)
+                                                    {
+                                                                    alert('不允许为空！');
+                                                       phonenumber.focus();
+                                                       return false;
+                                                    }    
+                                                    if(phonenumber.value.length!=11)
+                                                    {
+                                                        alert('手机号码的长度为11位！');
+                                                        phonenumber.focus();
+                                                        return false;
+                                                    }
+
+                                                    var myreg = /^0?1[3|4|5|7|8][0-9]\d{8}$/;
+                                                    if(!myreg.test(phonenumber.value))
+                                                    {
+                                                        alert('请输入有效的手机号码！');
+                                                        phonenumber.focus();
+                                                        return false;
+                                                    }
+                                                    $("#add_form").submit();
+                                             }
 					</script>
 	       			<dd class="table_phone">
 	       				<label>座机号码</label>
@@ -141,7 +142,7 @@
 						设置为默认
 	       			</dd> -->
 	       			<dd>
-	       				<input class="getgoods_save" type="submit" name="" id="" value="保存" />
+	       				<input class="getgoods_save" type="button" name="" id="" value="保存" onclick="saveaddress()" />
 	       			</dd>
        			</form>
        		</dl>

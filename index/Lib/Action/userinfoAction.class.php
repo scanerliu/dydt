@@ -55,7 +55,7 @@ class userinfoAction extends commonAction
             echo '<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />'; 
             echo "<script>alert('新密码不一致!');window.location.href='/userinfo/alter_pwd';</script>";
             // $this->error("新密码不一致！");
-        } else if (strlen($pwd_new_one)>16 || strlen($pwd_new_one)<6) {
+        } else if (strlen($_POST['pwd_new_one'])>16 || strlen($_POST['pwd_new_one'])<6) {
             echo '<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />'; 
             echo "<script>alert('请将密码控制在6-16位之间！');window.location.href='/userinfo/alter_pwd';</script>";
         } else {

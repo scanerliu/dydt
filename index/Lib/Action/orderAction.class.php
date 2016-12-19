@@ -166,9 +166,14 @@ class orderAction extends commonAction
             $this->error('没有有效的商品', '/');
         }
 		/*流水号 beg*/
+                //先更新流水号，再查询
+                $sql = "update system set serial_number=serial_number+1 where system_id = 1";
+                $Model = M();
+                $result = $Model->query($sql);
+                
 		$serial_number['serial_number']=M('system')->getField('serial_number');
-		$serial_number['serial_number']++;
-		M('system')->where("system_id=1")->save($serial_number);
+//		$serial_number['serial_number']++;
+//		M('system')->where("system_id=1")->save($serial_number);
 	     /*流水号 end*/
         $data['order_num'] ="ZSM".date('Ymd').$serial_number['serial_number'];
         $data['express_fee'] = $this->orderFunExpress_fee(); /*查询快递费*/
@@ -559,6 +564,7 @@ class orderAction extends commonAction
     
     public function getwxpaycode(){
         //$this->orderDetail_status_check(1);
+        ini_set("max_execution_time", "120");
         vendor('wxpay.WxPayApi');
         vendor('wxpay.WxPayNativePay');
         vendor('wxpay.WxPayData');
@@ -589,6 +595,7 @@ class orderAction extends commonAction
         $url = $result["code_url"];
         $object = new QRcode();
         $object->png($url, false, 3, 4, 2);
+        ini_set("max_execution_time", "30");
     }
  
     public function orderDetail2_mid()

@@ -51,4 +51,5 @@ $params = array(
 sign ( $params );
 $uri = SDK_FRONT_TRANS_URL;
 $html_form = create_html ( $params, $uri );
+//file_put_contents("D:\unionpay.log", 'unionpay info：'.$html_form, FILE_APPEND);
 echo $html_form;
