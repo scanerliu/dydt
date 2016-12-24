@@ -254,7 +254,7 @@ class IndexAction extends commonAction
 	 		  $where3['is_discount']=array('neq',1);
 			  $where3['frame'] = 1;
 	          $where3['stock'] =array('gt',0);
- 			  $data3=M('product')->where($where3)->limit(8)->select();
+ 			  $data3=M('product')->where($where3)->order("index_show desc, sort_by desc")->limit(8)->select();
               $data[$i]['product']=$data3;
 			  for( $n=0;$n<count($data[$i]['product']);$n++):
   			  $where4['product_id']=$data[$i]['product'][$n]['product_id'];

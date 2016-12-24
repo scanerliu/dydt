@@ -516,6 +516,14 @@ class productManagementAction extends beginAction {
         if ($_POST['discount_end_time']) {
             $data['discount_end_time'] = strtotime($_POST['discount_end_time']);
         }
+        $data['index_show'] = $_POST['index_show'];
+        $data['sort_by'] = $_POST['sort_by'];
+        if(empty($data['index_show'])){
+            $data['index_show'] = 0;
+        }
+        if(empty($data['sort_by'])){
+            $data['sort_by'] = 0;
+        }
         $data['introduction'] = $_POST['introduction'];
         $data['product_group'] = $_POST['product_group'];
         $data['time'] = time();
@@ -641,6 +649,14 @@ class productManagementAction extends beginAction {
         } else {
             $data['discount_end_time'] = '';
         }
+        $data['index_show'] = $_POST['index_show'];
+        $data['sort_by'] = $_POST['sort_by'];
+        if(empty($data['index_show'])){
+            $data['index_show'] = 0;
+        }
+        if(empty($data['sort_by'])){
+            $data['sort_by'] = 0;
+        }        
         $data['introduction'] = $_POST['introduction'];
         $data['qualification'] = $_POST['qualification'];
         $data['product_group'] = $_POST['product_group'];
@@ -941,6 +957,35 @@ class productManagementAction extends beginAction {
         $this->assign('list', $list); // 赋值数据集
         $this->assign('page', $show); // 赋值分页输出
         $this->assign('order', $data); /*订单信息*/
+    }
+    
+    public function indexShow() {
+        //分类 beg
+        $where['fid'] = '';
+        $data = M('product_classify')->where($where)->select();
+        $this->assign('class', $data);
+        
+        $where = null;
+	$where['frame'] = 1;
+        $where['index_show'] = 1;
+        if ($_GET['class']) {
+            $where['class1'] = $_GET['class'];
+        }
+        $data = M('product')->where($where)->select();
+	$where='';
+        for ($i = 0; $i < count($data); $i++) {
+            $where['product_id'] = $data[$i]['product_id'];
+            $data[$i]['img'] = M('product_img')->where($where)->getField('img');
+        }
+		 
+        $this->assign('data', $data);
+        $this->display('indexShow');
+    }
+    public function indexShowFun() {
+        $where['product_id'] = $_GET['product_id'];
+        $data['index_show'] = '0';
+        M('product')->where($where)->save($data);
+        $this->success('修改成功');
     }
 }
 

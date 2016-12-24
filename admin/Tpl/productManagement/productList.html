@@ -101,6 +101,8 @@
         <td>批准文号</td>
         <td>厂家</td>
       <td width="50">上下架</td>
+      <td width="50">主页显示</td>
+      <td width="50">排序值</td>
        <td width="150">修改时间</td>
       <td width="100">操作</td>
     </tr>
@@ -124,6 +126,14 @@
           <elseif condition="$vol.frame eq 2"/>下架
           <elseif condition="$vol.frame eq 3"/>锁定
         </if>
+          </td>
+         <td>
+         <if condition="$vol.index_show eq 1">是
+          <else/>否
+        </if>
+         </td>
+         <td>
+             {$vol.sort_by}        
           </td>
         <td>{$vol.time|date='Y年m月d日 H:i:s',###}</td>
         <td><a href="__APP__/productManagement/productSave/product_id/{$vol.product_id}" style="color:#03C">修改</a>&nbsp;<a href="__APP__/productManagement/productListFunDel/id/{$vol.product_id}" style="color:#03C">删除</a></td>

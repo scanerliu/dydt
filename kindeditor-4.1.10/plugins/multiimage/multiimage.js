@@ -218,7 +218,7 @@ KindEditor.plugin('multiimage', function(K) {
 		var dialog = self.createDialog({
 			name : name,
 			width : 650,
-			height : 510,
+			height : 310,
 			title : self.lang(name),
 			body : html,
 			previewBtn : {
